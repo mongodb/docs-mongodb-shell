@@ -14,10 +14,9 @@ MongoDB Shell
 
 .. include:: /includes/admonitions/fact-mdb-shell-beta.rst
 
-The |mdb-shell| is an interactive JavaScript shell interface to MongoDB,
-which provides a powerful interface for users to test queries and
-operations directly with the database. The |mdb-shell| also provides a
-fully functional JavaScript environment for use with MongoDB.
+The |mdb-shell| is a fully functional JavaScript environment for
+interacting with MongoDB deployments. You can use the |mdb-shell| to
+test queries and operations directly with your database.
 
 The |mdb-shell| is available as a standalone package in the MongoDB
 download center.
@@ -87,8 +86,8 @@ you had entered into the editor.
    into the |mdb-shell|.
 
 
-Comparison of the |mdb-shell| and Legacy ``mongo`` Shell
---------------------------------------------------------
+The |mdb-shell| versus the Legacy ``mongo`` Shell
+-------------------------------------------------
 
 The |mdb-shell| offers numerous advantages over the legacy
 :binary:`mongo <mongo>` shell, such as:
@@ -99,7 +98,7 @@ The |mdb-shell| offers numerous advantages over the legacy
 
 - Improved logging.
 
-During the beta phase, the |mdb-shell| supports a subset of the legacy
+During the beta stage, the |mdb-shell| supports a subset of the legacy
 :binary:`mongo <mongo>` shell commands. Extending the |mdb-shell| |api|
 coverage is an ongoing effort.
 
