@@ -45,8 +45,8 @@ Download and Install the |mdb-shell|
 Multi-Line Operations in the |mdb-shell|
 ----------------------------------------
 
-Run the ``editor()`` command inside of the |mdb-shell| to open the
-editor and manage comprehensive multiline functions:
+Run the ``.editor`` command within the |mdb-shell| to open the editor
+and manage comprehensive multiline functions:
 
 .. example::
 
@@ -54,11 +54,12 @@ editor and manage comprehensive multiline functions:
 
    .. code-block:: javascript
 
-      editor()
+      .editor
 
    The |mdb-shell| enters editor mode:
 
    .. code-block:: javascript
+      :copyable: false
 
       // Entering editor mode (^D to finish, ^C to cancel)
       const { Writable } = require('stream');
@@ -72,10 +73,18 @@ editor and manage comprehensive multiline functions:
           }
         });
 
+- Press ``Cmd/Ctrl`` + ``d`` to finish and run your function.
+
+- Press ``Cmd/Ctrl`` + ``c`` to cancel and exit without running your
+  function.
+
+When you close the editor, the |mdb-shell| does not save any functions
+you had entered into the editor.
+
 .. note::
 
-   Currently, ``editor()`` is the only way to run multiline commands in
-   the |mdb-shell|.
+   Currently, ``editor()`` is the only way to paste multiline commands
+   into the |mdb-shell|.
 
 
 Comparison of the |mdb-shell| and Legacy ``mongo`` Shell
