@@ -9,13 +9,13 @@ source:
   ref: open-mdb-shell-page
 ref: open-mdb-shell-page-macos
 ---
-title: "Download the tarball."
-ref: download-tarball
+title: "Download the installation archive."
+ref: download-archive
 level: 4
 content: |
 ---
 title: "Extract the files from the downloaded archive."
-ref: extract-tarball
+ref: extract-archive
 level: 4
 content: |
    
@@ -23,8 +23,8 @@ content: |
 
       tar -zxvf path/to/archive
 
-   If your web browser automatically unzips the file as part of the
-   download, the file ends in ``.tar`` instead.
+   Skip this step if your web browser automatically unzips the file as
+   part of the download.
 ---
 title: "Add the MongoDB Shell binary to your ``PATH`` environment
    variable."

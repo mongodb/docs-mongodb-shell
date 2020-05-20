@@ -36,6 +36,9 @@ to.
 - To learn how to run a local MongoDB deployment, see
   :manual:`Install MongoDB </installation/>`.
 
+Procedure
+~~~~~~~~~
+
 .. tabs-platforms::
 
    .. tab::
