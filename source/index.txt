@@ -24,6 +24,18 @@ download center.
 Download and Install the |mdb-shell|
 ------------------------------------
 
+Prerequisites
+~~~~~~~~~~~~~
+
+To use the |mdb-shell|, you must have a MongoDB deployment to connect
+to. 
+
+- For a free cloud-hosted deployment, you can use
+  `MongoDB Atlas <https://www.mongodb.com/cloud/atlas?tck=docs_vsce>`__.
+
+- To learn how to run a local MongoDB deployment, see
+  :manual:`Install MongoDB </installation/>`.
+
 .. tabs-platforms::
 
    .. tab::
@@ -34,7 +46,7 @@ Download and Install the |mdb-shell|
    .. tab::
       :tabid: macOS
 
-      Hello, I am macOS content.
+      .. include:: /includes/steps/install-shell-macos.rst
 
    .. tab::
       :tabid: linux
