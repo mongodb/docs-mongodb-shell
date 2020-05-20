@@ -53,6 +53,13 @@ to.
       
       Hello, I am Linux (rpm / deb) content.
 
+Connect to a MongoDB Deployment
+-------------------------------
+
+Once you have installed the |mdb-shell| and added it to you system
+``PATH``, you can connect to a MongoDB deployment. To learn more, see
+:ref:`mdb-shell-connect`.
+
 Multi-Line Operations in the |mdb-shell|
 ----------------------------------------
 
