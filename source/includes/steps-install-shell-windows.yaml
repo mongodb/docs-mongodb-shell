@@ -1,0 +1,27 @@
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: navigate-dlc
+ref: navigate-dlc-windows
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: open-mdb-shell-page
+ref: open-mdb-shell-page-windows
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: download-archive
+ref: download-archive-windows
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: extract-archive
+ref: extract-archive-windows
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: add-shell-to-path
+ref: add-shell-to-path-windows
+
+...
