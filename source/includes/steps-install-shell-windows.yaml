@@ -18,24 +18,8 @@ title: "Extract the files from the downloaded archive."
 ref: extract-archive
 level: 4
 content: |
-   
-   To extract files from a ``.zip`` folder:
-
-   1. Right click on the folder you want to extract files from.
-
-   #. Select :guilabel:`Extract All...`
-
-   #. Choose a file destination to which the folder's contents are 
-      extracted. The default destination is the same directory as the 
-      ``.zip`` folder.
-
-   #. Click :guilabel:`Extract`.
-
-   The contents of the ``.zip`` folder are extracted to the specified 
-   destination.
-
-   Skip this step if your web browser automatically unzips the file as
-   part of the download.
+   Extract the ``mongosh`` file to a destination that your ``PATH`` 
+   environment variable accesses or can be configured to access.
 ---
 title: "Add the MongoDB Shell binary to your ``PATH`` environment
    variable."
@@ -43,7 +27,9 @@ ref: add-shell-to-path
 level: 4
 content: |
 
-   To add the |mdb-shell| binary to your ``PATH`` environment:
+   If your ``PATH`` environment variable is not already configured to 
+   find ``mongosh``, add the |mdb-shell| binary's location to your 
+   ``PATH`` environment variable:
 
    1. Open the :guilabel:`Control Panel`.
 
@@ -55,7 +41,7 @@ content: |
 
    #. Click :guilabel:`Environment Variables`.
 
-   #. In the *User variables* section, select ``Path`` and click 
+   #. In the *System variables* section, select ``Path`` and click 
       :guilabel:`Edit`. The **Edit environment variable** modal 
       displays.
 
@@ -66,8 +52,9 @@ content: |
       modal, click :guilabel:`OK` to confirm your changes.
 
    To confirm that your ``PATH`` environment variable is correctly 
-   configured with ``mongosh``, search for ``cmd`` to open a command 
-   prompt and enter the ``mongosh --help`` command. If your ``PATH`` is 
-   configured correctly, a list of valid commands displays.
+   configured to find ``mongosh``, use the search bar to search for 
+   ``cmd``, open a command prompt, and enter the ``mongosh --help`` 
+   command. If your ``PATH`` is configured correctly, a list of valid 
+   commands displays.
 
 ...
