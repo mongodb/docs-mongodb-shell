@@ -14,18 +14,56 @@ source:
   ref: download-archive
 ref: download-archive-windows
 ---
-source:
-  file: steps-install-shell-base.yaml
-  ref: extract-archive
-ref: extract-archive-windows
+title: "Extract the files from the downloaded archive."
+ref: extract-archive
+level: 4
+content: |
+   
+   To extract files from a ``.zip`` folder:
+
+   1. Right click on the folder you want to extract from.
+
+   #. Select :guilabel:`Extract All...`
+
+   #. Choose a file destination to which the folder's contents are 
+      extracted. The default destination is the same directory as the 
+      ``.zip`` folder.
+
+   #. Click :guilabel:`Extract`.
+
+   The contents of the ``.zip`` folder are extracted to the specified 
+   destination.
+
+   Skip this step if your web browser automatically unzips the file as
+   part of the download.
 ---
-source:
-  file: steps-install-shell-base.yaml
-  ref: add-shell-to-path
-ref: add-shell-to-path-windows
----
-source:
-  file: steps-install-shell-base.yaml
-  ref: add-shell-to-path
-ref: add-shell-to-path-windows
+title: "Add the MongoDB Shell binary to your ``PATH`` environment
+   variable."
+ref: add-shell-to-path
+level: 4
+content: |
+
+   To add the |mdb-shell| binary to your ``PATH`` environment:
+
+   1. Open the :guilabel:`Control Panel`.
+
+   #. Click :guilabel:`System and Security`.
+
+   #. Click :guilabel:`System`.
+
+   #. Click :guilabel:`Advanced system settings`. The *System 
+      Properties* modal displays.
+
+   #. Click :guilabel:`Environment Variables`.
+
+   #. Under *User variables*, select ``Path`` and click 
+      :guilabel:`Edit...`. The *Edit environment variable* modal 
+      displays.
+
+   #. Click :guilabel:`New` and add the path to your ``mongosh`` 
+      executable.
+
+   #. Click :guilabel:`OK` to confirm your changes. On each other 
+      modal, click :guilabel:`OK` to confirm your changes.
+
 ...
