@@ -16,7 +16,7 @@ content: |
 ---
 title: "Download the installation archive."
 ref: download-archive
-level: 4
+level: 4 
 ---
 title: "Extract the files from the downloaded archive."
 ref: extract-archive
