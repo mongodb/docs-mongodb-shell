@@ -18,6 +18,8 @@ Use the following options to control various aspects of your
 General Options
 ---------------
 
+.. program:: mongosh
+
 .. setting:: --eval <javascript>
 
    Evaluates a JavaScript expression that is specified as an argument.
@@ -300,7 +302,7 @@ Authentication Options
 .. setting:: --authenticationDatabase <dbname>
    
    Specifies the authentication database where the specified
-   ``--username`` has been created. See
+   :option:`--username` has been created. See
    :ref:`user-authentication-database`.
    
 
@@ -390,7 +392,7 @@ Authentication Options
    ``--password`` option as the last option and leave out the
    argument.
 
-.. setting:: --username <username>, -u <username>
+.. option:: --username <username>, -u <username>
 
    Specifies a username with which to authenticate to a MongoDB database
    that uses authentication. Use in conjunction with the
