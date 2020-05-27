@@ -18,7 +18,7 @@ Create Operations
 -----------------
 
 Create or insert operations add new documents to a collection. If the
-collection does not currently exist, create operations create the
+collection does not exist, create operations also create the
 collection.
 
 You can insert a single document or multiple documents in a single
@@ -29,7 +29,7 @@ For examples, see :ref:`mongosh-insert`.
 Read Operations
 ---------------
 
-Read operations retrieves documents from a collection; i.e. queries a
+Read operations retrieve documents from a collection; i.e. query a
 collection for documents.
 
 You can specify criteria, or filters, that identify the documents to

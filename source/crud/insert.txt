@@ -70,10 +70,10 @@ adds the ``_id`` field with an ObjectId value to each document. See
    ])
 
 :method:`~db.collection.insertMany()` returns a document that includes
-the newly inserted documents ``_id`` field values.
+the newly inserted documents' ``_id`` field values.
 
 To retrieve the inserted documents,
-:ref:`read the collection <mongosh-read>`:
+:ref:`read documents in the collection <mongosh-read>`:
 
 .. code-block:: javascript
  

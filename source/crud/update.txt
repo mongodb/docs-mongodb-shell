@@ -73,10 +73,10 @@ document where ``title`` equals ``"Titanic"``:
 
 The update operation:
 
-- uses the :update:`$set` operator to update the value of the
-  ``countries`` array to ``[ "USA", "Canada" ]``,
+- Uses the :update:`$set` operator to update the value of the
+  ``countries`` array to ``[ "USA", "Canada" ]``.
 
-- uses the :update:`$currentDate` operator to update the value
+- Uses the :update:`$currentDate` operator to update the value
   of the ``lastUpdated`` field to the current date. If
   ``lastUpdated`` field does not exist,
   :update:`$currentDate` will create the field. See
