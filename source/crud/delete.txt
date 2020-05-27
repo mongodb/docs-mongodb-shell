@@ -91,6 +91,8 @@ To delete at most a single document that matches a specified filter
 
       db.movies.deleteOne( { cast: "Brad Pitt" } )
 
+   .. include:: /includes/admonitions/note-natural-sort-order.rst
+
 Delete Behavior
 ---------------
 

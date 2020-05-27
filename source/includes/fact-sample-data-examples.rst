@@ -3,6 +3,3 @@ The examples on this page reference the |service|
 cluster and populate that cluster with sample data to follow along with
 these examples. To learn more, see
 :atlas:`Get Started with Atlas </getting-started/>`.
-
-Alternatively, follow the :ref:`insert documents <mongosh-insert>`
-tutorial to learn how to populate a collection with data.

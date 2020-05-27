@@ -22,10 +22,10 @@ to query documents in a collection.
 .. TODO: Make a callout here to the Connect to an Atlas Cluster section
    in the connection docs
 
-Select All Documents in a Collection
-------------------------------------
+Read All Documents in a Collection
+----------------------------------
 
-To select all documents in the collection, pass an empty document as the
+To read all documents in the collection, pass an empty document as the
 query filter parameter to the find method. The query filter parameter
 determines the select criteria.
 
@@ -145,6 +145,12 @@ the documents in the collection that match at least one condition.
            year: 2010,
            $or: [ { "awards.wins": { $gte: 5 } }, { genres: "Drama" } ]
       } )
+
+Read Behavior
+-------------
+
+To learn more about the specific behavior of reading documents,
+see :manual:`Behavior </tutorial/query-documents/#behavior>`.
 
 Additional Query Tutorials
 --------------------------

@@ -18,16 +18,13 @@ The MongoDB shell provides the following methods to update documents in
 a collection:
 
 - To update a single document, use
-  :method:`db.collection.updateOne(\<filter\>, \<update\>, \<options\>)
-  <db.collection.updateOne>`.
+  :method:`db.collection.updateOne()`.
 
 - To update multiple documents, use
-  :method:`db.collection.updateMany(\<filter\>, \<update\>, \<options\>)
-  <db.collection.updateMany>`.
+  :method:`db.collection.updateMany()`.
 
 - To replace a document, use
-  :method:`db.collection.replaceOne(\<filter\>, \<update\>, \<options\>)
-  <db.collection.replaceOne>`.
+  :method:`db.collection.replaceOne()`.
 
 .. include:: /includes/fact-sample-data-examples.rst
 
@@ -57,52 +54,62 @@ details.
 Update a Single Document
 ------------------------
 
-The following example uses the :method:`db.collection.updateOne()`
-method on the ``sample_mflix.movies`` collection to update the *first*
-document where ``title`` equals ``"Titanic"``:
+Use the :method:`db.collection.updateOne()` method to update the *first*
+document that matches a specified filter.
 
-.. code-block::
+.. include:: /includes/admonitions/note-natural-sort-order.rst
 
-   use sample_mflix
+.. example::
 
-   db.movies.updateOne( { title: "Titanic" },
-   {
-     $set: { countries: [ "USA", "Canada" ] },
-     $currentDate: { lastUpdated: true }
-   }
+   To update the *first* document in the ``sample_mflix.movies``
+   collection where ``title`` equals ``"Titanic"``:
 
-The update operation:
+   .. code-block::
 
-- Uses the :update:`$set` operator to update the value of the
-  ``countries`` array to ``[ "USA", "Canada" ]``.
+      use sample_mflix
 
-- Uses the :update:`$currentDate` operator to update the value
-  of the ``lastUpdated`` field to the current date. If
-  ``lastUpdated`` field does not exist,
-  :update:`$currentDate` will create the field. See
-  :update:`$currentDate` for details.
+      db.movies.updateOne( { title: "Titanic" },
+      {
+        $set: { countries: [ "USA", "Canada" ] },
+        $currentDate: { lastUpdated: true }
+      }
+
+   The update operation:
+
+   - Uses the :update:`$set` operator to update the value of the
+     ``countries`` array to ``[ "USA", "Canada" ]``.
+
+   - Uses the :update:`$currentDate` operator to update the value
+     of the ``lastUpdated`` field to the current date. If
+     ``lastUpdated`` field does not exist,
+     :update:`$currentDate` will create the field. See
+     :update:`$currentDate` for details.
 
 Update Multiple Documents
 -------------------------
 
-The following example uses the :method:`db.collection.updateMany()`
-method on the ``sample_airbnb.listingsAndReviews`` collection to update
-all documents where ``security_deposit`` is less than ``100``:
+Use the :method:`db.collection.updateMany()` to update all documents
+that match a specified filter.
 
-.. code-block:: javascript
+.. example::
 
-   use sample_airbnb
+   To update all documents in the ``sample_airbnb.listingsAndReviews``
+   collection to update where ``security_deposit`` is less than ``100``:
 
-   db.listingsAndReviews.updateMany(
-     { security_deposit: { $lt: 100 } },
-     {
-       $set: { security_deposit: 100, minimum_nights: 1 }
-     }
-   )
+   .. code-block:: javascript
 
-The update operation uses the :update:`$set` operator to update the
-value of the ``security_deposit`` field to ``100`` and the value of the
-``minimum_nights`` field to ``1``.
+      use sample_airbnb
+
+      db.listingsAndReviews.updateMany(
+        { security_deposit: { $lt: 100 } },
+        {
+          $set: { security_deposit: 100, minimum_nights: 1 }
+        }
+      )
+
+   The update operation uses the :update:`$set` operator to update the
+   value of the ``security_deposit`` field to ``100`` and the value of
+   the ``minimum_nights`` field to ``1``.
 
 Replace a Document
 ------------------
@@ -120,21 +127,24 @@ document. In the replacement document, you can omit the ``_id`` field
 since the ``_id`` field is immutable; however, if you do include the
 ``_id`` field, it must have the same value as the current value.
 
-The following example replaces the *first* document from the
-``sample_analytics.accounts`` collection where ``account_id: 371138``:
+.. example::
 
-.. code-block:: javascript
+   To replace the *first* document from the
+   ``sample_analytics.accounts`` collection where
+   ``account_id: 371138``:
 
-   db.accounts.replaceOne(
-     { account_id: 371138 },
-     { account_id: 893421, limit: 5000, products: [ "Investment", "Brokerage" ] }
-   )
+   .. code-block:: javascript
 
-Run the following command to read your updated document:
+      db.accounts.replaceOne(
+        { account_id: 371138 },
+        { account_id: 893421, limit: 5000, products: [ "Investment", "Brokerage" ] }
+      )
 
-.. code-block:: javascript
+   Run the following command to read your updated document:
 
-   db.accounts.findOne( { account_id: 371138 } )
+   .. code-block:: javascript
+
+      db.accounts.findOne( { account_id: 893421 } )
 
 Update Behavior
 ---------------

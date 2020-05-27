@@ -22,32 +22,52 @@ into a collection:
 - To insert multiple documents, use
   :method:`db.collection.insertMany()`.
 
+.. include:: /includes/fact-sample-data-examples.rst
+
 Insert a Single Document
 ------------------------
 
 :method:`db.collection.insertOne()` inserts a *single*
 :ref:`document<bson-document-format>` into a collection.
 
-The following example inserts a new document into the ``inventory``
-collection. If the document does not specify an ``_id`` field, MongoDB
-adds the ``_id`` field with an ObjectId value to the new document. See
-:ref:`write-op-insert-behavior`.
+.. example::
 
-.. code-block:: javascript
+  This example inserts a new document into the ``sample_mflix.movies``
+  collection. If the document does not specify an ``_id`` field, MongoDB
+  adds the ``_id`` field with an ObjectId value to the new document. See
+  :ref:`write-op-insert-behavior`.
 
-   db.inventory.insertOne(
-      { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }
-   )
+  .. code-block:: javascript
 
-:method:`~db.collection.insertOne()` returns a document that
-includes the newly inserted document's ``_id`` field value.
+     use sample_mflix
 
-To retrieve the inserted document,
-:ref:`read the collection <mongosh-read>`:
+     db.movies.insertOne(
+       {
+         title: "The Favourite",
+         genres: [ "Drama", History" ]
+         runtime: 121,
+         rated: "R",
+         year: 2018,
+         directors: [ "Yorgos Lanthimos" ],
+         cast: [ "Olivia Colman", "Emma Stone", "Rachel Weisz" ],
+         type: "movie"
+       }
+     )
 
-.. code-block:: javascript
+   :method:`~db.collection.insertOne()` returns a document that
+   includes the newly inserted document's ``_id`` field value.
 
-   db.inventory.find( { item: "canvas" } )
+   To retrieve the inserted document,
+   :ref:`read the collection <mongosh-read>`:
+
+   .. code-block:: javascript
+
+      db.inventory.find( { title: "The Favourite" } )
+
+   .. note::
+
+      To ensure you return the document you inserted, you can instead
+      query by ``_id``.
 
 Insert Multiple Documents
 -------------------------
@@ -56,28 +76,44 @@ Insert Multiple Documents
 :ref:`documents <bson-document-format>` into a collection. Pass an array
 of documents to the method.
 
-The following example inserts three new documents into the ``inventory``
-collection. If the documents do not specify an ``_id`` field, MongoDB
-adds the ``_id`` field with an ObjectId value to each document. See
-:ref:`write-op-insert-behavior`.
+The following example inserts two new documents into the
+``sample_mflix.movies`` collection. If the documents do not specify an
+``_id`` field, MongoDB adds the ``_id`` field with an ObjectId value to
+each document. See :ref:`write-op-insert-behavior`.
 
 .. code-block:: javascript
 
    db.inventory.insertMany([
-      { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
-      { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
-      { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+      {
+         title: "Jurassic World: Fallen Kingdom",
+         genres: [ "Action", "Sci-Fi" ]
+         runtime: 130,
+         rated: "PG-13",
+         year: 2018,
+         directors: [ "J. A. Bayona" ],
+         cast: [ "Chris Pratt", "Bryce Dallas Howard", "Rafe Spall" ],
+         type: "movie"
+       },
+       {
+         title: "Tag",
+         genres: [ "Comedy", "Action" ]
+         runtime: 105,
+         rated: "R",
+         year: 2018,
+         directors: [ "Jeff Tomsic" ],
+         cast: [ "Annabelle Wallis", "Jeremy Renner", "Jon Hamm" ],
+         type: "movie"
+       }
    ])
 
 :method:`~db.collection.insertMany()` returns a document that includes
 the newly inserted documents' ``_id`` field values.
 
-To retrieve the inserted documents,
-:ref:`read documents in the collection <mongosh-read>`:
+To :ref:`read documents in the collection <mongosh-read>`:
 
 .. code-block:: javascript
  
-   db.inventory.find( {} )
+   db.movies.find( {} )
 
 Insert Behavior
 ---------------
