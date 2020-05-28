@@ -62,22 +62,25 @@ document that matches a specified filter.
 .. example::
 
    To update the *first* document in the ``sample_mflix.movies``
-   collection where ``title`` equals ``"Titanic"``:
+   collection where ``title`` equals ``"Tag"``:
 
    .. code-block::
 
       use sample_mflix
 
-      db.movies.updateOne( { title: "Titanic" },
+      db.movies.updateOne( { title: "Tag" },
       {
-        $set: { countries: [ "USA", "Canada" ] },
-        $currentDate: { lastUpdated: true }
-      }
+        $set: {
+          plot: "One month every year, five highly competitive friends
+                 hit the ground running for a no-holds-barred game of tag"
+        }
+        { $currentDate: { lastUpdated: true } }
+      })
 
    The update operation:
 
    - Uses the :update:`$set` operator to update the value of the
-     ``countries`` array to ``[ "USA", "Canada" ]``.
+     ``plot`` field for the movie ``Tag``.
 
    - Uses the :update:`$currentDate` operator to update the value
      of the ``lastUpdated`` field to the current date. If
