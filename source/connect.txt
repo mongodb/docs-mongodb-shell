@@ -62,6 +62,33 @@ instance running on a remote host machine on port 28015:
 Connection Considerations
 -------------------------
 
+Authentication
+~~~~~~~~~~~~~~
+
+To connect to a MongoDB instance requires authentication:
+
+- You can specify the username, password, and authentication database 
+  in the :doc:`connection string </reference/connection-string>`. 
+  For example, to connect to a remote MongoDB instance and
+  authenticate against the ``admin`` database as user ``alice``:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://alice:<password>@mongodb0.examples.com:28015/?authSource=admin"
+
+- You can use the ``--username``, ``--password``, and
+  ``--authenticationDatabase`` ``mongosh`` options. For example, to
+  connect to a remote MongoDB instance and authenticate against the 
+  ``admin`` database as user ``alice``:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com:28015" --username alice --password <password> --authenticationDatabase admin
+
+  .. note::
+
+     If you don't provide a password, ``mongosh`` prompts you for one.
+
 Connecting to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -89,41 +116,14 @@ To connect to a replica set:
      to ``true`` for the connection. You can 
      override this behavior by explicitly setting ``tls`` to ``false``.
 
-Authentication
-~~~~~~~~~~~~~~
-
-To connect to a MongoDB instance requires authentication:
-
-- You can specify the username, password, and authentication database 
-  in the :doc:`connection string </reference/connection-string>`. 
-  For example, to connect to a remote MongoDB instance and
-  authenticate against the ``admin`` database as user ``alice``:
-
-  .. code-block:: sh
-
-     mongosh "mongodb://alice:<password>@mongodb0.examples.com:28015/?authSource=admin"
-
-- You can use the ``--username``, ``--password``, and
-  ``--authenticationDatabase`` command-line options. For example, to
-  connect to a remote MongoDB instance and authenticate against the 
-  ``admin`` database as user ``alice``:
-
-  .. code-block:: sh
-
-     mongosh "mongodb://mongodb0.example.com:28015" --username alice --password <password> --authenticationDatabase admin
-
-  .. note::
-
-     If you specify ``--password`` without the user's password, the
-     shell will prompt for the password.
-
 TLS Connections
 ~~~~~~~~~~~~~~~
 
-For :manual:`tls </reference/connection-string/#urioption.tls>` 
-connections:
+For ``tls`` connections:
 
-- You can specify the ``tls=true`` option in the
+- You can use the 
+  :manual:`tls option </reference/connection-string/#urioption.tls>` to 
+  set ``tls=true`` in the 
   :manual:`connection string </reference/connection-string>`:
 
   .. code-block:: sh
