@@ -48,7 +48,7 @@ To specify a port to connect to on localhost, use the
 MongoDB Instance on a Remote Host
 ---------------------------------
 
-To specify a remote host and port, such as |a-service| cluster, use a 
+To specify a remote host and port, use a 
 :manual:`connection string </reference/connection-string>`.
 
 .. example:: 
@@ -142,9 +142,11 @@ For ``tls`` connections:
 
   .. example::
 
+     To enable ``tls`` in the connection string:
+
      .. code-block:: sh
 
-        mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA&tls=true"
+        mongosh "mongodb://mongodb0.example.com:28015/?tls=true"
 
 - If you are using the :manual:`DNS Seedlist Connection Format 
   </reference/connection-string/#dns-seedlist-connection-format>`, the 
@@ -152,6 +154,9 @@ For ``tls`` connections:
   the ``tls`` option to ``true`` for the connection:
 
   .. example::
+
+     To connect to a DNS seedlist-defined replica set with ``tls`` 
+     enabled:
 
      .. code-block:: sh
 
@@ -168,7 +173,7 @@ For ``tls`` connections:
   
   .. example:: 
      
-     To connect to a remote host:
+     To connect to a remote host with ``tls`` enabled:
 
      .. code-block:: sh
 
