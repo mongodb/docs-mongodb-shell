@@ -16,11 +16,8 @@ Connect to a Deployment
 Ensure that a MongoDB deployment is running before attempting to 
 connect to it with ``mongosh``.
 
-Connect to an Instance
-----------------------
-
 Local MongoDB Instance on Default Port
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 You can run ``mongosh`` without any command-line options
 to connect to a MongoDB instance running on your **localhost** with 
@@ -31,7 +28,7 @@ to connect to a MongoDB instance running on your **localhost** with
    mongosh
 
 Local MongoDB Instance on a Non-Default Port
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------
 
 To specify a port to connect to on localhost, use the 
 :manual:`connection string </reference/connection-string>` format. For 
@@ -43,7 +40,7 @@ non-default port 28015:
    mongosh "localhost:28015"
 
 MongoDB Instance on a Remote Host
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 To specify a remote host and port, use a :manual:`connection string
 </reference/connection-string>`. For example, to connect to a MongoDB
@@ -68,7 +65,7 @@ Authentication
 To connect to a MongoDB instance requires authentication:
 
 - You can specify the username, password, and authentication database 
-  in the :doc:`connection string </reference/connection-string>`. 
+  in the :manual:`connection string </reference/connection-string>`. 
   For example, to connect to a remote MongoDB instance and
   authenticate against the ``admin`` database as user ``alice``:
 
@@ -77,7 +74,7 @@ To connect to a MongoDB instance requires authentication:
      mongosh "mongodb://alice:<password>@mongodb0.examples.com:28015/?authSource=admin"
 
 - You can use the ``--username``, ``--password``, and
-  ``--authenticationDatabase`` ``mongosh`` options. For example, to
+  ``--authenticationDatabase`` command-line options. For example, to
   connect to a remote MongoDB instance and authenticate against the 
   ``admin`` database as user ``alice``:
 
@@ -87,7 +84,8 @@ To connect to a MongoDB instance requires authentication:
 
   .. note::
 
-     If you don't provide a password, ``mongosh`` prompts you for one.
+     If you don't provide a ``--password`` value, ``mongosh`` prompts 
+     you for one.
 
 Connecting to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,7 +135,7 @@ For ``tls`` connections:
 
   .. code-block:: sh
 
-     mongo "mongodb+srv://server.example.com/"
+     mongosh "mongodb+srv://server.example.com/"
 
 - You can specify the ``--tls`` command-line option.
   For example, to connect to a remote host:
