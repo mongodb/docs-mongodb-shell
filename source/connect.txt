@@ -9,5 +9,142 @@ Connect to a Deployment
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: singlecol
+
+Prerequisites
+~~~~~~~~~~~~~
+
+Ensure that a MongoDB deployment is running before attempting to 
+connect to it with ``mongosh``.
+
+Connect to an Instance
+----------------------
+
+Local MongoDB Instance on Default Port
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can run ``mongosh`` without any command-line options
+to connect to a :doc:`MongoDB </reference/program/mongod>` instance
+running on your **localhost** with **default port** 27017:
+
+.. code-block:: sh
+
+   mongosh
+
+Local MongoDB Instance on a Non-Default Port
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To specify a port to connect to on localhost, use the 
+:doc:`connection string </reference/connection-string>` format. For 
+example, to connect to a MongoDB instance running on localhost with a 
+non-default port 28015:
+
+.. code-block:: sh
+
+   mongosh "localhost:28015"
+
+MongoDB Instance on a Remote Host
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To specify a remote host and port, use a :doc:`connection string
+</reference/connection-string>`. For example, to connect to a MongoDB
+instance running on a remote host machine on port 28015:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com:28015"
+
+  .. note:: Connecting to |service|
+
+     If your remote host is a |service-fullname| cluster, you can copy 
+     your connection string from the |service| UI. To learn more, see 
+     :atlas:`Connect to a Cluster </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
+
+Connection Considerations
+-------------------------
+
+MongoDB Instance with Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect to a MongoDB instance requires authentication:
+
+- You can specify the username, password, and authentication database 
+  in the :doc:`connection string </reference/connection-string>`. 
+  For example, to connect to a remote MongoDB instance and
+  authenticate against the ``admin`` database as user ``alice``:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://alice:<password>@mongodb0.examples.com:28015/?authSource=admin"
+
+- You can use the :option:`--username \<user\> <mongo --username>` and
+  :option:`--password <mongo --password>`,
+  :option:`--authenticationDatabase \<db\> <mongo
+  --authenticationDatabase>` command-line options. For example, to
+  connect and authenticate to a remote MongoDB instance as user
+  ``alice``:
+
+  .. note::
+
+     If you specify ``--password`` without the user's password, the
+     shell will prompt for the password.
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com:28015" --username alice --password <password> --authenticationDatabase admin
+
+Connect to a MongoDB Replica Set
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect to a replica set:
+
+- You can specify the replica set name and members in the
+  :doc:`connection string </reference/connection-string>`.
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
+
+- If using the :ref:`connections-dns-seedlist`, you can specify the
+  connection string:
+
+  .. code-block:: sh
+
+     mongosh "mongodb+srv://server.example.com/"
+
+  .. note::
+  
+     Use of the ``+srv`` connection string modifier automatically sets
+     the ssl option to true for the connection.
+
+TLS Connections
+~~~~~~~~~~~~~~~
+
+For TLS connections, 
+
+- You can specify the ``ssl=true`` option in the
+  :doc:`connection string </reference/connection-string>`.
+
+  .. code-block:: sh
+
+     mongo "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA&ssl=true"
+
+- If using the :ref:`connections-dns-seedlist`, you can include the
+  ``+srv`` connection string modifier:
+
+  .. code-block:: sh
+
+     mongo "mongodb+srv://server.example.com/"
+
+  .. note::
+  
+     Use of the ``+srv`` connection string modifier automatically sets
+     the ssl option to true for the connection.
+
+- You can specify the ``--tls`` command-line option.
+  For example, to connect to a remote host:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com:28015" --tls
