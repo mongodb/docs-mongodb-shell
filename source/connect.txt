@@ -34,7 +34,7 @@ Local MongoDB Instance on a Non-Default Port
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To specify a port to connect to on localhost, use the 
-:manual:`connection string <reference/connection-string>` format. For 
+:manual:`connection string </reference/connection-string>` format. For 
 example, to connect to a MongoDB instance running on localhost with a 
 non-default port 28015:
 
@@ -46,7 +46,7 @@ MongoDB Instance on a Remote Host
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To specify a remote host and port, use a :manual:`connection string
-<reference/connection-string>`. For example, to connect to a MongoDB
+</reference/connection-string>`. For example, to connect to a MongoDB
 instance running on a remote host machine on port 28015:
 
   .. code-block:: sh
@@ -68,14 +68,14 @@ Connecting to a Replica Set
 To connect to a replica set:
 
 - You can specify the replica set name and members in the
-  :manual:`connection string <reference/connection-string>`.
+  :manual:`connection string </reference/connection-string>`:
 
   .. code-block:: sh
 
      mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
 
 - If you are using the :manual:`DNS Seedlist Connection Format 
-  <reference/connection-string/#dns-seedlist-connection-format>`, you 
+  </reference/connection-string/#dns-seedlist-connection-format>`, you 
   can include the ``+srv`` modifier in your connection string:
 
   .. code-block:: sh
@@ -84,7 +84,10 @@ To connect to a replica set:
 
   .. note::
      Using the ``+srv`` connection string modifier automatically sets 
-     the ``tls`` option to ``true`` for the connection. You can override this behavior by explicitly setting :manual:`tls <reference/connection-string/#urioption.tls>` to ``false``.
+     the 
+     :manual:`tls option </reference/connection-string/#urioption.tls>` 
+     to ``true`` for the connection. You can 
+     override this behavior by explicitly setting ``tls`` to ``false``.
 
 Authentication
 ~~~~~~~~~~~~~~
@@ -100,39 +103,37 @@ To connect to a MongoDB instance requires authentication:
 
      mongosh "mongodb://alice:<password>@mongodb0.examples.com:28015/?authSource=admin"
 
-- You can use the :option:`--username \<user\> <mongo --username>` and
-  :option:`--password <mongo --password>`,
-  :option:`--authenticationDatabase \<db\> <mongo
-  --authenticationDatabase>` command-line options. For example, to
-  connect and authenticate to a remote MongoDB instance as user
-  ``alice``:
+- You can use the ``--username``, ``--password``, and
+  ``--authenticationDatabase`` command-line options. For example, to
+  connect to a remote MongoDB instance and authenticate against the 
+  ``admin`` database as user ``alice``:
+
+  .. code-block:: sh
+
+     mongosh "mongodb://mongodb0.example.com:28015" --username alice --password <password> --authenticationDatabase admin
 
   .. note::
 
      If you specify ``--password`` without the user's password, the
      shell will prompt for the password.
 
-  .. code-block:: sh
-
-     mongosh "mongodb://mongodb0.example.com:28015" --username alice --password <password> --authenticationDatabase admin
-
 TLS Connections
 ~~~~~~~~~~~~~~~
 
-For :manual:`tls <reference/connection-string/#urioption.tls>` 
-connections, 
+For :manual:`tls </reference/connection-string/#urioption.tls>` 
+connections:
 
 - You can specify the ``tls=true`` option in the
-  :manual:`connection string </reference/connection-string>`.
+  :manual:`connection string </reference/connection-string>`:
 
   .. code-block:: sh
 
      mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA&tls=true"
 
 - If you are using the :manual:`DNS Seedlist Connection Format 
-  <reference/connection-string/#dns-seedlist-connection-format>`, the 
+  </reference/connection-string/#dns-seedlist-connection-format>`, the 
   ``+srv`` connection string modifier automatically sets
-  the ``tls`` option to ``true`` for the connection.
+  the ``tls`` option to ``true`` for the connection:
 
   .. code-block:: sh
 
