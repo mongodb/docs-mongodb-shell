@@ -14,7 +14,8 @@ Connect to a Deployment
 
 
 Ensure that a MongoDB deployment is running before attempting to 
-connect to it with ``mongosh``.
+connect to it with ``mongosh``. The connection method you use depends 
+on your deployment type.
 
 Local MongoDB Instance on Default Port
 --------------------------------------
