@@ -162,13 +162,6 @@ For ``tls`` connections:
 
         mongosh "mongodb+srv://server.example.com/"
 
-  .. note::
-     
-     Using the ``+srv`` connection string modifier automatically sets 
-     the 
-     :manual:`tls option </reference/connection-string/#urioption.tls>` 
-     to ``true`` for the connection.
-
 - You can specify the ``--tls`` command-line option.
   
   .. example:: 
