@@ -150,6 +150,6 @@ Disconnect from a Deployment
 
 To disconnect from a deployment and exit ``mongosh``, you can:
 
-- Type ``.exit``
+- Type ``.exit``, or
 
 - Press ``Ctrl`` + ``C`` twice.
