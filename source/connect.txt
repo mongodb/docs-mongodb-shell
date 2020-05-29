@@ -12,8 +12,6 @@ Connect to a Deployment
    :depth: 2
    :class: singlecol
 
-Prerequisites
-~~~~~~~~~~~~~
 
 Ensure that a MongoDB deployment is running before attempting to 
 connect to it with ``mongosh``.
