@@ -143,3 +143,12 @@ For ``tls`` connections:
   .. code-block:: sh
 
      mongosh "mongodb://mongodb0.example.com:28015" --tls
+
+Disconnect from a Deployment
+----------------------------
+
+To disconnect from a deployment and exit ``mongosh``, you can:
+
+- Type ``.exit``
+
+- Press ``Ctrl`` + ``C`` twice.
