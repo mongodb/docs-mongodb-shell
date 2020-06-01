@@ -15,8 +15,8 @@ Connect to a Deployment
 
 .. important::
 
-   Ensure that a MongoDB deployment is running before attempting to 
-   connect to it with ``mongosh``. The connection method you use 
+   Ensure that you have a running MongoDB deployment before attempting 
+   to connect with ``mongosh``. The connection method you use 
    depends on your deployment type.
 
 Local MongoDB Instance on Default Port
@@ -29,6 +29,12 @@ to connect to a MongoDB instance running on your **localhost** with
 .. code-block:: sh
 
    mongosh
+
+This is equivalent to the following command:
+
+.. code-block:: sh
+
+   mongosh "localhost:27017"
 
 Local MongoDB Instance on a Non-Default Port
 --------------------------------------------
@@ -66,11 +72,11 @@ To specify a remote host and port, use a
    your connection string from the |service| UI. To learn more, see 
    :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
-Connection Considerations
--------------------------
+Connection Options
+------------------
 
-Authentication
-~~~~~~~~~~~~~~
+Connect with Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a MongoDB instance requires authentication, use the 
 ``--username`` and ``--authenticationDatabase`` command-line options. 
@@ -97,8 +103,8 @@ To connect to a MongoDB instance requires authentication, use the
    - Add :manual:`Database Users </core/security-users/>` 
      to provide authenticated access to a MongoDB instance.
 
-Connecting to a Replica Set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to a Replica Set
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a replica set:
 
@@ -130,23 +136,10 @@ To connect to a replica set:
 
         mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
 
-TLS Connections
-~~~~~~~~~~~~~~~
+Connect using TLS
+~~~~~~~~~~~~~~~~~
 
 For ``tls`` connections:
-
-- You can use the 
-  :manual:`tls option </reference/connection-string/#urioption.tls>` to 
-  set ``tls=true`` in the 
-  :manual:`connection string </reference/connection-string>`:
-
-  .. example::
-
-     To enable ``tls`` in the connection string:
-
-     .. code-block:: sh
-
-        mongosh "mongodb://mongodb0.example.com:28015/?tls=true"
 
 - If you are using the :manual:`DNS Seedlist Connection Format 
   </reference/connection-string/#dns-seedlist-connection-format>`, the 
@@ -161,6 +154,19 @@ For ``tls`` connections:
      .. code-block:: sh
 
         mongosh "mongodb+srv://server.example.com/"
+
+- You can use the 
+  :manual:`tls option </reference/connection-string/#urioption.tls>` to 
+  set ``tls=true`` in the 
+  :manual:`connection string </reference/connection-string>`:
+
+  .. example::
+
+     To enable ``tls`` in the connection string:
+
+     .. code-block:: sh
+
+        mongosh "mongodb://mongodb0.example.com:28015/?tls=true"
 
 - You can specify the ``--tls`` command-line option.
   
