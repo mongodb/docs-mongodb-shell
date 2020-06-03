@@ -116,6 +116,12 @@ Consider the following pipeline:
       { $sort: { averageGenreRating: -1 } }
    ] )
 
+.. tip::
+
+   Run the ``.editor`` command before you paste multi-line aggregation
+   pipelines to the |mdb-shell|. For more information, see
+   :ref:`mdb-shell-multi-line`.
+
 This pipeline performs an aggregation in four stages:
 
 First Stage
