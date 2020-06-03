@@ -134,6 +134,8 @@ Learn More
 
 - :ref:`Perform CRUD Operations <mdb-shell-crud>`
 
+- :ref:`Run Aggregation Pipelines <mdb-shell-aggregation>`
+
 - :ref:`View Available Methods in the MongoDB Shell <mdb-shell-methods>`
 
 .. class:: hidden
@@ -143,4 +145,5 @@ Learn More
 
       /connect
       /crud
+      /run-agg-pipelines
       /reference
