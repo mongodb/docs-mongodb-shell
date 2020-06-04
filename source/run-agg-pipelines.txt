@@ -36,6 +36,13 @@ the terminal.
 Understand the Aggregation Syntax
 ---------------------------------
 
+The MongoDB aggregation pipeline consists of :manual:`stages
+</reference/operator/aggregation-pipeline/#aggregation-pipeline-operator-reference>`.
+Each stage transforms the documents as they pass through the pipeline.
+Pipeline stages do not need to produce one output document for every
+input document; e.g., some stages may generate new documents or filter
+out documents.
+
 To create an aggregation pipeline, use the following syntax in the
 |mdb-shell|:
 
