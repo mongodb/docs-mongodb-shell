@@ -30,56 +30,11 @@ Common uses for aggregation include:
 
 - Sorting data.
 
-When you run an aggregation, |mdb-shell| conveniently outputs the
-results directly to the terminal.
+When you run an aggregation, |mdb-shell| outputs the results directly to
+the terminal.
 
-About the Examples
-------------------
-
-.. include:: /includes/fact-sample-data-examples.rst
-
-The examples below use the ``movies`` collection in the |service|
-:atlas:`sample_mflix </sample-data/sample-mflix/>` sample dataset. 
-
-Each document in the ``movies`` collection describes a movie:
-
-.. code-block:: javascript
-   :linenos:
-   :copyable: false
-
-   {
-     _id: 573a1390f29313caabcd4135,
-     plot: 'Three men hammer on an anvil and pass a bottle of beer around.',
-     genres: [ 'Short' ],
-     runtime: 1,
-     cast: [ 'Charles Kayser', 'John Ott' ],
-     num_mflix_comments: 1,
-     title: 'Blacksmith Scene',
-     fullplot: 'A stationary camera looks at a large anvil with a blacksmith behind it and one on either side. The smith in the middle draws a heated metal rod from the fire, places it on the anvil, and all three begin a rhythmic hammering. After several blows, the metal goes back in the fire. One smith pulls out a bottle of beer, and they each take a swig. Then, out comes the glowing metal and the hammering resumes.',
-     countries: [ 'USA' ],
-     released: 1893-05-09T00:00:00.000Z,
-     directors: [ 'William K.L. Dickson' ],
-     rated: 'UNRATED',
-     awards: { wins: 1, nominations: 0, text: '1 win.' },
-     lastupdated: '2015-08-26 00:03:50.133000000',
-     year: 1893,
-     imdb: { rating: 6.2, votes: 1189, id: 5 },
-     type: 'movie',
-     tomatoes: {
-       viewer: { rating: 3, numReviews: 184, meter: 32 },
-       lastUpdated: 2015-06-28T18:34:09.000Z
-     }
-   }
-
-The examples assume that you have already used the |mdb-shell| to switch
-to the database that contains the documents that you want to aggregate:
-
-.. code-block:: javascript
-
-   use sample_mflix
-
-Create and Run an Aggregation Pipeline
---------------------------------------
+Understand the Aggregation Syntax
+---------------------------------
 
 To create an aggregation pipeline, use the following syntax in the
 |mdb-shell|:
@@ -98,7 +53,81 @@ To create an aggregation pipeline, use the following syntax in the
    ])
 
 Example
-~~~~~~~
+-------
+
+.. include:: /includes/fact-sample-data-examples.rst
+
+The example below uses the ``movies`` collection in the |service|
+:atlas:`sample_mflix </sample-data/sample-mflix/>` sample dataset.
+
+Example Document
+~~~~~~~~~~~~~~~~
+
+Each document in the ``movies`` collection describes a movie:
+
+.. code-block:: javascript
+   :linenos:
+   :copyable: false
+
+   {
+     _id: 573a1397f29313caabce8347,
+     fullplot: 'In a cyberpunk vision of the future, man has developed the technology to create replicants, human clones used to serve in the colonies outside Earth but with fixed lifespans. In Los Angeles, 2019, Deckard is a Blade Runner, a cop who specializes in terminating replicants. Originally in retirement, he is forced to re-enter the force when four replicants escape from an off-world colony to Earth.',
+     imdb: { rating: 8.2, votes: 419589, id: 83658 },
+     year: 1982,
+     plot: 'A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.',
+     genres: [ 'Sci-Fi', 'Thriller' ],
+     rated: 'R',
+     metacritic: 88,
+     title: 'Blade Runner',
+     lastupdated: '2015-09-04 00:05:51.990000000',
+     languages: [ 'English', 'German', 'Cantonese', 'Japanese', 'Hungarian' ],
+     writers: [
+       'Hampton Fancher (screenplay)',
+       'David Webb Peoples (screenplay)',
+       'Philip K. Dick (novel)'
+     ],
+     type: 'movie',
+     tomatoes: {
+       viewer: { rating: 4, numReviews: 331213, meter: 91 },
+       dvd: 1997-08-27T00:00:00.000Z,
+       critic: { rating: 8.5, numReviews: 102, meter: 90 },
+       lastUpdated: 2015-09-12T17:48:21.000Z,
+       consensus: "Misunderstood when it first hit theaters, the influence of Ridley Scott's mysterious, neo-noir Blade Runner has deepened with time. A visually remarkable, achingly human sci-fi masterpiece.",
+       rotten: 10,
+       production: 'Warner Bros. Pictures',
+       fresh: 92
+     },
+     poster: 'https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_SX677_AL_.jpg',
+     num_mflix_comments: 1,
+     released: 1982-06-25T00:00:00.000Z,
+     awards: {
+       wins: 13,
+       nominations: 15,
+       text: 'Nominated for 2 Oscars. Another 11 wins & 15 nominations.'
+     },
+     countries: [ 'USA', 'Hong Kong', 'UK' ],
+     cast: [
+       'Harrison Ford',
+       'Rutger Hauer',
+       'Sean Young',
+       'Edward James Olmos'
+     ],
+     directors: [ 'Ridley Scott' ],
+     runtime: 117
+   }
+
+The documents aggregated in this tutorial reside in the
+``sample_mflix.movies`` collection. Use the following command to switch
+to the database that contains this collection:
+
+.. code-block:: javascript
+
+   use sample_mflix
+
+.. _mdb-shell-example-agg-pipeline:
+
+Example Aggregation Pipeline
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Consider the following pipeline:
 
@@ -106,13 +135,25 @@ Consider the following pipeline:
    :linenos:
 
    db.movies.aggregate([
-     {$project: {_id: 0, genres: 1, imdb: 1, title: 1} }, 
-     {$unwind: "$genres" },
-     {$group: 
+
+     // First Stage
+
+     { $project: {_id: 0, genres: 1, imdb: 1, title: 1} }, 
+
+     // Second Stage
+
+     { $unwind: "$genres" },
+
+     // Third Stage
+
+     { $group: 
        { _id: "$genres", 
          averageGenreRating: { $avg: "$imdb.rating" } 
        } 
      },
+
+      // Fourth Stage
+
       { $sort: { averageGenreRating: -1 } }
    ] )
 
@@ -140,69 +181,45 @@ First Stage
      The ``$project`` pipeline in the example suppresses the ``_id``
      field from the documents it passes to the next stage.
 
+  The ``$project`` pipeline in the example transforms the example
+  document and passes the following output to the next pipeline stage:
+
+  .. code-block:: javascript
+     :linenos:
+     :copyable: false
+
+     {
+       imdb: { rating: 8.2, votes: 419589, id: 83658 },
+       genres: [ 'Sci-Fi', 'Thriller' ],
+       title: 'Blade Runner'
+     }
+
 Second Stage
   The :pipeline:`$unwind <$unwind>` stage passes a document for each
   element in the ``genres`` array to the next pipeline stage.
 
-  Consider the following document:
+  The ``$unwind`` pipeline in the example passes two transformations of
+  the example document to the next pipeline stage:
 
   .. code-block:: javascript
-     :copyable: false
      :linenos:
-     :emphasize-lines: 7
+     :copyable: false
 
      {
-       _id: 573a1397f29313caabce8347,
-       fullplot: 'In a cyberpunk vision of the future, man has developed the technology to create replicants, human clones used to serve in the colonies outside Earth but with fixed lifespans. In Los Angeles, 2019, Deckard is a Blade Runner, a cop who specializes in terminating replicants. Originally in retirement, he is forced to re-enter the force when four replicants escape from an off-world colony to Earth.',
        imdb: { rating: 8.2, votes: 419589, id: 83658 },
-       year: 1982,
-       plot: 'A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.',
-       genres: [ 'Sci-Fi', 'Thriller' ],
-       rated: 'R',
-       metacritic: 88,
-       title: 'Blade Runner',
-       lastupdated: '2015-09-04 00:05:51.990000000',
-       languages: [ 'English', 'German', 'Cantonese', 'Japanese', 'Hungarian' ],
-       writers: [
-         'Hampton Fancher (screenplay)',
-         'David Webb Peoples (screenplay)',
-         'Philip K. Dick (novel)'
-       ],
-       type: 'movie',
-       tomatoes: {
-         viewer: { rating: 4, numReviews: 331213, meter: 91 },
-         dvd: 1997-08-27T00:00:00.000Z,
-         critic: { rating: 8.5, numReviews: 102, meter: 90 },
-         lastUpdated: 2015-09-12T17:48:21.000Z,
-         consensus: "Misunderstood when it first hit theaters, the influence of Ridley Scott's mysterious, neo-noir Blade Runner has deepened with time. A visually remarkable, achingly human sci-fi masterpiece.",
-         rotten: 10,
-         production: 'Warner Bros. Pictures',
-         fresh: 92
-       },
-       poster: 'https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_SX677_AL_.jpg',
-       num_mflix_comments: 1,
-       released: 1982-06-25T00:00:00.000Z,
-       awards: {
-         wins: 13,
-         nominations: 15,
-         text: 'Nominated for 2 Oscars. Another 11 wins & 15 nominations.'
-       },
-       countries: [ 'USA', 'Hong Kong', 'UK' ],
-       cast: [
-         'Harrison Ford',
-         'Rutger Hauer',
-         'Sean Young',
-         'Edward James Olmos'
-       ],
-       directors: [ 'Ridley Scott' ],
-       runtime: 117
+       genres: 'Sci-Fi',
+       title: 'Blade Runner'
      }
 
-  For this document, the ``$unwind`` pipeline in the example passes two
-  documents to the next stage in the pipeline:
+  .. code-block:: javascript
+     :linenos:
+     :copyable: false
 
-  - One where the ``genres`` field is ``'Sci-Fi'``, and
-  - Another where ``genres`` field is ``'Thriller'``.
+     {
+       imdb: { rating: 8.2, votes: 419589, id: 83658 },
+       genres: 'Thriller',
+       title: 'Blade Runner'
+     }
 
 Third Stage
   The :pipeline:`$group <$group>` stage:
@@ -249,7 +266,11 @@ Fourth Stage
   from the previous stage in descending order based on the value of 
   the ``averageGenreRating`` field.
 
-When you run the example pipeline, the |mdb-shell| prints documents
+Run the Example Pipeline
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you run the :ref:`example pipeline
+<mdb-shell-example-agg-pipeline>`, the |mdb-shell| prints documents
 similar to the following to the terminal:
 
 .. code-block:: javascript
