@@ -266,8 +266,6 @@ Fourth Stage
   from the previous stage in descending order based on the value of 
   the ``averageGenreRating`` field.
 
-Run the Example Pipeline
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you run the :ref:`example pipeline
 <mdb-shell-example-agg-pipeline>`, the |mdb-shell| prints documents
