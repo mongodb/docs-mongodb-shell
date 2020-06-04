@@ -145,7 +145,7 @@ Consider the following pipeline:
 
      // First Stage
 
-     { $project: {_id: 0, genres: 1, imdb: 1, title: 1} }, 
+     { $project: { _id: 0, genres: 1, imdb: 1, title: 1 } }, 
 
      // Second Stage
 
@@ -185,11 +185,14 @@ First Stage
 
   .. note::
 
-     The ``$project`` pipeline in the example suppresses the ``_id``
-     field from the documents it passes to the next stage.
+    The ``$project`` stage specifies ``_id: 0`` to suppress the ``_id``
+    field from the documents it passes to the next stage.
 
-  The ``$project`` pipeline in the example transforms the example
-  document and passes the following output to the next pipeline stage:
+    For more information, see the :manual:`MongoDB Manual
+    </reference/operator/aggregation/project/#suppress-id-field-in-the-output-documents>`.
+
+  The ``$project`` stage transforms the example document and passes 
+  the following output to the next pipeline stage:
 
   .. code-block:: javascript
      :linenos:
@@ -205,8 +208,9 @@ Second Stage
   The :pipeline:`$unwind <$unwind>` stage passes a document for each
   element in the ``genres`` array to the next pipeline stage.
 
-  The ``$unwind`` pipeline in the example passes two transformations of
-  the example document to the next pipeline stage:
+  The ``$unwind`` stage generates the following two documents from the
+  original example document, then passes them to the next pipeline
+  stage:
 
   .. code-block:: javascript
      :linenos:
@@ -240,7 +244,7 @@ Third Stage
     genre, and
   - Passes the new documents to the next pipeline stage.
 
-  This pipeline sends documents that look similar to the following to 
+  This stage sends documents that look similar to the following to 
   the next pipeline stage:
 
   .. code-block:: javascript
@@ -272,7 +276,6 @@ Fourth Stage
   The :pipeline:`$sort <$sort>` stage sorts the documents it receives
   from the previous stage in descending order based on the value of 
   the ``averageGenreRating`` field.
-
 
 When you run the :ref:`example pipeline
 <mdb-shell-example-agg-pipeline>`, the |mdb-shell| prints documents
