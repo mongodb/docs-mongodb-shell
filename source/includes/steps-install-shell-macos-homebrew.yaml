@@ -5,7 +5,7 @@ level: 4
 content: |
 
    Refer to the `Homebrew <https://brew.sh/>`__ website
-   for instructions to install Homebrew on macOS.
+   for the steps to install Homebrew on macOS.
 ---
 title: "Tap the MongoDB Homebrew Tap."
 ref: tab-mongodb
