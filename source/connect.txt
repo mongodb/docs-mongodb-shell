@@ -85,7 +85,8 @@ To specify a remote host and port, you can use:
      your connection string from the |service| UI. To learn more, see 
      :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
-- The command-line option ``--host``.
+- The command-line option ``--host``, specifying a port in the format 
+``<host>:<port>``.
 
   .. example:: 
 
