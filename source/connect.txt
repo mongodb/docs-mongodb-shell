@@ -50,7 +50,7 @@ To specify a port to connect to on localhost, you can use:
   
      .. code-block:: sh
   
-        mongosh "localhost:28015"
+        mongosh "mongodb://localhost:28015"
 
 - The command-line option ``--port``.
 
