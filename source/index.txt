@@ -65,8 +65,8 @@ Once you have installed the |mdb-shell| and added it to you system
 
 .. _mdb-shell-multi-line:
 
-Multi-Line Operations in the |mdb-shell|
-----------------------------------------
+|mdb-shell| Editor Mode
+-----------------------
 
 Run the ``.editor`` command within the |mdb-shell| to open the editor
 and manage comprehensive multiline functions:
@@ -103,12 +103,6 @@ and manage comprehensive multiline functions:
 
 When you close the editor, the |mdb-shell| does not save any functions
 you had entered into the editor.
-
-.. note::
-
-   Currently, ``editor()`` is the only way to paste multiline commands
-   into the |mdb-shell|.
-
 
 The |mdb-shell| versus the Legacy ``mongo`` Shell
 -------------------------------------------------
