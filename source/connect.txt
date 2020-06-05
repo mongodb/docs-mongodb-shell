@@ -34,7 +34,7 @@ This is equivalent to the following command:
 
 .. code-block:: sh
 
-   mongosh "localhost:27017"
+   mongosh "mongodb://localhost:27017"
 
 Local MongoDB Instance on a Non-Default Port
 --------------------------------------------
