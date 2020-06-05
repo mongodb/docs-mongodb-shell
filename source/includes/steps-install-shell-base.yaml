@@ -34,7 +34,7 @@ content: |
 
    .. code-block:: sh
 
-     chmod +x /path/to/mongosh
+      chmod +x /path/to/mongosh
 ---
 title: "Add the MongoDB Shell binary to your ``PATH`` environment
    variable."
