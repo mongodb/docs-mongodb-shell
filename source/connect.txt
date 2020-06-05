@@ -39,17 +39,29 @@ This is equivalent to the following command:
 Local MongoDB Instance on a Non-Default Port
 --------------------------------------------
 
-To specify a port to connect to on localhost, use the 
-:manual:`connection string </reference/connection-string>` format. 
+To specify a port to connect to on localhost, you can use:
 
-.. example::
+- A :manual:`connection string </reference/connection-string>`. 
 
-   To connect to a MongoDB instance running on localhost with a 
-   non-default port 28015:
+  .. example::
+  
+     To connect to a MongoDB instance running on localhost with a 
+     non-default port 28015:
+  
+     .. code-block:: sh
+  
+        mongosh "localhost:28015"
 
-   .. code-block:: sh
+- The command-line option ``--port``.
 
-      mongosh "localhost:28015"
+  .. example:: 
+
+     To connect to a MongoDB instance running on localhost with a 
+     non-default port 28015:
+
+     .. code-block:: sh
+
+        mongosh --port 28015
 
 MongoDB Instance on a Remote Host
 ---------------------------------
@@ -73,14 +85,14 @@ To specify a remote host and port, you can use:
      your connection string from the |service| UI. To learn more, see 
      :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
-- Command line options ``--host`` and ``--port``.
+- Command-line options ``--host`` and ``--port``.
 
   .. example:: 
 
      To connect to a MongoDB
      instance running on a remote host machine on port 28015:
 
-     .. code-block:: sh
+     .. code-block:: text
 
         mongosh --host mongodb://mongodb0.example.com --port 28015
 
