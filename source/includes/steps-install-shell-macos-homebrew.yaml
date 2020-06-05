@@ -4,12 +4,8 @@ ref: install-homebrew
 level: 4
 content: |
 
-   Run the following command to install the
-   `Homebrew <https://brew.sh/>`__ package manager:
-
-   .. code-block:: sh
-  
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   Refer to the `Homebrew <https://brew.sh/>`__ website
+   for instructions to install Homebrew on macOS.
 ---
 title: "Tap the MongoDB Homebrew Tap."
 ref: tab-mongodb

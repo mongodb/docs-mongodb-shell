@@ -50,9 +50,13 @@ Procedure
          minimum `node.JS <https://nodejs.org/en/download/>`__ version
          of ``12.0.0``.
 
-      Homebrew is the recommended installation method for ``mongosh``
-      on macOS. To learn how to manually install ``mongosh`` from an
-      archive, see :ref:`macos-install-archive`.
+         To view the complete list of system requirements for Homebrew,
+         see the
+         `Homebrew Website <https://docs.brew.sh/Installation>`__.
+
+      The Homebrew package manager is the recommended installation
+      method for ``mongosh`` on macOS. To learn how to manually install
+      ``mongosh`` from an archive, see :ref:`macos-install-archive`.
 
       To install ``mongosh`` with Homebrew:
 
