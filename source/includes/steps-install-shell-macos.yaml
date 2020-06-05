@@ -23,5 +23,17 @@ source:
   file: steps-install-shell-base.yaml
   ref: add-shell-to-path
 ref: add-shell-to-path-macos
+---
+title: "Allow macOS to Run ``mongosh``."
+ref: remove-quarantine-macos
+level: 4
+content: |
+   macOS may prevent ``mongosh`` from running after installation. If
+   you receive a security error when starting ``mongosh`` indicating
+   that the developer could not be identified or verified, run
+   the following command:
 
+   .. code-block:: sh
+
+      xattr -r -d com.apple.quarantine /path/to/mongosh
 ...
