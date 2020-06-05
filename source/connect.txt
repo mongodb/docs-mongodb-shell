@@ -54,23 +54,35 @@ To specify a port to connect to on localhost, use the
 MongoDB Instance on a Remote Host
 ---------------------------------
 
-To specify a remote host and port, use a 
-:manual:`connection string </reference/connection-string>`.
+To specify a remote host and port, you can use:
 
-.. example:: 
+- A :manual:`connection string </reference/connection-string>`.
 
-   To connect to a MongoDB
-   instance running on a remote host machine on port 28015:
+  .. example:: 
 
-   .. code-block:: sh
+     To connect to a MongoDB
+     instance running on a remote host machine on port 28015:
 
-      mongosh "mongodb://mongodb0.example.com:28015"
+     .. code-block:: sh
 
-.. note:: Connecting to |service|
+        mongosh "mongodb://mongodb0.example.com:28015"
 
-   If your remote host is a |service-fullname| cluster, you can copy 
-   your connection string from the |service| UI. To learn more, see 
-   :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
+  .. note:: Connecting to |service|
+  
+     If your remote host is a |service-fullname| cluster, you can copy 
+     your connection string from the |service| UI. To learn more, see 
+     :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
+
+- Command line options ``--host`` and ``--port``.
+
+  .. example:: 
+
+     To connect to a MongoDB
+     instance running on a remote host machine on port 28015:
+
+     .. code-block:: sh
+
+        mongosh --host mongodb://mongodb0.example.com --port 28015
 
 Connection Options
 ------------------
