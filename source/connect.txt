@@ -97,7 +97,7 @@ To specify a remote host and port, you can use:
 
         mongosh --host mongodb://mongodb0.example.com:28015
 
-- Command-line options ``--host`` and ``--port``.
+- The command-line options ``--host`` and ``--port``.
 
   .. example:: 
 
