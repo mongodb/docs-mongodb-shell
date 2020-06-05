@@ -73,7 +73,7 @@ To specify a remote host and port, you can use:
   .. example:: 
 
      To connect to a MongoDB
-     instance running on a remote host machine on port 28015:
+     instance running on a remote host on port 28015:
 
      .. code-block:: sh
 
