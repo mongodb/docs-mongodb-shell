@@ -85,19 +85,8 @@ To specify a remote host and port, you can use:
      your connection string from the |service| UI. To learn more, see 
      :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
-- The command-line option ``--host``, 
-  specifying a port in the format ``<host>:<port>``.
-
-  .. example:: 
-
-     To connect to a MongoDB
-     instance running on a remote host on port 28015:
-
-     .. code-block:: sh
-
-        mongosh --host mongodb0.example.com
-
-- The command-line options ``--host`` and ``--port``.
+- The command-line options ``--host`` and ``--port``. If you do not 
+  specify a port, ``mongosh`` uses the **default port** 27017.
 
   .. example:: 
 
