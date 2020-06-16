@@ -86,7 +86,8 @@ To specify a remote host and port, you can use:
      :atlas:`Connect to a Cluster <connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
 - The command-line options ``--host`` and ``--port``. If you do not 
-  specify a port, ``mongosh`` uses the **default port** 27017.
+  include the ``--port`` option, ``mongosh`` uses the **default port** 
+  27017.
 
   .. example:: 
 
