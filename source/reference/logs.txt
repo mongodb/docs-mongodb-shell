@@ -34,16 +34,18 @@ file.
 Open the following file in a text editor to view the |mdb-shell| command
 history:
 
-.. tab::
-   :tabid: macOS and Linux
+.. tabs::
 
-   .. code-block:: sh
+   .. tab::
+      :tabid: macOS and Linux
 
-      ~/.mongodb/mongosh/.mongosh_repl_history
+      .. code-block:: sh
 
-.. tab::
-   :tabid: windows
+         ~/.mongodb/mongosh/.mongosh_repl_history
 
-   .. code-block:: sh
+   .. tab::
+      :tabid: windows
 
-      %UserProfile%/.mongodb/mongosh/.mongosh_repl_history
+      .. code-block:: sh
+
+         %UserProfile%/.mongodb/mongosh/.mongosh_repl_history
