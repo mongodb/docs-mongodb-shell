@@ -1,0 +1,49 @@
+.. _mdb-shell-logs:
+
+==================
+MongoDB Shell Logs
+==================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. include:: /includes/admonitions/fact-mdb-shell-beta.rst
+
+|mdb-shell| stores logs for each session in `ndjson
+<http://ndjson.org/>`__ format using `pino
+<https://github.com/pinojs/pino>`__. With a Session ID, you can view or
+tail the logs for that |mdb-shell| session.
+
+View |mdb-shell| Logs
+---------------------
+
+.. include:: /includes/steps/view-logs.rst
+
+View |mdb-shell| Command History
+--------------------------------
+
+|mdb-shell| saves a history of all commands you've run across sessions.
+When a new command is issued, it is added to the top of the history
+file.
+
+Open the following file in a text editor to view the |mdb-shell| command
+history:
+
+.. tab::
+   :tabid: macOS and Linux
+
+   .. code-block:: sh
+
+      ~/.mongodb/mongosh/.mongosh_repl_history
+
+.. tab::
+   :tabid: windows
+
+   .. code-block:: sh
+
+      %UserProfile%/.mongodb/mongosh/.mongosh_repl_history
