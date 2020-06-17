@@ -27,71 +27,57 @@ content: |
   |mdb-shell| saves the log for each session to your user's
   ``.mongodb/mongosh`` directory:
 
-  .. tab::
-     :tabid: macOS and Linux
+  .. tabs::
 
-     .. code-block:: sh
+     .. tab::
+        :tabid: macOS and Linux
 
-        ~/.mongodb/mongosh/<sessionId>_log
+        .. code-block:: sh
 
-  .. tab::
-     :tabid: windows
+           ~/.mongodb/mongosh/<sessionId>_log
 
-     .. code-block:: sh
+        Run the following command to view the log for a session:
 
-        %UserProfile%/.mongodb/mongosh/<sessionId>_log
+        .. code-block:: sh
 
-  .. tab::
-     :tabid: macOS and Linux
-     :hidden: true
+           cat ~/.mongodb/mongosh/<sessionId>_log
 
-     Run the following command to view the log for a session:
+        Run the following command to tail the log for a session:
 
-     .. code-block:: sh
+        .. code-block:: sh
 
-        cat ~/.mongodb/mongosh/<sessionId>_log
+           tail -f ~/.mongodb/mongosh/<sessionId>_log
 
-  .. tab::
-     :tabid: windows
-     :hidden: true
+        .. tip::
 
-     Run the following PowerShell command to view the log for a session:
+           You can pipe the output to an installed ``ndjson`` pretty
+           printer, such as `pino-colada
+           <https://www.npmjs.com/package/pino-colada>`__ 
+           or `pino-pretty <https://www.npmjs.com/package/pino-pretty>`__
+           to improve readability:
 
-     .. code-block:: sh
+           .. code-block:: sh
 
-        Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log
+              tail -f ~/.mongodb/mongosh/<sessionId>_log | pino-colada
 
-  .. tab::
-     :tabid: macOS and Linux
-     :hidden: true
+     .. tab::
+        :tabid: windows
 
-      Run the following command to tail the log for a session:
+        .. code-block:: sh
 
-     .. code-block:: sh
+           %UserProfile%/.mongodb/mongosh/<sessionId>_log
 
-        tail -f ~/.mongodb/mongosh/<sessionId>_log
+        Run the following PowerShell command to view the log for a session:
 
-     .. tip::
+        .. code-block:: sh
 
-        You can pipe the output to an installed ``ndjson`` pretty
-        printer, such as `pino-colada
-        <https://www.npmjs.com/package/pino-colada>`__ 
-        or `pino-pretty <https://www.npmjs.com/package/pino-pretty>`__
-        to improve readability:
+           Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log
 
-         .. code-block:: sh
+        Run the following PowerShell command to tail the log for a
+        session:
 
-            tail -f ~/.mongodb/mongosh/<sessionId>_log | pino-colada
+        .. code-block:: sh
 
-  .. tab::
-     :tabid: windows
-     :hidden: true
-
-      Run the following PowerShell command to tail the log for a
-      session:
-
-     .. code-block:: sh
-
-        Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log -Wait
+           Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log -Wait
 
 ...
