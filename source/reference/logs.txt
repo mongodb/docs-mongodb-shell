@@ -31,13 +31,13 @@ View |mdb-shell| Command History
 When a new command is issued, it is added to the top of the history
 file.
 
-Open the following file in a text editor to view the |mdb-shell| command
-history:
-
 .. tabs::
 
    .. tab::
       :tabid: macOS and Linux
+
+      Open the following file in a text editor to view the |mdb-shell|
+      command history:
 
       .. code-block:: sh
 
@@ -45,6 +45,9 @@ history:
 
    .. tab::
       :tabid: windows
+
+      Open the following file in a text editor to view the |mdb-shell|
+      command history:
 
       .. code-block:: sh
 
