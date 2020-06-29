@@ -1,0 +1,259 @@
+.. _mdb-shell-help:
+
+===========================
+Access the |mdb-shell| Help
+===========================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+``mongosh`` provides additional help information in its "online"
+help system. This document provides an overview of accessing this help
+information. 
+
+.. _mdb-shell-help-command-line:
+
+Command Line Help
+-----------------
+
+To see the list of options and help for starting ``mongosh``, use the
+``--help`` option from the command line:
+
+.. code-block:: sh
+
+   mongosh --help
+
+Shell Help
+----------
+
+To see the list of help, in ``mongosh``, type ``help``:
+
+.. code-block:: javascript
+
+   help
+
+.. _mdb-shell-help-db:
+
+Database Help
+-------------
+
+In ``monogsh``:
+
+- To see the list of databases on the server, use the ``show dbs``
+  command:
+
+  .. code-block:: javascript
+
+     show dbs
+
+  ``show databases`` is an alias for ``show dbs``.
+
+- To see the list of help for methods you can use on the ``db``
+  object, call the ``db.help()`` method or run the ``db.help`` command:
+
+  .. include:: /includes/admonitions/help-interchangeable.rst
+
+  .. code-block:: javascript
+
+     db.help()
+
+  The output resembles the following:
+
+  .. code-block:: none
+     :copyable: false
+
+     Database Class:
+
+       getMongo                Returns the current database connection
+       getCollectionNames      Returns an array containing the names of
+                               all collections in the current database.
+       getCollectionInfos      Returns an array of documents with
+                               collection information, i.e. collection
+                               name and options, for the current
+                               database.
+       runCommand              Runs an arbitrary command on the
+                               database. 
+       adminCommand            Runs an arbitrary command against the
+                               admin database. 
+       aggregate               Runs a specified admin/diagnostic
+                               pipeline which does not require an
+                               underlying collection.
+       getSiblingDB            Returns another database without
+                               modifying the db variable in the shell
+                               environment. 
+       getCollection           Removes the current database, deleting
+                               the associated data files.
+       dropDatabase            Removes the current database, deleting
+                               the associated data files.
+
+- To see the implementation of a method in ``mongosh``, type the
+  ``db.<method name>`` without the parenthesis (``()``), as in the
+  following example which will return the implementation of the method
+  :method:`db.adminCommand()`:
+
+  .. code-block:: javascript
+
+     db.adminCommand
+
+  The output resembles the following:
+
+  .. code-block:: javascript
+     :copyable: false
+
+     [Function] {
+       serverVersions: [ '3.4.0', '4.4.0' ],
+       returnsPromise: true,
+       topologies: [ 0, 2, 1 ],
+       returnType: { type: 'unknown', attributes: {} },
+       platforms: [ 0, 1, 2 ],
+       help: [Function] Help
+     }
+
+
+.. _mdb-shell-help-collection:
+
+Collection Help
+---------------
+
+In ``mongosh``:
+
+- To see the list of collections in the current database, use the
+  ``show collections`` command:
+
+  .. code-block:: javascript
+
+     show collections
+  
+- To see the help for methods available on the collection objects
+  (e.g. ``db.<collection>``), use the ``db.<collection>.help()``
+  method:
+
+  .. include:: /includes/admonitions/help-interchangeable.rst
+
+  .. code-block:: javascript
+
+     db.collection.help()
+
+  ``<collection>`` can be the name of a collection that exists,
+  although you may specify a collection that doesn't exist.
+
+  The output resembles the following:
+
+  .. code-block:: none
+     :copyable: false
+
+     Collection Class:
+
+       aggregate               Calculates aggregate values for the
+                               data in a collection or a view.
+       bulkWrite               Performs multiple write operations
+                               with controls for order of execution.
+       count                   Returns the count of documents that
+                               would match a find() query for the
+                               collection or view.
+       countDocuments          Returns the count of documents that
+                               match the query for a collection or view.
+       deleteMany              Removes all documents that match the
+                               filter from a collection.
+       deleteOne               Removes a single document from a
+                               collection. 
+       distinct                Finds the distinct values for a specified
+                               field across a single collection or view
+                               and returns the results in an array.
+       estimatedDocumentCount  Returns the count of all documents in a
+                               collection or view.
+       find                    Selects documents in a collection or view.
+       
+       ...
+
+- To see the collection method implementation, type the
+  ``db.<collection>.<method>`` name without the parenthesis (``()``),
+  as in the following example which will return the implementation of
+  the :method:`~db.collection.save()` method:
+
+  .. code-block:: javascript
+
+     db.collection.save
+
+  The output resembles the following:
+
+  .. code-block:: javascript
+     :copyable: false
+
+     [Function] {
+       serverVersions: [ '0.0.0', '4.0.0' ],
+       returnsPromise: true,
+       topologies: [ 0, 2, 1 ],
+       returnType: { type: 'unknown', attributes: {} },
+       platforms: [ 0, 1, 2 ],
+       help: [Function] Help
+     }
+
+.. _mongo-shell-help-cursor:
+
+Cursor Help
+-----------
+
+When you perform :ref:`read operations <read-operations-queries>` with
+the :method:`~db.collection.find()` method in the
+:binary:`~bin.mongo` shell, you can use various cursor methods to modify
+the :method:`~db.collection.find()` behavior and various
+JavaScript methods to handle the cursor returned from the
+:method:`~db.collection.find()` method.
+
+- To list the available modifier and cursor handling methods, use the
+  ``db.collection.find().help()`` command:
+
+  .. code-block:: javascript
+
+     db.collection.find().help()
+
+  ``<collection>`` can be the name of a collection that exists,
+  although you may specify a collection that doesn't exist.
+
+- To see the implementation of the cursor method, type the
+  ``db.<collection>.find().<method>`` name without the parenthesis
+  (``()``), as in the following example which will return the
+  implementation of the ``toArray()`` method:
+
+  .. code-block:: javascript
+
+     db.collection.find().toArray
+
+Some useful methods for handling cursors are:
+
+- :method:`~cursor.hasNext()` which checks whether the
+  cursor has more documents to return.
+
+- :method:`~cursor.next()` which returns the next document and
+  advances the cursor position forward by one.
+
+- :method:`forEach(\<function\>) <cursor.forEach()>` which iterates the
+  whole cursor and applies the ``<function>`` to each document returned
+  by the cursor. The ``<function>`` expects a single argument which
+  corresponds to the document from each iteration.
+
+For examples on iterating a cursor and retrieving the documents from
+the cursor, see :doc:`cursor handling </tutorial/iterate-a-cursor>`. See
+also :ref:`js-query-cursor-methods` for all available cursor methods.
+
+.. _mongo-shell-type-help:
+
+Wrapper Object Help
+-------------------
+
+To get a list of the wrapper classes available in the :binary:`~bin.mongo`
+shell, such as ``BinData()``, type ``help misc`` in the
+:binary:`~bin.mongo` shell:
+
+.. code-block:: javascript
+
+   help misc
+
+.. seealso:: :doc:`/reference/method`
+
