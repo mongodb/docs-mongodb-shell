@@ -16,6 +16,12 @@ Access the |mdb-shell| Help
 This document provides an overview of accessing this help
 information.
 
+.. tip::
+
+   When accessing :ref:`database <mdb-shell-help-db>` and
+   :ref:`collection <mdb-shell-help-collection>` help in ``mongosh``,
+   you can use the ``.help()`` and ``.help`` syntaxes interchangeably.
+
 .. _mdb-shell-help-command-line:
 
 Command Line Help
@@ -31,8 +37,6 @@ To see the list of options and help for starting ``mongosh``, use the
 Shell Help
 ----------
 
-.. include:: /includes/admonitions/help-interchangeable.rst
-
 To see a basic list of commands you can run, in ``mongosh``, type
 ``help``:
 
@@ -45,9 +49,8 @@ To see a basic list of commands you can run, in ``mongosh``, type
 Database Help
 -------------
 
-In ``monogsh``:
-
-- To see the list of databases on the server, use the ``show dbs``
+Show List of Databases
+  To see the list of databases on the server, use the ``show dbs``
   command:
 
   .. code-block:: javascript
@@ -56,10 +59,9 @@ In ``monogsh``:
 
   ``show databases`` is an alias for ``show dbs``.
 
-- To see the list of help for methods you can use on the ``db``
+Show List of Database Methods
+  To see the list of methods you can use on the ``db``
   object, call the ``db.help()`` method or run the ``db.help`` command:
-
-  .. include:: /includes/admonitions/help-interchangeable.rst
 
   .. code-block:: javascript
 
@@ -94,7 +96,8 @@ In ``monogsh``:
        dropDatabase            Removes the current database, deleting
                                the associated data files.
 
-- To see help for a specific database method in ``mongosh``, type the
+Show Help for Specific Database Method
+  To see help for a specific database method in ``mongosh``, type the
   ``db.<method name>``, followed by ``.help`` or ``.help()``. The
   following example returns help for the :method:`db.adminCommand()`
   method:
@@ -113,7 +116,8 @@ In ``monogsh``:
 
        For more information on usage: https://docs.mongodb.com/manual/reference/method/db.adminCommand
 
-- To see additional usage details for a database method in ``mongosh``,
+Show Additional Usage Details for a Database Method
+  To see additional usage details for a database method in ``mongosh``,
   type the ``db.<method name>`` without the parenthesis (``()``). The
   following example returns details about the
   :method:`db.adminCommand()` method:
@@ -142,20 +146,18 @@ In ``monogsh``:
 Collection Help
 ---------------
 
-In ``mongosh``:
-
-- To see the list of collections in the current database, use the
+Show List of Collections
+  To see the list of collections in the current database, use the
   ``show collections`` command:
 
   .. code-block:: javascript
 
      show collections
   
-- To see the help for methods available on the collection objects
+Show List of Collection Methods
+  To see the list of methods available on the collection objects
   (e.g. ``db.<collection>``), use the ``db.<collection>.help()``
   method:
-
-  .. include:: /includes/admonitions/help-interchangeable.rst
 
   .. code-block:: javascript
 
@@ -193,12 +195,11 @@ In ``mongosh``:
        
        ...
 
-- To see help for a specific collection method in ``mongosh``, type the
+Show Help for Specific Collection Method
+  To see help for a specific collection method in ``mongosh``, type the
   ``db.<collection>.<method name>``, followed by ``.help`` or
   ``.help()``. The following example returns help for the
   :method:`db.collection.insertOne()` method:
-
-  .. include:: /includes/admonitions/help-interchangeable.rst
 
   .. code-block:: javascript
 
@@ -215,7 +216,8 @@ In ``mongosh``:
 
      For more information on usage: https://docs.mongodb.com/manual/reference/method/db.collection.insertOne
 
-- To see additional usage details for a collection method in
+Show Additional Usage Details for a Collection Method
+  To see additional usage details for a collection method in
   ``mongosh``, type the ``db.<collection>.<method>`` name without the
   parenthesis (``()``) The following example returns
   details about the :method:`~db.collection.insertOne()` method:
