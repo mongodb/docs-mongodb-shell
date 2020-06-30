@@ -91,10 +91,31 @@ In ``monogsh``:
        dropDatabase            Removes the current database, deleting
                                the associated data files.
 
-- To see the implementation of a method in ``mongosh``, type the
-  ``db.<method name>`` without the parenthesis (``()``), as in the
-  following example which will return the implementation of the method
-  :method:`db.adminCommand()`:
+- To see help for a specific database method in ``mongosh``, type the
+  ``db.<method name>`` without the parenthesis (``()``), followed by
+  ``.help`` or ``.help()``. The following example returns help for the
+  :method:`db.adminCommand()` method:
+
+  .. include:: /includes/admonitions/help-interchangeable.rst
+
+  .. code-block:: javascript
+
+     db.adminCommand.help()
+
+  The output resembles the following:
+
+  .. code-block:: none
+
+       db.adminCommand({ serverStatus: 1 }):
+
+       Runs an arbitrary command against the admin database.
+
+       For more information on usage: https://docs.mongodb.com/manual/reference/method/db.adminCommand
+
+- To see additional usage details for a database method in ``mongosh``,
+  type the ``db.<method name>`` without the parenthesis (``()``). The
+  following example returns details about the
+  :method:`db.adminCommand()` method:
 
   .. code-block:: javascript
 
@@ -171,14 +192,36 @@ In ``mongosh``:
        
        ...
 
-- To see the collection method implementation, type the
-  ``db.<collection>.<method>`` name without the parenthesis (``()``),
-  as in the following example which will return the implementation of
-  the :method:`~db.collection.save()` method:
+- To see help for a specific collection method in ``mongosh``, type the
+  ``db.<collection>.<method name>`` without the parenthesis (``()``),
+  followed by ``.help`` or ``.help()``. The following example returns
+  help for the :method:`db.collection.insertOne()` method:
+
+  .. include:: /includes/admonitions/help-interchangeable.rst
 
   .. code-block:: javascript
 
-     db.collection.save
+     db.collection.insertOne.help()
+
+  The output resembles the following:
+
+  .. code-block:: none
+     :copyable: false
+
+     db.collection.insertOne(document, options):
+
+     Inserts a document into a collection.
+
+     For more information on usage: https://docs.mongodb.com/manual/reference/method/db.collection.insertOne
+
+- To see additional usage details for a collection method in
+  ``mongosh``, type the ``db.<collection>.<method>`` name without the
+  parenthesis (``()``) The following example returns
+  details about the :method:`~db.collection.insertOne()` method:
+
+  .. code-block:: javascript
+
+     db.collection.insertOne
 
   The output resembles the following:
 
@@ -186,7 +229,7 @@ In ``mongosh``:
      :copyable: false
 
      [Function] {
-       serverVersions: [ '0.0.0', '4.0.0' ],
+       serverVersions: [ '3.2.0', '4.4.0' ],
        returnsPromise: true,
        topologies: [ 0, 2, 1 ],
        returnType: { type: 'unknown', attributes: {} },
@@ -194,66 +237,5 @@ In ``mongosh``:
        help: [Function] Help
      }
 
-.. _mongo-shell-help-cursor:
-
-Cursor Help
------------
-
-When you perform :ref:`read operations <read-operations-queries>` with
-the :method:`~db.collection.find()` method in the
-:binary:`~bin.mongo` shell, you can use various cursor methods to modify
-the :method:`~db.collection.find()` behavior and various
-JavaScript methods to handle the cursor returned from the
-:method:`~db.collection.find()` method.
-
-- To list the available modifier and cursor handling methods, use the
-  ``db.collection.find().help()`` command:
-
-  .. code-block:: javascript
-
-     db.collection.find().help()
-
-  ``<collection>`` can be the name of a collection that exists,
-  although you may specify a collection that doesn't exist.
-
-- To see the implementation of the cursor method, type the
-  ``db.<collection>.find().<method>`` name without the parenthesis
-  (``()``), as in the following example which will return the
-  implementation of the ``toArray()`` method:
-
-  .. code-block:: javascript
-
-     db.collection.find().toArray
-
-Some useful methods for handling cursors are:
-
-- :method:`~cursor.hasNext()` which checks whether the
-  cursor has more documents to return.
-
-- :method:`~cursor.next()` which returns the next document and
-  advances the cursor position forward by one.
-
-- :method:`forEach(\<function\>) <cursor.forEach()>` which iterates the
-  whole cursor and applies the ``<function>`` to each document returned
-  by the cursor. The ``<function>`` expects a single argument which
-  corresponds to the document from each iteration.
-
-For examples on iterating a cursor and retrieving the documents from
-the cursor, see :doc:`cursor handling </tutorial/iterate-a-cursor>`. See
-also :ref:`js-query-cursor-methods` for all available cursor methods.
-
-.. _mongo-shell-type-help:
-
-Wrapper Object Help
--------------------
-
-To get a list of the wrapper classes available in the :binary:`~bin.mongo`
-shell, such as ``BinData()``, type ``help misc`` in the
-:binary:`~bin.mongo` shell:
-
-.. code-block:: javascript
-
-   help misc
-
-.. seealso:: :doc:`/reference/method`
-
+.. didn't include the cursor details from the manual help page as
+   it seems as if most of it doesn't apply for ``mongosh``
