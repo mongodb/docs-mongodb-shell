@@ -12,9 +12,9 @@ Access the |mdb-shell| Help
    :depth: 1
    :class: singlecol
 
-``mongosh`` provides additional help information in its "online"
-help system. This document provides an overview of accessing this help
-information. 
+``mongosh`` provides additional help information in its help system.
+This document provides an overview of accessing this help
+information.
 
 .. _mdb-shell-help-command-line:
 
@@ -31,7 +31,10 @@ To see the list of options and help for starting ``mongosh``, use the
 Shell Help
 ----------
 
-To see the list of help, in ``mongosh``, type ``help``:
+.. include:: /includes/admonitions/help-interchangeable.rst
+
+To see a basic list of commands you can run, in ``mongosh``, type
+``help``:
 
 .. code-block:: javascript
 
@@ -92,11 +95,9 @@ In ``monogsh``:
                                the associated data files.
 
 - To see help for a specific database method in ``mongosh``, type the
-  ``db.<method name>`` without the parenthesis (``()``), followed by
-  ``.help`` or ``.help()``. The following example returns help for the
-  :method:`db.adminCommand()` method:
-
-  .. include:: /includes/admonitions/help-interchangeable.rst
+  ``db.<method name>``, followed by ``.help`` or ``.help()``. The
+  following example returns help for the :method:`db.adminCommand()`
+  method:
 
   .. code-block:: javascript
 
@@ -160,8 +161,8 @@ In ``mongosh``:
 
      db.collection.help()
 
-  ``<collection>`` can be the name of a collection that exists,
-  although you may specify a collection that doesn't exist.
+  ``<collection>`` can be the name of an existing or nonexistent
+  collection.
 
   The output resembles the following:
 
@@ -193,9 +194,9 @@ In ``mongosh``:
        ...
 
 - To see help for a specific collection method in ``mongosh``, type the
-  ``db.<collection>.<method name>`` without the parenthesis (``()``),
-  followed by ``.help`` or ``.help()``. The following example returns
-  help for the :method:`db.collection.insertOne()` method:
+  ``db.<collection>.<method name>``, followed by ``.help`` or
+  ``.help()``. The following example returns help for the
+  :method:`db.collection.insertOne()` method:
 
   .. include:: /includes/admonitions/help-interchangeable.rst
 
