@@ -204,6 +204,21 @@ For ``tls`` connections:
 
         mongosh "mongodb://mongodb0.example.com:28015" --tls
 
+Connect to a Specific Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect to a specific database:
+
+- You can specify a database in the URL path when passing a connection
+   string. The database in the URL path is automatically selected unless
+   you specify a different database.
+
+   .. example::
+
+     .. code-block:: sh
+
+         mongosh 'mongodb://localhost:27017/db1' 
+
 Connect to a Different Deployment
 ---------------------------------
 
