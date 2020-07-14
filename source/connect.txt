@@ -211,7 +211,7 @@ To connect to a specific database:
 
 - You can specify a database in the URL path when passing a connection
    string. The database in the URL path is automatically selected unless
-   you specify a different database.
+   you specify a different database. 
 
    .. example::
 
