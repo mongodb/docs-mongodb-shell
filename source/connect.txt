@@ -207,17 +207,19 @@ For ``tls`` connections:
 Connect to a Specific Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a specific database:
-
-- You can specify a database in the URL path when passing a connection
-  string. The database in the URL path is automatically selected unless
-  you specify a different database.
+To connect to a specific database, specify a database in your
+   `Connection string URI path
+   <https://docs.mongodb.com/manual/reference/connection-string/>`__. If
+   you do not specify a database in your URI path, you connect to the
+   Test database by default.
 
    .. example::
 
+     The following connection string URI connects to database db1.
+
      .. code-block:: sh
 
-         mongosh 'mongodb://localhost:27017/db1' 
+         mongosh "mongodb://localhost:27017/db1" 
 
 Connect to a Different Deployment
 ---------------------------------
