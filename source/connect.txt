@@ -208,7 +208,7 @@ Connect to a Specific Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a specific database, specify a database in your
-`Connection string URI path
+`connection string URI path
 <https://docs.mongodb.com/manual/reference/connection-string/>`__. If
 you do not specify a database in your URI path, you connect to a Test
 database by default.
