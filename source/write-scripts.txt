@@ -1,8 +1,8 @@
 .. _mdb-shell-write-scripts:
 
-=======================================
-Write Scripts for {+mdb-shell+}
-=======================================
+=================================
+Write Scripts for the |mdb-shell|
+=================================
 
 .. default-domain:: mongodb
 
@@ -12,10 +12,10 @@ Write Scripts for {+mdb-shell+}
    :depth: 2
    :class: singlecol
 
-You can write scripts for the MongoDB Shell that manipulate data in
+You can write scripts for the |mdb-shell| that manipulate data in
 MongoDB or perform administrative operations.
 
-This tutorial introduces using the MongoDB Shell with JavaScript to
+This tutorial introduces using the |mdb-shell| with JavaScript to
 access MongoDB.
 
 .. _mdb-shell-open-new-connections-in-shell:
@@ -23,7 +23,7 @@ access MongoDB.
 Open a New Connection
 ---------------------
 
-From the MongoDB shell or from a JavaScript file, you can instantiate
+From the |mdb-shell| or from a JavaScript file, you can instantiate
 database connections using the :method:`Mongo()` method:
 
 .. code-block:: javascript
@@ -35,7 +35,7 @@ database connections using the :method:`Mongo()` method:
 
 .. note::
 
-   {+mdb-shell+} does not support the
+   The |mdb-shell| does not support the
    :manual:`ClientSideFieldLevelEncryptionOptions
    </reference/method/Mongo/#clientsidefieldlevelencryptionoptions>`
    document with the :method:`Mongo()` method.
@@ -58,7 +58,7 @@ must include the credentials in the :manual:`connection string
 MongoDB instance that is:
 
 - Running on ``localhost`` on the default port, and
-- secured using :manual:`SCRAM </core/security-scram/>`.
+- Secured using :manual:`SCRAM </core/security-scram/>`.
 
 .. code-block:: javascript
 
@@ -93,7 +93,7 @@ The following example:
 Execute a JavaScript File
 -------------------------
 
-You can execute a ``.js`` file from within the MongoDB shell
+You can execute a ``.js`` file from within the |mdb-shell|
 using the ``.load`` command. The following command loads and executes
 the ``myjstest.js`` file:
 
@@ -101,12 +101,10 @@ the ``myjstest.js`` file:
 
    .load myjstest.js
 
-
-
 The ``.load`` command accepts relative and absolute paths. If the
-current working directory of the MongoDB shell is ``/data/db``,
+current working directory of the |mdb-shell| is ``/data/db``,
 and ``myjstest.js`` resides in the ``/data/db/scripts`` directory, then
-the following calls within the MongoDB shell are equivalent: 
+the following calls within the |mdb-shell| are equivalent: 
 
 .. code-block:: javascript
    :copyable: false
@@ -118,4 +116,4 @@ the following calls within the MongoDB shell are equivalent:
 
    There is no search path for the ``.load`` command. If the desired
    script is not in the current working directory or the full specified
-   path, the MongoDB shell cannot access the file.
+   path, the |mdb-shell| cannot access the file.
