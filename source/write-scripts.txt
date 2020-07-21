@@ -70,8 +70,9 @@ MongoDB instance that is:
 
 .. include:: /includes/admonitions/note-redact-credentials-command-history.rst
 
-Additionally, you can use the :method:`connect()` method to connect to
-the MongoDB instance. The following example:
+Additionally, you can use the :manual:`connect()
+</reference/method/connect/>` method to connect to the MongoDB instance.
+The following example:
 
 - Connects to the MongoDB instance that is running on ``localhost`` with
   the non-default port ``27020``, and 
