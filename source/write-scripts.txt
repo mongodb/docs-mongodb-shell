@@ -1,7 +1,7 @@
 .. _mdb-shell-write-scripts:
 
 =======================================
-Write Scripts for the {+mdb-shell+}
+Write Scripts for {+mdb-shell+}
 =======================================
 
 .. default-domain:: mongodb
@@ -12,18 +12,18 @@ Write Scripts for the {+mdb-shell+}
    :depth: 2
    :class: singlecol
 
-You can write scripts for the {+mdb-shell+} that manipulate data in
+You can write scripts for the MongoDB Shell that manipulate data in
 MongoDB or perform administrative operations.
 
-This tutorial provides an introduction to writing JavaScript that uses 
-the {+mdb-shell+} shell to access MongoDB.
+This tutorial introduces using the MongoDB Shell with JavaScript to
+access MongoDB.
 
 .. _mdb-shell-open-new-connections-in-shell:
 
-Open A New Connection
+Open a New Connection
 ---------------------
 
-From the {+mdb-shell+} or from a JavaScript file, you can instantiate
+From the MongoDB shell or from a JavaScript file, you can instantiate
 database connections using the :method:`Mongo()` method:
 
 .. code-block:: javascript
@@ -35,25 +35,30 @@ database connections using the :method:`Mongo()` method:
 
 .. note::
 
-   The {+mdb-shell+} does not support the
-   ``ClientSideFieldLevelEncryptionOptions`` parameter with the
-   :method:`Mongo()` method.
+   {+mdb-shell+} does not support the
+   :manual:`ClientSideFieldLevelEncryptionOptions
+   </reference/method/Mongo/#clientsidefieldlevelencryptionoptions>`
+   document with the :method:`Mongo()` method.
 
-Consider the following example that instantiates a new connection to the
-MongoDB instance running on localhost on the default port and sets the
-global ``db`` variable to ``myDatabase`` using the :method:`getDB()`
-method:
+Consider a MongoDB instance running on localhost on the default port.
+The following example:
+
+- Instantiates a new connection to the instance, and
+- Sets the global ``db`` variable to ``myDatabase`` using the
+  :method:`getDB()` method. 
 
 .. code-block:: javascript
 
    conn = Mongo();
    db = conn.getDB("myDatabase");
 
-If connecting to a MongoDB instance that enforces access control, you
+If you connect to a MongoDB instance that enforces access control, you
 must include the credentials in the :manual:`connection string
-</reference/connection-string/>`. The following example shows you how
-to connect to a MongoDB instance running on ``localhost`` on the default
-port secured using :manual:`SCRAM </core/security-scram/>`:
+</reference/connection-string/>`. The following example connects to a
+MongoDB instance that is:
+
+- Running on ``localhost`` on the default port, and
+- secured using :manual:`SCRAM </core/security-scram/>`.
 
 .. code-block:: javascript
 
@@ -66,9 +71,11 @@ port secured using :manual:`SCRAM </core/security-scram/>`:
 .. include:: /includes/admonitions/note-redact-credentials-command-history.rst
 
 Additionally, you can use the :method:`connect()` method to connect to
-the MongoDB instance. The following example connects to the MongoDB
-instance that is running on ``localhost`` with the non-default port
-``27020`` and sets the global ``db`` variable:
+the MongoDB instance. The following example:
+
+- Connects to the MongoDB instance that is running on ``localhost`` with
+  the non-default port ``27020``, and 
+- Sets the global ``db`` variable.
 
 .. code-block:: javascript
 
@@ -85,19 +92,20 @@ instance that is running on ``localhost`` with the non-default port
 Execute a JavaScript File
 -------------------------
 
-You can execute a ``.js`` file from within the {+mdb-shell+} shell,
-using the ``.load`` command, as in the following: 
+You can execute a ``.js`` file from within the MongoDB shell
+using the ``.load`` command. The following command loads and executes
+the ``myjstest.js`` file:
 
 .. code-block:: javascript
 
    .load myjstest.js
 
-This command loads and executes the ``myjstest.js`` file.
+
 
 The ``.load`` command accepts relative and absolute paths. If the
-current working directory of the {+mdb-shell+} shell is ``/data/db``,
+current working directory of the MongoDB shell is ``/data/db``,
 and ``myjstest.js`` resides in the ``/data/db/scripts`` directory, then
-the following calls within the mongo shell would be equivalent: 
+the following calls within the MongoDB shell are equivalent: 
 
 .. code-block:: javascript
    :copyable: false
@@ -107,6 +115,6 @@ the following calls within the mongo shell would be equivalent:
 
 .. note::
 
-   There is no search path for the .load command. If the desired script
-   is not in the current working directory or the full specified path,
-   the {+mdb-shell+} will not be able to access the file.
+   There is no search path for the ``.load`` command. If the desired
+   script is not in the current working directory or the full specified
+   path, the MongoDB shell cannot access the file.
