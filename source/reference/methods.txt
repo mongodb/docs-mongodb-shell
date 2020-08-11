@@ -418,6 +418,10 @@ Database Methods
 
      - Runs admin/diagnostic pipeline which does not require an underlying collection.
 
+   * - :method:`db.commandHelp()`
+
+     - Displays help text for the specified database command.
+
    * - :method:`db.dropDatabase()`
 
      - Removes the current database.
@@ -443,6 +447,10 @@ Database Methods
    * - :method:`db.getSiblingDB()`
 
      - Provides access to the specified database.
+
+   * - :method:`db.listCommands()`
+
+     - Provides a list of all database commands.
 
    * - :method:`db.logout()`
 
