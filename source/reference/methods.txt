@@ -264,17 +264,17 @@ Bulk Operation Methods
 
    * - :method:`db.collection.initializeOrderedBulkOp()`
 
-     - Initializes and returns a new :method:`Bulk <db.collection.Bulk()>` operations
-       builder for a collection. The builder constructs an ordered list of
-       write operations that MongoDB executes in bulk.
+     - Initializes and returns a new :method:`Bulk()` operations builder
+       for a collection. The builder constructs an ordered list of write
+       operations that MongoDB executes in bulk.
 
    * - :method:`db.collection.initializeUnorderedBulkOp()`
 
-     - Initializes and returns a new :method:`db.collection.Bulk()` operations
-       builder for a collection. The builder constructs an unordered list of
-       write operations that MongoDB executes in bulk.
+     - Initializes and returns a new :method:`Bulk()` operations builder
+       for a collection. The builder constructs an unordered list of write
+       operations that MongoDB executes in bulk.
    
-   * - :method:`Bulk <db.collection.Bulk()>`
+   * - :method:`Bulk()`
 
      - Creates a bulk operations builder used to construct a list of write
        operations to perform in bulk for a single collection. To instantiate
@@ -283,7 +283,7 @@ Bulk Operation Methods
 
    * - :method:`Bulk.execute()`
 
-     - Executes the list of operations built by the :method:`db.collection.Bulk()`
+     - Executes the list of operations built by the :method:`Bulk()`
        operations builder.
 
    * - :method:`Bulk.find()`
