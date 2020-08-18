@@ -290,18 +290,6 @@ Bulk Operation Methods
 
      - Specifies a query condition for an update or a remove operation.
 
-   * - :method:`Bulk.find.arrayFilters()`
-
-     - Determines which array elements to modify for an update operation
-       on an array field.
-
-   * - :method:`Bulk.find.collation()`
-
-     - Specifies the :manual:`collation
-       </reference/bson-type-comparison-order/#collation>` for the bulk
-       writes. Append to :method:`Bulk.find()` method to specify collation
-       for the find operation.
-
    * - :method:`Bulk.find.hint()`
 
      - Sets the **hint** option that specifies the index to support the
