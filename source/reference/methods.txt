@@ -667,8 +667,8 @@ standalone and replica set deployments.
 
      - Returns the free cloud monitoring status for your deployment.
 
-Plan Cache Methods
-------------------
+Query Plan Cache Methods
+------------------------
 
 .. list-table::
    :widths: 30 70
@@ -680,23 +680,27 @@ Plan Cache Methods
 
    * - :method:`db.collection.getPlanCache()`
 
-     - description.
+     - Returns an interface to access the query plan cache object and 
+       associated ``PlanCache`` methods for a collection.
 
    * - :method:`PlanCache.clear()`
 
-     - description.
+     - Removes all cached query plans for a collection.
 
    * - :method:`PlanCache.clearPlansByQuery()`
 
-     - description.
+     - Clears the cached query plans for the specified 
+       :term:`query shape`.
 
    * - :method:`PlanCache.help()`
 
-     - description.
+     - Lists the methods available to view and modify a collection’s 
+       query plan cache.
 
    * - :method:`PlanCache.list()`
 
-     - description.
+     - Returns an array of :manual:`plan cache entries </query-plans/>` 
+       for a collection.
 
 Server Status Methods
 ---------------------
