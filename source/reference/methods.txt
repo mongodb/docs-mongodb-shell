@@ -135,7 +135,7 @@ Bulk Operation Methods
        :method:`Bulk.execute()`.
 
    * - :method:`Bulk.insert()`
-
+  
      - Adds an insert operation to a bulk operations list.
 
    * - :method:`Bulk.tojson()`
