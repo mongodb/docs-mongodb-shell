@@ -699,7 +699,8 @@ Query Plan Cache Methods
 
    * - :method:`PlanCache.list()`
 
-     - Returns an array of :manual:`plan cache entries </query-plans/>` 
+     - Returns an array of 
+       :manual:`plan cache entries </core/query-plans/>` 
        for a collection.
 
 Server Status Methods
