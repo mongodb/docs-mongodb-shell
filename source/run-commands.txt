@@ -28,10 +28,12 @@ Terminate a Running Command
 To terminate a running command or query in ``mongosh``,
 press ``Ctrl + C``.
 
-``Ctrl + C`` terminates the process in the shell, but does not
-terminate the process on the MongoDB server. This behavior
-differs from the :method:`db.killOp()` method, which terminates
-commands on the server.
+.. note::
+
+   ``Ctrl+C`` terminates the process in the shell, but does not
+   terminate the process on the MongoDB server. This behavior
+   differs from the :method:`db.killOp()` method, which terminates
+   commands on the server.
 
 Command Exceptions
 ------------------
