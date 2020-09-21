@@ -42,10 +42,10 @@ the server.
 
 .. note::
 
-   In the legacy ``mongo`` shell, when a command's output was
-   ``{ ok: 0}``, the behavior differed between commands. ``mongosh``
-   provides a more consistent user experience by always throwing an
-   exception in these scenarios.
+   In the legacy ``mongo`` shell, when a command's output included ``{
+   ok: 0 }``, the behavior differs between commands. ``mongosh``
+   provides consistent behavior by always throwing an exception in these
+   scenarios.
 
 .. toctree::
    :titlesonly:
