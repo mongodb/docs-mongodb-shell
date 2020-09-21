@@ -58,11 +58,10 @@ the `MongoDB Download Center
 Behavior Updates
 ~~~~~~~~~~~~~~~~
 
-Whenever a shell helper issues a command that results in ``{ ok: 0 }``
-``mongosh`` throws an exception and does not return the raw output from
-the server.
+Whenever a command's output includes ``{ ok: 0 }``, ``mongosh`` throws
+an exception and does not return the raw output from the server.
 
-The legacy ``mongo`` shell error handling was not consistent between
+The legacy ``mongo`` shell error handling is not consistent between
 commands. ``mongosh`` standardizes the user-facing behavior for a
 more consistent experience.
 
