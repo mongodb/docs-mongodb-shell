@@ -1,0 +1,31 @@
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: navigate-dlc
+ref: navigate-dlc-linux-deb
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: open-mdb-shell-page
+ref: open-mdb-shell-page-linux-deb
+---
+source:
+  file: steps-install-shell-base.yaml
+  ref: download-archive
+ref: download-archive-generic-linux
+---
+title: "Extract and install the ``.deb`` package."
+ref: extract-archive-linux-deb
+level: 4
+content: |
+  To install the downloaded ``.deb`` package, either:
+
+  - Double click your downloaded ``.deb`` package icon and follow
+    the prompts.
+
+  - Run the following command from the terminal:
+
+    .. code-block:: sh
+
+       sudo dpkg --install path/to/mongosh_<version>_.deb
+...

@@ -23,5 +23,4 @@ source:
   file: steps-install-shell-base.yaml
   ref: add-shell-to-path
 ref: add-shell-to-path-generic-linux
-
 ...

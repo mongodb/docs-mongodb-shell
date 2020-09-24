@@ -71,8 +71,26 @@ Procedure
 
    .. tab::
       :tabid: linux
+
+      Select your desired Linux installation package from the tabs
+      below:
+
+      .. tabs::
       
-      .. include:: /includes/steps/install-shell-generic-linux.rst
+         .. tab:: .tgz
+            :tabid: tgz
+      
+            .. include:: /includes/steps/install-shell-linux-generic.rst
+
+         .. tab:: .deb (Debian)
+            :tabid: deb
+
+            .. include:: /includes/steps/install-shell-linux-deb.rst
+
+         .. tab:: .rpm (RHEL)
+            :tabid: rpm
+            
+            .. include:: /includes/steps/install-shell-linux-rpm.rst
 
 Next Steps
 ----------
