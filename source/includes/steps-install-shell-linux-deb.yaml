@@ -4,15 +4,9 @@ source:
   ref: navigate-dlc
 ref: navigate-dlc-linux-deb
 ---
-source:
-  file: steps-install-shell-base.yaml
-  ref: open-mdb-shell-page
-ref: open-mdb-shell-page-linux-deb
----
-source:
-  file: steps-install-shell-base.yaml
-  ref: download-archive
-ref: download-archive-generic-linux
+title: "Download the Debian 64-bit ``.deb`` package."
+ref: download-archive-rhel
+level: 4 
 ---
 title: "Extract and install the ``.deb`` package."
 ref: extract-archive-linux-deb
@@ -23,9 +17,10 @@ content: |
   - Double click your downloaded ``.deb`` package icon and follow
     the prompts.
 
-  - Run the following command from the terminal:
+  - Run the following command from the directory containing the
+    ``mongosh`` ``.deb`` package:
 
     .. code-block:: sh
 
-       sudo dpkg --install path/to/mongosh_<version>_.deb
+       sudo dpkg --install mongosh_{+version+}_amd64.deb
 ...

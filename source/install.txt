@@ -72,8 +72,15 @@ Procedure
    .. tab::
       :tabid: linux
 
-      Select your desired Linux installation package from the tabs
-      below:
+      Select the appropriate tab based on your Linux distribution and
+      desired package:
+
+      - For TGZ tarball installation, click the ``.tgz`` tab.
+
+      - For installation on Ubuntu and Debian, click the ``.deb`` tab.
+
+      - For installation on :abbr:`RHEL (Red Hat Enterprise Linux)`,
+        click the ``.rpm`` tab.
 
       .. tabs::
       
@@ -82,12 +89,12 @@ Procedure
       
             .. include:: /includes/steps/install-shell-linux-generic.rst
 
-         .. tab:: .deb (Debian)
+         .. tab:: .deb
             :tabid: deb
 
             .. include:: /includes/steps/install-shell-linux-deb.rst
 
-         .. tab:: .rpm (RHEL)
+         .. tab:: .rpm
             :tabid: rpm
             
             .. include:: /includes/steps/install-shell-linux-rpm.rst

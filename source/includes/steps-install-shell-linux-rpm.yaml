@@ -4,23 +4,18 @@ source:
   ref: navigate-dlc
 ref: navigate-dlc-linux-rpm
 ---
-source:
-  file: steps-install-shell-base.yaml
-  ref: open-mdb-shell-page
-ref: open-mdb-shell-page-linux-rpm
----
-source:
-  file: steps-install-shell-base.yaml
-  ref: download-archive
-ref: download-archive-generic-linux
+title: "Download the Red Hat 64-bit ``.rpm`` package."
+ref: download-archive-rhel
+level: 4 
 ---
 title: "Extract and install the ``.rpm`` package."
 ref: extract-archive-rpm
 level: 4
 content: |
-  Run the following command to install the |mdb-shell|:
+  To install the |mdb-shell|, run the following command from the
+  directory containing the ``mongosh`` ``.rpm`` package:
 
   .. code-block:: sh
 
-     sudo yum install mongosh-0.4.0-x86_64.rpm
+     sudo yum install mongosh-{+version+}-x86_64.rpm
 ...
