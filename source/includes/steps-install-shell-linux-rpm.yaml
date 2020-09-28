@@ -17,5 +17,5 @@ content: |
 
   .. code-block:: sh
 
-     sudo yum install mongosh-{+version+}-x86_64.rpm
+     sudo yum install -y mongosh-{+version+}-x86_64.rpm
 ...

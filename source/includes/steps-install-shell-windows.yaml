@@ -26,7 +26,7 @@ content: |
    To add the |mdb-shell| binary's location to your 
    ``PATH`` environment variable:
 
-   1. Open the :guilabel:`Control Panel`.
+   a. Open the :guilabel:`Control Panel`.
 
    #. In the :guilabel:`System and Security` category, click 
       :guilabel:`System`.

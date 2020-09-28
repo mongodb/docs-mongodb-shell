@@ -12,15 +12,10 @@ title: "Extract and install the ``.deb`` package."
 ref: extract-archive-linux-deb
 level: 4
 content: |
-  To install the downloaded ``.deb`` package, either:
+  To install the |mdb-shell|, run the following command from the
+  directory containing the ``mongosh`` ``.deb`` package:
 
-  - Double click your downloaded ``.deb`` package icon and follow
-    the prompts.
+  .. code-block:: sh
 
-  - Run the following command from the directory containing the
-    ``mongosh`` ``.deb`` package:
-
-    .. code-block:: sh
-
-       sudo dpkg --install mongosh_{+version+}_amd64.deb
+      sudo dpkg --install mongosh_{+version+}_amd64.deb
 ...
