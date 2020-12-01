@@ -128,7 +128,7 @@ Procedure
 .. important:: Windows Users
 
    ``mongosh`` preferences are stored by default in the directory
-   ``C:\Users\<username>'\.mongodb\mongosh``.
+   ``C:\Users\<username>\.mongodb\mongosh``.
 
 Next Steps
 ----------
