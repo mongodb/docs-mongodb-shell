@@ -417,7 +417,7 @@ Cursor Methods
      - Controls the number of documents MongoDB will return to the
        client in a single network message.
 
-       In the following example, the query returns results in batches of
+       The following example query returns results in batches of
        100: 
 
        .. code-block:: sh
@@ -728,7 +728,7 @@ Native Methods
           > print(x)
           example text
 
-   * - :method:`sleep()`
+   * - ``sleep()``
     
      - Suspends the |mongo| shell for a given period of time.
 

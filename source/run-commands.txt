@@ -47,21 +47,11 @@ the server.
    provides consistent behavior by always throwing an exception in these
    scenarios.
 
-Shell Commands
---------------
+Clear the ``mongosh`` Console
+-----------------------------
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Command
-
-     - Description
-
-   * - ``cls``
-
-     - Clear the screen. You can also clear the screen with ``Ctrl + L``
-       and ``console.clear()``.
+The ``cls`` command clears the console. You can also clear the console
+with ``Ctrl + L`` and ``console.clear()``.
 
 .. toctree::
    :titlesonly:

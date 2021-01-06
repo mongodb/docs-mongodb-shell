@@ -25,13 +25,13 @@ level: 4
 ref: view-session-log
 content: |
 
-  |mdb-shell| saves the log for each session to your user's
-  ``.mongodb/mongosh`` directory:
-
   .. tabs::
 
      .. tab::
         :tabid: macOS and Linux
+
+        |mdb-shell| saves the log for each session to your user's
+        ``.mongodb/mongosh`` directory:
 
         .. code-block:: sh
 
@@ -62,24 +62,27 @@ content: |
               tail -f ~/.mongodb/mongosh/<sessionId>_log | pino-colada
 
      .. tab::
-        :tabid: windows
+        :tabid: Windows
+
+        |mdb-shell| saves the log for each session to your user's
+        ``C:\Users\<username>\AppData\Local\`` directory:
 
         .. code-block:: sh
 
-           %UserProfile%/.mongodb/mongosh/<sessionId>_log
+           C:\Users\<username>\AppData\Local\<sessionId>_log
 
         Run the following PowerShell command to view the log for a session:
 
         .. code-block:: sh
 
-           Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log
+           Get-Content C:\Users\<username>\AppData\Local\<sessionId>_log
 
         Run the following PowerShell command to tail the log for a
         session:
 
         .. code-block:: sh
 
-           Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log -Wait
+           Get-Content C:\Users\<username>\AppData\Local\<sessionId>_log -Wait
 
         .. tip::
 
@@ -91,6 +94,6 @@ content: |
 
            .. code-block:: sh
 
-              Get-Content %UserProfile%/.mongodb/mongosh/<sessionId>_log -Wait | pino-colada
+              Get-Content C:\Users\<username>\AppData\Local\<sessionId>_log -Wait | pino-colada
 
 ...
