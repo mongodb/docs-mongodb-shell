@@ -35,6 +35,7 @@ the methods listed in the :guilabel:`Alternative Methods` column.
    * - ``db.collection.remove()``
      - - :method:`db.collection.deleteOne()`
        - :method:`db.collection.deleteMany()`
+       - :method:`db.collection.findOneAndDelete()`
        - :method:`db.collection.bulkWrite()`
 
    * - ``db.collection.save()``
@@ -42,10 +43,12 @@ the methods listed in the :guilabel:`Alternative Methods` column.
        - :method:`db.collection.insertMany()`
        - :method:`db.collection.updateOne()`
        - :method:`db.collection.updateMany()`
+       - :method:`db.collection.findOneAndUpdate()`
 
 
    * - ``db.collection.update()``
      - - :method:`db.collection.updateOne()`
        - :method:`db.collection.updateMany()`
+       - :method:`db.collection.findOneAndUpdate()`
        - :method:`db.collection.bulkWrite()`
 
