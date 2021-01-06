@@ -47,6 +47,22 @@ the server.
    provides consistent behavior by always throwing an exception in these
    scenarios.
 
+Shell Commands
+--------------
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Command
+
+     - Description
+
+   * - ``cls``
+
+     - Clear the screen. You can also clear the screen with ``Ctrl + L``
+       and ``console.clear()``.
+
 .. toctree::
    :titlesonly:
    
