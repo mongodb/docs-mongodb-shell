@@ -379,7 +379,7 @@ Connection Methods
        the ``mongo`` shell or from a JavaScript file.
 
        The :method:`Mongo()` method takes a parameter called
-       ``ClientSideFieldLevelEncryptionOptions``, with the following options:
+       ``ClientSideFieldLevelEncryptionOptions`` with the following options:
 
        .. list-table::
           :widths: 15 20 40
@@ -425,7 +425,7 @@ Connection Methods
 
             - Boolean
 
-            - *(Optional)* Specify ``true`` to bypass automatic client-side
+            - *(Optional)* The flag to bypass automatic client-side
               field level encryption rules and perform explicit (manual)
               per-field encryption.
 
@@ -439,7 +439,7 @@ Connection Methods
 
    * - :method:`Mongo.watch()`
 
-     - Opens a :manual:`change stream cursor </change-streams>` for a replica
+     - Opens a :manual:`change stream cursor </changeStreams>` for a replica
        set or a sharded cluster to report on all its non-system collections
        across its databases, with the exception of the ``admin``, ``local``,
        and ``config`` databases.
