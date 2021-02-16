@@ -750,12 +750,20 @@ standalone and replica set deployments.
 Client-Side Field Level Encryption Methods
 ------------------------------------------
 
-.. note::
+.. note:: Limitations
 
-   Automatic encryption is available when ``mongosh`` is connected to an
-   Atlas cluster or a freestanding MongoDB Enterprise Server. For details,
-   see :manual:`Automatic Client-Side Field Level Encryption
+   Automatic encryption is only available when ``mongosh`` is connected
+   to an Atlas cluster or a MongoDB Enterprise Server. For details, see
+   :manual:`Automatic Client-Side Field Level Encryption
    </core/security-automatic-client-side-encryption/>`.
+
+   Automatic encryption is not available with the Homebrew installation
+   of ``mongosh``.
+
+   Field level encryption is only available in the ``mongosh`` binary,
+   and not available in the :compass:`embedded Compass shell </embedded-shell>`. 
+
+
 
 .. list-table::
    :widths: 30 70
