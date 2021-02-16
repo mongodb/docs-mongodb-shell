@@ -361,56 +361,50 @@ Connection Methods
      - JavaScript constructor to instantiate a database connection from
        the ``mongo`` shell or from a JavaScript file.
 
-       The :method:`Mongo()` method takes a parameter called
-       ``ClientSideFieldLevelEncryptionOptions`` with the following options:
+       The :method:`Mongo()` method has the following parameters:
 
        .. list-table::
-          :widths: 15 20 40
-          :header-rows: 1
+           :header-rows: 1
+           :widths: 20 20 80
 
-          * - Option
+           * - Parameter
+       
+             - Type
+       
+             - Description
+       
+           * - ``host``
+       
+             - string
+       
+             - *Optional*
+             
+               The connection string for the target database
+               connection.
 
-            - Type
+               If omitted, :method:`Mongo` instantiates a connection to the 
+               localhost interface on the default port ``27017``.
 
-            - Description
+           * - ``ClientSideFieldLevelEncryptionOptions``
+             
+             - Document
 
-          * - ``keyVaultClient``
+             - *Optional* 
+               
+               .. versionadded:: 4.2
 
-            - :method:`Mongo()` connection object
+               Configuration parameters for enabling
+               :manual:`Client-Side Field Level Encryption
+               </core/security-client-side-encryption>`.
 
-            - *(Optional)* The MongoDB cluster hosting the key vault
-              collection. Omit to use the current database connection
-              as the key vault host.
+               ``ClientSideFieldLevelEncryptionOptions`` overrides the
+               existing client-side field level encryption configuration of
+               the database connection. If omitted, :method:`Mongo()`
+               inherits the client-side field level encryption configuration
+               of the current database connection.
 
-          * - ``keyVaultNamespace``
-
-            - String
-
-            - *(Required)* The full namespace of the key vault collection.
-
-          * - ``kmsProvider``
-
-            - Document
-
-            - *(Required)* The Key Management Service (KMS) used by
-              client-side field level encryption for managing a Customer
-              Master Key (CMK).
-
-          * - ``schemaMap``
-
-            - Document
-
-            - *(Optional)* The automatic client-side field level encryption
-              rules specified using the JSON schema Draft 4 standard syntax
-              and encryption-specific keywords.
-
-          * - ``bypassAutoEncryption``
-
-            - Boolean
-
-            - *(Optional)* The flag to bypass automatic client-side
-              field level encryption rules and perform explicit (manual)
-              per-field encryption.
+               For documentation of usage and syntax, see
+               :ref:`ClientSideFieldLevelEncryptionOptions`.
 
    * - :method:`Mongo.getDB()`
 
@@ -752,18 +746,19 @@ Client-Side Field Level Encryption Methods
 
 .. note:: Limitations
 
-   Automatic encryption is only available when ``mongosh`` is connected
-   to an Atlas cluster or a MongoDB Enterprise Server. For details, see
-   :manual:`Automatic Client-Side Field Level Encryption
-   </core/security-automatic-client-side-encryption/>`.
+   - Automatic encryption is only available when ``mongosh`` is connected
+     to an Atlas cluster or a MongoDB Enterprise Server. For details,
+     see :manual:`Automatic Client-Side Field Level Encryption
+     </core/security-automatic-client-side-encryption/>`. The methods
+     listed in this section are used for *manual* encryption, and are
+     supported on non-enterprise servers.
 
-   Automatic encryption is not available with the Homebrew installation
-   of ``mongosh``.
+   - Automatic encryption is not available with the Homebrew installation
+     of ``mongosh``.
 
-   Field level encryption is only available in the ``mongosh`` binary,
-   and not available in the :compass:`embedded Compass shell </embedded-shell>`. 
-
-
+   - Field level encryption is only available in the ``mongosh`` binary,
+     and not available in the :compass:`embedded Compass shell
+     </embedded-shell>`. 
 
 .. list-table::
    :widths: 30 70
