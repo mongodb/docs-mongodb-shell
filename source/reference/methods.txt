@@ -842,10 +842,10 @@ Native Methods
      - Loads and runs a JavaScript file in the shell.
 
        In ``mongosh``, scripts loaded with the ``load()`` method support
-       the ``__filename`` and ``__dirname`` Node.js environment
-       variables. These variables return the file name and directory of
-       the loaded script, respectively. The returned values are always
-       absolute paths.
+       the ``__filename`` and ``__dirname`` Node.js variables. These
+       variables return the file name and directory of the loaded
+       script, respectively. The returned values are always absolute
+       paths.
 
        In the legacy shell, you cannot not access the script's file name
        or directory using the ``load()`` method.
