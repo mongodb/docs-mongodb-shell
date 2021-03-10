@@ -38,8 +38,8 @@ Procedure
 
       .. note::
 
-         ``mongosh`` preferences are stored by default in the directory
-         ``C:\Users\<username>\.mongodb\mongosh``.
+         On Windows, ``mongosh`` preferences and configuration options
+         are stored in the ``%APPDATA%/mongodb/mongosh`` directory.
 
    .. tab::
       :tabid: macos
