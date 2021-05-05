@@ -27,7 +27,7 @@ General Options
    code. As a result, many options of the shell environment are not 
    available.
 
-   The result of evaluating the JavaScript argument is printed to your 
+   The result of evaluating a JavaScript argument is printed to your 
    command line.
 
 .. option:: --help, -h
