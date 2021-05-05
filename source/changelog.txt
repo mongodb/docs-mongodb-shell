@@ -12,6 +12,47 @@
    :depth: 1
    :class: singlecol
 
+v0.12.1
+-------
+
+*Released April 30, 2021*
+
+New features in this release:
+
+- Adds support for the ``db.hello()`` shell method and
+  ``hello`` database command. Use these commands in place of
+  ``isMaster``.
+
+- Extends the shell customization API to allow controlling log
+  verbosity.
+
+- Adds autocomplete for ``show`` and ``use`` commands. For example,
+  ``show collections`` and ``use test``.
+
+Bug fixes in this release:
+
+- :dbcommand:`collStats` now works properly on sharded collections.
+
+v0.12.0
+-------
+
+*Released April 23, 2021*
+
+- New async rewriter, allowing for a much wider range of JavaScript
+  features in the shell.
+
+- Connection failure response is now more prompt if a connection
+  is deemed unlikely to succeed.
+
+- Adds new API for shell customization.
+
+v0.11.0
+-------
+
+*Released April 8, 2021*
+
+Internal improvements and various bug fixes.
+
 v0.10.1
 -------
 
