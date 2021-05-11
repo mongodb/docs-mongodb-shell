@@ -98,7 +98,7 @@ content: |
 
   .. code-block:: sh
 
-      sudo apt-get install -y mongosh
+      sudo apt-get install -y mongodb-mongosh
   
   Optional. ``apt-get`` will upgrade the packages when a newer version
   becomes available. To prevent unintended upgrades, you can pin the
@@ -106,6 +106,6 @@ content: |
 
   .. code-block:: sh
 
-    echo "mongosh hold" | sudo dpkg --set-selections
+    echo "mongodb-mongosh hold" | sudo dpkg --set-selections
 
 ...
