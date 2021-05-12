@@ -52,3 +52,22 @@ the methods listed in the :guilabel:`Alternative Methods` column.
        - :method:`db.collection.findOneAndUpdate()`
        - :method:`db.collection.bulkWrite()`
 
+Read Preference Behavior
+------------------------
+
+When using ``mongosh`` to connect directly to a :term:`secondary`
+replica set member, if you specify a default read preference, that
+preference is honored for commands run against that member. For example,
+specifying ``readPreference=primary`` directs read operations to the
+replica set :term:`primary`. 
+
+To set a default read preference, you can either:
+
+- Use the :urioption:`readPreference` connection string option when
+  connecting to the node.
+
+- Use the :method:`Mongo.setReadPref()` method.
+
+In the legacy ``mongo`` shell, the default read preference is *not*
+honored when connected to a :term:`secondary` replica set member. Read
+operations are always directed to the member to which you are connected.
