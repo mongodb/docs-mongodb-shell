@@ -69,7 +69,7 @@ You can read from a secondary member if you specify a
 - :readmode:`secondary`
 - :readmode:`secondaryPreferred`
 
-To specify a read preference, you use can either:
+To specify a read preference, you can use either:
 
 - The :urioption:`readPreference` connection string option when
   connecting to the node.
