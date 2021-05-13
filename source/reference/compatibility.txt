@@ -55,19 +55,41 @@ the methods listed in the :guilabel:`Alternative Methods` column.
 Read Preference Behavior
 ------------------------
 
+Read Operations on a Secondary Node
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 When using ``mongosh`` to connect directly to a :term:`secondary`
-replica set member, if you specify a default read preference, that
-preference is honored for commands run against that member. For example,
-specifying ``readPreference=primary`` directs read operations to the
-replica set :term:`primary`. 
+replica set member, you do not have to explicitly enable secondary reads
+with ``rs.secondaryOk()``.
 
-To set a default read preference, you can either:
+You can read from a secondary member if you specify a
+:manual:`read preference </core/read-preference/>` of either:
 
-- Use the :urioption:`readPreference` connection string option when
+- :readmode:`primaryPreferred`
+- :readmode:`secondary`
+- :readmode:`secondaryPreferred`
+
+To specify a read preference, you use can either:
+
+- The :urioption:`readPreference` connection string option when
   connecting to the node.
 
-- Use the :method:`Mongo.setReadPref()` method.
+- The :method:`Mongo.setReadPref()` method.
 
-In the legacy ``mongo`` shell, the default read preference is *not*
-honored when connected to a :term:`secondary` replica set member. Read
-operations are always directed to the member to which you are connected.
+``rs.secondaryOk()`` was required in the legacy ``mongo`` shell to
+enable secondary reads.
+
+``show`` Helper Methods
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The following ``show`` helper methods always use a read preference of
+``primaryPreferred``, even when a different read preference has been
+specified:
+
+- ``show dbs``
+- ``show databases``
+- ``show tables``
+- ``show collections``
+
+In the legacy ``mongo`` shell, these operations use the specified read
+preference.
