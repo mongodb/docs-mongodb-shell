@@ -76,7 +76,7 @@ To specify a read preference, you can use either:
 
 - The :method:`Mongo.setReadPref()` method.
 
-``rs.secondaryOk()`` was required in the legacy ``mongo`` shell to
+The legacy ``mongo`` shell required running ``rs.secondaryOk()`` to
 enable secondary reads.
 
 ``show`` Helper Methods
@@ -84,12 +84,12 @@ enable secondary reads.
 
 The following ``show`` helper methods always use a read preference of
 ``primaryPreferred``, even when a different read preference has been
-specified:
+specified for the operation:
 
 - ``show dbs``
 - ``show databases``
-- ``show tables``
 - ``show collections``
+- ``show tables``
 
 In the legacy ``mongo`` shell, these operations use the specified read
 preference.
