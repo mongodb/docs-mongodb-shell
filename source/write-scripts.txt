@@ -157,13 +157,12 @@ You can ``require()`` built-in Node modules (such as
 
       var fs = require('fs');
 
-Require a Non-Built-In Module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Require an NPM Module
+~~~~~~~~~~~~~~~~~~~~~
 
-To ``require()`` non-built-in Node modules (such as those downloaded
-from `npm <https://www.npmjs.com/>`__) you must install the module
-globally or to the ``node_modules`` directory in your current working
-directory.
+To ``require()`` external Node modules (such as those downloaded from
+`npm <https://www.npmjs.com/>`__) you must install the module globally
+or to the ``node_modules`` directory in your current working directory.
 
 Once you install or copy your desired package to one of the module
 directories, you can ``require()`` that package.
