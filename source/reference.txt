@@ -15,4 +15,3 @@ Reference
       /reference/methods
       /reference/options
 
-
