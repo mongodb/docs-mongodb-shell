@@ -123,8 +123,7 @@ using the :method:`load()` method.
 
       .. code-block:: javascript
 
-         conn = Mongo();
-         db = conn.getDB("myDatabase");
+         db = connect('mongodb://localhost/myDatabase');
 
          db.movies.insertMany( [
             {
