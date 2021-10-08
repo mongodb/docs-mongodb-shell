@@ -67,7 +67,7 @@ without any additional setup or configuration.
    - Populates the ``myDatabase.employees`` collection with sample data.
    - Uses the ``fs`` module to write a document from the
      ``myDatabase.employees`` collection to a file named
-     ``employee.txt``.
+     ``employee.json``.
 
    1. Create a file named ``employee-to-text-file.js`` with the
       following contents:
@@ -76,8 +76,7 @@ without any additional setup or configuration.
 
          const fs = require('fs');
 
-         conn = Mongo();
-         db = conn.getDB("myDatabase");
+         db = connect('mongodb://localhost/myDatabase');
 
          db.employees.insertMany( [
             { "name": "Alice", "department": "engineering" },
@@ -87,7 +86,7 @@ without any additional setup or configuration.
 
          const document = db.employees.findOne();
 
-         fs.writeFileSync('employee.txt', JSON.stringify(document));
+         fs.writeFileSync('employee.json', JSON.stringify(document));
 
    #. To load and execute the ``employee-to-text-file.js`` file, run the
       following command from ``mongosh``:
@@ -97,7 +96,7 @@ without any additional setup or configuration.
          load("employee-to-text-file.js")
 
    #. To confirm that the data was written to the file, open the
-      ``employee.txt`` file.
+      ``employee.json`` file.
 
 Require an npm Module
 ---------------------
@@ -132,8 +131,7 @@ install the modules either:
 
          const formatDistance = require('date-fns/formatDistance')
 
-         conn = Mongo();
-         db = conn.getDB("myDatabase");
+         db = connect('mongodb://localhost/myDatabase');
 
          db.cakeSales.insertMany( [
             { _id: 0, type: "chocolate", orderDate: new Date("2020-05-18T14:10:30Z"),
