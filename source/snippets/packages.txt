@@ -46,45 +46,8 @@ on writing scripts see :ref:`mdb-shell-write-scripts`.
 
 Prepare the Files
 ~~~~~~~~~~~~~~~~~
-#. Fork the snippets `project repository 
-   <https://github.com/mongodb-labs/mongosh-snippets>`__.
-#. Create a directory for your snippet package under the ``snippets``
-   directory in the forked repository. This directory will
-   contain the code for your script and several metadata files. 
-#. Create a ``README.md``. The ``README.md`` describes how to use your
-   code. This file is displayed when a user enters ``snippet help`` for
-   your snippet.
-#. Create a ``LICENSE`` file. You will need to enter a license
-   identifier string later, so try to chose a license from the
-   `SPDX license list <https://www.npmjs.com/package/spdx>`__.
-#. Create an ``index.js`` file. 
 
-   - This file contains the entry point to your code that is exposed in
-     the :binary:`~bin.mongosh` console.
-   - The script is written in JavaScript and defines your new functions.
-   - The script can be in a single file or multiple files.
-   - The script can call other files and local or remote npm modules.
-     To ``require()`` a remote npm module use the construction: 
-
-     .. code-block:: javascript
-
-        const localRequire = require('module').createRequire(__filename);)
-
-     For an example, see
-     `index.js <https://github.com/mongodb-labs/mongosh-snippets/blob/main/snippets/resumetoken/index.js>`__
-     in the ``resumetoken`` snippet.
-   - ``index.js`` is referenced in :ref:`package.json <snip-prep-package.json>`. 
-   - The MongoDB repository has `example code
-     <https://github.com/mongodb-labs/mongosh-snippets>`__.
-
-   .. tip::
-
-      If you have an existing script, either rename it ``index.js`` or
-      create an ``index.js`` file to load it. For an example of an
-      ``index.js`` file that loads other scripts, see `this one
-      <https://github.com/mongodb-labs/mongosh-snippets/blob/main/snippets/mongocompat/index.js>`__
-      in the `community repository
-      <https://github.com/mongodb-labs/mongosh-snippets>`__.
+.. include:: /includes/steps/snip-package-files.rst
 
 .. _snip-prep-package.json:
 
@@ -147,7 +110,9 @@ The parameters are:
        `other options <https://docs.npmjs.com/cli/v7/using-npm/config>`__
        as well.
 
-Use this code to create a skelton ``package.json`` file. 
+Use this code to create a skelton ``package.json`` file. Edit the file
+and replace each ``UPDATE`` to insert the values for your snippet
+package.
 
 .. code-block:: javascript
 
@@ -163,8 +128,6 @@ Use this code to create a skelton ``package.json`` file.
        }
    }
 
-Edit the file and replace each ``UPDATE`` to insert the values for your
-snippet package. 
 
 There are several examples of ``package.json`` files in the MongoDB
 GitHub `repository <https://github.com/mongodb-labs/mongosh-snippets>`__.
@@ -194,45 +157,16 @@ registry. The package will contain:
 When the files are complete, follow these steps to create and publish
 your snippet package. 
 
-#. Create a registry index file. The registry index contains metadata
-   for the snippet packages in your registry. 
-   
-   Run `make-index.js
-   <https://github.com/mongodb-labs/mongosh-snippets/blob/main/scripts/make-index.js>`__
-   from the ``mongo-snippets`` directory create the index.
+.. _snip-make-a-registry-index:
 
-   .. code-block:: shell
-
-      node ./scripts/make-index.js
-
-   For further details about ``make-index.js``, see:
-   :ref:`<snip-make-a-registry-index>`. Using ``make-index.js`` is the
-   preferred way to create a registry index, but you can also
-   :ref:`create a registry index manually <snip-manual-reg-index>`.
-#. Commit your snippet and the registry index file to your GitHub
-   repository.
-#. Publish your changes to your npm registry. 
-
-   .. code-block:: shell
-
-      npm publish --access public
+.. include:: /includes/steps/snip-publish.rst
 
 Install the New Snippet Package
 -------------------------------
 
 Follow these steps to install your new snippet package:
 
-#. Refresh the snippet metadata in your local :binary:`~bin.mongosh`.
-
-   .. code-block:: shell 
-
-      snippet refresh
- 
-#. Install the snippet.
-
-   .. code-block:: shell 
-
-      snippet install YOUR_NEW_SNIPPET
+.. include:: /includes/steps/snip-install.rst
 
 .. _snip-contribute-a-package:
 
@@ -246,85 +180,11 @@ useful for other MongoDB users, you are invited to contribute it to the
 
 To submit a snippet to the shared MongoDB repository:
 
-#. Read and complete the
-   `MongoDB Contributor Agreement <https://www.mongodb.com/legal/contributor-agreement>`__.
-#. Fork and clone the
-   `snippet project repository <https://github.com/mongodb-labs/mongosh-snippets>`__
-   from GitHub.
-#. Add a new directory for your code under
-   `snippets/ <https://github.com/mongodb-labs/mongosh-snippets/tree/main/snippets>`__.
-   Give it a descriptive name.
-#. Create your snippet package. Be sure it contains the following files: 
-
-   - ``package.json``
-   - ``index.js``
-   - ``README.md``
-   - ``LICENSE``
-
-   You do not have to create a registry index file. If your snippet
-   package is accepted, MongoDB will update the registry index file.
-#. Commit your changes.
-#. Open a pull request against the `snippet project repository
-   <https://github.com/mongodb-labs/mongosh-snippets>`__.
+.. include:: /includes/steps/snip-contribute.rst
 
 MongoDB will review your pull request. If it is accepted, we will:
 
 - Merge your code into our GitHub repository.
 - Publish it to the npm registry.
 - Add it to the snippet index.
-
-.. _snip-make-a-registry-index:
-
-Example: Using ``make-index.js``
---------------------------------
-
-The registry index file must be compressed before it is uploaded for
-use. `make-index.js
-<https://github.com/mongodb-labs/mongosh-snippets/blob/main/scripts/make-index.js>`__
-walks through your snippet source directories gathering the information
-that is needed to create the registry index file. After it creates the
-registry index file, the ``make-index.js`` script also compresses it. 
-
-You can use `show-index.js
-<https://github.com/mongodb-labs/mongosh-snippets/blob/main/scripts/show-index.js>`__
-to view the compressed registry index file. 
-
-The `make-index.js
-<https://github.com/mongodb-labs/mongosh-snippets/blob/main/scripts/make-index.js>`__
-script assumes a directory structure like this:
-
-.. code-block:: shell
-   :copyable: false
-
-   mongo-snippets
-   |
-   ├── scripts
-   │   ├── make-index.js
-   │   └── show-index.js
-   └── snippets
-       ├── decrypt-cards
-       │   ├── LICENSE-Community.txt
-       │   ├── README.md
-       │   ├── error-matchers.js
-       │   ├── index.js
-       │   └── package.json
-       └── update-auth
-           ├── LICENSE
-           ├── README.md
-           ├── index.js
-           └── package.json
-
-To index the files, use `node <https://nodejs.org/>`__ to run
-``make-index.js`` from the ``mongo-snippets`` directory.
-
-.. code-block:: shell
-
-    node ./scripts/make-index.js
-
-The output of this script is a
-`brotli-compressed <https://github.com/google/brotli/>`__ registry
-index file, ``index.bson.br``. 
-
-Upload ``index.bson.br`` to your GitHub repository. Note the location
-and add a URL to ``snippetIndexSourceURLs`` to reference the file.
 

@@ -133,8 +133,9 @@ the expected booleans.
 Uninstall Snippets
 ------------------
 
-Use the ``uninstall`` command to remove a snippet. If you are unsure of
-the name, the ``ls`` command lists all installed snippets.
+Use the ``snippet uninstall`` command to remove a snippet. If you are
+unsure of the name, the ``snippet ls`` command lists all installed
+snippets.
 
 This code uninstalls the ``analyze-schema`` snippet. 
 

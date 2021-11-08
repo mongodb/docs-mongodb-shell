@@ -17,7 +17,9 @@ Create a Registry Index File Manually
 
    .. include:: /includes/warnings/warn-experimental-feature.rst
 
-This page discusses how to manually create a registry index file. 
+This page discusses how to manually create a registry index file. To
+generate the registry index file using a script, see :ref:`Create a
+Registry Index File <snip-make-a-registry-index>`. 
 
 To create the registry index file:
 
