@@ -41,6 +41,9 @@ What Kind of Data ``mongosh`` Tracks
 
 - Personal identifiable information.
 
+For more information, see MongoDB's `Privacy Policy
+<https://www.mongodb.com/legal/privacy-policy?tck=docs_mongosh>`__.
+
 Toggle Telemetry Collection
 ---------------------------
 
