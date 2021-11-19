@@ -12,7 +12,7 @@ Configure Telemetry Options
    :depth: 1
    :class: singlecol
 
-``mongosh`` collects anonymous usage data to improve MongoDB products.
+``mongosh`` collects anonymous and aggregated usage data to improve MongoDB products.
 ``mongosh`` collects this information by default, but you can disable
 this data collection at any time.
 
