@@ -20,7 +20,7 @@ General Options
 
 .. option:: --build-info
 
-   Returns a JSON formatted document with information about the
+   Returns a JSON-formatted document with information about the
    :binary:`~bin.mongosh` build.
 
 .. option:: --eval <javascript>
