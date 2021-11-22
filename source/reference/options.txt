@@ -18,7 +18,7 @@ General Options
 
 .. program:: mongosh
 
-.. option:: --build-info::
+.. option:: --build-info
 
    Returns a JSON formatted document with information about the
    :binary:`~bin.mongosh` build.
