@@ -252,8 +252,9 @@ Set an environment variable:
 
    export EDITOR="/usr/local/bin/code --wait"
 
-Set the Visual Studio editor with
-:ref:`config.set() <mongosh-shell-settings>`:
+You can also set the editor with :ref:`config.set()
+<mongosh-shell-settings>`. If Visual Studio is in your path, open
+:binary:`~bin.mongosh` and run:
 
 .. code-block:: javascript
 
