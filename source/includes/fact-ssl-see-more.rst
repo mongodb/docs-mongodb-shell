@@ -1,4 +1,4 @@
-To learn more about |tls-ssl| and MongoDB, see:
+To learn more about TLS/SSL and MongoDB, see:
 
 - :manual:`Configure mongod and mongos for TLS/SSL
   </tutorial/configure-ssl>`
