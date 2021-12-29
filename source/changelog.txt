@@ -352,8 +352,8 @@ New features in this release:
 
 - New connection methods:
 
-  - :method:`Mongo.getDBNames()` Returns a list of databases.
-  - :method:`Mongo.getDBs()` Returns a document with a list of
+  - :method:`Mongo.getDBNames()` returns a list of databases.
+  - :method:`Mongo.getDBs()` returns a document with a list of
     databases and metadata.
 
 v0.12.1
