@@ -1,0 +1,37 @@
+.. _mongoshrc-js:
+
+=================================
+``.mongoshrc`` Configuration File
+=================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+On startup, ``mongosh`` checks the user's ``HOME`` directory for a
+JavaScript file named ``.mongoshrc.js``. If ``.mongoshrc.js`` is found,
+``mongosh`` interprets the file before displaying the prompt for the
+first time.
+
+If you use the shell to evaluate a JavaScript file or expression,
+either by using the :option:`--eval <mongosh --eval>` option on the
+command line or by specifying :ref:`a .js file to mongosh
+<mdb-shell-execute-file>`, ``mongosh`` reads the ``.mongoshrc.js`` file
+*after* the JavaScript has finished processing.
+
+You can prevent ``.mongoshrc.js`` from being loaded from the command
+line by using the :option:`--norc <mongosh --norc>` option.
+
+.. note::
+
+   The legacy :binary:`~bin.mongo` shell used a configuation file
+   called ``.mongorc.js``. If ``mongosh`` detects this file on startup,
+   and ``.mongoshrc.js`` is not present, ``mongosh`` will suggest
+   renaming ``.mongorc.js`` to ``.mongoshrc.js``. 
+
+   The legacy ``.mongorc.js`` file will not be loaded.
+
