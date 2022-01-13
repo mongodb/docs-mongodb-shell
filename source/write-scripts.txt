@@ -437,13 +437,14 @@ The following lines are equivalent.
 Execute Code From a Configuration File
 --------------------------------------
 
-On startup, ``mongosh`` checks for a file named :ref:`mongoshrc-js`. If
-:ref:`mongoshrc-js` is found, ``mongosh`` interprets the file before
+On startup, :binary:`mongosh` checks for a file named
+:ref:`.mongoshrc.js <mongoshrc-js>`. If :ref:`.mongoshrc.js
+<mongoshrc-js>` is found, :binary:`mongosh` interprets the file before
 displaying the prompt for the first time.
 
 .. seealso::
 
-   :ref:`mongoshrc-js`, :ref:`mongosh-shell-settings`
+   :ref:`.mongoshrc.js <mongoshrc-js>`, :ref:`mongosh-shell-settings`
 
 Execute JavaScript Code
 ~~~~~~~~~~~~~~~~~~~~~~~
