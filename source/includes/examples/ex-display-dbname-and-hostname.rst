@@ -1,5 +1,5 @@
-Use a function like this one to display the database and hostname in
-the :binary:`~bin.mongosh` prompt:
+To display the database and hostname in the :binary:`~bin.mongosh`
+prompt, use a function like this one:
 
 .. code-block:: javascript
 

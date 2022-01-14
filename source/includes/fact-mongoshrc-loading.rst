@@ -1,6 +1,6 @@
 On startup, :binary:`mongosh` checks the user's ``HOME`` directory for
 a JavaScript file named :ref:`.mongoshrc.js <mongoshrc-js>`. If this
-file is found, :binary:`mongosh` interprets the content of
+file is found, :binary:`mongosh` reads the content of
 :ref:`.mongoshrc.js <mongoshrc-js>` before displaying the prompt for
 the first time.
 
@@ -20,5 +20,5 @@ the :option:`--norc <mongosh --norc>` option.
    :binary:`mongosh` will suggest renaming ``.mongorc.js`` to
    :ref:`.mongoshrc.js <mongoshrc-js>`. 
 
-   The legacy ``.mongorc.js`` file will not be loaded.
+   The legacy ``.mongorc.js`` file is not loaded.
 

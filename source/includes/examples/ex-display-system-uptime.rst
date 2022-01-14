@@ -1,6 +1,6 @@
-Use a function like this one for a prompt that shows the system uptime
-and a count of documents across all collections in the current
-database.
+To create a prompt that shows the system uptime and a count of
+documents across all collections in the current database, use a
+function like this one:
 
 .. code-block:: javascript
 
