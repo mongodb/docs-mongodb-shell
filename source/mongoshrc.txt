@@ -24,7 +24,7 @@ Examples
 The following examples create custom prompts. To display:
 
 - :ref:`line numbers <ex-display-line-numbers>`
-- :ref:`database adn hostname <ex-display-dbname-and-hostname>`
+- :ref:`database and hostname <ex-display-dbname-and-hostname>`
 - :ref:`system uptime and document count <ex-display-system-up-time>`
 
 add the example code to :ref:`.mongoshrc.js <mongoshrc-js>`.
