@@ -461,7 +461,7 @@ database, add the following to ``<your-home-directory>/.mongoshrc.js``:
 
    db.clientConnections.insertOne( { connectTime: ISODate() } )
 
-Each time you connect to a database, the MongoDB server will add a
+Each time you connect to a database, the MongoDB server adds a
 document like the following to the ``clientConnections`` collection.
 
 .. code-block:: javascript
