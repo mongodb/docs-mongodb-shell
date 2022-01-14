@@ -18,3 +18,24 @@
 
 .. include:: /includes/fact-mongoshrc-loading.rst
 
+Examples
+--------
+
+Create custom prompts for :binary:`~bin.mongosh`. Add the code in the
+following examples to :ref:`.mongoshrc.js <mongoshrc-js>` to set a
+custom prompt.
+
+Display Line Numbers
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/examples/ex-display-line-numbers.rst
+
+Display Database and Hostname
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/examples/ex-display-dbname-and-hostname.rst
+
+Display System Up Time and Document Count
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/examples/ex-display-system-uptime.rst
