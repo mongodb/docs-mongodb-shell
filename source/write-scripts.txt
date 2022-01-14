@@ -459,11 +459,7 @@ database, add the following to ``<your-home-directory>/.mongoshrc.js``:
 
 .. code-block:: javascript
 
-   db.clientConnections.updateOne(
-      { "_id": ObjectId() },
-      { $currentDate: { "connectTime": true } },
-      { upsert: true }
-   ) ;
+   db.clientConnections.insertOne( { connectTime: ISODate() } )
 
 Each time you connect to a database, the MongoDB server will add a
 document like the following to the ``clientConnections`` collection.
