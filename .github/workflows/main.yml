@@ -37,6 +37,12 @@ jobs:
             foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
             readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
             echo $targets
+            
+            for i in $targets
+            do 
+               echo "$i"
+           done
+ 
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
               grep --no-filename -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
