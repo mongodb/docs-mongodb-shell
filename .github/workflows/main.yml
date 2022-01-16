@@ -35,7 +35,8 @@ jobs:
             echo "List of all staging links:"
             #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
             foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
-            echo "*** $foo"
+            t = readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' .)
+            echo $t
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
               grep --no-filename -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
