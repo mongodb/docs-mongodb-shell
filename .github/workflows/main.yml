@@ -42,11 +42,10 @@ jobs:
             do 
                echo "$i"
                #([^\/]+$).*
-               echo `expr "$i" : '([^\/]+$).*'`
-               a = `expr "$i" : '([^\/]+$).*'`
+               echo "expr "$i" : '([^\/]+$).*' "
                #v="some string.rtf"
-               a2=${a::-4}
-               echo "$a2"
+               #a2=${a::-4}
+               #echo "$a2"
                
            done
  
