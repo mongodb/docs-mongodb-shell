@@ -36,7 +36,7 @@ jobs:
             
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
-              grep -R -l -hn '.. include:: /includes/fact-connect-prereqs.rst' source
+              grep -hn -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
             fi
           done
           
