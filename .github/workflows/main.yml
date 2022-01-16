@@ -33,7 +33,7 @@ jobs:
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
             echo "List of all staging links:"
-            grep -Rh -l '.. include:: /includes/fact-connect-prereqs.rst' source
+            grep -Rhl '.. include:: /includes/fact-connect-prereqs.rst' source
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
               grep --no-filename -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
