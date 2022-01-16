@@ -34,11 +34,8 @@ jobs:
           for added_modified_file in "${added_modified_files[@]}"; do
             echo "${added_modified_file} has changed, no action will occur unless its a .py file."
             if [ "${added_modified_file: -4}" == ".rst" ]
-            ls
-            grep -R '.. include:: /includes/fact-connect-prereqs.rst' source
             then
-              grep -r "intersphinx" /docs-mongodb-shell
-              #echo "Updating lambda-function: ${added_modified_file%%.*} with newly changed code in ${added_modified_file}." 
+              grep -R '.. include:: /includes/fact-connect-prereqs.rst' source
             fi
           done
           
