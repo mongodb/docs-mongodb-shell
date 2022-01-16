@@ -32,10 +32,11 @@ jobs:
       - run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
-            echo "${added_modified_file} has changed, no action will occur unless its a .py file."
+            echo "List of all staging links:"
+            
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
-              grep -R '.. include:: /includes/fact-connect-prereqs.rst' source
+              grep -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
             fi
           done
           
