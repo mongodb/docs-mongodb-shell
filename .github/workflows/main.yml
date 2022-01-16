@@ -35,7 +35,7 @@ jobs:
             echo "${added_modified_file} has changed, no action will occur unless its a .py file."
             if [ "${added_modified_file: -4}" == ".rst" ]
             ls
-            grep -R 'intersphinx' source
+            grep -R 'mongosh' source
             then
               grep -r "intersphinx" /docs-mongodb-shell
               #echo "Updating lambda-function: ${added_modified_file%%.*} with newly changed code in ${added_modified_file}." 
