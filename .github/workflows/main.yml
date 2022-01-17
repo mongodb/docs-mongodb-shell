@@ -38,7 +38,7 @@ jobs:
             foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
             readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
             echo $targets
-
+            pat="([^\/]+\$).*" #parretn to extract filename after last slash.
             for i in $targets
             do 
                echo "$i"
