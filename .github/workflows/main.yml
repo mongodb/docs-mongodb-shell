@@ -39,14 +39,6 @@ jobs:
             for i in $targets #get the URLs for the modified txt files.
             do 
                  [[ $Stext =~ $pat ]]
-              if [ "${added_modified_file: -4}" == ".rst" ]
-                then
-                  grep --no-filename -R -l $added_modified_file source
-                  #[[ $added_modified_file =~ $pat ]] #get the filename after the last slash.
-                  #v1=$BASH_REMATCH
-                  #v2=${v1::-4} #remove the .txt from the file
-                  #echo "$v2"
-                fi
             done
           
       - name: Extract branch name
