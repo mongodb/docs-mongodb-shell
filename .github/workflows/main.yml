@@ -33,11 +33,8 @@ jobs:
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
             echo "List of all staging links:"
-            #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
-            foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
             readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
-            
-            pat="([^\/]+\$).*"
+            pat="([^\/]+\$).*" #parretn to extract filename after last slash.
             
             for i in $targets #get the URLs for the modified txt files.
             do 
@@ -50,7 +47,7 @@ jobs:
                 #v2=${v1::-4} #remove the .txt from the file
                 #echo "$v2"
               fi
-            done
+              
           done
           
       - name: Extract branch name
