@@ -36,29 +36,23 @@ jobs:
             #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
             foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
             readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
-            echo $targets
             
-            for i in $targets
+            pat="([^\/]+\$).*"
+            
+            for i in $targets #get the URLs for the modified txt files.
             do 
-               echo "$i"
-               #([^\/]+$).*
-               echo "expr "$i" : '([^\/]+$).*' "
-               #v="some string.rtf"
-               #a2=${a::-4}
-               #echo "$a2"
+               [[ $Stext =~ $pat ]]
                
-           done
- 
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
-              grep --no-filename -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
-              Stext="/source/myfile.rst"
-              pat="([^\/]+\$).*"
-              [[ $Stext =~ $pat ]] #get the filename after the last slash.
-              v1=$BASH_REMATCH
-              v2=${v1::-4} #remove the .txt from the file
-              echo "$v2"
+              grep --no-filename -R -l $added_modified_file source
+              #[[ $added_modified_file =~ $pat ]] #get the filename after the last slash.
+              #v1=$BASH_REMATCH
+              #v2=${v1::-4} #remove the .txt from the file
+              #echo "$v2"
             fi
+          done
+          
           done
           
       - name: Extract branch name
