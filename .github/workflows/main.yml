@@ -52,10 +52,8 @@ jobs:
 
             if [ "${added_modified_file: -4}" == ".rst" ]
             then
-              grep --no-filename -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
-              Stext="/source/myfile.rst"
-              pat="([^\/]+\$).*"
-              [[ $Stext =~ $pat ]] #get the filename after the last slash.
+              grep --no-filename -R -l $added_modified_file source
+              [[ $added_modified_file =~ $pat ]] #get the filename after the last slash.
               v1=$BASH_REMATCH
               v2=${v1::-4} #remove the .txt from the file
               echo "$v2"
