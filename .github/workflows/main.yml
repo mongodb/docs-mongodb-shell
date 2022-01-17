@@ -33,31 +33,26 @@ jobs:
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
           
             for added_modified_file in "${added_modified_files[@]}"; do
-            echo "List of all staging links:"
-            #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
-            foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
-            readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
-            echo $targets
-            pat="([^\/]+\$).*" #parretn to extract filename after last slash.
-            for i in $targets
-            do 
-               echo "$i"
-               #([^\/]+$).*
-               echo "expr "$i" : '([^\/]+$).*' "
-               #v="some string.rtf"
-               #a2=${a::-4}
-               #echo "$a2"
+              echo "List of all staging links:"
+              #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
+              foo="$(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) "
+              readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source)
+              echo $targets
+              pat="([^\/]+\$).*" #parretn to extract filename after last slash.
+              for i in $targets
+                do 
+                   echo "$i"
+                   if [ "${added_modified_file: -4}" == ".rst" ]
+                    then
+                      grep --no-filename -R -l $added_modified_file source
+                      [[ $added_modified_file =~ $pat ]] #get the filename after the last slash.
+                      v1=$BASH_REMATCH
+                      v2=${v1::-4} #remove the .txt from the file
+                      echo "$v2"
+                    fi
+               done
 
-           done
 
-            if [ "${added_modified_file: -4}" == ".rst" ]
-            then
-              grep --no-filename -R -l $added_modified_file source
-              [[ $added_modified_file =~ $pat ]] #get the filename after the last slash.
-              v1=$BASH_REMATCH
-              v2=${v1::-4} #remove the .txt from the file
-              echo "$v2"
-            fi
           done
 
           
