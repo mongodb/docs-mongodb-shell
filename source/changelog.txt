@@ -19,7 +19,7 @@ v1.1.9
 
 New features in this release:
 
-- :issue:`MONGOSH-1015` – mongosh no longer overrides appName if it 
+- :issue:`MONGOSH-1015` – ``mongosh`` no longer overrides ``appName`` if it 
   was present in the connection string.
 
 - :issue:`MONGOSH-1073` – You can now pass BSON number objects to the 
