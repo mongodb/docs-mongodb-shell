@@ -5,7 +5,7 @@ to.
   `MongoDB Atlas <https://www.mongodb.com/cloud/atlas?tck=docs_mongosh>`__.
 
 - To learn how to run a local MongoDB deployment, see
-  :manual:`Install MongoDB </installation/>`.
+  :manual:`Install MongoDB </installation/>`. 
 
 Supported MongoDB Versions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
