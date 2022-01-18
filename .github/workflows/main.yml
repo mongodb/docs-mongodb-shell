@@ -35,12 +35,16 @@ jobs:
             for added_modified_file in "${added_modified_files[@]}"; do
               echo "List of all staging links:"
               
+              pat="([^\/]+\$).*" #pattern to extract filename after last slash.
+              
               #if the file is a txt file echo the path
               if [ "${added_modified_files: -4}" == ".txt" ]
                 then
-                  echo "${added_modified_file}"
+                   [[ $added_modified_files =~ $pat ]] #get the filename after the last slash.
+                   v1=$BASH_REMATCH
+                   v2=${v1::-4} #remove the .txt from the file
+                   echo "$v2"
                 fi
-                
                 
               #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
               #foo="$(grep -HRl '.. include:: /includes/${added_modified_file}' source)"
@@ -48,10 +52,9 @@ jobs:
               #read the rst includes
               
               readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) #this list all include .txt files.
-              pat="([^\/]+\$).*" #pattern to extract filename after last slash.
+              
               for i in $targets
                 do 
-                   #echo "$i"
                    [[ $i =~ $pat ]] #get the filename after the last slash.
                    v1=$BASH_REMATCH
                    v2=${v1::-4} #remove the .txt from the file
