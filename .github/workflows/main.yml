@@ -41,7 +41,7 @@ jobs:
           format: 'csv'
       - run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-            prefix="https://docs..."${BRANCH_NAME}"
+            prefix="https://docs...${BRANCH_NAME}"
             
             for added_modified_file in "${added_modified_files[@]}"; do
               echo "List of all staging links:"
