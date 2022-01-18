@@ -10,7 +10,7 @@ option on the command line or by specifying a :ref:`.js file
 <mdb-shell-execute-file>`, :binary:`mongosh` reads :ref:`.mongoshrc.js
 <mongoshrc-js>` *after* the JavaScript has finished processing. You can
 prevent :ref:`.mongoshrc.js <mongoshrc-js>` from being loaded by using
-the :option:`--norc <mongosh --norc>` option.
+the :option:`--norc <mongosh --norc>` option. 
 
 .. note::
 
