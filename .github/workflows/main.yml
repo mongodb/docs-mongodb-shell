@@ -36,11 +36,12 @@ jobs:
               echo "List of all staging links:"
               
               #if the file is a txt file echo the path
-              if [ ${added_modified_files} -gt 100 ]
               if [ "${added_modified_files: -4}" == ".txt" ]
                 then
                   echo "${added_modified_file}"
                 fi
+                
+                
               #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
               #foo="$(grep -HRl '.. include:: /includes/${added_modified_file}' source)"
               #echo $foo
