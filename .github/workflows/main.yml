@@ -49,6 +49,8 @@ jobs:
               [[ $added_modified_files =~ $pat ]] #get the filename after the last slash.
               v1=$BASH_REMATCH
               echo "v1 : ${v1}"
+              echo "v : '.. include:: /includes/${v1}'"
+              
               readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/${v1}' source) #this list all include .txt files.
               
               for i in $targets
