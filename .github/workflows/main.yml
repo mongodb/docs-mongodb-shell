@@ -34,10 +34,18 @@ jobs:
           
             for added_modified_file in "${added_modified_files[@]}"; do
               echo "List of all staging links:"
-              echo "${added_modified_file}"
+              
+              #if the file is a txt file echo the path
+              if [ ${added_modified_files} -gt 100 ]
+              if [ "${added_modified_files: -4}" == ".txt" ]
+                then
+                  echo "${added_modified_file}"
+                fi
               #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
               #foo="$(grep -HRl '.. include:: /includes/${added_modified_file}' source)"
               #echo $foo
+              #read the rst includes
+              
               readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) #this list all include .txt files.
               pat="([^\/]+\$).*" #pattern to extract filename after last slash.
               for i in $targets
