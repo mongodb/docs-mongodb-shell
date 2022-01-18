@@ -50,10 +50,11 @@ jobs:
               v1=$BASH_REMATCH
               echo "v1 : ${v1}"
               echo "v : '.. include:: /includes/${v1}'"
+              searchinclude='.. include:: /includes/${v1}'
               
-              readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/${v1}' source) #this list all include .txt files.
+              readarray -d '' -t targets < <(grep -HRl searchinclude source) #grep the included files into an array.
               
-              for i in $targets
+              for i in $targets #get list of all the txt file which have the .rst file included in them.
                 do 
                    [[ $i =~ $pat ]] #get the filename after the last slash.
                    v1=$BASH_REMATCH
