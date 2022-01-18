@@ -45,13 +45,10 @@ jobs:
                    v2=${v1::-4} #remove the .txt from the file
                    echo "$v2"
                 fi
-                
-              #grep -h -R -l '.. include:: /includes/fact-connect-prereqs.rst' source
-              #foo="$(grep -HRl '.. include:: /includes/${added_modified_file}' source)"
-              #echo $foo
-              #read the rst includes
               
-              readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/fact-connect-prereqs.rst' source) #this list all include .txt files.
+              [[ $added_modified_files =~ $pat ]] #get the filename after the last slash.
+              v1=$BASH_REMATCH
+              readarray -d '' -t targets < <(grep -HRl '.. include:: /includes/${v1}' source) #this list all include .txt files.
               
               for i in $targets
                 do 
