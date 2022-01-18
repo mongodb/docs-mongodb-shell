@@ -15,7 +15,7 @@
 v1.1.8
 ------
 
-*Released January 11, 2022*
+*Released January 11, 2022* 
 
 New features in this release:
 
