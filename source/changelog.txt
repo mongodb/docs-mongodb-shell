@@ -23,7 +23,7 @@ New features in this release:
   was present in the connection string.
 
 - :issue:`MONGOSH-1073` – You can now pass BSON number objects to the 
-  legacy BSON number constructors, for example:
+  legacy BSON number constructors. For example,
   ``NumberInt(NumberInt(n))`` now works like it did in the legacy shell.
 
 `Full release notes available on JIRA
