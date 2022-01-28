@@ -181,7 +181,7 @@ New features in this release:
   ``// comments`` are now preserved as ``/* comments */`` in the
   history entry.
 
-- The :ref:`aggregation-pipeline` is now an optional parameter for
+- The :ref:`aggregation-pipeline` parameter is now optional for
   :method:`db.collection.watch()`, :method:`db.watch()`, and
   :method:`Mongo.watch()`.
 
