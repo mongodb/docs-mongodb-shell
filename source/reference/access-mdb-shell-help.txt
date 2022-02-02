@@ -13,7 +13,7 @@ Access Help in ``mongosh``
    :depth: 1
    :class: singlecol
 
-This document provides a brief overview of the help available in
+This document provides an overview of the help available in
 :binary:`mongosh`. 
 
 .. tip::
@@ -119,7 +119,7 @@ method:
 
 The output resembles the following:
 
-.. code-block:: none
+.. code-block:: javascript
    :copyable: false
 
      db.adminCommand({ serverStatus: 1 }):
@@ -192,7 +192,7 @@ To see the list of methods available on collection objects use the
 
    db.collection.help()
 
-``<collection>`` can be the name of an existing or nonexistent
+``<collection>`` can be the name of an existing or non-existent
 collection.
 
 The output resembles the following abbreviated list:
@@ -271,9 +271,9 @@ The output resembles the following:
 Cursor Help
 -----------
 
-Use :ref:`cursor methods <mongosh-cursor-methods>` to modify
-:ref:`read operations <read-operations-queries>` that use
-:method:`~db.collection.find()`.
+To modify :ref:`read operations <read-operations-queries>` that use
+:method:`~db.collection.find()`, use :ref:`cursor methods
+<mongosh-cursor-methods>`.
 
 To list the available modifier and cursor handling methods, use the
 ``db.collection.find().help()`` command:
@@ -374,17 +374,17 @@ certain database commands and obtain information on your deployment:
      - Show help.
 
    * - ``show collections``
-     - Print a list of all collections for current database
+     - Display a list of all collections for current database
 
    * - ``show dbs``
-     - Print a list of all databases on the server.
+     - Display a list of all databases on the server.
 
        .. note::
 
           ``show dbs`` is synonymous with ``show databases``.
 
    * - ``show log <name>``
-     - Prints the last segment of log in memory for the specified
+     - Displays the last segment of log in memory for the specified
        logger name. If you do not specify a ``<name>``, the command
        defaults to ``global``.
 
@@ -397,18 +397,18 @@ certain database commands and obtain information on your deployment:
              show log startupWarnings
 
    * - ``show logs``
-     - Print the accessible logger names. See :doc:`/logs`.
+     - Display the accessible logger names. See :doc:`/logs`.
 
    * - ``show users``
-     - Print a list of users for current database.
+     - Display a list of users for current database.
 
    * - ``show profile``
-     - Print the five most recent operations that took 1 millisecond or
+     - Display the five most recent operations that took 1 millisecond or
        more. See documentation on the
        :manual:`database profiler
        </tutorial/manage-the-database-profiler>` for more information.
 
    * - ``show roles``
-     - Print a list of all roles, both user-defined and built-in, for
+     - Display a list of all roles, both user-defined and built-in, for
        the current database.
 
