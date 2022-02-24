@@ -21,8 +21,8 @@ v1.2.1
   :ref:`configuration file <mongosh-shell-settings>`.
 
 - :issue:`MONGOSH-959` – You can now use the :ref:`config.reset
-  <example-reset-setting>` method to return to the default configuration
-  settings.
+  <example-reset-setting>` method to return a configuration setting to
+  its default value.
 
 - :issue:`MONGOSH-1133` – ``mongosh`` adds a ``--tlsUseSystemCA``
   option that causes ``mongosh`` to attempt to load system
