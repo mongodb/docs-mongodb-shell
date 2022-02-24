@@ -320,6 +320,13 @@ TLS Options
    disabled TLS 1.0, specify ``none`` to
    :option:`--tlsDisabledProtocols <--tlsDisabledProtocols>`.
 
+.. option:: --tlsUseSystemCA
+
+   When specified, causes ``mongosh`` to load trusted certificates known
+   to the operating system. Use this option if you want to use
+   certificates already known to your operating system without needing
+   to explicitly specify those certificates to ``mongosh``.
+
 Authentication Options
 ----------------------
 
