@@ -335,7 +335,7 @@ changes. (Note that this stores the most recent input first.)
 Reset a Configuration Setting to Its Default Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you modify a configuration setting and want to reset it to its
+If you modified a configuration setting and want to reset it to its
 default value, use ``config.reset( <"property"> )``.
 
 #. Run the following command to set the value of ``historyLength`` to
