@@ -105,7 +105,7 @@ Select the appropriate tab for your operating system:
       - The ``mongocryptd`` binary that is included in the |mdb-shell|
         ``.deb`` package does not work on unsupported Ubuntu platforms
         (16.04 or older). If you must install :binary:`mongosh` on an
-        unsupported Ubuntu platform :manual:`install
+        unsupported Ubuntu platform, :manual:`install
         </reference/security-client-side-encryption-appendix/#installation>` 
         the ``mongocryptd`` binary separately to use its 
         functionality in the |mdb-shell|.
