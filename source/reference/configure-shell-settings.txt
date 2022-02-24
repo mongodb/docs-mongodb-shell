@@ -46,6 +46,12 @@ Change the current setting of ``<property>`` to ``<value>``:
 
    config.set( "<property>", <value> )
 
+Reset a ``<property>`` back to its default value:
+
+.. code-block:: javascript
+
+   config.reset( "<property>" )
+
 Supported ``property`` parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -324,3 +330,34 @@ changes. (Note that this stores the most recent input first.)
    db.contacts.find( {"email": "<email>" } )
    config.set( "redactHistory", "remove-redact" )
 
+Reset a Configuration Setting to Its Default Value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you modify a configuration setting and want to reset it to its
+default value, use ``config.reset( <"property"> )``.
+
+#. Run the following command to set the value of ``historyLength`` to
+   ``2000``:
+
+   .. code-block:: javascript
+
+      config.set("historyLength", 2000)
+
+#. Verify the updated value for ``historyLength``:
+
+   .. code-block:: javascript
+
+      config.get("historyLength")
+
+#. Reset the ``historyLength`` setting back to its default value of
+   ``1000``:
+
+   .. code-block:: javascript
+
+      config.reset("historyLength")
+
+#. Verify the updated value:
+
+   .. code-block:: javascript
+
+      config.get("historyLength")
