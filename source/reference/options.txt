@@ -322,9 +322,9 @@ TLS Options
 
 .. option:: --tlsUseSystemCA
 
-   Allows ``mongosh`` to load certificates known to the operating
+   Allows ``mongosh`` to load TLS certificates known to the operating
    system's certificate authority. Use this option if you want to use
-   |tls-ssl| certificates already known to your operating system without
+   TLS certificates already known to your operating system without
    needing to explicitly specify those certificates to ``mongosh``.
 
 Authentication Options
