@@ -15,7 +15,7 @@
 v1.2.1
 ------
 
-*Released February24, 2022*
+*Released February 24, 2022*
 
 - :issue:`MONGOSH-1063` - You can now create a global ``monogosh``
   :ref:`configuration file <mongosh-shell-settings>`.
@@ -24,7 +24,7 @@ v1.2.1
   return to the default configuration settings.
 
 - :issue:`MONGOSH-1133` – ``mongosh`` adds a ``--tlsUseSystemCA``
-  feature that causes ```mongosh`` to attempt to load system
+  feature that causes ``mongosh`` to attempt to load system
   certificates as well as the built-in certificates.
 
 
