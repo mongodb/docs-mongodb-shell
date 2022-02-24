@@ -351,8 +351,7 @@ default value, use ``config.reset( <"property"> )``.
 
       config.get("historyLength")
 
-#. Reset the ``historyLength`` setting back to its default value of
-   ``1000``:
+#. Reset the ``historyLength`` setting to its default value of ``1000``:
 
    .. code-block:: javascript
 
