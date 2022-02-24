@@ -46,7 +46,7 @@ Change the current setting of ``<property>`` to ``<value>``:
 
    config.set( "<property>", <value> )
 
-Reset a ``<property>`` back to its default value:
+Reset a ``<property>`` to its default value:
 
 .. code-block:: javascript
 
