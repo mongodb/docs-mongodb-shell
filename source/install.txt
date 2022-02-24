@@ -57,21 +57,21 @@ Select the appropriate tab for your operating system:
          `Homebrew Website <https://docs.brew.sh/Installation>`__.
 
       The Homebrew package manager is the recommended installation
-      method for ``mongosh`` on macOS. To learn how to manually install
-      ``mongosh`` from an archive instead, see
+      method for :binary:`mongosh` on macOS. To learn how to manually
+      install :binary:`mongosh` from an archive instead, see
       :ref:`macos-install-archive`.
 
       Considerations
       ``````````````
 
-      ``mongosh`` installed with Homebrew does not support
+      :binary:`mongosh` installed with Homebrew does not support
       :manual:`automatic client-side field level encryption
       </core/security-automatic-client-side-encryption/>`.
 
       Procedure
       `````````
 
-      To install ``mongosh`` with Homebrew:
+      To install :binary:`mongosh` with Homebrew:
 
       .. include:: /includes/steps/install-shell-macos-homebrew.rst
 
@@ -80,7 +80,7 @@ Select the appropriate tab for your operating system:
       Install from ``.zip`` File
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      To manually install ``mongosh`` using a downloaded ``.zip``
+      To manually install :binary:`mongosh` using a downloaded ``.zip``
       file:
 
       .. include:: /includes/steps/install-shell-macos.rst
@@ -91,21 +91,22 @@ Select the appropriate tab for your operating system:
       Considerations for Ubuntu
       ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      - ``mongosh`` is available as a
+      - :binary:`mongosh` is available as a
         :abbr:`PPA (Personal Package Archive)` for Ubuntu 20.04 (Focal)
-        and Ubuntu 18.04 (Bionic).
+        and Ubuntu 18.04 (Bionic). If you are installing on Ubuntu
+        20.04 (Focal) or Ubuntu 18.04  (Bionic), use the procedure in
+        the ``.deb`` tab.
         
-        - If you are using Ubuntu 20.04 (Focal) or Ubuntu 18.04
-          (Bionic), use the procedure in the ``.deb`` tab.
-        
-        - If you are using Ubuntu 16.04 (Xenial), you must
-          obtain the ``mongosh`` tarball using the procedure in the
-          ``.tgz`` tab.
+      - MongoDB 5.0 removes support for Ubuntu 16.04 (Xenial). If you
+        must use the unsupported Ubuntu 16.04 (Xenial), install the
+        :binary:`mongosh` tarball using the procedure in the ``.tgz``
+        tab.
       
-      - The ``mongocryptd`` binary in the |mdb-shell| ``.deb`` 
-        package does not work on Ubuntu 16.04 or older. On 
-        Ubuntu 16.04 and older systems, you must 
-        :manual:`install </reference/security-client-side-encryption-appendix/#installation>` 
+      - The ``mongocryptd`` binary that is included in the |mdb-shell|
+        ``.deb`` package does not work on unsupported Ubuntu platforms
+        (16.04 or older). If you must install :binary:`mongosh` on an
+        unsupported Ubuntu platform :manual:`install
+        </reference/security-client-side-encryption-appendix/#installation>` 
         the ``mongocryptd`` binary separately to use its 
         functionality in the |mdb-shell|.
 
@@ -144,5 +145,5 @@ Select the appropriate tab for your operating system:
 Next Steps
 ----------
 
-Once you successfully install ``mongosh``, learn how to
+Once you successfully install :binary:`mongosh`, learn how to
 :ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
