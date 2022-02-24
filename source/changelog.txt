@@ -24,7 +24,7 @@ v1.2.1
   return to the default configuration settings.
 
 - :issue:`MONGOSH-1133` – ``mongosh`` adds a ``--tlsUseSystemCA``
-  feature that causes ``mongosh`` to attempt to load system
+  option that causes ``mongosh`` to attempt to load system
   certificates as well as the built-in certificates.
 
 
