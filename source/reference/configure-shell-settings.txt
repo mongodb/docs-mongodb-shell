@@ -330,6 +330,8 @@ changes. (Note that this stores the most recent input first.)
    db.contacts.find( {"email": "<email>" } )
    config.set( "redactHistory", "remove-redact" )
 
+.. _example-reset-setting:
+
 Reset a Configuration Setting to Its Default Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
