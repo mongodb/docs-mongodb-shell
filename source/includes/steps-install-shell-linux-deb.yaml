@@ -1,6 +1,3 @@
-:binary:`mongosh` is available as a :abbr:`PPA (Personal Package
-Archive)` for Ubuntu 20.04 (Focal) and Ubuntu 18.04 (Bionic).
-
 title: Import the public key used by the package management system.
 stepnum: 1
 level: 4
