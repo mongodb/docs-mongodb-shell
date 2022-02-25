@@ -108,6 +108,10 @@ Select the appropriate tab for your operating system:
          .. tab:: .deb
             :tabid: deb
 
+            :binary:`mongosh` is available as a :abbr:`PPA (Personal
+            Package Archive)` for Ubuntu 20.04 (Focal) and Ubuntu 18.04
+            (Bionic).
+
             .. include:: /includes/steps/install-shell-linux-deb.rst
 
          .. tab:: .rpm
