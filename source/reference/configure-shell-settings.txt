@@ -338,8 +338,7 @@ Reset a Configuration Setting to the Default Value
 If you modified a configuration setting and want to reset it to the
 default value, use ``config.reset( "<property>" )``.
 
-#. To set the value of ``historyLength`` to ``2000``, run the following
-   command:
+#. Change the value of the ``historyLength`` setting to ``2000``:
 
    .. code-block:: javascript
 
