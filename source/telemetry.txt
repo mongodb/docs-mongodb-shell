@@ -90,3 +90,9 @@ collection.
       :copyable: false
 
       Telemetry is now enabled.
+
+   .. note::
+   
+      If the ``forceDisableTelemetry`` :ref:`setting
+      <mongosh-shell-settings>` is ``true``, you cannot enable
+      telemetry.
