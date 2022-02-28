@@ -81,6 +81,12 @@ Supported ``property`` parameters
      - Designates an editor to use within the :binary:`~bin.mongosh`
        console. Overrides the ``EDITOR`` environment variable if set.
 
+   * - ``forceDisableTelemetry``
+     - boolean
+     - false
+     - If ``true``, a user cannot manually enable :ref:`telemetry
+       <telemetry>`.
+
    * - ``historyLength``
      - integer
      - 1000
