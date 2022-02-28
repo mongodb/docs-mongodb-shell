@@ -85,7 +85,7 @@ Supported ``property`` parameters
      - boolean
      - false
      - If ``true``, a user cannot manually enable :ref:`telemetry
-       <telemetry>`.
+       <telemetry>`. 
 
    * - ``historyLength``
      - integer
