@@ -35,3 +35,4 @@ To configure ``mongosh`` settings, you can either use:
 
    /reference/configure-shell-settings-api
    /reference/configure-shell-settings-global
+   /reference/customize-prompt
