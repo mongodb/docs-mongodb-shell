@@ -22,6 +22,22 @@ Configuration File Format
 The ``mongosh`` configuration file uses the YAML format. All options are
 under the ``mongosh`` namespace.
 
+Example Configuration File
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following configuration file sets:
+
+- ``displayBatchSize`` to 50
+- ``inspectDepth`` to 20
+- ``redactHistory`` to ``remove-redact``
+
+.. code-block:: yaml
+
+   mongosh:
+     displayBatchSize: 50
+     inspectDepth: 20
+     redactHistory: "remove-redact"
+
 Configuration File Location
 ---------------------------
 
@@ -61,22 +77,6 @@ You can specify the following ``mongosh`` settings in your configuration
 file:
 
 .. include:: /includes/list-table-shell-properties.rst
-
-Example Configuration File
---------------------------
-
-The following configuration file sets:
-
-- ``displayBatchSize`` to 50
-- ``inspectDepth`` to 20
-- ``redactHistory`` to ``remove-redact``
-
-.. code-block:: yaml
-
-   mongosh:
-     displayBatchSize: 50
-     inspectDepth: 20
-     redactHistory: "remove-redact"
 
 Behavior with ``config`` API
 ----------------------------
