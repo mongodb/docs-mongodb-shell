@@ -92,9 +92,10 @@ lines as entered unless ``redactHistory`` is set to ``remove-redact``.
 Behavior with Configuration File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Settings specified with the :ref:`config API <configure-settings-api>`
-override settings specified in the configuration file. Additionally,
-settings specified with the config API persist across restarts.
+Settings specified with the ``config`` API override settings specified
+in the :ref:`configuration file <configure-settings-global>`.
+Additionally, settings specified with the ``config`` API persist across
+restarts.
 
 .. example::
 
