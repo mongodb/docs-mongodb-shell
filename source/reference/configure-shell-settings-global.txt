@@ -13,7 +13,8 @@ Configure :binary:`~bin.mongosh` Using a Configuration File
 
 You can specify ``mongosh`` settings in a global configuration file.
 When you specify settings in a configuration file, those settings are
-applied at startup.
+applied at startup. After you create a configuration file, the settings
+in the file take effect the next time you start ``mongosh``.
 
 Configuration File Format
 -------------------------
@@ -61,8 +62,8 @@ file:
 
 .. include:: /includes/list-table-shell-properties.rst
 
-Example
--------
+Example Configuration File
+--------------------------
 
 The following configuration file sets:
 
@@ -80,8 +81,9 @@ The following configuration file sets:
 Behavior with ``config`` API
 ----------------------------
 
-Settings set with the :ref:`config API <configure-settings-api>`
-override settings set in the configuration file.
+Settings specified with the :ref:`config API <configure-settings-api>`
+override settings specified in the configuration file. Additionally,
+settings specified with the config API persist across restarts.
 
 .. example::
 
