@@ -91,21 +91,23 @@ Settings set with the ``config`` API override settings set in the
 
 .. example::
 
-   Consider the following configuration file:
+   Consider the following configuration file that sets the
+   ``inspectDepth`` setting to ``20``:
 
    .. code-block:: yaml
 
       mongosh:
         inspectDepth: 20
        
-   During your ``mongosh`` session you run:
+   During your ``mongosh`` session you run the following command to set
+   ``inspectDepth`` to ``10``:
 
    .. code-block:: javascript
 
       config.set( "inspectDepth": 10 )
 
-   The value of ``inspectDepth`` is set to ``10``, and will remain
-   ``10`` even when ``mongosh`` is restarted.
+   The value of ``inspectDepth`` becomes ``10``, and will remain ``10``
+   even when ``mongosh`` is restarted.
 
 Examples
 --------
