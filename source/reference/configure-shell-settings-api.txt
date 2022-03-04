@@ -46,6 +46,12 @@ Change the current setting of ``<property>`` to ``<value>``:
 
    config.set( "<property>", <value> )
 
+Reset a ``<property>`` to the default value:
+
+.. code-block:: javascript
+
+   config.reset( "<property>" )
+
 Supported ``property`` parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
