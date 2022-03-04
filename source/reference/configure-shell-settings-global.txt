@@ -81,9 +81,11 @@ The following configuration file sets:
 Behavior with ``config`` API
 ----------------------------
 
-Settings specified with the :ref:`config API <configure-settings-api>`
-override settings specified in the configuration file. Additionally,
-settings specified with the config API persist across restarts.
+Settings specified with the :ref:`config API <configure-settings-api>`:
+
+- Override settings specified in the configuration file
+
+- Persist across restarts
 
 .. example::
 
