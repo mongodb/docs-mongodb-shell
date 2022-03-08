@@ -452,8 +452,9 @@ Session Options
 
 .. option:: --retryWrites
 
-   Enables :manual:`retryable writes </core/retryable-writes/>` as the
-   default for sessions in the |mdb-shell|.
+   Enables :ref:`retryable-writes`. Retryable writes are the default in
+   |mdb-shell|. To disable retryable writes, use
+   :option:`--retryWrites=false <mongosh --retryWrites>`
 
    For more information on sessions, see :ref:`sessions`.
 
