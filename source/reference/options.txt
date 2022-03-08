@@ -453,7 +453,8 @@ Session Options
 .. option:: --retryWrites
 
    Enables :ref:`retryable-writes`. Retryable writes are the default in
-   |mdb-shell|. To disable retryable writes, use
+   :binary:`mongosh`. Retryable writes are disabled by default in the
+   legacy :binary:`mongo` shell. To disable retryable writes, use
    :option:`--retryWrites=false <mongosh --retryWrites>`
 
    For more information on sessions, see :ref:`sessions`.
