@@ -95,9 +95,9 @@ Behavior with Configuration File
 Settings specified with the ``config`` API:
 
 - Override settings specified in the :ref:`configuration file
-  <configure-settings-global>`
+  <configure-settings-global>`.
 
-- Persist across restarts
+- Persist across restarts.
 
 .. example::
 
