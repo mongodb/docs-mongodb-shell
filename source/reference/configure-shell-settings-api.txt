@@ -66,9 +66,7 @@ Remove or Redact Sensitive Information From History
 :binary:`~bin.mongosh` makes "best-effort" attempts to match patterns
 that normally correspond to certain kinds of sensitive information.
 
-There are
-`patterns <https://github.com/mongodb-js/redact/blob/master/lib/regexes.js>`__
-that match:
+There are patterns that match:
 
 - Certificates and keys
 - Email addresses
