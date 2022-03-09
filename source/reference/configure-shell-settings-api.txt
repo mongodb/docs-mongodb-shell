@@ -71,13 +71,11 @@ There are
 that match:
 
 - Certificates and keys
-- Generic user directories
 - Email addresses
-- IP addresses
+- Generic user directories
 - HTTP(s) URLs
+- IP addresses
 - MongoDB connection strings
-- Compass schema URL fragments
-- Electron application resources
 
 Certain operations, such as :method:`connect()`, are considered
 inherently sensitive. If ``redactHistory`` is set to ``remove`` or
