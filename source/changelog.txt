@@ -47,8 +47,8 @@ v1.2.2
 
 *Released February 25, 2022*
 
-:issue:`MONGOSH-1134` - Internal bug fix required to re-enable
-Homebrew installation.
+- :issue:`MONGOSH-1134` - Internal bug fix required to re-enable
+  Homebrew installation.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=32988>`__.
