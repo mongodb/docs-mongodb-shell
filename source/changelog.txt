@@ -37,7 +37,7 @@ v1.2.3
 *Released March 10, 2022*
 
 - :issue:`MONGOSH-1121` - Support the ``commitQuorum`` parameter for the
-:method:`~db.collection.createIndexes()` method.
+  :method:`~db.collection.createIndexes()` method.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=32989>`__.
