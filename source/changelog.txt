@@ -18,7 +18,7 @@ v1.3.0
 *Released March 17, 2022*
 
 - :issue:`MONGOSH-856` - Kerberos feature parity with the legacy shell 
-  is Done™ now, with the last command line option now also working as it
+  is done now, with the last command line option now also working as it
   did in the legacy shell.
 
 - :issue:`MONGOSH-1013` - KMIP support for CSFLE. More specifically, you 
