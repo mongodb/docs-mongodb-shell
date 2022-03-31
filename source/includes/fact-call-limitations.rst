@@ -1,6 +1,6 @@
 .. Top level title in calling page, won't render in right TOC
 
-The results of database calls cannot be passed inside the following
+The results of database queries cannot be passed inside the following
 contexts:
 
 - Class constructor functions
@@ -16,7 +16,7 @@ or ``.map()``.
 Constructors
 ~~~~~~~~~~~~
 
-The following constructors will not work: 
+The following constructors do not work: 
 
 .. code-block:: javascript
    :copyable: false
@@ -51,18 +51,18 @@ Use an ``async`` function instead:
 Generator Functions
 ~~~~~~~~~~~~~~~~~~~
 
-The following generator functions will not work: 
+The following generator functions do not work: 
 
 .. code-block:: javascript
    :copyable: false
 
    // This code will fail
    function* FindResults() {
-      yield db.students.find();
+      yield db.students.findMany();
    }
 
    // This code will fail
-   function listEntries() { return db.students.find(); }
+   function listEntries() { return db.students.findMany(); }
    function* findResults() {
       yield listEntries();
    }
@@ -71,7 +71,7 @@ Use an ``async generator function`` instead:
 
 .. code-block:: javascript
 
-   function listEntries() { return db.students.find(); }
+   function listEntries() { return db.students.findMany(); }
    async function* findResults() {
       yield listEntries();
    }
@@ -79,7 +79,7 @@ Use an ``async generator function`` instead:
 Array Sort
 ~~~~~~~~~~
 
-The following array sort will not work: 
+The following array sort do not work: 
 
 .. code-block:: javascript
    :copyable: false
@@ -89,7 +89,7 @@ The following array sort will not work:
      return db[ collectionOne ].estimatedDocumentCount() - db[ collectionOne ].estimatedDocumentCount() )
    } );
 
-Use ``.map`` instead. 
+Use ``.map()`` instead. 
 
 .. code-block:: javascript
 
