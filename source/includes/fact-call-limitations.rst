@@ -50,8 +50,9 @@ Use an ``async`` function instead:
 
 .. note::
 
-   You can also use a method that performs a database operation inside
-   a class as an alternative to working with asynchronous JavaScript.
+   You can also create a method that performs a database operation
+   inside a class as an alternative to working with asynchronous
+   JavaScript.
 
    .. code-block::
 
