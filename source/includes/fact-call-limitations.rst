@@ -96,7 +96,7 @@ Use an ``async generator function`` instead:
 Array Sort
 ~~~~~~~~~~
 
-The following array sort do not work: 
+The following array sort does not work: 
 
 .. code-block:: javascript
    :copyable: false
