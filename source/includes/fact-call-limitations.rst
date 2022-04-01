@@ -48,6 +48,22 @@ Use an ``async`` function instead:
       }
    }
 
+.. note::
+
+   You can also use a method that performs a database operation inside
+   a class as an alternative to working with asynchronous JavaScript.
+
+   .. code-block::
+
+      class FindResults {
+         constructor() { }
+         
+         init() { this.value = db.students.find(); }
+       }
+
+   To use this class, first construct a class instance then call the
+   ``.init()`` method.
+
 Generator Functions
 ~~~~~~~~~~~~~~~~~~~
 
