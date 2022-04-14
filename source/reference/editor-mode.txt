@@ -212,15 +212,18 @@ missing a comma:
       { "name": "Paola", "group": "marketing" }
    ] )
 
-To run the example:
+To setup the example:
 
 #. Copy the example code.
 #. Enter ``edit`` to start an editing session. 
 #. Paste the example code into the editor.
-#. Exit the editor. The example code is copied to the command line.
-#. Press ``enter``. :binary:`mongosh` returns an error.  
-#. Enter ``edit`` without any arguments. The external editor reloads
-   the last edit.
+#. Exit the editor. 
+#. Press ``enter``.
+
+When you exit the editor, it copies the example code to the command
+line. :binary:`mongosh` returns an error when the code runs.
+
+To reload the example code, enter ``edit`` without any arguments.
 
 .. code-block:: javascript
    :copyable: false
