@@ -212,7 +212,7 @@ missing a comma:
       { "name": "Paola", "group": "marketing" }
    ] )
 
-To setup the example:
+To set up the example:
 
 #. Copy the example code.
 #. Enter ``edit`` to start an editing session. 
