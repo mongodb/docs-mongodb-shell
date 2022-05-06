@@ -85,6 +85,16 @@ Select the appropriate tab for your operating system:
 
       .. include:: /includes/steps/install-shell-macos.rst
 
+      Platform Support
+      ~~~~~~~~~~~~~~~~
+
+      ``mongosh`` supports Apple silicon starting with ``mongosh``
+      0.13.2.
+
+      :manual:`Automatic client-side field level encryption
+      </core/security-automatic-client-side-encryption/>` is not
+      supported on Apple silicon.
+
    .. tab::
       :tabid: linux
 
