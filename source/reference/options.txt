@@ -419,11 +419,12 @@ Authentication Options
    If :option:`--sspiHostnameCanonicalization 
    <--sspiHostnameCanonicalization>` is set to:
 
-   - ``forward``, the effect is the same as setting ``authMechanismProperties=CANONICALIZE_HOST_NAME:true``.    
-   - ``none``, the effect is the same as setting ``authMechanismProperties=CANONICALIZE_HOST_NAME:false``.    
-
-   :option:`--sspiHostnameCanonicalization 
-   <--sspiHostnameCanonicalization>` cannot be set to ``forwardAndReverse``.  
+   - ``forwardAndReverse``, ``mongosh`` 1.3.0 adds support to perform a
+     forward DNS lookup and then a reverse lookup.
+   - ``forward``, the effect is the same as setting
+     ``authMechanismProperties=CANONICALIZE_HOST_NAME:true``.    
+   - ``none``, the effect is the same as setting
+     ``authMechanismProperties=CANONICALIZE_HOST_NAME:false``.    
 
 .. option:: --password <password>, -p <password>
 
