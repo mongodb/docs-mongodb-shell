@@ -15,7 +15,7 @@
 v1.4.2
 ------
 
-*Released May 17, 2022*
+*Released May 18, 2022*
 
 - :issue:`MONGOSH-1139` - Adds Debian 11 support for ``mongosh``.
 
