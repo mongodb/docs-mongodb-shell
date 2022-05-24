@@ -30,7 +30,7 @@ content: |
    If your web browser automatically extracts the archive as part of the
    download or you extract the archive without the ``tar`` command,
    you may need to make the binary executable. Run the following
-   commands from the directory where you extracted the archive:
+   command from the directory where you extracted the archive:
 
    .. code-block:: sh
 
