@@ -35,7 +35,7 @@ content: |
    .. code-block:: sh
 
       chmod +x bin/mongosh
-      chmod +x bin/mongocryptd-mongosh
+      chmod +x bin/mongosh_csfle_v1.dylib
 ---
 title: "Add the downloaded binaries to your ``PATH`` environment
    variable."
