@@ -25,7 +25,7 @@ content: |
       tar -zxvf mongosh-{+version+}-linux-x64.tgz
 
    The extracted ``bin`` folder contains two binaries: ``mongosh`` and
-   ``mongocryptd-mongosh``.
+   ``mongosh_csfle_v1.so``.
 
    If your web browser automatically extracts the archive as part of the
    download or you extract the archive without the ``tar`` command,

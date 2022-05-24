@@ -22,7 +22,7 @@ content: |
       unzip mongosh-{+version+}-darwin-x64.zip
 
    The extracted ``bin`` folder contains two binaries: ``mongosh`` and
-   ``mongocryptd-mongosh``.
+   ``mongosh_csfle_v1.dylib``.
 
    If your web browser automatically extracts the archive as part of the
    download or you extract the archive without the ``unzip`` command,
