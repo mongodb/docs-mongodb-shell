@@ -51,7 +51,7 @@ content: |
      .. code-block:: sh
 
        sudo cp mongosh /usr/local/bin/
-       sudo cp mongocryptd-mongosh /usr/local/bin/
+       sudo cp mongosh_csfle_v1.so /usr/local/bin/
 
    - Create symbolic links to the ``MongoDB Shell``. Switch to the
      directory where you extracted the files from the ``.tgz`` archive.
