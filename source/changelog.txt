@@ -17,12 +17,11 @@ v1.5.0
 
 *Released June 2, 2022*
 
-- :issue:`MONGOSH-1138` – MongoSH now supports Queryable Encryption 
-  (FLE 2.0).
+- :issue:`MONGOSH-1138` – ``mongosh`` now supports Queryable Encryption.
 
-- :issue:`MONGOSH-1169` – MongoSH now supports FIPS-compliant mode.
+- :issue:`MONGOSH-1169` – ``mongosh`` now supports FIPS-compliant mode.
 
-- MongoSH now uses Node.js version 16.x.
+- ``mongosh`` now uses Node.js version 16.x.
 
 - MongoSH now longer distributes per-distro MongoSH linux packages. You
   can still get .rpm, .deb and .tgz packages through your package manager 
