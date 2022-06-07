@@ -20,13 +20,13 @@ MongoDB's free monitoring service.
 
 To enable free monitoring, run the following command: 
 
-.. code-block:: javascript
+.. code-block:: sh
 
    db.enableFreeMonitoring()
 
 To permanently disable this reminder, run the following command: 
 
-.. code-block:: javascript
+.. code-block:: sh
 
    db.disableFreeMonitoring()
 
