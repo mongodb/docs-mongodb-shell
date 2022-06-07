@@ -24,7 +24,7 @@ content: |
 
                [mongodb-org-{+mdb-version+}]
                name=MongoDB Repository
-               baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/{+mdb-version+}/$basearch/
+               baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/{+mdb-version+}/x86_64/
                gpgcheck=1
                enabled=1
                gpgkey=https://www.mongodb.org/static/pgp/server-{+pgp-version+}.asc
@@ -69,4 +69,11 @@ content: |
   .. code-block:: sh
 
     sudo yum install -y mongodb-mongosh
+  
+  To install a version of ``mongosh`` that supports OpenSSL, issue the
+  following command:
+
+  .. code-block:: sh 
+
+     sudo yum install -y mongodb-mongosh-shared-openssl11
 ...
