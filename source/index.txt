@@ -44,7 +44,7 @@ When connecting to MongoDB Community Edition clusters
 with ``mongosh`` you will be prompted with instructions on enabling 
 MongoDB's free monitoring service.
 
-For more details on free monitoring see :ref:`free_monitoring-mongosh`. 
+For more details on free monitoring see :ref:`free-monitoring-mongosh`. 
 
 .. _mdb-shell-multi-line:
 
