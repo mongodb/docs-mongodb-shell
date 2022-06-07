@@ -1,0 +1,68 @@
+.. _free_monitoring-mongosh:
+
+===============
+Free Monitoring
+===============
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. versionadded:: 1.5
+
+When connecting to MongoDB Community Edition clusters
+with ``mongosh`` you will be prompted with instructions on enabling 
+MongoDB's free monitoring service.
+
+To enable free monitoring, run the following command: 
+
+.. code-block:: javascript
+
+   db.enableFreeMonitoring()
+
+To permanently disable this reminder, run the following command: 
+
+.. code-block:: javascript
+
+   db.disableFreeMonitoring()
+
+Monitored Data
+--------------
+
+Free monitoring provides information about your deployment, including:
+
+- Operation Execution Times
+
+- Memory Usage
+
+- CPU Usage
+
+- Operation Counts
+
+The data expires 24 hours after being uploaded.
+
+Monitored Data and Expiration
+-----------------------------
+
+When enabled, the monitored data is uploaded periodically. The
+monitored data expires after 24 hours. That is, you can only access
+monitored data that has been uploaded within the past 24 hours.
+
+If you disable free monitoring and later re-enable free monitoring, you
+can access your previous metrics that have not expired within the past
+24 hours.
+
+Monitoring URL
+--------------
+
+When you enable free monitoring, you are provided with a unique
+URL where you can access your monitored data.
+
+.. important::
+
+   Anyone with whom you share this unique URL can access your monitored
+   data.
