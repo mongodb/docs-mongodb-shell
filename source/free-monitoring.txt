@@ -30,4 +30,4 @@ To permanently disable this reminder, run the following command:
    db.disableFreeMonitoring()
 
 For more information on free monitoring see 
-:ref:`free MongoDB cluster monitoring<free-monitoring-mongodb>`.
+:ref:`free MongoDB monitoring <free-monitoring-mongodb>`.
