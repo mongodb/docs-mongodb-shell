@@ -12,7 +12,7 @@ Free Monitoring
    :depth: 1
    :class: singlecol
 
-.. versionadded:: 1.5
+.. versionadded:: 1.4.1
 
 When connecting to MongoDB Community Edition clusters
 with ``mongosh`` you will be prompted with instructions on enabling 
