@@ -15,7 +15,10 @@ Free Monitoring
 .. versionadded:: 1.4.1
 
 ``mongosh`` prompts you to enable MongoDB's free monitoring service when 
-you connect to MongoDB Community Edition clusters.
+you connect to MongoDB Community Edition cluster.
+
+The monitoring service provides information on your deployment such as 
+operation execution times and memory usage.
 
 To enable free monitoring, run the following command: 
 
