@@ -9,9 +9,10 @@ Reference
    .. toctree::
       :titlesonly:
 
-      /reference/configure-shell-settings
-      /reference/editor-mode
       /reference/data-types
       /reference/methods
       /reference/options
-
+      /mongoshrc
+      /reference/compatibility
+      /logs
+      /changelog

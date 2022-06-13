@@ -95,14 +95,12 @@ Learn More
 
    /install
    /connect
-   /free-monitoring
-   /field-level-encryption
-   /logs
    /run-commands
-   /snippets
+   /crud
+   /run-agg-pipelines
+   /field-level-encryption
    /write-scripts
+   /snippets
+   /configure-mongosh
    /reference
    /reference/access-mdb-shell-help.txt
-   /reference/compatibility
-   /changelog
-

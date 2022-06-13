@@ -1,0 +1,22 @@
+.. _mongosh-configure:
+
+=====================
+Configure ``mongosh``
+=====================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. toctree::
+   :titlesonly:
+ 
+   /reference/editor-mode
+   /reference/configure-shell-settings
+   /reference/customize-prompt
+   /telemetry
+   /free-monitoring
