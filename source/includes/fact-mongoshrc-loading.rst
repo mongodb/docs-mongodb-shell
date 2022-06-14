@@ -1,4 +1,4 @@
-On startup, :binary:`mongosh` checks the user's ``HOME`` directory for a
+On startup, :binary:`mongosh` checks your ``HOME`` directory for a
 JavaScript file named ``.mongoshrc.js``. If this file is found,
 :binary:`mongosh` reads the content of ``.mongoshrc.js`` before
 displaying the prompt for the first time.

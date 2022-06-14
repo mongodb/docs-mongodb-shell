@@ -251,14 +251,15 @@ You can also specify the shortened form of the options:
 Execute Code From a Configuration File
 --------------------------------------
 
-On startup, :binary:`mongosh` checks for a file named
-:ref:`.mongoshrc.js <mongoshrc-js>`. If :ref:`.mongoshrc.js
-<mongoshrc-js>` is found, :binary:`mongosh` interprets the file before
+On startup, :binary:`mongosh` checks your ``HOME`` directory for a
+JavaScript file named ``.mongoshrc.js``. If this file is found,
+:binary:`mongosh` reads the content of ``.mongoshrc.js`` before
 displaying the prompt for the first time.
 
 .. seealso::
 
-   :ref:`customize-the-mongosh-prompt`
+   - :ref:`customize-the-mongosh-prompt`
+   - :ref:`mongoshrc-js`
 
 Execute JavaScript Code
 ~~~~~~~~~~~~~~~~~~~~~~~
