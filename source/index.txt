@@ -95,12 +95,12 @@ Learn More
 
    /install
    /connect
+   /configure-mongosh
    /run-commands
    /crud
    /run-agg-pipelines
    /field-level-encryption
    /write-scripts
    /snippets
-   /configure-mongosh
    /reference
    /reference/access-mdb-shell-help.txt

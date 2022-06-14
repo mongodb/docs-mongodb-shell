@@ -1,8 +1,8 @@
 .. _run-commands:
 
-===============
-Use ``mongosh``
-===============
+============
+Run Commands
+============
 
 .. default-domain:: mongodb
 
