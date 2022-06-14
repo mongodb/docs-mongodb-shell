@@ -25,8 +25,8 @@ access MongoDB.
 Execute a JavaScript File
 -------------------------
 
-Execute a Script from Within the mongosh Console
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Execute a Script from Within mongosh
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can execute a ``.js`` file from within the |mdb-shell|
 using the :method:`load()` method.
