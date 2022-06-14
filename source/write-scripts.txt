@@ -127,9 +127,9 @@ The following example creates scripts and runs them from the command
 line. 
 
 - ``loadMovies.js``, uses :method:`~db.collection.insertMany()` to a
-   update a local MongodDB instance.
+  update a local MongodDB instance.
 - ``queryMovies.js`` uses :method:`db.collection.find()` to verify
-   the update.
+  the update.
 
 #. Copy this script and save it as ``loadMovies.js``.
 
