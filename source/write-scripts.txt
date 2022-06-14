@@ -264,13 +264,30 @@ displaying the prompt for the first time.
 Execute JavaScript Code
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/examples/ex-display-line-numbers.rst
+To update the :binary:`~bin.mongosh` prompt to display line numbers, add
+the following code to ``<your-home-directory>/.mongoshrc.js``
+
+.. code-block:: javascript
+
+   let cmdCount = 1;
+   prompt = function() {
+                return (cmdCount++) + "> ";
+            }
+
+The prompt will look like this:
+
+.. code-block:: javascript
+
+   1> show collections
+   2> use test
+   3>
 
 Execute MongoDB Code
 ~~~~~~~~~~~~~~~~~~~~
 
 To create a log of when your :binary:`mongosh` client connects to a
-database, add the following to ``<your-home-directory>/.mongoshrc.js``:
+database, add the following code to
+``<your-home-directory>/.mongoshrc.js``:
 
 .. code-block:: javascript
 

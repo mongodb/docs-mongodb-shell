@@ -1,5 +1,5 @@
-To update the :binary:`~bin.mongosh` prompt to display line numbers, add
-the following code to your ``.mongoshrc.js`` file:
+This code will dynamically update the :binary:`~bin.mongosh` prompt
+to display line numbers:
 
 .. code-block:: javascript
 
@@ -15,3 +15,4 @@ The prompt will look like this:
    1> show collections
    2> use test
    3>
+
