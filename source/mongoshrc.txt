@@ -22,5 +22,5 @@ Example Usage
 -------------
 
 You can use the .mongoshrc file to customize ``mongosh`` startup
-behavior and add scripted functionality. To see examples, see
+behavior and add scripted functionality. For examples, see
 :ref:`mongosh-write-scripts-config-file`.

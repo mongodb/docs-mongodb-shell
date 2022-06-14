@@ -1,5 +1,5 @@
-To update the :binary:`~bin.mongosh` prompt to display line numbers, run
-the following code inside ``mongosh``:
+To display line numbers in the :binary:`~bin.mongosh` prompt, run the
+following code inside ``mongosh``:
 
 .. code-block:: javascript
 
