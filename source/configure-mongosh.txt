@@ -12,6 +12,17 @@ Configure ``mongosh``
    :depth: 1
    :class: singlecol
 
+Read the following pages to learn how to configure ``mongosh`` behaviors
+and user experience:
+
+- :ref:`mongosh-editor-mode`
+- :ref:`mongosh-shell-settings`
+- :ref:`customize-the-mongosh-prompt`
+- :ref:`telemetry`
+- :ref:`free-monitoring-mongosh`
+
+
+
 .. toctree::
    :titlesonly:
  
