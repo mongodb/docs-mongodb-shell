@@ -1,0 +1,7 @@
+.. _mongosh-script-limitations:
+
+==================
+Script Limitations
+==================
+
+.. include:: /includes/fact-call-limitations.rst

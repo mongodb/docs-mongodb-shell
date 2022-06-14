@@ -246,6 +246,8 @@ You can also specify the shortened form of the options:
    space it will not be saved in your command history. This minimizes
    exposure if you enter passwords on the command line.
 
+.. _mongosh-write-scripts-config-file:
+
 Execute Code From a Configuration File
 --------------------------------------
 
@@ -447,14 +449,10 @@ To run ``portableGetUserCount.js`` on a different host or port, change
 the connection details on the command line. Unlike ``getUserCount.js``,
 you do not have to edit the script to run ``portableGetUserCount.js``.
 
-Limitations on Database Calls
------------------------------
-
-.. include:: /includes/fact-call-limitations.rst
-
 .. toctree::
    :titlesonly:
 
    /write-scripts/require-external-modules
    /write-scripts/require-load-differences
    /write-scripts/scoping
+   /write-scripts/limitations

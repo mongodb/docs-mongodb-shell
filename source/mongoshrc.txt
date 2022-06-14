@@ -18,5 +18,6 @@
 
 .. include:: /includes/fact-mongoshrc-loading.rst
 
-You can use the ``.mongoshrc`` file to customize the ``mongosh`` prompt
-at startup. To see examples, see :ref:`customize-the-mongosh-prompt`.
+You can use the ``.mongoshrc`` file to customize ``mongosh`` startup
+behavior and add scripted functionality. To see examples, see
+:ref:`mongosh-write-scripts-config-file`.
