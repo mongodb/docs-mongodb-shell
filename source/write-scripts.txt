@@ -31,6 +31,9 @@ Execute a Script from Within mongosh
 You can execute a ``.js`` file from within the |mdb-shell|
 using the :method:`load()` method.
 
+File Paths
+``````````
+
 The :method:`load()` method accepts relative and absolute paths. If the
 current working directory of the |mdb-shell| is ``/data/db``, and
 ``connect-and-insert.js`` is in the ``/data/db/scripts`` directory, then
@@ -43,6 +46,9 @@ the following calls within the |mdb-shell| are equivalent:
    load( "/data/db/scripts/connect-and-insert.js" )
 
 .. _mongosh-ex-run-script:
+
+Example
+```````
 
 The following example creates and executes a script that:
 
@@ -113,6 +119,9 @@ information in addition to the ``--file`` or ``-f`` parameters.
    line arguments.
    
    To pass filenames always use ``--file`` or ``-f``.
+
+Example
+```````
 
 The following example creates scripts and runs them from the command
 line. 
