@@ -21,8 +21,6 @@ and user experience:
 - :ref:`telemetry`
 - :ref:`free-monitoring-mongosh`
 
-
-
 .. toctree::
    :titlesonly:
  
