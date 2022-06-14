@@ -9,10 +9,10 @@ Reference
    .. toctree::
       :titlesonly:
 
+      /reference/compatibility
       /reference/data-types
       /reference/methods
-      /reference/options
       /mongoshrc
-      /reference/compatibility
-      /logs
+      /reference/options
       /changelog
+      /logs
