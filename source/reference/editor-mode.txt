@@ -1,4 +1,5 @@
 .. _mongosh-editor-mode:
+.. _mdb-shell-multi-line:
 
 ==========================
 Use an Editor for Commands
