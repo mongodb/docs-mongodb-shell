@@ -70,8 +70,9 @@ content: |
 
     sudo yum install -y mongodb-mongosh
   
-  To install ``mongosh`` that supports OpenSSL, issue the following
-  command:
+  MongoDB also provides a version of ``mongosh`` that uses your system's
+  OpenSSL library. To install that ``mongosh`` version, issue the
+  following command:
 
   .. code-block:: sh 
 
