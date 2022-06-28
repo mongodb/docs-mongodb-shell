@@ -63,18 +63,41 @@ level: 4
 ref: install
 content: |
 
-  To install the latest stable version of ``mongosh``, issue the following
-  command:
+  To install the latest stable version of ``mongosh``, issue the
+  following command:
 
   .. code-block:: sh
 
     sudo yum install -y mongodb-mongosh
   
   MongoDB also provides a version of ``mongosh`` that uses your system's
-  OpenSSL library. To install that ``mongosh`` version, issue the
+  OpenSSL library.
+  
+  To install ``mongosh`` that uses OpenSSL 1.1 on Red Hat, issue the
   following command:
 
   .. code-block:: sh 
 
-     sudo yum install -y mongodb-mongosh-shared-openssl11 
+     sudo yum install -y mongodb-mongosh-shared-openssl11
+
+  To install ``mongosh`` that uses OpenSSL 1.1 on Ubuntu, issue
+  the following command:
+
+  .. code-block:: sh 
+
+     sudo apt-get install -y mongodb-mongosh-shared-openssl11
+
+  To install ``mongosh`` that uses OpenSSL 3.0 on Red Hat, issue
+  the following command:
+
+  .. code-block:: sh 
+
+     sudo yum install -y mongodb-mongosh-shared-openssl3
+
+  To install ``mongosh`` that uses OpenSSL 3.0 on Ubuntu, issue
+  the following command:
+
+  .. code-block:: sh 
+
+     sudo apt-get install -y mongodb-mongosh-shared-openssl3
 ...
