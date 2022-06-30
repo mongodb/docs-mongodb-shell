@@ -11,6 +11,12 @@ title: "Download the ``mongosh`` installation archive for your
   operating system."
 ref: download-archive
 level: 4 
+content: |
+
+   Download the appropriate version of ``mongosh`` for your operating
+   system. MongoDB also provides a version of ``mongosh`` that supports
+   OpenSSL. See the `MongoDB Download Center
+   <https://www.mongodb.com/try/download/shell?jmp=docs>`__ for details.
 ---
 title: "Extract the files from the downloaded archive."
 ref: extract-archive
