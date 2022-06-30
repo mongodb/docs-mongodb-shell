@@ -7,6 +7,12 @@ ref: navigate-dlc-generic-linux
 title: "Download the Linux 64-bit ``.tgz`` package."
 ref: download-archive-rhel
 level: 4 
+content: |
+
+   Download the appropriate version of ``mongosh`` for your operating
+   system. MongoDB also provides a version of ``mongosh`` that supports
+   OpenSSL. See the `MongoDB Download Center
+   <https://www.mongodb.com/try/download/shell?jmp=docs>`__ for details.
 ---
 source:
   file: steps-install-shell-base.yaml
