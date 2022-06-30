@@ -33,7 +33,7 @@ content: |
 
    You will need to provide your exact ``.tgz`` package in the command,
    which may vary depending on the package version you downloaded. For
-   example, the ``mongosh`` OpenSSL3 package is:
+   example, the ``mongosh`` OpenSSL 3 package is:
       
    .. code-block:: sh
    
