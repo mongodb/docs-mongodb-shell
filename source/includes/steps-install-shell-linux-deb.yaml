@@ -100,7 +100,7 @@ content: |
 
     sudo apt-get install -y mongodb-mongosh
   
-  MongoDB also provides a version of ``mongosh`` that uses your system's
+  MongoDB also provides versions of ``mongosh`` that use your system's
   OpenSSL library.
   
   To install ``mongosh`` that uses OpenSSL 1.1, issue the following
