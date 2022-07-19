@@ -24,6 +24,12 @@
      - Designates an editor to use within the :binary:`~bin.mongosh`
        console. Overrides the ``EDITOR`` environment variable if set.
 
+   * - ``forceDisableTelemetry``
+     - boolean
+     - true
+     - Only available in the global configuration file. When true,
+       users cannot enable telemetry manually.
+
    * - ``historyLength``
      - integer
      - 1000
