@@ -1,5 +1,5 @@
 The current database name is part of the default ``mongosh`` prompt. To
-reformat the prompt to show the database and hostname use a function
+reformat the prompt to show the database and hostname, use a function
 like this one:
 
 .. code-block:: javascript
