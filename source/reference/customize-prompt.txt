@@ -11,9 +11,9 @@ Customize the :binary:`~bin.mongosh` Prompt
    :backlinks: none
    :depth: 1
 
-The :binary:`~bin.mongosh` prompt includes the current database name by
-default. Modify the ``prompt`` variable to display custom strings or to
-return dynamic information about your ``mongosh`` session.
+By default the :binary:`~bin.mongosh` prompt includes the current
+database name. You can modify the ``prompt`` variable to display custom
+strings or to return dynamic information about your ``mongosh`` session.
 
 Custom prompts are not stored when you exit :binary:`~bin.mongosh`. To
 have a custom prompt persist through restarts, add the code for your
