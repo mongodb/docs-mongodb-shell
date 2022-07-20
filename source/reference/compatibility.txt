@@ -10,7 +10,7 @@ Compatibility Changes with Legacy ``mongo`` Shell
    :depth: 1
    :class: singlecol
 
-This page addresses differences between ``mongosh`` and the legacy
+This page describes differences between ``mongosh`` and the legacy
 ``mongo`` shell. In addition to the alternatives listed here, you can
 use the `mongocompat
 <https://github.com/mongodb-labs/mongosh-snippets/blob/main/snippets/mongocompat/index.js>`__
