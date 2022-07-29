@@ -17,7 +17,7 @@ v1.5.3
 
 *Released July 29, 2022*
 
-Updated telemetry internals.
+Updates telemetry internals.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?version=34298&projectId=17381>`__.
