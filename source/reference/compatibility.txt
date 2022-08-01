@@ -13,11 +13,13 @@ Compatibility Changes with Legacy ``mongo`` Shell
 This page describes differences between ``mongosh`` and the legacy
 ``mongo`` shell. In addition to the alternatives listed here, you can
 use the `mongocompat
-<https://github.com/mongodb-labs/mongosh-snippets/blob/main/snippets/mongocompat/index.js>`__
+<https://github.com/mongodb-labs/mongosh-snippets/blob/main/snippets/mongocompat/>`__
 snippet to access to legacy :binary:`mongo` shell APIs. For more
 information, see :ref:`snip-overview`.
 
-snippet install analyze-schema
+.. code-block:: shell
+
+   snippet install mongocompact
 
 Deprecated Methods
 ------------------
