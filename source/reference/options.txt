@@ -33,7 +33,13 @@ General Options
    statements, ``mongosh`` only prints the results of the last
    ``--eval``.
 
+   Example: Format Output
+   ``````````````````````
+
    .. include:: /includes/examples/ex-eval-output.rst
+
+   Example: Multiple ``--eval`` Arguments
+   ``````````````````````````````````````
 
    .. include:: /includes/examples/ex-eval-multi.rst
 
