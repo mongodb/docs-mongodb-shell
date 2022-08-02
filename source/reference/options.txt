@@ -33,9 +33,9 @@ General Options
    statements, ``mongosh`` only prints the results of the last
    ``--eval``.
 
-  .. include:: /includes/examples/ex-eval-output.rst
+   .. include:: /includes/examples/ex-eval-output.rst
 
-  .. include:: /includes/examples/ex-eval-multi.rst
+   .. include:: /includes/examples/ex-eval-multi.rst
 
 .. option:: --help, -h
 
