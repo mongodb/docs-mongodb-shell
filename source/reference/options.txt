@@ -33,13 +33,11 @@ General Options
    statements, ``mongosh`` only prints the results of the last
    ``--eval``.
 
-   Example: Format Output
-   ``````````````````````
+   **Example: Format Output**
 
    .. include:: /includes/examples/ex-eval-output.rst
 
-   Example: Multiple ``--eval`` Arguments
-   ``````````````````````````````````````
+   **Example: Multiple ``--eval`` Arguments**
 
    .. include:: /includes/examples/ex-eval-multi.rst
 
@@ -450,8 +448,6 @@ Authentication Options
    :option:`--password <--password>` and
    :option:`--authenticationDatabase <--authenticationDatabase>`
    options.
-   
-
 
 Session Options
 ---------------
