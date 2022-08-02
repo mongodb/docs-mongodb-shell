@@ -25,18 +25,17 @@ General Options
 
 .. option:: --eval <javascript>
 
-   Evaluates a JavaScript expression that is specified as an argument.
-   ``mongosh`` does not load its own environment when evaluating
-   code. As a result many options of the shell environment are not
-   available.
+   Evaluates a JavaScript expression. You can use a single ``--eval``
+   argument or multiple ``--eval`` arguments together.
+   
+   After ``mongosh`` evaluates the ``--eval`` argument, it prints the
+   results to your command line. If you use multiple ``--eval``
+   statements, ``mongosh`` only prints the results of the last
+   ``--eval``.
 
-   The result of evaluating a JavaScript argument is printed to your 
-   command line.
+  .. include:: /includes/examples/ex-eval-output.rst
 
-   To get output suitable for automated parsing, use
-   ``EJSON.stringify()``.
-
-   .. include:: /includes/examples/ex-eval-output.rst
+  .. include:: /includes/examples/ex-eval-multi.rst
 
 .. option:: --help, -h
 

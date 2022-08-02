@@ -1,4 +1,7 @@
-.. code-block:: javascript
+To get output suitable for automated parsing, use
+``EJSON.stringify()``.
+
+ .. code-block:: javascript
 
    mongosh --quiet  --host rs0/centos1104 --port 27500 \
            --eval "EJSON.stringify(rs.status().members.map( \
