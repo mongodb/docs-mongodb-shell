@@ -10,36 +10,18 @@ Options
    :depth: 2
    :class: singlecol
 
+.. program:: mongosh
+
 Use the following options to control various aspects of your
 |mdb-shell| connection and behavior.
 
 General Options
 ---------------
 
-.. program:: mongosh
-
 .. option:: --build-info
 
    Returns a JSON-formatted document with information about the
    :binary:`~bin.mongosh` build.
-
-.. option:: --eval <javascript>
-
-   Evaluates a JavaScript expression. You can use a single ``--eval``
-   argument or multiple ``--eval`` arguments together.
-   
-   After ``mongosh`` evaluates the ``--eval`` argument, it prints the
-   results to your command line. If you use multiple ``--eval``
-   statements, ``mongosh`` only prints the results of the last
-   ``--eval``.
-
-   **Example: Format Output**
-
-   .. include:: /includes/examples/ex-eval-output.rst
-
-   **Example: Multiple ``--eval`` Arguments**
-
-   .. include:: /includes/examples/ex-eval-multi.rst
 
 .. option:: --help, -h
 
@@ -75,6 +57,9 @@ General Options
 .. option:: --version
 
    Returns the |mdb-shell| release number.
+
+
+.. _mongosh-connection-options:
 
 Connection Options
 ------------------
