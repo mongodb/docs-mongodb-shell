@@ -99,8 +99,10 @@ Stable API Options
 
    Specifies that the server will respond with :ref:`APIDeprecationError
    <api-deprecation-resp>` if your application uses a command or behavior 
-   that is deprecated in the specified :ref:`apiVersion 
-   <api-version-desc>`.
+   that is deprecated in the specified ``apiVersion``.
+
+   If you specify :option:`--apiDeprecationErrors`, you must also 
+   specify :option:`--apiVersion`.
 
 .. _mongosh-connection-options:
 
