@@ -479,15 +479,15 @@ Client-Side Field Level Encryption Options
 
 .. option:: --awsAccessKeyId <string>
 
-   An AWS `Access Key 
+   An `AWS Access Key 
    <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
    associated with an IAM user who has ``List`` and ``Read`` permissions 
    for the AWS Key Management Service (KMS). :program:`mongosh` uses the 
    specified :option:`--awsAccessKeyId` to access the KMS. 
 
-   :option:`--awsAccessKeyId` is required for enabling 
+   :option:`--awsAccessKeyId` is required to enable 
    :ref:`manual-csfle-feature` for the :program:`mongosh` shell session. 
-   :option:`--awsAccessKeyId` requires *all* of the following command 
+   :option:`--awsAccessKeyId` requires *both* of the following command 
    line options:
 
    - :option:`--awsSecretAccessKey` 
@@ -505,9 +505,9 @@ Client-Side Field Level Encryption Options
    An AWS `Secret Key <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
    associated to the specified :option:`--awsAccessKeyId`.
 
-   :option:`--awsSecretAccessKey` is required for enabling 
+   :option:`--awsSecretAccessKey` is required to enable
    :ref:`manual-csfle-feature` for the :program:`mongosh` session. 
-   :option:`--awsSecretAccessKey` requires *all* of the following
+   :option:`--awsSecretAccessKey` requires *both* of the following
    command line options:
 
    - :option:`--awsAccessKeyId` 
@@ -527,7 +527,7 @@ Client-Side Field Level Encryption Options
    <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
    associated to the specified :option:`--awsAccessKeyId`.
 
-   :option:`--awsSessionToken` is required for enabling 
+   :option:`--awsSessionToken` is required to enable
    :ref:`manual-csfle-feature` for the :program:`mongosh` shell session. 
    :option:`--awsSessionToken` requires *all* of the following command 
    line options:
@@ -552,8 +552,8 @@ Client-Side Field Level Encryption Options
    :program:`mongosh` creates the specified namespace if it does not
    exist.
 
-   :option:`--keyVaultNamespace` requires *all* of the following command 
-   line options:
+   :option:`--keyVaultNamespace` requires *both* of the following 
+   command line options:
 
    - :option:`--awsAccessKeyId` 
    - :option:`--awsSecretAccessKey`
