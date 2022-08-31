@@ -502,7 +502,8 @@ Client-Side Field Level Encryption Options
 
 .. option:: --awsSecretAccessKey <string>
 
-   An AWS `Secret Key <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
+   An `AWS Secret Key 
+   <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
    associated to the specified :option:`--awsAccessKeyId`.
 
    :option:`--awsSecretAccessKey` is required to enable
@@ -523,7 +524,7 @@ Client-Side Field Level Encryption Options
 
 .. option:: --awsSessionToken <string>
 
-   An AWS `Session Token 
+   An `AWS Session Token 
    <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html>`__
    associated to the specified :option:`--awsAccessKeyId`.
 
