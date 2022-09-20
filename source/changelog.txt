@@ -24,10 +24,10 @@ v1.6.0
   helper method. This method runs the ``$shardedDataDistribution``
   aggregation stage and returns a cursor for the result.
 
-- :issue:`MONGOSH-1266`: – The KeyVault ``.getKey()`` and
+- :issue:`MONGOSH-1266`: The KeyVault ``.getKey()`` and
   ``.getKeyByAltName()`` methods now return Documents.
 
-- :issue:`MONGOSH-1249`: – Adds a ``--json`` flag for use with
+- :issue:`MONGOSH-1249`: Adds a ``--json`` flag for use with
   ``--eval`` commands.
 
 - :issue:`MONGOSH-1287`: ``cursor.count()`` is now deprecated. Instead,
