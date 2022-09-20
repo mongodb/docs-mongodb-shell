@@ -24,15 +24,15 @@ v1.6.0
   helper method. This method runs the ``$shardedDataDistribution``
   aggregation stage and returns a cursor for the result.
 
-- :issue:`MONGOSH-1266`: The KeyVault ``.getKey()`` and
-  ``.getKeyByAltName()`` methods now return Documents.
+- :issue:`MONGOSH-1266`: The KeyVault :method:`~KeyVault.getKey()` and
+  :method:`~KeyVault.getKeyByAltName()` methods now return Documents.
 
 - :issue:`MONGOSH-1249`: Adds a ``--json`` flag for use with
   ``--eval`` commands.
 
 - :issue:`MONGOSH-1287`: ``cursor.count()`` is now deprecated. Instead,
-  use :method:`~db.collection.countDocuments()` and
-  :method:`~db.collection.estimatedDocumentCount()`.
+  use :method:`db.collection.countDocuments()` and
+  :method:`db.collection.estimatedDocumentCount()`.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=34315>`__.
