@@ -31,8 +31,8 @@ v1.6.0
   ``--eval`` commands.
 
 - :issue:`MONGOSH-1287`: ``cursor.count()`` is now deprecated. Instead,
-  use :method:`db.collection.countDocuments()` and
-  :method:`db.collection.estimatedDocumentCount()`.
+  use :method:`~db.collection.countDocuments()` and
+  :method:`~db.collection.estimatedDocumentCount()`.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=34315>`__.
