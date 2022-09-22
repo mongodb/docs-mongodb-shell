@@ -842,7 +842,7 @@ Native Methods
 
    * - .. _mongosh-native-method-load:
 
-       :manual:`load() </reference/method/load/>`
+       ``load()``
 
      - Loads and runs a JavaScript file in the shell.
 
