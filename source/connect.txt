@@ -60,11 +60,11 @@ localhost port 28015:
 MongoDB Deployment on a Remote Host
 -----------------------------------
 
-To specify a remote host and port, you can use:
+To specify a remote host and port, you can use either:
 
 - A :manual:`connection string </reference/connection-string>`.
 
-- The command-line options ``--host`` and ``--port``. If you do not
+- The ``--host`` and ``--port`` command-line options. If you do not
   include the ``--port`` option, ``mongosh`` uses the default port
   27017.
 
@@ -84,15 +84,16 @@ running on host ``mongodb0.example.com`` and port 28015:
    If your remote host is a |service| cluster, you can copy your
    connection string from the |service| UI. To learn more, see
    :atlas:`Connect to a Cluster
-   </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
+   </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`
+   in the Atlas documentation.
 
 Connection Options
 ------------------
 
-The following sections show how to specify connection options for
-different types of deployments.
+Specify different connection options to connect to different types of
+deployments.
 
-Connect with Authentication
+Connect With Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a MongoDB deployment requires authentication, use the
@@ -108,16 +109,16 @@ deployment and authenticate on the ``admin`` database as user ``alice``:
 
 .. seealso::
 
-   - :manual:`Enable Access Control </tutorial/enable-authentication/>` 
-     to enforce authentication.
+   - To enforce authentication on a deployment, see
+     :manual:`Enable Access Control </tutorial/enable-authentication/>`.
 
-   - Add :manual:`Database Users </core/security-users/>` 
-     to provide authenticated access to a MongoDB instance.
+   - To provision access to a MongoDB deployment, see :manual:`Database
+     Users </core/security-users/>`.
 
 Connect to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a replica set:
+To connect to a replica set, perform one of the following actions:
 
 - If you are using the :manual:`DNS Seedlist Connection Format
   </reference/connection-string/#dns-seedlist-connection-format>`,include
@@ -130,7 +131,7 @@ To connect to a replica set:
 
      mongosh "mongodb+srv://server.example.com/"
 
-  .. note:: TLS Behavior
+  .. note:: +srv TLS Behavior
 
      When you use the ``+srv`` connection string modifier, MongoDB
      automatically sets the :option:`--tls <--tls>` connection option to
