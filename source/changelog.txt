@@ -20,9 +20,6 @@ v1.6.1
 - :issue:`MONGOSH-1320`: Fixes a startup bug related to Docker and 
   similar environments.
 
-- :issue:`MONGOSH-955`: ``printjson()`` now prints full, untruncated 
-  output.
-
 - :issue:`MONGOSH-1050`: Adds support for the 
   ``convertShardKeyToHashed()`` helper method.
   
