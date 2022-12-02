@@ -21,12 +21,11 @@ Prerequisites
 .. include:: /includes/fact-connect-prereqs.rst
    
 
-Local MongoDB Instance on Default Port
---------------------------------------
+Local Deployment on Default Port
+--------------------------------
 
-Run ``mongosh`` without any command-line options
-to connect to a MongoDB instance running on your **localhost** with 
-**default port** 27017:
+To connect to a MongoDB deployment running on **localhost** with
+**default port** 27017, run ``mongosh`` without any options:
 
 .. code-block:: sh
 
@@ -38,92 +37,80 @@ This is equivalent to the following command:
 
    mongosh "mongodb://localhost:27017"
 
-Local MongoDB Instance on a Non-Default Port
---------------------------------------------
+Local Deployment on a Non-Default Port
+--------------------------------------
 
 To specify a port to connect to on localhost, you can use either:
 
 - A :manual:`connection string </reference/connection-string>`.
 
-  For example, the following command connects to a MongoDB deployment
-  running on localhost port 28015:
-  
-  .. code-block:: sh
-
-     mongosh "mongodb://localhost:28015"
-
 - The ``--port`` command-line option.
 
-  For example, the following command connects to a MongoDB deployment
-  running on localhost port 28015:
+For example, the following commands connect to a deployment running on
+localhost port 28015:
 
-  .. code-block:: sh
+.. code-block:: sh
 
-     mongosh --port 28015
+   mongosh "mongodb://localhost:28015"
 
-MongoDB Instance on a Remote Host
----------------------------------
+.. code-block:: sh
+
+   mongosh --port 28015
+
+MongoDB Deployment on a Remote Host
+-----------------------------------
 
 To specify a remote host and port, you can use:
 
 - A :manual:`connection string </reference/connection-string>`.
 
-  .. example:: 
-
-     To connect to a MongoDB
-     instance running on a remote host on port 28015:
-
-     .. code-block:: sh
-
-        mongosh "mongodb://mongodb0.example.com:28015"
-
-  .. note:: Connecting to |service|
-  
-     If your remote host is a |service-fullname| cluster, you can copy 
-     your connection string from the |service| UI. To learn more, see 
-     :atlas:`Connect to a Cluster </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
-
-- The command-line options ``--host`` and ``--port``. If you do not 
-  include the ``--port`` option, ``mongosh`` uses the **default port** 
+- The command-line options ``--host`` and ``--port``. If you do not
+  include the ``--port`` option, ``mongosh`` uses the default port
   27017.
 
-  .. example:: 
+For example, the following commands connect to a MongoDB deployment
+running on host ``mongodb0.example.com`` and port 28015:
 
-     To connect to a MongoDB
-     instance running on a remote host on port 28015:
+.. code-block:: sh
 
-     .. code-block:: sh
+   mongosh "mongodb://mongodb0.example.com:28015"
 
-        mongosh --host mongodb0.example.com --port 28015
+.. code-block:: sh
+
+   mongosh --host mongodb0.example.com --port 28015
+
+.. note:: Connect to |service-fullname|
+
+   If your remote host is a |service| cluster, you can copy your
+   connection string from the |service| UI. To learn more, see
+   :atlas:`Connect to a Cluster
+   </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`.
 
 Connection Options
 ------------------
 
+The following sections show how to specify connection options for
+different types of deployments.
+
 Connect with Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a MongoDB instance requires authentication, use the 
-``--username`` and ``--authenticationDatabase`` command-line options. 
-``mongosh`` prompts you for a password, which it masks as you type.
-  
-.. example:: 
+To connect to a MongoDB deployment requires authentication, use the
+``--username`` and ``--authenticationDatabase`` command-line options.
+``mongosh`` prompts you for a password, which it hides as you type.
 
-   To connect to a remote MongoDB instance and authenticate against 
-   the ``admin`` database as user ``alice``:
+For example, run the following command to connect to a remote MongoDB
+deployment and authenticate on the ``admin`` database as user ``alice``:
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      mongosh "mongodb://mongodb0.example.com:28015" --username alice --authenticationDatabase admin
-
-.. note::
-
-   To provide a password with the command instead of using the masked 
-   prompt, you can use the ``--password`` option.
+   mongosh "mongodb://mongodb0.example.com:28015" --username alice --authenticationDatabase admin
 
 .. seealso::
 
    - :manual:`Enable Access Control </tutorial/enable-authentication/>` 
      to enforce authentication.
+
    - Add :manual:`Database Users </core/security-users/>` 
      to provide authenticated access to a MongoDB instance.
 
@@ -132,15 +119,16 @@ Connect to a Replica Set
 
 To connect to a replica set:
 
-- If you are using the :manual:`DNS Seedlist Connection Format 
-  </reference/connection-string/#dns-seedlist-connection-format>`, you 
-  can include the ``+srv`` modifier in your connection string.
+- If you are using the :manual:`DNS Seedlist Connection Format
+  </reference/connection-string/#dns-seedlist-connection-format>`,include
+  the ``+srv`` modifier in your connection string.
 
-  .. example::
+  For example, run the following command to connect to a replica set on
+  ``server.example.com``:
 
-     .. code-block:: sh
+  .. code-block:: sh
 
-        mongosh "mongodb+srv://server.example.com/"
+     mongosh "mongodb+srv://server.example.com/"
 
   .. note::
      Using the ``+srv`` connection string modifier automatically sets 
