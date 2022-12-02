@@ -101,8 +101,8 @@ To connect to a MongoDB deployment requires authentication, use the
 <--authenticationDatabase>` options. ``mongosh`` prompts you for a
 password, which it hides as you type.
 
-For example, run the following command to connect to a remote MongoDB
-deployment and authenticate on the ``admin`` database as user ``alice``:
+For example, run the following command to authenticate on the ``admin``
+database as user ``alice``:
 
 .. code-block:: sh
 
