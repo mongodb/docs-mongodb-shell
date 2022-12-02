@@ -121,7 +121,7 @@ Connect to a Replica Set
 
 To connect to a replica set, perform one of the following actions:
 
-- If you are using the :manual:`DNS Seedlist Connection Format
+- If you use the :manual:`DNS Seedlist Connection Format
   </reference/connection-string/#dns-seedlist-connection-format>`,include
   the ``+srv`` modifier in your connection string.
 
