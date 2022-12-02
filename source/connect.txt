@@ -148,7 +148,7 @@ To connect to a replica set, perform one of the following actions:
 
      mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
 
-.. note::
+.. note:: directConnection Parameter
 
    ``mongosh`` adds the ``directConnection=true`` query parameter to the
    connection string automatically unless at least one of the following is
