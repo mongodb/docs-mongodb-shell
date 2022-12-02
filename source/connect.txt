@@ -161,7 +161,7 @@ To connect to a replica set, perform one of the following actions:
    When ``directConnection=true``, all operations are run on the host
    specified in the connection URI.
 
-Connect using TLS
+Connect Using TLS
 ~~~~~~~~~~~~~~~~~
 
 To connect to a deployment using TLS, perform one of the following
