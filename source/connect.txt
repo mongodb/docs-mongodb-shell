@@ -97,7 +97,8 @@ Connect With Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a MongoDB deployment requires authentication, use the
-``--username`` and ``--authenticationDatabase`` command-line options.
+:option:``--username <--username>`` and
+:option:`--authenticationDatabase <--authenticationDatabase>` options.
 ``mongosh`` prompts you for a password, which it hides as you type.
 
 For example, run the following command to connect to a remote MongoDB
