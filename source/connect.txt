@@ -130,23 +130,21 @@ To connect to a replica set:
 
      mongosh "mongodb+srv://server.example.com/"
 
-  .. note::
-     Using the ``+srv`` connection string modifier automatically sets 
-     the 
-     :manual:`tls option </reference/connection-string/#urioption.tls>` 
-     to ``true`` for the connection. You can 
-     override this behavior by explicitly setting ``tls`` to ``false``.
+  .. note:: TLS Behavior
+
+     When you use the ``+srv`` connection string modifier, MongoDB
+     automatically sets the :option:`--tls <--tls>` connection option to
+     ``true``. To override this behavior, set ``--tls`` to ``false``.
 
 - You can specify the replica set name and members in the
   :manual:`connection string </reference/connection-string>`.
 
-  .. example::
+  For example, run the following command to connect to a three-member
+  replica set named ``replA``:
 
-     To connect to a three-member replica set named ``replA``:
+  .. code-block:: sh
 
-     .. code-block:: sh
-
-        mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
+     mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
 
 .. note::
 
@@ -158,68 +156,67 @@ To connect to a replica set:
    - The connection string uses the ``mongodb+srv://`` scheme.
    - The connection string contains a seed list with multiple hosts.
 
+   When ``directConnection=true``, all operations are run on the host
+   specified in the connection URI.
+
 Connect using TLS
 ~~~~~~~~~~~~~~~~~
 
-For ``tls`` connections:
+To connect to a deployment using TLS, perform one of the following
+actions:
 
-- If you are using the :manual:`DNS Seedlist Connection Format 
-  </reference/connection-string/#dns-seedlist-connection-format>`, the 
-  ``+srv`` connection string modifier automatically sets
-  the ``tls`` option to ``true`` for the connection:
+- Use the :manual:`DNS Seedlist Connection Format
+  </reference/connection-string/#dns-seedlist-connection-format>`. The
+  ``+srv`` connection string modifier automatically sets the ``tls``
+  option to ``true`` for the connection.
 
-  .. example::
+  For example, run the following command to connect to a DNS
+  seedlist-defined replica set with ``tls`` enabled:
 
-     To connect to a DNS seedlist-defined replica set with ``tls`` 
-     enabled:
+  .. code-block:: sh
 
-     .. code-block:: sh
+     mongosh "mongodb+srv://server.example.com/"
 
-        mongosh "mongodb+srv://server.example.com/"
+- Specify the :option:`--tls <--tls>` option to ``true`` in the connection
+  string.
 
-- You can use the 
-  :manual:`tls option </reference/connection-string/#urioption.tls>` to 
-  set ``tls=true`` in the 
-  :manual:`connection string </reference/connection-string>`:
+  For example, run the following command to enable ``tls`` with a
+  connection string option:
 
-  .. example::
+  .. code-block:: sh
 
-     To enable ``tls`` in the connection string:
+     mongosh "mongodb://mongodb0.example.com:28015/?tls=true"
 
-     .. code-block:: sh
+- Specify the ``--tls`` command-line option.
 
-        mongosh "mongodb://mongodb0.example.com:28015/?tls=true"
+  For example, run the following command to connect to a remote host
+  with ``tls`` enabled:
 
-- You can specify the ``--tls`` command-line option.
-  
-  .. example:: 
-     
-     To connect to a remote host with ``tls`` enabled:
+  .. code-block:: sh
 
-     .. code-block:: sh
-
-        mongosh "mongodb://mongodb0.example.com:28015" --tls
+     mongosh "mongodb://mongodb0.example.com:28015" --tls
 
 Connect to a Specific Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a specific database, specify a database in your
 :manual:`connection string URI path </reference/connection-string/>` If
-you do not specify a database in your URI path, you connect to a database named ``test``.
+you do not specify a database in your URI path, you connect to the
+``test`` database.
 
-.. example::
+For example, run the following command to connect to a database called
+``qa`` on localhost:
 
-  The following connection string URI connects to database ``db1``.
+.. code-block:: sh
 
-  .. code-block:: sh
-
-      mongosh "mongodb://localhost:27017/db1" 
+    mongosh "mongodb://localhost:27017/qa" 
 
 Connect to a Different Deployment
 ---------------------------------
 
-You can use the :method:`Mongo()` or the :manual:`connect()
-</reference/method/connect/>` methods to connect to a different MongoDB
+If you are already connected to a deployment in the |mdb-shell|, you can
+use the :method:`Mongo()` or :manual:`connect()
+</reference/method/connect/>` method to connect to a different MongoDB
 deployment from within the |mdb-shell|.
 
 To learn how to connect to a different deployment using these methods,
@@ -228,17 +225,17 @@ see :ref:`mdb-shell-open-new-connections-in-shell`.
 Verify Current Connection
 -------------------------
 
-Use the :method:`db.getMongo()` method to verify your current database
-connection.
+To verify your current database connection, use the
+:method:`db.getMongo()` method.
 
-The method returns the
-:manual:`connection string URI </reference/connection-string/>` for
-your current connection.
+The method returns the :manual:`connection string URI
+</reference/connection-string/>` for your current connection.
 
 Disconnect from a Deployment
 ----------------------------
 
-To disconnect from a deployment and exit ``mongosh``, you can:
+To disconnect from a deployment and exit ``mongosh``, perform one of the
+following actions:
 
 - Type ``.exit``, ``exit``, or ``exit()``.
 
@@ -251,11 +248,13 @@ To disconnect from a deployment and exit ``mongosh``, you can:
 Limitations
 -----------
 
-- :manual:`Kerberos authentication </core/kerberos/>` does not permit
+- :manual:`Kerberos authentication </core/kerberos/>` does not allow
   ``authMechanismProperties=CANONICALIZE_HOST_NAME:true|false`` in the
-  connection string. Use one of:
-  ``authMechanismProperties=CANONICALIZE_HOST_NAME:forward|forwardAndReverse|none``
-  instead.
+  connection string. Instead, use either:
+  
+  - ``authMechanismProperties=CANONICALIZE_HOST_NAME:forward``
+  - ``authMechanismProperties=CANONICALIZE_HOST_NAME:forwardAndReverse``
+  - ``authMechanismProperties=CANONICALIZE_HOST_NAME:none``
 
 - ``mongosh`` currently only supports the ``zlib``
   :manual:`compressor </core/wiredtiger/#compression>`. The following 
