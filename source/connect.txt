@@ -87,8 +87,8 @@ running on host ``mongodb0.example.com`` and port 28015:
    </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`
    in the Atlas documentation.
 
-Connection Options
-------------------
+Specify Connection Options
+--------------------------
 
 Specify different connection options to connect to different types of
 deployments.
