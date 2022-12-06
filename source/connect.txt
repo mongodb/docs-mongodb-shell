@@ -64,9 +64,8 @@ To specify a remote host and port, you can use either:
 
 - A :manual:`connection string </reference/connection-string>`.
 
-- The ``--host`` and ``--port`` command-line options. If you do not
-  include the ``--port`` option, ``mongosh`` uses the default port
-  27017.
+- The ``--host`` and ``--port`` command-line options. If you omit the
+  ``--port`` option, ``mongosh`` uses the default port 27017.
 
 For example, the following commands connect to a MongoDB deployment
 running on host ``mongodb0.example.com`` and port 28015:
@@ -177,8 +176,7 @@ replica set named ``replA``:
 Connect Using TLS
 ~~~~~~~~~~~~~~~~~
 
-To connect to a deployment using TLS, perform one of the following
-actions:
+To connect to a deployment using TLS, you can either:
 
 - Use the :manual:`DNS Seedlist Connection Format
   </reference/connection-string/#dns-seedlist-connection-format>`. The
@@ -192,7 +190,7 @@ actions:
 
      mongosh "mongodb+srv://server.example.com/"
 
-- Specify the :option:`--tls <--tls>` option to ``true`` in the connection
+- Set the :option:`--tls <--tls>` option to ``true`` in the connection
   string.
 
   For example, run the following command to enable ``tls`` with a
@@ -215,7 +213,7 @@ Connect to a Specific Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to a specific database, specify a database in your
-:manual:`connection string URI path </reference/connection-string/>` If
+:manual:`connection string URI path </reference/connection-string/>`. If
 you do not specify a database in your URI path, you connect to the
 ``test`` database.
 
@@ -231,7 +229,7 @@ Connect to a Different Deployment
 
 If you are already connected to a deployment in the |mdb-shell|, you can
 use the :method:`Mongo()` or :manual:`connect()
-</reference/method/connect/>` method to connect to a different MongoDB
+</reference/method/connect/>` method to connect to a different
 deployment from within the |mdb-shell|.
 
 To learn how to connect to a different deployment using these methods,
