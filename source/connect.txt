@@ -42,7 +42,8 @@ Connect to a Local Deployment on a Non-Default Port
 
 To specify a port to connect to on localhost, you can use either:
 
-- A :manual:`connection string </reference/connection-string>`
+- A :manual:`connection string </reference/connection-string>` with the
+  chosen port
 
 - The ``--port`` command-line option
 
@@ -62,7 +63,8 @@ Connect to a Deployment on a Remote Host
 
 To specify a remote host and port, you can use either:
 
-- A :manual:`connection string </reference/connection-string>`.
+- A :manual:`connection string </reference/connection-string>` with the
+  chosen host and port.
 
 - The ``--host`` and ``--port`` command-line options. If you omit the
   ``--port`` option, ``mongosh`` uses the default port 27017.
@@ -121,7 +123,7 @@ Connect to a Replica Set
 To connect to a replica set, you can either: 
 
 - Use the :manual:`DNS Seedlist Connection Format
-  </reference/connection-string/#dns-seedlist-connection-format>`
+  </reference/connection-string/#dns-seedlist-connection-format>`.
 
 - Explicitly specify the replica set name and members in the connection
   string.
@@ -162,8 +164,7 @@ replica set named ``replA``:
 
    ``mongosh`` automatically adds the ``directConnection=true``
    parameter to the connection string, regardless of the connection
-   string format specified, unless at least one of the following is
-   true:
+   string format used, unless at least one of the following is true:
 
    - The ``replicaSet`` query parameter is present in the connection string.
    - The connection string uses the ``mongodb+srv://`` connection string
