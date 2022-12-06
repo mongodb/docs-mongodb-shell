@@ -42,9 +42,9 @@ Connect to a Local Deployment on a Non-Default Port
 
 To specify a port to connect to on localhost, you can use either:
 
-- A :manual:`connection string </reference/connection-string>`.
+- A :manual:`connection string </reference/connection-string>`
 
-- The ``--port`` command-line option.
+- The ``--port`` command-line option
 
 For example, the following commands connect to a deployment running on
 localhost port 28015:
