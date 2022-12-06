@@ -21,8 +21,8 @@ Prerequisites
 .. include:: /includes/fact-connect-prereqs.rst
    
 
-Local Deployment on Default Port
---------------------------------
+Connect to a Local Deployment on the Default Port
+-------------------------------------------------
 
 To connect to a MongoDB deployment running on **localhost** with
 **default port** 27017, run ``mongosh`` without any options:
@@ -37,8 +37,8 @@ This is equivalent to the following command:
 
    mongosh "mongodb://localhost:27017"
 
-Local Deployment on a Non-Default Port
---------------------------------------
+Connect to a Local Deployment on a Non-Default Port
+---------------------------------------------------
 
 To specify a port to connect to on localhost, you can use either:
 
@@ -57,8 +57,8 @@ localhost port 28015:
 
    mongosh --port 28015
 
-MongoDB Deployment on a Remote Host
------------------------------------
+Connect to a Deployment on a Remote Host
+----------------------------------------
 
 To specify a remote host and port, you can use either:
 
@@ -81,7 +81,7 @@ running on host ``mongodb0.example.com`` and port 28015:
 
 .. note:: Connect to |service-fullname|
 
-   If your remote host is a |service| cluster, you can copy your
+   If your remote host is an |service| cluster, you can copy your
    connection string from the |service| UI. To learn more, see
    :atlas:`Connect to a Cluster
    </connect-to-cluster/#use-the-connect-dialog-to-connect-to-your-cluster>`
@@ -96,7 +96,7 @@ deployments.
 Connect With Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a MongoDB deployment requires authentication, use the
+To connect to a MongoDB deployment that requires authentication, use the
 :option:`--username <--username>` and :option:`--authenticationDatabase
 <--authenticationDatabase>` options. ``mongosh`` prompts you for a
 password, which it hides as you type.
@@ -119,43 +119,56 @@ database as user ``alice``:
 Connect to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a replica set, perform one of the following actions:
+To connect to a replica set, you can either: 
 
-- If you use the :manual:`DNS Seedlist Connection Format
-  </reference/connection-string/#dns-seedlist-connection-format>`,include
-  the ``+srv`` modifier in your connection string.
+- Use the :manual:`DNS Seedlist Connection Format
+  </reference/connection-string/#dns-seedlist-connection-format>`
 
-  For example, run the following command to connect to a replica set on
-  ``server.example.com``:
+- Explicitly specify the replica set name and members in the connection
+  string.
 
-  .. code-block:: sh
+Option 1: DNS Seedlist Format
+`````````````````````````````
 
-     mongosh "mongodb+srv://server.example.com/"
+To use the DNS seedlist connection format, include the ``+srv`` modifier
+in your connection string.
 
-  .. note:: +srv TLS Behavior
+For example, run the following command to connect to a replica set on
+``server.example.com``:
 
-     When you use the ``+srv`` connection string modifier, MongoDB
-     automatically sets the :option:`--tls <--tls>` connection option to
-     ``true``. To override this behavior, set ``--tls`` to ``false``.
+.. code-block:: sh
 
-- You can specify the replica set name and members in the
-  :manual:`connection string </reference/connection-string>`.
+   mongosh "mongodb+srv://server.example.com/"
 
-  For example, run the following command to connect to a three-member
-  replica set named ``replA``:
+.. note:: +srv TLS Behavior
 
-  .. code-block:: sh
+   When you use the ``+srv`` connection string modifier, MongoDB
+   automatically sets the :option:`--tls <--tls>` connection option to
+   ``true``. To override this behavior, set ``--tls`` to ``false``.
 
-     mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
+Option 2: Specify Members in Connection String
+``````````````````````````````````````````````
 
-.. note:: directConnection Parameter
+You can specify individual replica set members in the
+:manual:`connection string </reference/connection-string>`.
 
-   ``mongosh`` adds the ``directConnection=true`` query parameter to the
-   connection string automatically unless at least one of the following is
+For example, run the following command to connect to a three-member
+replica set named ``replA``:
+
+.. code-block:: sh
+
+   mongosh "mongodb://mongodb0.example.com.local:27017,mongodb1.example.com.local:27017,mongodb2.example.com.local:27017/?replicaSet=replA"
+   
+.. note:: directConnection Parameter Added Automatically
+
+   ``mongosh`` automatically adds the ``directConnection=true``
+   parameter to the connection string, regardless of the connection
+   string format specified, unless at least one of the following is
    true:
 
    - The ``replicaSet`` query parameter is present in the connection string.
-   - The connection string uses the ``mongodb+srv://`` scheme.
+   - The connection string uses the ``mongodb+srv://`` connection string
+     format.
    - The connection string contains a seed list with multiple hosts.
 
    When ``directConnection=true``, all operations are run on the host
