@@ -102,8 +102,8 @@ To connect to a MongoDB deployment that requires authentication, use the
 <--authenticationDatabase>` options. ``mongosh`` prompts you for a
 password, which it hides as you type.
 
-For example, run the following command to authenticate on the ``admin``
-database as user ``alice``:
+For example, to authenticate on the ``admin`` database as user
+``alice``, run the following command:
 
 .. code-block:: sh
 
@@ -134,8 +134,8 @@ Option 1: DNS Seedlist Format
 To use the DNS seedlist connection format, include the ``+srv`` modifier
 in your connection string.
 
-For example, run the following command to connect to a replica set on
-``server.example.com``:
+For example, to connect to a replica set on ``server.example.com``, run
+the following command:
 
 .. code-block:: sh
 
@@ -153,8 +153,8 @@ Option 2: Specify Members in Connection String
 You can specify individual replica set members in the
 :manual:`connection string </reference/connection-string>`.
 
-For example, run the following command to connect to a three-member
-replica set named ``replA``:
+For example, to connect to a three-member replica set named ``replA``,
+run the following command:
 
 .. code-block:: sh
 
@@ -184,8 +184,8 @@ To connect to a deployment using TLS, you can either:
   ``+srv`` connection string modifier automatically sets the ``tls``
   option to ``true`` for the connection.
 
-  For example, run the following command to connect to a DNS
-  seedlist-defined replica set with ``tls`` enabled:
+  For example, to connect to a DNS seedlist-defined replica set with
+  ``tls`` enabled, run the following command:
 
   .. code-block:: sh
 
@@ -194,8 +194,8 @@ To connect to a deployment using TLS, you can either:
 - Set the :option:`--tls <--tls>` option to ``true`` in the connection
   string.
 
-  For example, run the following command to enable ``tls`` with a
-  connection string option:
+  For example, to enable ``tls`` with a connection string option, run
+  the following command:
 
   .. code-block:: sh
 
@@ -203,8 +203,8 @@ To connect to a deployment using TLS, you can either:
 
 - Specify the ``--tls`` command-line option.
 
-  For example, run the following command to connect to a remote host
-  with ``tls`` enabled:
+  For example, to connect to a remote host with ``tls`` enabled, run the
+  following command:
 
   .. code-block:: sh
 
@@ -218,8 +218,8 @@ To connect to a specific database, specify a database in your
 you do not specify a database in your URI path, you connect to the
 ``test`` database.
 
-For example, run the following command to connect to a database called
-``qa`` on localhost:
+For example, to connect to a database called ``qa`` on localhost, run the
+following command:
 
 .. code-block:: sh
 
