@@ -109,9 +109,8 @@ database, run the following command:
 
    mongosh "mongodb://mongodb0.example.com:28015" --username alice --authenticationDatabase admin
    
-To provide a password as part of the connection command, instead of
-using the masked prompt, use the :option:`--password <--password>`
-option.
+To provide a password as part of the connection command instead of using
+the masked prompt, use the :option:`--password <--password>` option.
 
 .. seealso::
 
