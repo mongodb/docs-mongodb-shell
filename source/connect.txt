@@ -175,7 +175,8 @@ run the following command:
    - The connection string uses the ``mongodb+srv://`` connection string
      format.
    - The connection string contains a seed list with multiple hosts.
-   - The connection string already contains a `directConnection` parameter.
+   - The connection string already contains a ``directConnection``
+     parameter.
 
    When ``directConnection=true``, all operations are run on the host
    specified in the connection URI.
