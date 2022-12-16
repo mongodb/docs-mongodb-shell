@@ -102,12 +102,16 @@ To connect to a MongoDB deployment that requires authentication, use the
 <--authenticationDatabase>` options. ``mongosh`` prompts you for a
 password, which it hides as you type.
 
-For example, to authenticate on the ``admin`` database as user
-``alice``, run the following command:
+For example, to authenticate as user ``alice`` on the ``admin``
+database, run the following command:
 
 .. code-block:: sh
 
    mongosh "mongodb://mongodb0.example.com:28015" --username alice --authenticationDatabase admin
+   
+To provide a password as part of the connection command, instead of
+using the masked prompt, use the :option:`--password <--password>`
+option.
 
 .. seealso::
 
@@ -162,9 +166,9 @@ run the following command:
    
 .. note:: directConnection Parameter Added Automatically
 
-   ``mongosh`` automatically adds the ``directConnection=true``
-   parameter to the connection string, regardless of the connection
-   string format used, unless at least one of the following is true:
+   When you specify individual replica set members in the connection
+   string, ``mongosh`` automatically adds the ``directConnection=true``
+   parameter, unless at least one of the following is true:
 
    - The ``replicaSet`` query parameter is present in the connection string.
    - The connection string uses the ``mongodb+srv://`` connection string
