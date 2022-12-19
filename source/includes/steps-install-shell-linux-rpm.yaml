@@ -31,12 +31,12 @@ content: |
 
             You can also download the ``.rpm`` files directly from the
             `MongoDB repository <https://repo.mongodb.org/yum/redhat/>`__.
-            Downloads are organized by:
+            Downloads are organized in the following order:
             
-            - Red Hat or CentOS version (for example, ``8``), then
-            - MongoDB :manual:`release version </reference/versioning>`
-              (for example, ``{+mdb-version+}``), then
-            - Architecture (for example, ``x86_64``).
+            1. Red Hat or CentOS version (for example, ``8``)
+            #. MongoDB :manual:`release version </reference/versioning>`
+               (for example, ``{+mdb-version+}``)
+            #. Architecture (for example, ``x86_64``)
 
         - id: aws2-tab
           name: Amazon Linux 2
@@ -54,12 +54,12 @@ content: |
             You can also download the ``.rpm`` files directly from the
             `MongoDB repository
             <https://repo.mongodb.org/yum/amazon/>`__. Downloads are
-            organized by:
+            organized in the following order:
             
-            - Amazon Linux version (for example, ``2``), then
-            - MongoDB :manual:`release version </reference/versioning>`
-              (for example, ``{+mdb-version+}``), then
-            - Architecture (for example, ``x86_64``).
+            1. Amazon Linux version (for example, ``2``), then
+            #. MongoDB :manual:`release version </reference/versioning>`
+               (for example, ``{+mdb-version+}``), then
+            #. Architecture (for example, ``x86_64``).
 
 ---
 title: Install ``mongosh``.
