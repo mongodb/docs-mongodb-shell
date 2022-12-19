@@ -34,8 +34,12 @@ content: |
             Downloads are organized in the following order:
             
             1. Red Hat or CentOS version (for example, ``8``)
+
+            #. MongoDB edition (for example, ``mongodb-enterprise``)
+
             #. MongoDB :manual:`release version </reference/versioning>`
                (for example, ``{+mdb-version+}``)
+
             #. Architecture (for example, ``x86_64``)
 
         - id: aws2-tab
@@ -56,10 +60,12 @@ content: |
             <https://repo.mongodb.org/yum/amazon/>`__. Downloads are
             organized in the following order:
             
-            1. Amazon Linux version (for example, ``2``), then
+            1. Amazon Linux version (for example, ``2``)
+
             #. MongoDB :manual:`release version </reference/versioning>`
-               (for example, ``{+mdb-version+}``), then
-            #. Architecture (for example, ``x86_64``).
+               (for example, ``{+mdb-version+}``)
+
+            #. Architecture (for example, ``x86_64``)
 
 ---
 title: Install ``mongosh``.
