@@ -43,7 +43,7 @@ content: |
             #. Architecture (for example, ``x86_64``)
 
         - id: aws2-tab
-          name: Amazon Linux 2
+          name: Amazon Linux
           content: |
 
             .. code-block:: shell
