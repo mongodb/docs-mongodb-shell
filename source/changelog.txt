@@ -24,6 +24,7 @@ v1.7.1
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=35548>`__.
+
 v1.7.0
 ------
 
