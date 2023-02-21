@@ -31,7 +31,7 @@ v1.7.0
 *Released February 10, 2023*
 
 - :issue:`MONGOSH-57` Display a warning when connecting to impostor
-   MongoDB instances such as CosmosDB or DocumentDB.
+  MongoDB instances such as CosmosDB or DocumentDB.
 - :issue:`MONGOSH-545` You can now use ``db.getMongo().getURI()`` to get
   the current connection string.
 
