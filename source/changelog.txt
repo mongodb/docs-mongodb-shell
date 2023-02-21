@@ -32,8 +32,8 @@ v1.7.0
 
 - :issue:`MONGOSH-57` Display a warning when connecting to impostor
   MongoDB instances such as CosmosDB or DocumentDB.
-- :issue:`MONGOSH-545` You can now use ``db.getMongo().getURI()`` to get
-  the current connection string.
+- :issue:`MONGOSH-545` To get the current connection string, use
+  ``db.getMongo().getURI()``.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=35363>`__.
