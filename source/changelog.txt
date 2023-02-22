@@ -17,8 +17,6 @@ v1.7.1
 
 *Released February 16, 2023*
 
-- :issue:`MONGOSH-1087` An earlier enhancement to autocomplete that is
-  available now.
 - :issue:`MONGOSH-1378` Fixes connectivity issues when ``mongosh`` is
   installed using Homebrew.
 
@@ -30,8 +28,8 @@ v1.7.0
 
 *Released February 10, 2023*
 
-- :issue:`MONGOSH-57` Display a warning when connecting to impostor
-  MongoDB instances such as CosmosDB or DocumentDB.
+- :issue:`MONGOSH-57` Display a warning when connecting to databases
+  that mimic MongoDB.
 - :issue:`MONGOSH-545` To get the current connection string, use
   ``db.getMongo().getURI()``.
 
