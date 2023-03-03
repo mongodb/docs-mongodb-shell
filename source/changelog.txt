@@ -36,8 +36,8 @@ Compatibility Changes
   sends the object's own keys to the server. ``mongosh`` does not send
   inherited enumerable keys to the server.
 
-Issues fixed
-~~~~~~~~~~~~
+Updates in 1.8.0
+~~~~~~~~~~~~~~~~
 
 - :issue:`MONGOSH-1358` Updates for the 5.1.0 :driver:`Node.js driver
   </node/>`. 
@@ -79,10 +79,8 @@ v1.6.2
 *Released January 9, 2023*
 
 - Improves ``mongosh`` startup time.
-
 - ``mongosh`` now uses :github:`Node.js driver 4.13.0
   </mongodb/node-mongodb-native/releases/tag/v4.13.0>`.
-
 - Improves error messages.
 
 `Full release notes available on JIRA
