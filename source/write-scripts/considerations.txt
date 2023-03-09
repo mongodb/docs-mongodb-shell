@@ -1,0 +1,27 @@
+.. _mongosh-script-limitations:
+.. _mongosh-script-considerations:
+
+=====================
+Script Considerations
+=====================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. include:: /includes/fact-call-limitations.rst
+
+Code Objects
+~~~~~~~~~~~~
+
+.. include:: /includes/scripting/fact-code-objects.rst 
+
+Enumerable Keys
+~~~~~~~~~~~~~~~
+
+.. include:: /includes/scripting/fact-enumerable-keys.rst
+
