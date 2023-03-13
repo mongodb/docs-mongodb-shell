@@ -15,13 +15,3 @@ Script Considerations
 
 .. include:: /includes/fact-call-limitations.rst
 
-Code Objects
-~~~~~~~~~~~~
-
-.. include:: /includes/scripting/fact-code-objects.rst 
-
-Enumerable Keys
-~~~~~~~~~~~~~~~
-
-.. include:: /includes/scripting/fact-enumerable-keys.rst
-
