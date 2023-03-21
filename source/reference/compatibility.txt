@@ -143,20 +143,20 @@ The :ref:`ObjectId() <server-objectid>` methods work differently in
      - ``mongosh`` Behavior
 
    * - ``ObjectId.str``
-     - | Returns a hexadecimal string
+     - | Returns a hexadecimal string:
        | ``6419ccfce40afaf9317567b7``
      - Undefined
 
    * - ``ObjectId.valueOf()``
-     - | Returns the value of ``ObjectId.str``
+     - | Returns the value of ``ObjectId.str``:
        | ``6419ccfce40afaf9317567b7``
-     - | Returns the value of ``ObjectId.self``
+     - | Returns the value of ``ObjectId.self``:
        | ``ObjectId("6419ccfce40afaf9317567b7")``
 
    * - ``ObjectId.toString()``
-     - | Returns a formatted string
+     - | Returns a formatted string:
        | ``ObjectId("6419ccfce40afaf9317567b7")``
-     - | Returns a hexadecimal formatted string
+     - | Returns a hexadecimal formatted string:
        | ``6419ccfce40afaf9317567b7``
 
 Numeric Values
