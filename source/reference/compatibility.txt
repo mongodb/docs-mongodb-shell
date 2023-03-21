@@ -132,7 +132,7 @@ legacy :binary:`mongo` shell. To disable retryable writes, use
 ObjectId Methods and Attributes
 -------------------------------
 
-The :ref:`ObjectId() <server-objectid>` methods work differently in
+These :ref:`ObjectId() <server-objectid>` methods work differently in
 ``mongosh`` than in the legacy ``mongo`` shell.
 
 .. list-table::
