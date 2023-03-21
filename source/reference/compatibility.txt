@@ -132,8 +132,8 @@ legacy :binary:`mongo` shell. To disable retryable writes, use
 ObjectId Methods and Attributes
 -------------------------------
 
-The ObjectId() methods work differently in ``mongosh`` than in the
-legacy ``mongo`` shell.
+The :ref:`ObjectId() <server-objectid>` methods work differently in
+``mongosh`` than in the legacy ``mongo`` shell.
 
 .. list-table::
    :header-rows: 1
@@ -143,16 +143,21 @@ legacy ``mongo`` shell.
      - ``mongosh`` Behavior
 
    * - ``ObjectId.str``
-     - Hexadecimal string
+     - | Returns a hexadecimal string
+       | ``6419ccfce40afaf9317567b7``
      - Undefined
 
    * - ``ObjectId.valueOf()``
-     - Returns ``ObjectId.str``
-     - Returns ``ObjectId.self``
+     - | Returns the value of ``ObjectId.str``
+       |  ``6419ccfce40afaf9317567b7``
+     - | Returns the value of ``ObjectId.self``
+       | ``ObjectId("6419ccfce40afaf9317567b7")``
 
    * - ``ObjectId.toString()``
-     - Returns an ObjectId("<hexadecimal>") string
-     - Returns a hexadecimal string
+     - | Returns a formatted string
+       | ``ObjectId("6419ccfce40afaf9317567b7")``
+     - | Returns a hexadecimal formatted string
+       | ``6419ccfce40afaf9317567b7``
 
 Numeric Values
 --------------
