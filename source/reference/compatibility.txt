@@ -145,7 +145,8 @@ The :ref:`ObjectId() <server-objectid>` methods work differently in
    * - ``ObjectId.str``
      - | Returns a hexadecimal string:
        | ``6419ccfce40afaf9317567b7``
-     - Undefined
+     - | Undefined
+       | (Not available)
 
    * - ``ObjectId.valueOf()``
      - | Returns the value of ``ObjectId.str``:
