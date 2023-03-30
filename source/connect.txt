@@ -271,7 +271,7 @@ following actions:
 Non-genuine Deployments
 -----------------------
 
-The shell displays a warning message when connected to non-genuine
+The shell displays a warning message when you connect to non-genuine
 MongoDB instances. Non-genuine instances may behave differently from the
 official MongoDB instances due to missing, inconsistent, or incomplete
 features.
