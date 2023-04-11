@@ -131,9 +131,9 @@ Select the appropriate tab for your operating system:
             - :abbr:`RHEL (Red Hat Enterprise Linux)`
             - Amazon Linux 2
 
-            .. important:: Amazon Linux 2023 Support
+            .. important:: Amazon Linux 2023 Availability
 
-               ``mongosh`` is **not** supported on Amazon Linux 2023.
+               ``mongosh`` is **not** available on Amazon Linux 2023.
 
             Procedure
             ~~~~~~~~~
