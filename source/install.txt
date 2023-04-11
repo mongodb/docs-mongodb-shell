@@ -88,9 +88,6 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: linux
 
-      Procedure
-      ~~~~~~~~~
-
       Select the appropriate tab based on your Linux distribution and
       desired package from the tabs below:
 
@@ -103,27 +100,55 @@ Select the appropriate tab for your operating system:
 
       - To install the ``.tgz`` tarball, click the ``.tgz`` tab.
 
+      
+
+      
+
       .. tabs::
       
          .. tab:: .deb
             :tabid: deb
 
+            Supported Platforms
+            ~~~~~~~~~~~~~~~~~~~
+
             :binary:`mongosh` is available as a :abbr:`PPA (Personal
-            Package Archive)` for Ubuntu 20.04 (Focal) and Ubuntu 18.04
-            (Bionic).
+            Package Archive)` for the following platforms:
+            
+            - Ubuntu 20.04 (Focal)
+            - Ubuntu 18.04 (Bionic)
+
+            Procedure
+            ~~~~~~~~~
 
             .. include:: /includes/steps/install-shell-linux-deb.rst
 
          .. tab:: .rpm
             :tabid: rpm
+
+            Supported Platforms
+            ~~~~~~~~~~~~~~~~~~~
             
-            :binary:`mongosh` is available as ``yum`` package for
-            :abbr:`RHEL (Red Hat Enterprise Linux)` and Amazon Linux 2.
+            :binary:`mongosh` is available as ``yum`` package for the
+            following platforms:
+
+            - :abbr:`RHEL (Red Hat Enterprise Linux)`
+            - Amazon Linux 2
+
+            .. important:: Amazon Linux 2023 Support
+
+               ``mongosh`` is **not** supported on Amazon Linux 2023.
+
+            Procedure
+            ~~~~~~~~~
 
             .. include:: /includes/steps/install-shell-linux-rpm.rst
 
          .. tab:: .tgz
             :tabid: tgz
+
+            Procedure
+            ~~~~~~~~~
       
             .. include:: /includes/steps/install-shell-linux-generic.rst
 
