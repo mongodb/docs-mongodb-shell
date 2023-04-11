@@ -100,10 +100,6 @@ Select the appropriate tab for your operating system:
 
       - To install the ``.tgz`` tarball, click the ``.tgz`` tab.
 
-      
-
-      
-
       .. tabs::
       
          .. tab:: .deb
