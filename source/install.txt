@@ -133,7 +133,8 @@ Select the appropriate tab for your operating system:
 
             .. important:: Amazon Linux 2023 Availability
 
-               ``mongosh`` is **not** available on Amazon Linux 2023.
+               ``mongosh`` is **not** currently available on Amazon
+               Linux 2023.
 
             Procedure
             ~~~~~~~~~
