@@ -97,20 +97,19 @@ content: |
   OpenSSL or you can use your system's OpenSSL installation to enhance
   security. 
 
-  To install the latest stable version of ``mongosh`` without OpenSSL,
-  issue the following command:
+  To install the latest stable version of ``mongosh`` without OpenSSL:
 
   .. code-block:: sh
 
     sudo apt-get install -y mongodb-mongosh
 
-  To install ``mongosh`` with OpenSSL 1.1, issue the following command:
+  To install ``mongosh`` with OpenSSL 1.1:
 
   .. code-block:: sh 
 
      sudo apt-get install -y mongodb-mongosh-shared-openssl11
 
-  To install ``mongosh`` with OpenSSL 3.0, issue the following command:
+  To install ``mongosh`` with OpenSSL 3.0:
 
   .. code-block:: sh 
 
