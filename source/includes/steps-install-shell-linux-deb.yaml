@@ -93,9 +93,7 @@ level: 4
 ref: install
 content: |
 
-  ``mongosh`` supports OpenSSL. You can install ``mongosh`` without
-  OpenSSL or you can use your system's OpenSSL installation to enhance
-  security. 
+  .. include:: /includes/intro-openssl-installs.rst
 
   To install the latest stable version of ``mongosh`` without OpenSSL:
 
