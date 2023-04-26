@@ -95,19 +95,20 @@ content: |
 
   .. include:: /includes/intro-openssl-installs.rst
 
-  To install the latest stable version of ``mongosh`` without OpenSSL:
+  To install the latest stable version of ``mongosh`` with the included
+  OpenSSL libraries:
 
   .. code-block:: sh
 
     sudo apt-get install -y mongodb-mongosh
 
-  To install ``mongosh`` with OpenSSL 1.1:
+  To install ``mongosh`` with your OpenSSL 1.1 libraries:
 
   .. code-block:: sh 
 
      sudo apt-get install -y mongodb-mongosh-shared-openssl11
 
-  To install ``mongosh`` with OpenSSL 3.0:
+  To install ``mongosh`` with your OpenSSL 3.0 libraries:
 
   .. code-block:: sh 
 
