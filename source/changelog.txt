@@ -12,6 +12,17 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v1.8.2
+------
+
+*Released April 28, 2023*
+
+- :issue:`MONGOSH-1323` Print content of the string instead of the 
+  string itself in browser-repl
+
+`Full release notes available on JIRA
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?version=35957&projectId=17381>`__.
+
 v1.8.1
 ------
 
