@@ -17,9 +17,6 @@ v1.9.1
 
 *Released May 25, 2023*
 
-- Update Node.js to version ``16.20.0`` to address potential
-  vulnerabilities.
-
 - Internal improvements for reporting and monitoring.
 
 `Full release notes available on JIRA
