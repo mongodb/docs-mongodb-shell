@@ -1254,6 +1254,11 @@ Sharding Methods
 
        .. versionadded:: 4.4
 
+   * - :method:`sh.disableAutoMerger()`
+
+     - Disables automatic :term:`chunk` merges for a specified namespace
+       (``<database>.<collection>``).
+   
    * - :method:`sh.disableAutoSplit()`
 
      - Disables auto-splitting for the sharded cluster.
@@ -1263,6 +1268,11 @@ Sharding Methods
      - Disables balancing on a single collection in a sharded
        database. Does not affect balancing of other collections in a sharded cluster.
 
+   * - :method:`sh.enableAutoMerger()`
+
+     - Enables automatic :term:`chunk` merges for a specified namespace
+       (``<database>.<collection>``).
+   
    * - :method:`sh.enableAutoSplit()`
 
      - Enables auto-splitting for the sharded cluster.
@@ -1328,6 +1338,11 @@ Sharding Methods
      - Divides an existing :term:`chunk` that contains a document
        matching a query into two approximately equal chunks.
 
+   * - :method:`sh.startAutomerger()`
+
+     - Starts automatic :term:`chunk` merges for all collections in the
+       current database.
+   
    * - :method:`sh.startBalancer()`
 
      - Enables the :term:`balancer`.
@@ -1341,6 +1356,11 @@ Sharding Methods
      - Disables the :term:`balancer`. This operation does not wait for
        the balancer to complete any in progress operations, and may
        terminate ongoing operations.
+
+   * - :method:`sh.stopAutomerger()`
+
+     - Stops automatic :term:`chunk` merges for all collections in the
+       current database.
 
    * - :method:`sh.updateZoneKeyRange()`
 
