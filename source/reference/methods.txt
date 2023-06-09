@@ -1259,6 +1259,8 @@ Sharding Methods
      - Disables automatic :term:`chunk` merges for a specified namespace
        (``<database>.<collection>``).
    
+       .. versionadded:: 7.0
+
    * - :method:`sh.disableAutoSplit()`
 
      - Disables auto-splitting for the sharded cluster.
@@ -1273,6 +1275,8 @@ Sharding Methods
      - Enables automatic :term:`chunk` merges for a specified namespace
        (``<database>.<collection>``).
    
+       .. versionadded:: 7.0
+
    * - :method:`sh.enableAutoSplit()`
 
      - Enables auto-splitting for the sharded cluster.
@@ -1342,7 +1346,9 @@ Sharding Methods
 
      - Starts automatic :term:`chunk` merges for all collections in the
        current database.
-   
+
+       .. versionadded:: 7.0
+
    * - :method:`sh.startBalancer()`
 
      - Enables the :term:`balancer`.
@@ -1361,6 +1367,8 @@ Sharding Methods
 
      - Stops automatic :term:`chunk` merges for all collections in the
        current database.
+
+       .. versionadded:: 7.0
 
    * - :method:`sh.updateZoneKeyRange()`
 
