@@ -1256,8 +1256,7 @@ Sharding Methods
 
    * - :method:`sh.disableAutoMerger()`
 
-     - Disables automatic :term:`chunk` merges for a specified namespace
-       (``<database>.<collection>``).
+     - Disables automatic :term:`chunk` merges for a :term:`namespace`.
    
        .. versionadded:: 7.0
 
@@ -1272,8 +1271,7 @@ Sharding Methods
 
    * - :method:`sh.enableAutoMerger()`
 
-     - Enables automatic :term:`chunk` merges for a specified namespace
-       (``<database>.<collection>``).
+     - Enables automatic :term:`chunk` merges for a :term:`namespace`.
    
        .. versionadded:: 7.0
 
@@ -1357,18 +1355,18 @@ Sharding Methods
 
      - Reports on the status of a sharded cluster.
 
-   * - :method:`sh.stopBalancer()`
-
-     - Disables the :term:`balancer`. This operation does not wait for
-       the balancer to complete any in progress operations, and may
-       terminate ongoing operations.
-
    * - :method:`sh.stopAutoMerger()`
 
      - Stops automatic :term:`chunk` merges for all collections in the
        current database.
 
        .. versionadded:: 7.0
+
+   * - :method:`sh.stopBalancer()`
+
+     - Disables the :term:`balancer`. This operation does not wait for
+       the balancer to complete any in progress operations, and may
+       terminate ongoing operations.
 
    * - :method:`sh.updateZoneKeyRange()`
 
