@@ -1342,7 +1342,7 @@ Sharding Methods
      - Divides an existing :term:`chunk` that contains a document
        matching a query into two approximately equal chunks.
 
-   * - :method:`sh.startAutomerger()`
+   * - :method:`sh.startAutoMerger()`
 
      - Starts automatic :term:`chunk` merges for all collections in the
        current database.
@@ -1363,7 +1363,7 @@ Sharding Methods
        the balancer to complete any in progress operations, and may
        terminate ongoing operations.
 
-   * - :method:`sh.stopAutomerger()`
+   * - :method:`sh.stopAutoMerger()`
 
      - Stops automatic :term:`chunk` merges for all collections in the
        current database.
