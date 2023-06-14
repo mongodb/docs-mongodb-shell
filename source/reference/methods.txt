@@ -1256,7 +1256,7 @@ Sharding Methods
 
    * - :method:`sh.disableAutoMerger()`
 
-     - Disables automatic :term:`chunk` merges for a :term:`namespace`.
+     - .. include:: /includes/disableAutoMerger.rst
    
        .. versionadded:: 7.0
 
@@ -1271,7 +1271,7 @@ Sharding Methods
 
    * - :method:`sh.enableAutoMerger()`
 
-     - Enables automatic :term:`chunk` merges for a :term:`namespace`.
+     - .. include:: /includes/enableAutoMerger.rst
    
        .. versionadded:: 7.0
 
