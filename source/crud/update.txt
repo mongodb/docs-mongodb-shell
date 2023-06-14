@@ -62,7 +62,7 @@ document that matches a specified filter.
    To update the *first* document in the ``sample_mflix.movies``
    collection where ``title`` equals ``"Tag"``:
 
-   .. code-block::
+   .. code-block:: javascript
 
       use sample_mflix
 
