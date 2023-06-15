@@ -23,8 +23,7 @@ v1.10.0
   ``checkMetadataConsistency`` command. For details, see the
   `driver command example
   <https://www.mongodb.com/docs/drivers/node/v5.6/fundamentals/run-command/#example>`__.
-- :issue:`MONGOSH-1442` Added these helpers for shard key
-  selection:
+- :issue:`MONGOSH-1442` Added helpers for shard key selection:
 
   - ``db.collection.analyzeShardKey( key )``
   - ``db.collection.configureQueryAnalyzer( { mode, sampleRate } )``
