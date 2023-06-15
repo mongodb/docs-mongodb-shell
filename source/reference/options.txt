@@ -476,9 +476,10 @@ Authentication Options
 
 .. option:: --oidcFlows
 
-   Specifies OpenID Connect flows. The OpenID connect flows specify how the ``mongosh``
-   interacts with identity provider for the authentication process. ``mongosh`` 
-   supports the following OpenID Connect flows:
+   Specifies OpenID Connect flows in a comma-separated list. 
+   The OpenID connect flows specify how ``mongosh``interacts with the identity 
+   provider for the authentication process. ``mongosh`` supports the following 
+   OpenID Connect flows:
 
    .. list-table::
       :header-rows: 1
@@ -491,12 +492,20 @@ Authentication Options
         - Default. ``mongosh`` redirects you to the identity provider log-in screen.
 
       * - ``device-auth``
-        - ``mongosh`` provides you with a URL and code to finish authentication.    
+        - ``mongosh`` provides you with a URL and code to finish authentication.
+          This is considered a less secure OpenID Connect flow.
+
+   To set ``device-auth`` as a fallback option to ``auth-code``, see the following 
+   example:
+
+   .. code-block:: bash 
+
+      mongosh 'mongodb://localhost/' --authenticationMechanism MONGODB-OIDC --oidcFlows=auth-code,device-auth
 
 .. option:: --oidcRedirectUri
 
    Specifies a URI where the identity provider redirects you after authentication.
-   The URI must match the configuration of the Identity Provider used by the server.
+   The URI must match the configuration of the identity provider used by the server.
    The default is ``http://localhost:27097/redirect``.
 
 .. option:: --oidcTrustedEndpoint
@@ -508,6 +517,8 @@ Authentication Options
 
    Specifies the specific browser ``mongosh`` redirects you to when ``MONGODB-OIDC`` 
    is enabled.
+
+   This option is run with the system shell. 
 
 .. option:: --password <password>, -p <password>
 
