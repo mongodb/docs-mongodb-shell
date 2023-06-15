@@ -18,11 +18,11 @@ v1.10.0
 
 *Released June 14, 2023*
 
-- :issue:`MONGOSH-1469` Node driver included in MongoDB 5.6.0.
+- :issue:`MONGOSH-1469` Node driver for MongoDB 5.6.0.
 - :issue:`MONGOSH-1432` Added helper methods for the
   ``checkMetadataConsistency`` command.
-  `For details about the methods, see
-  <https://www.mongodb.com/docs/drivers/node/v5.6/fundamentals/run-command/#example>`__.
+  For details about the methods, see
+  `<https://www.mongodb.com/docs/drivers/node/v5.6/fundamentals/run-command/#example>`__.
 - :issue:`MONGOSH-1442` Added helper methods for shard key
   selection:
 
