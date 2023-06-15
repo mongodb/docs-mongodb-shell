@@ -60,7 +60,7 @@ document that matches a specified filter.
 .. example::
 
    To update the *first* document in the ``sample_mflix.movies``
-   collection where ``title`` equals ``"Tag"``:
+   collection where ``title`` equals ``"Twilight"``:
 
    .. code-block:: javascript
 
@@ -69,8 +69,7 @@ document that matches a specified filter.
       db.movies.updateOne( { title: "Twilight" },
       {
         $set: {
-          plot: "A teenage girl risks everything–including her life–when she
-          falls in love with a vampire."
+          plot: "A teenage girl risks everything–including her life–when she falls in love with a vampire."
         },
         $currentDate: { lastUpdated: true } 
       })
