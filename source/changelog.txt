@@ -30,7 +30,7 @@ v1.10.0
   - ``db.collection.configureQueryAnalyzer( { mode, sampleRate } )``
 
 `Full release notes available on JIRA
-<https://https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36119>`__.
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36119>`__.
 
 v1.9.1
 ------
