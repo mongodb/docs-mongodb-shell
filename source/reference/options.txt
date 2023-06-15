@@ -496,6 +496,7 @@ Authentication Options
 .. option:: --oidcRedirectUri
 
    Specifies a URI where the identity provider redirects you after authentication.
+   The URI must match the configuration of the Identity Provider used by the server.
    The default is ``http://localhost:27097/redirect``.
 
 .. option:: --oidcTrustedEndpoint
@@ -506,7 +507,7 @@ Authentication Options
 .. option:: --browser
 
    Specifies the specific browser ``mongosh`` redirects you to when ``MONGODB-OIDC`` 
-   is enabled. 
+   is enabled.
 
 .. option:: --password <password>, -p <password>
 
