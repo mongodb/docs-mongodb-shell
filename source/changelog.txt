@@ -22,7 +22,7 @@ v1.10.0
 - :issue:`MONGOSH-1432` Added helper methods for the
   ``checkMetadataConsistency`` command.
   For details about the methods, see
-  `<https://www.mongodb.com/docs/drivers/node/v5.6/fundamentals/run-command/#example>`__.
+  `<driver example https://www.mongodb.com/docs/drivers/node/v5.6/fundamentals/run-command/#example>`__.
 - :issue:`MONGOSH-1442` Added helper methods for shard key
   selection:
 
