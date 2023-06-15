@@ -496,7 +496,7 @@ Authentication Options
 .. option:: --oidcRedirectUri
 
    Specifies a URI where the identity provider redirects you after authentication.
-   The default is ``http://localhost:27097/redirect``. 
+   The default is ``http://localhost:27097/redirect``.
 
 .. option:: --oidcTrustedEndpoint
 
