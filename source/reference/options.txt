@@ -518,7 +518,7 @@ Authentication Options
    Specifies the specific browser ``mongosh`` redirects you to when ``MONGODB-OIDC`` 
    is enabled.
 
-   This option is run with the system shell.  
+   This option is run with the system shell.
 
 .. option:: --password <password>, -p <password>
 
