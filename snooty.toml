@@ -1,7 +1,10 @@
 name = "mongodb-shell"
 title = "MongoDB Shell"
 
-intersphinx = ["https://www.mongodb.com/docs/manual/objects.inv"]
+intersphinx = [
+    "https://www.mongodb.com/docs/manual/objects.inv",
+    "https://www.mongodb.com/docs/master/objects.inv"
+]
 
 toc_landing_pages = ["/run-commands",
                      "/crud",
