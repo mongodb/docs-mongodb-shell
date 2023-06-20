@@ -89,12 +89,12 @@ Use the following methods to manage Atlas Search indexes.
 
    * - :method:`db.collection.dropSearchIndex()`
 
-     - Deletes an existing Atlas Search.
+     - Deletes an existing Atlas Search index.
 
    * - :method:`db.collection.getSearchIndexes()`
 
      - Returns information about existing Atlas Search indexes on a specified
-       collection. 
+       collection.
 
    * - :method:`db.collection.updateSearchIndex()`
 
