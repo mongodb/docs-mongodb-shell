@@ -17,17 +17,16 @@ v1.10.1
 
 *Released June 21, 2023*
 
-- Upgrades to Node.js version 16.20.1.
+- Upgrades to Node.js version 16.20.1. Node 16.20.1 addresses security
+  issues with OpenSSL. For more information, see
+  `Node.js security releases
+  <https://nodejs.org/en/blog/vulnerability/june-2023-security-releases>`__. 
 
 - :issue:`MONGOSH-1286` ``mongosh --build-info`` now lists driver
   dependency versions.
 
   - You can access driver dependency versions within the shell by
     running the new ``buildInfo()`` function.
-
-- :issue:`MONGOSH-1479` ``mongosh`` on homebrew no longer prints an
-  extraneous warning when reconnecting multiple times in a single
-  session.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36225>`__.
