@@ -128,4 +128,20 @@ content: |
   .. code-block:: sh 
 
      sudo apt-get install -y mongodb-mongosh-shared-openssl3
+---
+title: Confirm that ``mongosh`` installed successfully.
+stepnum: 5
+level: 4
+ref: confirm
+content: |
+
+  To confirm that ``mongosh`` installed successfully, run the following
+  command:
+
+  .. code-block:: sh
+
+     mongosh --version
+
+  Your terminal should respond with the version of ``mongosh`` you have
+  installed.
 ...
