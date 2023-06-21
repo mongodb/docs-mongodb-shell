@@ -18,7 +18,7 @@ v1.10.1
 *Released June 21, 2023*
 
 - Upgrades to Node.js version 16.20.1. Node 16.20.1 addresses security
-  issues with OpenSSL. For more information, see
+  issues. For more information, see
   `Node.js security releases
   <https://nodejs.org/en/blog/vulnerability/june-2023-security-releases>`__. 
 
