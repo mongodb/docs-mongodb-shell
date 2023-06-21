@@ -44,12 +44,27 @@ content: |
    .. tabs::
 
       tabs:
+         - id: jammy
+           name: Ubuntu 22.04 (Jammy)
+           content: |
+
+              The following instruction is for **Ubuntu 22.04 (Jammy)**.
+              For other releases, click the appropriate tab.
+
+              Create the
+              ``/etc/apt/sources.list.d/mongodb-org-{+mdb-version+}.list``
+              file for Ubuntu 22.04 (Jammy):
+
+              .. code-block:: sh
+
+                 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/{+mdb-version+} multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-{+mdb-version+}.list
+         
          - id: focal
            name: Ubuntu 20.04 (Focal)
            content: |
 
               The following instruction is for **Ubuntu 20.04 (Focal)**.
-              For Ubuntu 18.04 (Bionic) click on the appropriate tab.
+              For other releases, click the appropriate tab.
 
               Create the
               ``/etc/apt/sources.list.d/mongodb-org-{+mdb-version+}.list``
