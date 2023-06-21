@@ -170,7 +170,7 @@ Option 2: Specify Members in Connection String
 ``````````````````````````````````````````````
 
 You can specify individual replica set members in the
-:manual:`connection string </reference/connection-string>`.
+:manual:`connection string </reference/connection-string>`. 
 
 For example, to connect to a three-member replica set named ``replA``,
 run the following command:
