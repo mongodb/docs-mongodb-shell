@@ -49,7 +49,7 @@ content: |
            content: |
 
               The following instruction is for **Ubuntu 22.04 (Jammy)**.
-              For other releases, click the appropriate tab.
+              For other Ubuntu releases, click the appropriate tab.
 
               Create the
               ``/etc/apt/sources.list.d/mongodb-org-{+mdb-version+}.list``
@@ -64,7 +64,7 @@ content: |
            content: |
 
               The following instruction is for **Ubuntu 20.04 (Focal)**.
-              For other releases, click the appropriate tab.
+              For other Ubuntu releases, click the appropriate tab.
 
               Create the
               ``/etc/apt/sources.list.d/mongodb-org-{+mdb-version+}.list``
@@ -79,7 +79,7 @@ content: |
            content: |
 
               The following instruction is for **Ubuntu 18.04
-              (Bionic)**. For Ubuntu 20.04 (Focal) click on the
+              (Bionic)**. For other Ubuntu releases, click the
               appropriate tab.
 
               Create the
