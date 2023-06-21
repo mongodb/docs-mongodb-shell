@@ -82,21 +82,25 @@ Use the following methods to manage Atlas Search indexes.
 
      - Description
 
-   * - :method:`db.collection.createSearchIndex()`
+   * - :upcoming:`db.collection.createSearchIndex()
+       </reference/method/db.collection.createSearchIndex>`
 
      - Creates one or more Atlas Search indexes on a specified
        collection.
 
-   * - :method:`db.collection.dropSearchIndex()`
+   * - :upcoming:`db.collection.dropSearchIndex()
+       </reference/method/db.collection.dropSearchIndex>`
 
      - Deletes an existing Atlas Search index.
 
-   * - :method:`db.collection.getSearchIndexes()`
+   * - :upcoming:`db.collection.getSearchIndexes()
+       </reference/method/db.collection.getSearchIndexes>`
 
      - Returns information about existing Atlas Search indexes on a specified
        collection.
 
-   * - :method:`db.collection.updateSearchIndex()`
+   * - :upcoming:`db.collection.updateSearchIndex()
+       </reference/method/db.collection.updateSearchIndex>`
 
      - Updates an existing Atlas Search index.
 
