@@ -10,10 +10,10 @@ content: |
 
        wget -qO - https://www.mongodb.org/static/pgp/server-{+pgp-version+}.asc | sudo apt-key add -
 
-    The operation should respond with an ``OK``. 
+    The operation should respond with ``OK``. 
     
-    However, if you receive an error indicating that ``gnupg`` is not
-    installed, you can:
+    If you receive an error indicating that ``gnupg`` is not installed,
+    you can:
        
     #. Install ``gnupg`` and its required libraries using the following command:
 
@@ -21,7 +21,7 @@ content: |
 
           sudo apt-get install gnupg
        
-    #. Once installed, retry importing the key:
+    #. Retry importing the key:
 
        .. code-block:: sh
 
@@ -39,7 +39,7 @@ content: |
 
    Click on the appropriate tab for your version of Ubuntu.
    If you are unsure of what Ubuntu version the host is running,
-   open a terminal or shell on the host and execute ``lsb_release -dc``. 
+   open a terminal or shell on the host and run ``lsb_release -dc``. 
 
    .. tabs::
 
