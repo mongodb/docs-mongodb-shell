@@ -1256,7 +1256,7 @@ Sharding Methods
 
    * - :method:`sh.disableAutoMerger()`
 
-     - .. include:: /includes/disableAutoMerger.rst
+     - Disables the AutoMerger for a :term:`namespace`.
    
        .. versionadded:: 7.0
 
@@ -1271,7 +1271,7 @@ Sharding Methods
 
    * - :method:`sh.enableAutoMerger()`
 
-     - .. include:: /includes/enableAutoMerger.rst
+     - Enables the AutoMerger for a :term:`namespace`.
    
        .. versionadded:: 7.0
 
@@ -1342,8 +1342,7 @@ Sharding Methods
 
    * - :method:`sh.startAutoMerger()`
 
-     - Starts automatic :term:`chunk` merges for all collections in the
-       current database.
+     - Enables the AutoMerger.
 
        .. versionadded:: 7.0
 
@@ -1357,8 +1356,7 @@ Sharding Methods
 
    * - :method:`sh.stopAutoMerger()`
 
-     - Stops automatic :term:`chunk` merges for all collections in the
-       current database.
+     - Disables the AutoMerger.
 
        .. versionadded:: 7.0
 
