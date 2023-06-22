@@ -1254,8 +1254,8 @@ Sharding Methods
 
        .. versionadded:: 4.4
 
-   * -  :upcoming:`sh.disableAutoMerger()
-        </reference/method/sh.disableAutoMerger>`
+   * - :upcoming:`sh.disableAutoMerger()
+       </reference/method/sh.disableAutoMerger>`
 
      - Disables the AutoMerger for a :term:`namespace`.
    
