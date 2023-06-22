@@ -125,7 +125,7 @@ option for programmatic usage of ``mongosh``, like a :driver:`driver
 Connect with OpenID Connect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to a deployment using :manual:`OpenID Connect </core/security-oidc/>`, 
+To connect to a deployment using :manual:`OpenID Connect </core/security-oidc>`, 
 use the :option:`--authenticationMechanism` option and set it to ``MONGODB-OIDC``. 
 ``mongosh`` redirects you to a browser where you enter your identity provider's 
 log-in information.
