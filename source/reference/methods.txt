@@ -1257,7 +1257,7 @@ Sharding Methods
    * - :upcoming:`sh.disableAutoMerger()
        </reference/method/sh.disableAutoMerger>`
 
-     - Disables the AutoMerger for a :term:`namespace`.
+     - Disables automatic chunk merges for a namespace.
    
        .. versionadded:: 7.0
 
@@ -1270,9 +1270,10 @@ Sharding Methods
      - Disables balancing on a single collection in a sharded
        database. Does not affect balancing of other collections in a sharded cluster.
 
-   * - :method:`sh.enableAutoMerger()`
+   * - :upcoming:`sh.enableAutoMerger()
+       </reference/method/sh.enableAutoMerger>`
 
-     - Enables the AutoMerger for a :term:`namespace`.
+     - Enables automatic chunk merges for a namespace.
    
        .. versionadded:: 7.0
 
@@ -1341,7 +1342,8 @@ Sharding Methods
      - Divides an existing :term:`chunk` that contains a document
        matching a query into two approximately equal chunks.
 
-   * - :method:`sh.startAutoMerger()`
+   * - :upcoming:`sh.startAutoMerger()
+       </reference/method/sh.startAutoMerger>`
 
      - Enables the AutoMerger.
 
@@ -1355,7 +1357,8 @@ Sharding Methods
 
      - Reports on the status of a sharded cluster.
 
-   * - :method:`sh.stopAutoMerger()`
+   * - :upcoming:`sh.stopAutoMerger()
+       </reference/method/sh.stopAutoMerger>`
 
      - Disables the AutoMerger.
 
