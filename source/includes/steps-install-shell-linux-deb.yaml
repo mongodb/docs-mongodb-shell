@@ -10,9 +10,10 @@ content: |
 
        wget -qO- https://www.mongodb.org/static/pgp/server-{+pgp-version+}.asc | sudo tee /etc/apt/trusted.gpg.d/server-{+pgp-version+}.asc
 
-    The previous command prints the GPG key to the terminal and writes
-    the key to your system's ``/etc/apt/trusted.gpg.d/`` folder. You do
-    not need to copy or save the key that is printed to the terminal.
+    The previous command writes the GPG key to your system's
+    ``/etc/apt/trusted.gpg.d`` folder and prints the key to your
+    terminal. You do not need to copy or save the key that is printed to
+    the terminal.
     
     If you receive an error indicating that ``gnupg`` is not installed,
     perform the following steps:
