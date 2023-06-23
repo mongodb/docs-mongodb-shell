@@ -441,7 +441,7 @@ Authentication Options
           `MongoDB Enterprise
           <http://www.mongodb.com/products/mongodb-enterprise-advanced?jmp=docs>`_.
 
-      * - :manual:`MONGODB-OIDC </core/security-oidc>` (OpenID Connect) 
+      * - :manual:`MONGODB-OIDC </core/security-oidc/>` (OpenID Connect) 
 
         - External authentication using OpenID Connect. This mechanism is
           available only in `MongoDB Enterprise
