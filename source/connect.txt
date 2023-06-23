@@ -128,7 +128,7 @@ Connect with OpenID Connect
 To connect to a deployment using :manual:`OpenID Connect </core/security-oidc>`, 
 use the :option:`--authenticationMechanism` option and set it to ``MONGODB-OIDC``. 
 ``mongosh`` redirects you to a browser where you enter your identity provider's 
-log-in information.
+log-in information. 
 
 For example, the following connects to a local deployment using ``MONGODB-OIDC``:
 
