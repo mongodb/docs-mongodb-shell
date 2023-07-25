@@ -387,13 +387,10 @@ Authentication Options
 .. option:: --authenticationMechanism <name>
 
    Specifies the authentication mechanism the |mdb-shell| uses to
-   authenticate to the :binary:`~bin.mongod` or :binary:`~bin.mongos`.
-
-   .. note::
-
-      If you don't specify an ``authenticationMechanism``, the MongoDB
-      Shell attempts to use SCRAM-SHA-256. If this fails, it falls back
-      to SCRAM-SHA-1.
+   authenticate to the :binary:`~bin.mongod` or :binary:`~bin.mongos`. 
+   If you don't specify an ``authenticationMechanism``, the MongoDB
+   Shell attempts to use SCRAM-SHA-256. If this fails, it falls back to
+   SCRAM-SHA-1.
 
    .. list-table::
       :header-rows: 1
