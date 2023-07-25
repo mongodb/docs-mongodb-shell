@@ -386,10 +386,14 @@ Authentication Options
 
 .. option:: --authenticationMechanism <name>
 
-   Default: SCRAM-SHA-256
-
    Specifies the authentication mechanism the |mdb-shell| uses to
    authenticate to the :binary:`~bin.mongod` or :binary:`~bin.mongos`.
+
+   .. note:
+
+      If you don't specify an ``authenticationMechanism``, MongoDB
+      attempts to use SCRAM-SHA-256. If this fails, it falls back to
+      SCRAM-SHA-1.
 
    .. list-table::
       :header-rows: 1
@@ -405,19 +409,11 @@ Authentication Options
           Salted Challenge Response Authentication Mechanism using the
           SHA-1 hash function.
 
-          If you don't specify an ``authenticationMechanism``, MongoDB
-          attempts to use SCRAM-SHA-256. If this fails, it falls back to
-          SCRAM-SHA-1.
-
       * - :ref:`SCRAM-SHA-256 <authentication-scram-sha-256>`
 
         - `RFC 7677 <https://tools.ietf.org/html/rfc7677>`_ standard
           Salted Challenge Response Authentication Mechanism using the
           SHA-256 hash function.
-
-          If you don't specify an ``authenticationMechanism``, MongoDB
-          attempts to use SCRAM-SHA-256. If this fails, it falls back to
-          SCRAM-SHA-1.
 
           Requires featureCompatibilityVersion set to ``4.0``.
 
