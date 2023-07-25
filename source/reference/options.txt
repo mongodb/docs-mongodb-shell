@@ -391,9 +391,9 @@ Authentication Options
 
    .. note::
 
-      If you don't specify an ``authenticationMechanism``, MongoDB
-      attempts to use SCRAM-SHA-256. If this fails, it falls back to
-      SCRAM-SHA-1.
+      If you don't specify an ``authenticationMechanism``, the MongoDB
+      Shell attempts to use SCRAM-SHA-256. If this fails, it falls back
+      to SCRAM-SHA-1.
 
    .. list-table::
       :header-rows: 1
