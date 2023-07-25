@@ -35,71 +35,71 @@ Select the appropriate tab for your operating system:
       Install from MSI
       ~~~~~~~~~~~~~~~~
 
-      .. include:: /includes/steps/install-shell-windows-msi.rst
-      
+      .. include:: /includes/install/windows-msi.rst
+
       Install from ``.zip`` File
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      .. include:: /includes/steps/install-shell-windows.rst
+      .. include:: /includes/install/windows-zip.rst
 
    .. tab::
       :tabid: macos
+
+      The Homebrew package manager is the recommended installation
+      method for ``mongosh`` on macOS. To learn how to manually
+      install ``mongosh`` from a ``.zip`` file, see
+      :ref:`macos-install-archive`.
+
+      To view the complete list of system requirements for Homebrew,
+      see the `Homebrew Website <https://docs.brew.sh/Installation>`__.
+
+      Considerations
+      ~~~~~~~~~~~~~~
+
+      ``mongosh`` installed with Homebrew does not support
+      :ref:`automatic client-side field level encryption
+      <csfle-fundamentals>`.
+
+      You can use the core ``Homebrew`` tap to install ``mongosh`` or
+      you can add the `MongoDB supported tap
+      <https://github.com/mongodb/homebrew-brew>`__.
 
       .. _macos-install-homebrew:
 
       Install with Homebrew
       ~~~~~~~~~~~~~~~~~~~~~
 
-      .. important::
- 
-         To view the complete list of system requirements for Homebrew,
-         see the
-         `Homebrew Website <https://docs.brew.sh/Installation>`__.
-
-      The Homebrew package manager is the recommended installation
-      method for :binary:`mongosh` on macOS. To learn how to manually
-      install :binary:`mongosh` from an archive instead, see
-      :ref:`macos-install-archive`.
-
-      Considerations
-      ``````````````
-
-      :binary:`mongosh` installed with Homebrew does not support
-      :manual:`automatic client-side field level encryption
-      </core/security-automatic-client-side-encryption/>`.
-
-      Procedure
-      `````````
-
-      To install :binary:`mongosh` with Homebrew:
-
-      .. include:: /includes/steps/install-shell-macos-homebrew.rst
+      .. include:: /includes/install/macos-homebrew.rst
 
       .. _macos-install-archive:
 
       Install from ``.zip`` File
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      To manually install :binary:`mongosh` using a downloaded ``.zip``
-      file:
-
-      .. include:: /includes/steps/install-shell-macos.rst
+      .. include:: /includes/install/macos-zip.rst
 
    .. tab::
       :tabid: linux
 
-      Select the appropriate tab based on your Linux distribution and
-      desired package from the tabs below:
+      ``mongosh`` provides several Linux installation packages. Select
+      the tab that corresponds to the package you want to use.
 
-      - To install the ``.deb`` package on Ubuntu 22.04 (Jammy), Ubuntu
-        20.04 (Focal), Ubuntu 18.04 (Bionic), or Debian, click the
-        ``.deb`` tab.
+      .. list-table::
+         :header-rows: 1
 
-      - To install the ``.rpm`` package on
-        :abbr:`RHEL (Red Hat Enterprise Linux)` or Amazon Linux 2,
-        click the ``.rpm`` tab.
+         * - Package
+           - Platform
 
-      - To install the ``.tgz`` tarball, click the ``.tgz`` tab.
+         * - ``.deb``
+           - | - Ubuntu
+               - Debian
+
+         * - ``.rpm``
+           - | - RHEL (Red Hat Enterprise Linux)
+               - Amazon Linux 2
+
+         * - ``.tgz``
+           - Not platform specific
 
       .. tabs::
       
@@ -109,8 +109,8 @@ Select the appropriate tab for your operating system:
             Supported Platforms
             ~~~~~~~~~~~~~~~~~~~
 
-            :binary:`mongosh` is available as a :abbr:`PPA (Personal
-            Package Archive)` for the following platforms:
+            ``mongosh`` is available as a :abbr:`PPA (Personal Package
+            Archive)` for the following platforms:
             
             - Ubuntu 22.04 (Jammy)
             - Ubuntu 20.04 (Focal)
@@ -127,7 +127,7 @@ Select the appropriate tab for your operating system:
             Supported Platforms
             ~~~~~~~~~~~~~~~~~~~
             
-            :binary:`mongosh` is available as ``yum`` package for the
+            ``mongosh`` is available as ``yum`` package for the
             following platforms:
 
             - :abbr:`RHEL (Red Hat Enterprise Linux)`
@@ -154,5 +154,5 @@ Select the appropriate tab for your operating system:
 Next Steps
 ----------
 
-Once you successfully install :binary:`mongosh`, learn how to
-:ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
+Once you successfully install ``mongosh``, learn how to :ref:`connect
+to your MongoDB deployment <mdb-shell-connect>`.

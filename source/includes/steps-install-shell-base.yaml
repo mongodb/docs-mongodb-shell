@@ -1,12 +1,4 @@
 ---
-title: "Open the MongoDB Shell download page."
-ref: navigate-dlc
-level: 4
-content: |
-
-  Open the `MongoDB Download Center
-  <https://www.mongodb.com/try/download/shell?jmp=docs>`__.
----
 
 title: "Add the downloaded binaries to your ``PATH`` environment
    variable."
