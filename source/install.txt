@@ -81,8 +81,8 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: linux
 
-      ``mongosh`` provides several Linux installation packages. Select
-      the tab that corresponds to the package you want to use.
+      ``mongosh`` has several Linux installation packages. Select the
+      tab that corresponds to the package you want to use.
 
       .. list-table::
          :header-rows: 1
@@ -92,11 +92,11 @@ Select the appropriate tab for your operating system:
 
          * - ``.deb``
            - | - Ubuntu
-               - Debian
+             | - Debian
 
          * - ``.rpm``
            - | - RHEL (Red Hat Enterprise Linux)
-               - Amazon Linux 2
+             | - Amazon Linux 2
 
          * - ``.tgz``
            - Not platform specific
