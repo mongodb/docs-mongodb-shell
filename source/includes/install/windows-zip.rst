@@ -1,3 +1,14 @@
+Install With a ``.zip`` Archive
+-------------------------------
+
+Considerations
+~~~~~~~~~~~~~~
+
+.. include:: /includes/install/windows-considerations.rst
+
+Steps
+~~~~~
+
 .. procedure::
    :style: normal
 

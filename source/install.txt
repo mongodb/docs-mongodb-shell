@@ -17,8 +17,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
-Procedure
----------
+Installation Types
+------------------
 
 Select the appropriate tab for your operating system:
 
@@ -27,20 +27,19 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: windows
 
-      .. note::
+      .. include:: /includes/install/windows-section-intro.rst
 
-         On Windows, ``mongosh`` preferences and configuration options
-         are stored in the ``%APPDATA%/mongodb/mongosh`` directory.
+      .. tabs::
 
-      Install from MSI
-      ~~~~~~~~~~~~~~~~
+         .. tab:: MSI Installer
+            :tabid: homebrew
 
-      .. include:: /includes/install/windows-msi.rst
+            .. include:: /includes/install/windows-msi.rst
 
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+         .. tab:: .zip
+            :tabid: windows-zip
 
-      .. include:: /includes/install/windows-zip.rst
+            .. include:: /includes/install/windows-zip.rst
 
    .. tab::
       :tabid: macos
@@ -56,7 +55,7 @@ Select the appropriate tab for your operating system:
 
             .. include:: /includes/install/macos-homebrew.rst
 
-         .. tab:: ``.zip``
+         .. tab:: .zip
             :tabid: macos-zip
 
             .. include:: /includes/install/macos-zip.rst

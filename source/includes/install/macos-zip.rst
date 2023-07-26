@@ -1,9 +1,6 @@
 Installation With a ``.zip`` Archive
 ------------------------------------
 
-To manually install :binary:`mongosh` on macOS using a downloaded
-``.zip`` file:
-
 Steps
 ~~~~~
 

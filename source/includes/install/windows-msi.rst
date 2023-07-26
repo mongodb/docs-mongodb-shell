@@ -1,3 +1,14 @@
+Install With MSI Installer
+--------------------------
+
+Considerations
+~~~~~~~~~~~~~~
+
+.. include:: /includes/install/windows-considerations.rst
+
+Steps
+~~~~~
+
 .. procedure::
    :style: normal
 

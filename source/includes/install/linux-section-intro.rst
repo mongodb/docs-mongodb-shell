@@ -1,6 +1,4 @@
-``mongosh`` is available in different Linux installation packages.
-Select the instruction tab that corresponds to the package you want to
-use.
+``mongosh`` is available in different Linux installation packages:
 
 .. list-table::
    :header-rows: 1
@@ -18,4 +16,7 @@ use.
 
    * - ``.tgz``
      - Not platform specific
+
+Select the instruction tab that corresponds to the package you want to
+use.
 
