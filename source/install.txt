@@ -45,61 +45,26 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: macos
 
-      The Homebrew package manager is the recommended installation
-      method for ``mongosh`` on macOS. To learn how to manually
-      install ``mongosh`` from a ``.zip`` file, see
-      :ref:`macos-install-archive`.
-
-      To view the complete list of system requirements for Homebrew,
-      see the `Homebrew Website <https://docs.brew.sh/Installation>`__.
-
-      Considerations
-      ~~~~~~~~~~~~~~
-
-      ``mongosh`` installed with Homebrew does not support
-      :ref:`automatic client-side field level encryption
-      <csfle-fundamentals>`.
-
-      You can use the core ``Homebrew`` tap to install ``mongosh`` or
-      you can add the `MongoDB supported tap
-      <https://github.com/mongodb/homebrew-brew>`__.
+      .. include:: /includes/install/macos-section-intro.rst
 
       .. _macos-install-homebrew:
 
-      Install with Homebrew
-      ~~~~~~~~~~~~~~~~~~~~~
+      .. tabs::    
 
-      .. include:: /includes/install/macos-homebrew.rst
+         .. tab:: Homebrew
+            :tabid: homebrew
 
-      .. _macos-install-archive:
+            .. include:: /includes/install/macos-homebrew.rst
 
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+         .. tab:: ``.zip``
+            :tabid: macos-zip
 
-      .. include:: /includes/install/macos-zip.rst
+            .. include:: /includes/install/macos-zip.rst
 
    .. tab::
       :tabid: linux
 
-      ``mongosh`` has several Linux installation packages. Select the
-      tab that corresponds to the package you want to use.
-
-      .. list-table::
-         :header-rows: 1
-
-         * - Package
-           - Platform
-
-         * - ``.deb``
-           - - Ubuntu
-             - Debian
-
-         * - ``.rpm``
-           - - RHEL (Red Hat Enterprise Linux)
-             - Amazon Linux 2
-
-         * - ``.tgz``
-           - Not platform specific
+      .. include:: /includes/install/linux-section-intro.rst
 
       .. tabs::
       

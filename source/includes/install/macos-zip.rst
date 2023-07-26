@@ -1,5 +1,11 @@
+Installation With a ``.zip`` Archive
+------------------------------------
+
 To manually install :binary:`mongosh` on macOS using a downloaded
 ``.zip`` file:
+
+Steps
+~~~~~
 
 .. procedure::
    :style: normal
@@ -64,4 +70,3 @@ To manually install :binary:`mongosh` on macOS using a downloaded
          message about ``mongosh``, labelled either :guilabel:`Open
          Anyway` or :guilabel:`Allow Anyway` depending on your version
          of macOS.
-
