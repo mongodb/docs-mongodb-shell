@@ -91,12 +91,12 @@ Select the appropriate tab for your operating system:
            - Platform
 
          * - ``.deb``
-           - | - Ubuntu
-             | - Debian
+           - - Ubuntu
+             - Debian
 
          * - ``.rpm``
-           - | - RHEL (Red Hat Enterprise Linux)
-             | - Amazon Linux 2
+           - - RHEL (Red Hat Enterprise Linux)
+             - Amazon Linux 2
 
          * - ``.tgz``
            - Not platform specific
