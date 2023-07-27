@@ -7,7 +7,7 @@ Supported Platforms
 ``mongosh`` is available as an ``.rpm`` package for the following
 platforms:
 
-- :abbr:`RHEL (Red Hat Enterprise Linux)`
+- Red Hat Enterprise Linux (RHEL)
 - Amazon Linux 2
 
 .. important:: Amazon Linux 2023 Availability
@@ -21,8 +21,8 @@ Before you Begin
 Before you install an ``.rpm`` package, you have to configure a
 repository or download a local copy of the package.
 
-Configure the package manager (``yum``)
-```````````````````````````````````````
+Configure a Repository
+``````````````````````
 
 There are ``.rpm`` distributions for RHEL and Amazon Linux.
 
@@ -56,10 +56,7 @@ If you use Amazon Linux, paste this code into
 Download the .rpm File
 ``````````````````````
 
-If you are unable to add a MongoDB repository, you can also
-download ``.rpm`` packages from the MongoDB repository. You need to
-provide the path to the downloaded package when you run ``yum`` to
-install ``mongosh``.
+You can also download ``.rpm`` packages from the MongoDB repository.
 
 For RHEL, the repository is organized in the following way:
 
@@ -78,7 +75,7 @@ For RHEL, the repository is organized in the following way:
 
   .. code-block:: shell
 
-     https://repo.mongodb.org/yum/redhat/9/mongodb-org/{+mdb-version+}/x86_64/RPMS/mongodb-mongosh-1.9.1.x86_64.rpm
+     https://repo.mongodb.org/yum/redhat/8/mongodb-org/{+mdb-version+}/x86_64/RPMS/mongodb-mongosh-1.9.1.x86_64.rpm
 
 For Amazon Linux, the repository is organized in the following
 way:
@@ -110,7 +107,7 @@ Steps
       .. include:: /includes/intro-openssl-installs.rst
 
       To install the latest stable version of ``mongosh`` with the
-      included OpenSSL libraries, run:
+      included OpenSSL libraries, run ``yum``. 
 
       .. code-block:: sh
 
