@@ -63,22 +63,18 @@ install ``mongosh``.
 
 For RHEL, the repository is organized in the following way:
 
-   1. The base URL: 
+- The base URL: 
 
-      .. code-block:: shell
+  .. code-block:: shell
 
-         https://repo.mongodb.org/yum/redhat
+     https://repo.mongodb.org/yum/redhat
 
-    #. Red Hat or CentOS version (for example, ``8``)
-
-    #. MongoDB edition (for example, ``mongodb-enterprise``)
-
-    #. MongoDB :manual:`release version </reference/versioning>`
-       (for example, ``{+mdb-version+}``)
-
-    #. Architecture (for example, ``x86_64``)
-
-  The full URL resembles:
+- Red Hat or CentOS version (for example, ``8``)
+- MongoDB edition (for example, ``mongodb-enterprise``)
+- MongoDB :manual:`release version </reference/versioning>`
+  (for example, ``{+mdb-version+}``)
+- Architecture (for example, ``x86_64``)
+- The full URL resembles:
 
   .. code-block:: shell
 
@@ -87,24 +83,21 @@ For RHEL, the repository is organized in the following way:
 For Amazon Linux, the repository is organized in the following
 way:
 
-   1. The base URL: 
+- The base URL: 
 
-      .. code-block:: shell
+  .. code-block:: shell
 
-         https://repo.mongodb.org/yum/amazon/
-    
-    #. Amazon Linux version (for example, ``2``)
+     https://repo.mongodb.org/yum/amazon/
+ 
+- Amazon Linux version (for example, ``2``)
+- MongoDB :manual:`release version </reference/versioning>`
+  (for example, ``{+mdb-version+}``)
+- Architecture (for example, ``x86_64``)
+- The full URL resembles:
 
-    #. MongoDB :manual:`release version </reference/versioning>`
-       (for example, ``{+mdb-version+}``)
+  .. code-block:: shell
 
-    #. Architecture (for example, ``x86_64``)
-
-The full URL resembles:
-
-.. code-block:: shell
-
-   https://repo.mongodb.org/yum/amazon/2/mongodb-org/{+mdb-version+}/x86_64/RPMS/mongodb-mongosh-1.9.1.x86_64.rpm
+     https://repo.mongodb.org/yum/amazon/2/mongodb-org/{+mdb-version+}/x86_64/RPMS/mongodb-mongosh-1.9.1.x86_64.rpm
 
 Steps
 ~~~~~
