@@ -12,7 +12,7 @@ Steps
 .. procedure::
    :style: normal
 
-   .. step:: Open the MongoDB Shell download page.
+   .. step:: Go to the MongoDB Shell download page.
 
       .. include:: /includes/install/all-open-download.rst
 
