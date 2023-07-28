@@ -10,7 +10,6 @@ Steps
 ~~~~~
 
 .. procedure::
-   :style: normal
 
    .. step:: Go to the MongoDB Shell download page
 
