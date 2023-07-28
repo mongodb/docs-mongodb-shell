@@ -101,7 +101,8 @@ For RHEL, the repository is organized in the following way:
 - MongoDB edition
 - MongoDB release version
 - Architecture
-- The full URL resembles:
+
+The full URL resembles:
 
   .. code-block:: shell
 
@@ -119,7 +120,8 @@ way:
 - Amazon Linux version
 - MongoDB release version
 - Architecture
-- The full URL resembles:
+
+The full URL resembles:
 
   .. code-block:: shell
 
