@@ -27,20 +27,19 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: windows
 
-      .. note::
+      .. include:: /includes/install/windows-section-intro.rst
 
-         On Windows, ``mongosh`` preferences and configuration options
-         are stored in the ``%APPDATA%/mongodb/mongosh`` directory.
+      .. tabs::
 
-      Install from MSI
-      ~~~~~~~~~~~~~~~~
+         .. tab:: MSI Installer
+            :tabid: homebrew
 
-      .. include:: /includes/steps/install-shell-windows-msi.rst
-      
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+            .. include:: /includes/install/windows-msi.rst
 
-      .. include:: /includes/steps/install-shell-windows.rst
+         .. tab:: .zip
+            :tabid: windows-zip
+
+            .. include:: /includes/install/windows-zip.rst
 
    .. tab::
       :tabid: macos
@@ -154,5 +153,6 @@ Select the appropriate tab for your operating system:
 Next Steps
 ----------
 
-Once you successfully install :binary:`mongosh`, learn how to
-:ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
+After you install ``mongosh``, learn how to :ref:`connect to your
+MongoDB deployment <mdb-shell-connect>`.
+
