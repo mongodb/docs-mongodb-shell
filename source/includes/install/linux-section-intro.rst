@@ -1,4 +1,4 @@
-``mongosh`` is available in different Linux installation packages:
+``mongosh`` is available on Linux in these package formats:
 
 .. list-table::
    :header-rows: 1

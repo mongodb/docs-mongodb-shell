@@ -15,11 +15,14 @@ platforms:
    ``mongosh`` is **not** currently available on Amazon
    Linux 2023.
 
-Supported Installation Methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation Methods
+~~~~~~~~~~~~~~~~~~~~
 
-You can use an ``.rpm`` package to install ``mongosh``. The ``.rpm``
-package can be hosted in a repository or it can be a local copy. 
+When you use an ``.rpm`` package to install ``mongosh``, the ``.rpm``
+package can be hosted in a :ref:`repository <mongosh-rpm-repo>` or it
+can be a :ref:`local copy <mongosh-rpm-local>`. 
+
+.. _mongosh-rpm-repo:
 
 Install from a Repository
 `````````````````````````
@@ -59,34 +62,32 @@ Install from a Repository
 
    .. step:: Install ``mongosh``.
 
-      .. include:: /includes/intro-openssl-installs.rst
+      .. include:: /includes/install/linux-openssl-installs.rst
 
-      To install the latest stable version of ``mongosh`` with the
-      included OpenSSL libraries, run ``yum``. 
+      .. include:: /includes/install/linux-rpm-ssl-packages.rst
+
+      To install ``mongosh``, uncomment and run one of the following
+      commands. Only run the command that matches your configuration. 
 
       .. code-block:: sh
 
-        sudo yum install -y mongodb-mongosh
+         # sudo yum install -y mongodb-mongosh
+         # sudo yum install -y mongodb-mongosh-shared-openssl11
+         # sudo yum install -y mongodb-mongosh-shared-openssl13
 
-      To install ``mongosh`` with your system's OpenSSL 1.1 libraries,
-      run:
-
-      .. code-block:: sh 
-
-         sudo yum install -y mongodb-mongosh-shared-openssl11
-
-      To install ``mongosh`` with your system's OpenSSL 3.0 libraries,
-      run:
-
-      .. code-block:: sh 
-
-         sudo yum install -y mongodb-mongosh-shared-openssl3
+.. _mongosh-rpm-local:
 
 Install from a Local .rpm File
 ``````````````````````````````
 
 You can download ``.rpm`` packages from the MongoDB repository and use
 them to install ``mongosh``.
+
+.. include:: /includes/install/linux-openssl-installs.rst
+
+.. include:: /includes/install/linux-rpm-ssl-packages.rst
+
+Download the package that corresponds to your OpenSSL configuration.
 
 For RHEL, the repository is organized in the following way:
 
@@ -131,24 +132,13 @@ way:
 
       .. include:: /includes/intro-openssl-installs.rst
 
-      To install the latest stable version of ``mongosh`` with the
-      included OpenSSL libraries, update the path and run:
+      To install ``mongosh``, uncomment one of the following commands
+      and edit the path to your ``.rpm``. Only run the command that
+      matches your configuration. 
 
       .. code-block:: sh
 
-        sudo yum localinstall -y /path/to/mongodb-mongosh.rpm
-
-      To install ``mongosh`` with your system's OpenSSL 1.1 libraries,
-      update the path and run:
-
-      .. code-block:: sh 
-
-         sudo yum localinstall -y /path/to/mongodb-mongosh-shared-openssl11.rpm
-
-      To install ``mongosh`` with your system's OpenSSL 3.0 libraries,
-      update the path and run:
-
-      .. code-block:: sh 
-
-         sudo yum localinstall -y /path/to/mongodb-mongosh-shared-openssl3.rpm
+         # sudo yum localinstall -y /path/to/mongodb-mongosh-{+version+}.x86_64.rpm
+         # sudo yum localinstall -y /path/to/mongodb-mongosh-shared-openssl11-{+version+}.x86_64.rpm
+         # sudo yum localinstall -y /path/to/mongodb-mongosh-shared-openssl13-{+version+}.x86_64.rpm
 
