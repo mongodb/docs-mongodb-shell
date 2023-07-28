@@ -12,17 +12,17 @@ Steps
 .. procedure::
    :style: normal
 
-   .. step:: Go to the MongoDB Shell download page.
+   .. step:: Go to the MongoDB Shell download page
 
       .. include:: /includes/install/all-open-download.rst
 
-   .. step:: Download ``mongosh``.
+   .. step:: Download ``mongosh``
 
       Select the :guilabel:`Windows 64-bit (8.1+) (MSI)` package from
       the :guilabel:`Platform` dropdown, then click
       :guilabel:`Download`.
 
-   .. step:: Install ``mongosh``.
+   .. step:: Install ``mongosh``
 
       Go to the directory where you downloaded the installer, then
       double-click the installer file.
