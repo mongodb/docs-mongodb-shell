@@ -67,3 +67,4 @@ Steps
          message about ``mongosh``, labelled either :guilabel:`Open
          Anyway` or :guilabel:`Allow Anyway` depending on your version
          of macOS.
+
