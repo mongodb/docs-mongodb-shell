@@ -17,8 +17,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
-Procedure
----------
+Installation Types
+------------------
 
 Select the appropriate tab for your operating system:
 
