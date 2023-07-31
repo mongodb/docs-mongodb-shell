@@ -22,25 +22,69 @@ Installation Types
 
 Select the appropriate tab for your operating system:
 
+- Linux
+
+  - Debian ``.deb`` package
+  - Ubuntu ``.deb`` package
+  - RHEL (Red Hat Enterprise Linux) ``.rpm`` package
+  - Amazon Linux 2 ``.rpm`` package
+  - Platform non-specific ``.tgz`` package
+
+- Windows
+
+  - MSI installer package
+  - ``.zip`` archive 
+   
+- macOS
+
+  - Homebrew package manager
+  - ``.zip`` archive 
+ 
 .. tabs-platforms::
 
    .. tab::
       :tabid: windows
 
-      .. note::
+      .. include:: /includes/install/windows-section-intro.rst
 
-         On Windows, ``mongosh`` preferences and configuration options
-         are stored in the ``%APPDATA%/mongodb/mongosh`` directory.
+      NON-NESTED TAB
 
-      Install from MSI
-      ~~~~~~~~~~~~~~~~
+      .. procedure::
+        :style: normal
 
-      .. include:: /includes/steps/install-shell-windows-msi.rst
-      
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+        .. step:: Go to the MongoDB Shell download page
 
-      .. include:: /includes/steps/install-shell-windows.rst
+           .. include:: /includes/install/all-open-download.rst
+
+        .. step:: Download ``mongosh``
+
+           Select the :guilabel:`Windows 64-bit (8.1+)` package from the 
+           :guilabel:`Platform` dropdown, then click :guilabel:`Download`.
+
+           The package is a ``.zip`` file.
+
+        .. step:: Extract ``mongosh``
+
+           Open a ``cmd`` terminal and run the following command from the
+           directory that has the ``mongosh`` ``.zip`` archive:
+
+           .. code-block:: sh
+              tar -xf mongosh-{+version+}-win32-x64.zip
+
+           The extracted archive has a ``bin`` folder that contains two
+           files, ``mongosh.exe`` and ``mongosh_crypt_v1.dll``.
+
+      .. tabs::
+
+         .. tab:: MSI Installer
+            :tabid: homebrew
+
+            .. include:: /includes/install/windows-msi.rst
+
+         .. tab:: .zip
+            :tabid: windows-zip
+
+            .. include:: /includes/install/windows-zip.rst
 
    .. tab::
       :tabid: macos
@@ -154,5 +198,6 @@ Select the appropriate tab for your operating system:
 Next Steps
 ----------
 
-Once you successfully install :binary:`mongosh`, learn how to
-:ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
+After you install ``mongosh``, learn how to :ref:`connect to your
+MongoDB deployment <mdb-shell-connect>`.
+
