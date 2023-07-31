@@ -23,7 +23,7 @@ v1.10.2
 - :issue:`MONGOSH-1449` Cap number of log files to 100 
 - :issue:`MONGOSH-1496` Do not include crypt shared library version in buildInfo
 
-`Full release notes available on Jira 
+`Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36247>`__.
 
 
