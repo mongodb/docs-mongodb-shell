@@ -22,6 +22,24 @@ Installation Types
 
 Select the appropriate tab for your operating system:
 
+- Linux
+
+  - Debian ``.deb`` package
+  - Ubuntu ``.deb`` package
+  - RHEL (Red Hat Enterprise Linux) ``.rpm`` package
+  - Amazon Linux 2 ``.rpm`` package
+  - Platform non-specific ``.tgz`` package
+
+- Windows
+
+  - MSI installer package
+  - ``.zip`` archive 
+   
+- macOS
+
+  - Homebrew package manager
+  - ``.zip`` archive 
+ 
 .. tabs-platforms::
 
    .. tab::
