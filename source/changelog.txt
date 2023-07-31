@@ -12,12 +12,22 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v1.10.3
+-------
+
+*Released July 31, 2023*
+
+Updates environment variables related to telemetry.
+
+`Full release notes available on JIRA
+<https://jira.mongodb.org/browse/MONGOSH-1545?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%201.10.3>`__.
+
 v1.10.2
 -------
 
 *Released July 28, 2023*
 
-- Invert and fix passwordless-auth-mechanism check
+- Inverts and fixes passwordless-auth-mechanism check
 - :issue:`MONGOSH-1495` Remove argument validation for db.killOp() 
 - :issue:`MONGOSH-1499` Rename configureQueryAnalyzer option to match server 
 - :issue:`MONGOSH-1449` Cap number of log files to 100 
