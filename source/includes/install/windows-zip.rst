@@ -9,6 +9,34 @@ Considerations
 Steps
 ~~~~~
 
+
+1. Go to the MongoDB Shell download page
+
+   .. include:: /includes/install/all-open-download.rst
+
+#. Download ``mongosh``
+
+   Select the :guilabel:`Windows 64-bit (8.1+)` package from the 
+   :guilabel:`Platform` dropdown, then click :guilabel:`Download`.
+
+   The package is a ``.zip`` file.
+
+#. Extract ``mongosh``
+
+   Open a ``cmd`` terminal and run the following command from the
+   directory that has the ``mongosh`` ``.zip`` archive:
+
+   .. code-block:: sh
+      tar -xf mongosh-{+version+}-win32-x64.zip
+
+   The extracted archive has a ``bin`` folder that contains two
+   files, ``mongosh.exe`` and ``mongosh_crypt_v1.dll``.
+
+
+
+
+
+
 .. procedure::
    :style: normal
 
