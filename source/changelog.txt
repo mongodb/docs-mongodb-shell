@@ -20,7 +20,7 @@ v1.10.3
 Updates environment variables related to telemetry.
 
 `Full release notes available on JIRA
-<https://jira.mongodb.org/browse/MONGOSH-1545?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%201.10.3>`__.
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36452>`__.
 
 v1.10.2
 -------
