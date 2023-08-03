@@ -12,6 +12,14 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.0.0
+------
+
+*Upcoming*
+
+- :ref:`Free Monitoring <free-monitoring-mongodb>` is no longer
+  supported for MongoDB Community Edition.  
+
 v1.10.3
 -------
 
