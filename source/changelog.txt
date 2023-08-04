@@ -20,9 +20,9 @@ v2.0.0
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:
   
-  - db.getFreeMonitoringStatus
-  - db.enableFreeMonitoring
-  - db.disableFreeMonitoring
+  - ``db.getFreeMonitoringStatus``
+  - ``db.enableFreeMonitoring``
+  - ``db.disableFreeMonitoring``
 
 v1.10.3
 -------
