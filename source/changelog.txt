@@ -17,8 +17,12 @@ v2.0.0
 
 *Upcoming*
 
-- :ref:`Free Monitoring <free-monitoring-mongodb>` is no longer
-  supported for MongoDB Community Edition.  
+- Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
+  helper functions:
+  
+  - db.getFreeMonitoringStatus
+  - db.enableFreeMonitoring
+  - db.disableFreeMonitoring
 
 v1.10.3
 -------
