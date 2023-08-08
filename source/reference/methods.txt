@@ -392,13 +392,6 @@ Collection Methods
      - Opens a :manual:`change stream cursor </changeStreams>` on the
        collection.
 
-
-Build Info Methods
-------------------
-
-You can check the build info of your ``mongosh`` binary with the 
-``buildInfo()`` command.
-
 Connection Methods
 ------------------
 
