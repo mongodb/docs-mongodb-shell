@@ -1,5 +1,4 @@
-This command returns the following JSON document that describes your 
-``mongosh`` build:
+Returns the following document that describes your ``mongosh`` build:
 
 .. code-block:: javascript
    :copyable: false
