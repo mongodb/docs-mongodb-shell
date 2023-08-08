@@ -5,12 +5,11 @@ running the following from your terminal:
 
    mongosh --build-info
 
-The command returns the following JSON document that describes your 
-``mongosh`` binary:
+This command returns the following JSON-formatted document:
 
 .. code-block:: javascript
    :copyable: false
-   
+
    {
    "version": "1.10.1",
    "distributionKind": "packaged",
