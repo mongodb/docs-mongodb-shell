@@ -1,6 +1,5 @@
-You can check the build info of your ``mongosh`` binary with the 
-``--build-info`` flag. In your terminal or command shell, run 
-the following command:
+You can check the build info of your ``mongosh`` binary by 
+running the following from your terminal:
 
 .. code-block:: sh
 

@@ -23,6 +23,10 @@ General Options
    Returns a JSON-formatted document with information about the
    :binary:`~bin.mongosh` build.
 
+   **Example: View Build Info**
+
+   .. include:: /includes/examples/ex-build-info-flag.rst
+
 .. option:: --eval <javascript>
 
    Evaluates a JavaScript expression. You can use a single ``--eval``
