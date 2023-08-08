@@ -1,5 +1,6 @@
-You can check the build info of your ``mongosh`` binary by 
-running the following from your terminal:
+You can check the build information and driver dependencies of your 
+:binary:`~bin.mongosh` binary by running the following from your 
+terminal:
 
 .. code-block:: sh
 

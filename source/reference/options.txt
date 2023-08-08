@@ -20,8 +20,8 @@ General Options
 
 .. option:: --build-info
 
-   Returns a JSON-formatted document with information about the
-   :binary:`~bin.mongosh` build.
+   Returns a JSON-formatted document with build information and driver 
+   dependencies about your :binary:`~bin.mongosh` binary.
 
    **Example: View Build Info**
 
