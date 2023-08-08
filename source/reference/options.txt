@@ -10,8 +10,8 @@ Options
    :depth: 2
    :class: singlecol
 
-Use the following options to control various aspects of your
-|mdb-shell| connection and behavior.
+Use the following options to view and control various aspects of your
+|mdb-shell|.
 
 General Options
 ---------------
