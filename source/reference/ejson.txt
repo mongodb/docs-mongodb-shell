@@ -1,0 +1,55 @@
+.. _mongosh-ejson:
+
+=====
+EJSON
+=====
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+..
+   COMMENT: These URLs aren't reused, they're just for editing clarity
+
+.. |bsonUrl| replace:: `BSON <https://www.mongodb.com/basics/bson>`__
+
+.. |ejsonUrl| replace:: `EJSON <https://www.npmjs.com/package/bson#EJSON>`__
+
+.. |bsonParseUrl| replace:: `Node.js BSON parser <https://www.npmjs.com/package/bson>`__
+
+MongoDB uses |bsonUrl|, a binary serialization format, to store
+documents and to exchange data. ``mongosh`` exposes the |ejsonUrl|
+interface from the |bsonParseUrl| to help you transform your data when
+you work with ``mongosh``. Use the ``EJSON`` interface when you need to
+transform data. 
+
+.. list-table::
+   :header-rows: 1
+
+   * - EJSON Method
+     - Use
+
+   * - :ref:`EJSON.stringify() <mongosh-ejson-stringify>`
+     - Convert BSON objects to strings. This method is useful to
+       transform ``mongosh`` output.
+
+   * - :ref:`EJSON.parse() <mongosh-ejson-parse>`
+     - Convert strings to JSON. This method is useful to transform
+       inputs.
+
+For additional EJSON capabilities, see the `npm EJSON documentation
+<https://www.npmjs.com/package/bson#EJSON>`__.
+
+Learn More
+----------
+
+`BSON specification <http://bsonspec.org/>`__
+
+.. toctree::
+   :titlesonly:
+
+   /reference/ejson/parse
+   /reference/ejson/stringify
+
