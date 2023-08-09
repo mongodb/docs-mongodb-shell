@@ -1,5 +1,5 @@
 You can check the build information and driver dependencies of your 
-:binary:`~bin.mongosh` binary by running the following from command 
+:binary:`~bin.mongosh` binary by running the following command 
 from your terminal:
 
 .. code-block:: sh
