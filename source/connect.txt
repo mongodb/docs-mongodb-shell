@@ -150,8 +150,7 @@ When using LDAP for authorization, users connecting via
    When you use one-time passwords with LDAP authentication, adding 
    the :ref:`connection string options <connections-connection-options>` 
    ``maxPoolSize=1&srvMaxHosts=1`` to your connection string is 
-   recommended to reduce the potential for 
-   connection failures.
+   recommended to reduce the potential for connection failures.
 
 Include the :option:`--host <mongosh --host>` and 
 :option:`--port <mongosh --port>` of the MongoDB server, along with any 
