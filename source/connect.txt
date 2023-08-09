@@ -129,8 +129,6 @@ Connect with LDAP
 When using LDAP for authorization, users connecting via
 ``mongosh`` must:
 
-- Set :option:`--authenticationDatabase <mongosh --authenticationDatabase>` to ``$external``.
-
 - Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` to the appropriate authentication
   mechanism.
 
@@ -146,6 +144,15 @@ When using LDAP for authorization, users connecting via
   :setting:`security.ldap.userToDNMapping` template.
 
 - Set :option:`--password <mongosh --password>` to the appropriate password.
+
+.. warning::
+
+   When you use one-time passwords with LDAP authentication, 
+   adding the 
+   :ref:`connection string options <connections-connection-options>` 
+   ``maxPoolSize=1&srvMaxHosts=1`` to your connection string is 
+   recommended to reduce the potential for 
+   connection failures.
 
 Include the :option:`--host <mongosh --host>` and 
 :option:`--port <mongosh --port>` of the MongoDB server, along with any 
