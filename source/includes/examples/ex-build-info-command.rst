@@ -1,5 +1,5 @@
 Returns the following JSON-formatted document that describes 
-your ``mongosh`` build:
+your ``mongosh`` build and driver dependencies:
 
 .. code-block:: javascript
    :copyable: false
