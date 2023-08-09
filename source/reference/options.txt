@@ -23,7 +23,7 @@ General Options
    Returns a JSON-formatted document with build information and driver 
    dependencies about your :binary:`~bin.mongosh` binary.
 
-   **Example: View Build Info**
+   **Example: View Build Information**
 
    .. include:: /includes/examples/ex-build-info-flag.rst
 
