@@ -18,8 +18,6 @@ your ``mongosh`` build and driver dependencies:
    runtimeArch: 'x64',
    runtimePlatform: 'darwin',
    deps: {
-      nodeDriverVersion: '5.6.0',
-      libmongocryptVersion: undefined,
-      libmongocryptNodeBindingsVersion: undefined
+      nodeDriverVersion: '5.6.0'
    }
    }
