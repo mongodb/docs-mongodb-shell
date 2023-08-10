@@ -21,5 +21,5 @@ your ``mongosh`` build and driver dependencies:
       nodeDriverVersion: '5.6.0',
       libmongocryptVersion: undefined,
       libmongocryptNodeBindingsVersion: undefined
-   }
+    }
    }
