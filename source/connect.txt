@@ -126,17 +126,18 @@ option for programmatic usage of ``mongosh``, like a :driver:`driver
 Connect with LDAP
 ~~~~~~~~~~~~~~~~~
 
-When using :ref:`LDAP <security-ldap>` for authorization, users 
-connecting with ``mongosh`` must:
+When you are using ``mongosh`` with :ref:`LDAP <security-ldap>` for 
+authorization, you must: 
 
 - Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
   to ``PLAIN``.
 
-- Set :option:`--username <mongosh --username>` to a username that respects the
-  :setting:`security.ldap.authz.queryTemplate`, or any configured
-  :setting:`security.ldap.userToDNMapping` template.
+- Set :option:`--username <mongosh --username>` to a username that 
+  respects the :setting:`security.ldap.authz.queryTemplate`, or any 
+  configured :setting:`security.ldap.userToDNMapping` template.
 
-- Set :option:`--password <mongosh --password>` to the appropriate password.
+- Set :option:`--password <mongosh --password>` to the appropriate 
+  password.
 
 .. warning::
 
