@@ -126,8 +126,7 @@ option for programmatic usage of ``mongosh``, like a :driver:`driver
 Connect with LDAP
 ~~~~~~~~~~~~~~~~~
 
-When you are using ``mongosh`` with :ref:`LDAP <security-ldap>` for 
-authorization, you must: 
+To connect to a deployment using :ref:`LDAP <security-ldap>`:
 
 - Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
   to ``PLAIN``.
