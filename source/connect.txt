@@ -127,7 +127,7 @@ Connect with LDAP
 ~~~~~~~~~~~~~~~~~
 
 When using :ref:`LDAP <security-ldap>` for authorization, users 
-connecting via ``mongosh`` must:
+connecting with ``mongosh`` must:
 
 - Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
   to ``PLAIN``.
