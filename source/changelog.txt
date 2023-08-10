@@ -24,7 +24,6 @@ v2.0.0
   - ``db.enableFreeMonitoring``
   - ``db.disableFreeMonitoring``
 
-
 v1.10.4
 -------
 
