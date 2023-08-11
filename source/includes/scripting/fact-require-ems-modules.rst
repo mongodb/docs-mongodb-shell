@@ -1,4 +1,4 @@
-There are two packing standards for Node.js modules.
+There are two packaging standards for Node.js modules.
 
 .. list-table::
    :header-rows: 1
