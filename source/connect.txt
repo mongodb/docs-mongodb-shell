@@ -128,15 +128,24 @@ Connect with LDAP
 
 To connect to a deployment using :ref:`LDAP <security-ldap>`:
 
-- Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
-  to ``PLAIN``.
-
 - Set :option:`--username <mongosh --username>` to a username that 
   respects the :setting:`security.ldap.authz.queryTemplate`, or any 
   configured :setting:`security.ldap.userToDNMapping` template.
 
 - Set :option:`--password <mongosh --password>` to the appropriate 
   password.
+
+- Set :option:`--authenticationDatabase <mongosh --authenticationDatabase>` 
+  to ``$external``.
+
+.. important::
+
+   The ``$external`` argument must be placed in single quotes, not
+   double quotes, to prevent the shell from interpreting ``$external``
+   as a variable.
+
+- Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
+  to ``PLAIN``.
 
 .. warning::
 
@@ -160,11 +169,6 @@ If you do not specify the password to the :option:`--password <mongosh
 --password>` command-line option, :binary:`~bin.mongosh`
 prompts for the password.
 
-.. important::
-
-   The ``$external`` argument must be placed in single quotes, not
-   double quotes, to prevent the shell from interpreting ``$external``
-   as a variable.
 
 Connect to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~
