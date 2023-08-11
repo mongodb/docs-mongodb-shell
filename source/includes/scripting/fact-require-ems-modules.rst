@@ -12,7 +12,7 @@ There are two packing standards for Node.js modules.
    * - ``ECMAScript``
      -  No
 
-You cannot ``require())`` an ECMAScript module in ``mongosh``. If you
+You cannot ``require()`` an ECMAScript module in ``mongosh``. If you
 want to use functionality from an ECMAScript module, check to see if
 there is a CommonJS version that you can use instead. For more
 information, see:
