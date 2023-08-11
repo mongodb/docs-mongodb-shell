@@ -154,11 +154,11 @@ To connect to a deployment using :ref:`LDAP <security-ldap>`:
    recommended to reduce the potential for connection failures.
 
 Include the :option:`--host <mongosh --host>` and 
-:option:`--port <mongosh --port>` of the MongoDB server, along with any 
-other options relevant to your deployment.
+:option:`--port <mongosh --port>` of the MongoDB deployment, along with 
+any other options relevant to your deployment.
 
-For example, the following operation authenticates to a MongoDB server 
-running with LDAP authentication and authorization:
+For example, the following operation authenticates to a MongoDB 
+deployment running with LDAP authentication and authorization:
 
 .. code-block:: bash
 
