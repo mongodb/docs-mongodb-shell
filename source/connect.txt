@@ -133,7 +133,9 @@ To connect to a deployment using :ref:`LDAP <security-ldap>`:
   configured :setting:`security.ldap.userToDNMapping` template.
 
 - Set :option:`--password <mongosh --password>` to the appropriate 
-  password.
+  password. If you do not specify the password to the 
+  ``--password`` command-line option, ``mongosh`` prompts you for 
+  the password.
 
 - Set :option:`--authenticationDatabase <mongosh --authenticationDatabase>` 
   to ``$external``.
@@ -161,11 +163,6 @@ running with LDAP authentication and authorization:
 .. code-block:: bash
 
    mongosh --username alice@dba.example.com --password  --authenticationDatabase '$external' --authenticationMechanism "PLAIN"  --host "mongodb.example.com" --port 27017
-
-If you do not specify the password to the :option:`--password <mongosh
---password>` command-line option, :binary:`~bin.mongosh`
-prompts for the password.
-
 
 Connect to a Replica Set
 ~~~~~~~~~~~~~~~~~~~~~~~~
