@@ -3,8 +3,8 @@ There are two packing standards for Node.js modules.
 .. list-table::
    :header-rows: 1
 
-   * - Standard
-     - Works with ``require()`` ``mongosh``
+   * - Packaging Standard
+     - Works with require()
 
    * - ``CommonJS`` (CJS)
      -  Yes
@@ -12,10 +12,9 @@ There are two packing standards for Node.js modules.
    * - ``ECMAScript``
      -  No
 
-You can ``require`` a CommonJS module in ``mongosh``. You cannot
-``require`` an ECMAScript module. If you want to use an ECMAScript
-module, check to see if there is a CommonJS version that you can use
-instead. For more information, see:
+You cannot ``require`` an ECMAScript module in ``mongosh``. If you want
+to use functionality from an ECMAScript module, check to see if there is
+a CommonJS version that you can use instead. For more information, see:
 
 - `Node.js module documentation
   <https://nodejs.org/api/esm.html#modules-ecmascript-modules>`__
