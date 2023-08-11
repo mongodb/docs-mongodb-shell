@@ -137,12 +137,9 @@ To connect to a deployment using :ref:`LDAP <security-ldap>`:
 
 - Set :option:`--authenticationDatabase <mongosh --authenticationDatabase>` 
   to ``$external``.
-
-.. important::
-
-   The ``$external`` argument must be placed in single quotes, not
-   double quotes, to prevent the shell from interpreting ``$external``
-   as a variable.
+  The ``$external`` argument must be placed in single quotes, not
+  double quotes, to prevent the shell from interpreting ``$external``
+  as a variable.
 
 - Set :option:`--authenticationMechanism <mongosh --authenticationMechanism>` 
   to ``PLAIN``.
