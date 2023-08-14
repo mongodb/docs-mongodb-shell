@@ -9,16 +9,15 @@ There are two packaging standards for Node.js modules.
    * - ``CommonJS`` (CJS)
      -  Yes
 
-   * - ``ECMAScript``
+   * - ``ECMAScript Module`` (ES Module)
      -  No
 
-You cannot ``require()`` an ECMAScript module in ``mongosh``. If you
-want to use functionality from an ECMAScript module, check to see if
-there is a CommonJS version that you can use instead. For more
-information, see:
+You cannot ``require()`` an ES module in ``mongosh``. If you want to use
+functionality from an EScript module, check to see if there is a
+CommonJS version that you can use instead. For more information, see:
 
 - `Node.js module documentation
   <https://nodejs.org/api/esm.html#modules-ecmascript-modules>`__
-- `npm package installation documentation
-  <https://docs.npmjs.com/cli/v6/commands/npm-install>`__
+- `Installing older versions of npm packages
+  <https://docs.npmjs.com/cli/v9/commands/npm-install>`__
 
