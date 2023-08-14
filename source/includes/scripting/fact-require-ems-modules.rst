@@ -13,8 +13,8 @@ There are two packaging standards for Node.js modules.
      -  No
 
 You cannot ``require()`` an ES module in ``mongosh``. If you want to use
-functionality from an EScript module, check to see if there is a
-CommonJS version that you can use instead. For more information, see:
+functionality from an ES module, check to see if there is a CommonJS
+version that you can use instead. For more information, see:
 
 - `Node.js module documentation
   <https://nodejs.org/api/esm.html#modules-ecmascript-modules>`__
