@@ -24,6 +24,12 @@ v2.0.0
   - ``db.enableFreeMonitoring``
   - ``db.disableFreeMonitoring``
 
+v1.10.5
+-------
+*Released August 11, 2023*
+
+Provides an accessible list of ``mongosh`` `downloads <https://downloads.mongodb.com/compass/mongosh.json>`__.
+
 v1.10.4
 -------
 
