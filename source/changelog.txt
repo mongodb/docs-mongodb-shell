@@ -28,7 +28,8 @@ v1.10.5
 -------
 *Released August 11, 2023*
 
-Provides an accessible list of ``mongosh`` `downloads <https://downloads.mongodb.com/compass/mongosh.json>`__.
+Provides an accessible list of ``mongosh`` `downloads <https://downloads.mongodb.com/compass/mongosh.json>`__ 
+that can be accessed through your application.
 
 v1.10.4
 -------
