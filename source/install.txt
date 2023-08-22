@@ -17,6 +17,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
+.. include:: /includes/platform-limitations.rst
+
 Procedure
 ---------
 
