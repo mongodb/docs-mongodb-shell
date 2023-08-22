@@ -24,7 +24,12 @@ v2.0.0
 
 - ``mongosh`` displays binary values as ``Binary.createFromBase64(
   <base64String> )`` values instead of ``Binary( Buffer.from(
-  <base64String> ) )`` values.
+  <base64String> ) )`` values. For example:
+
+  - Starting in 2.0: ``binaryValue:
+    Binary.createFromBase64("SGVsbG8gV29ybGQhCg==")``
+  - Earlier versions: ``binaryValue:
+    Binary(Buffer.from("SGVsbG8gV29ybGQhCg==", "hex"), 0)``
 
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:
