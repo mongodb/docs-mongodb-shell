@@ -17,14 +17,14 @@ v2.0.0
 
 *Upcoming*
 
-Added support for these constructors:
+- Added support for these constructors:
 
-- ``Binary.createFromBase64()``
-- ``ObjectId.createFromHexString()``
+  - ``Binary.createFromBase64()``
+  - ``ObjectId.createFromHexString()``
 
-``mongosh`` displays binary values as ``Binary.createFromBase64(
-<base64String> )`` values instead of ``Binary( Buffer.from(
-<base64String> ) )`` values.
+- ``mongosh`` displays binary values as ``Binary.createFromBase64(
+  <base64String> )`` values instead of ``Binary( Buffer.from(
+  <base64String> ) )`` values.
 
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:
