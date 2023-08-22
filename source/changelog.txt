@@ -22,7 +22,7 @@ v2.0.0
   - ``Binary.createFromBase64()``
   - ``ObjectId.createFromHexString()``
 
-- ``mongosh`` displays binary values as ``Binary.createFromBase64(
+- ``mongosh`` returns binary values as ``Binary.createFromBase64(
   <base64String> )`` values instead of ``Binary( Buffer.from(
   <base64String> ) )`` values. For example:
 
