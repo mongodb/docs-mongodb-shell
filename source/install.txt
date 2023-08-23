@@ -17,6 +17,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
+Starting in ``mongosh`` 2.0.0:
+
 .. include:: /includes/platform-limitations.rst
 
 Procedure
