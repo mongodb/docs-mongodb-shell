@@ -1,5 +1,6 @@
-In connection strings, you cannot use these as synonyms for ``true``:
-``1``, ``y``, ``yes``, or ``t``.
+For boolean values in connection strings, you:
 
-You cannot use , and ``-1``, ``0``, ``f``, ``n``, and ``no`` as synonyms
-for ``false``. You must use ``true`` and ``false`` only.
+- must use ``true`` and ``false`` only.
+- cannot use ``1``, ``y``, ``yes``, or ``t`` instead of ``true``. 
+- cannot use ``-1``, ``0``, ``f``, ``n``, or ``no`` instead of
+  ``false``. 
