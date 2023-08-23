@@ -24,7 +24,7 @@ v2.0.0
   - ``db.enableFreeMonitoring``
   - ``db.disableFreeMonitoring``
 
-- .. include:: /includes/platform-limitations.rst
+.. include:: /includes/platform-limitations.rst
 
 v1.10.6
 -------
