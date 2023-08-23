@@ -156,3 +156,7 @@ Next Steps
 
 Once you successfully install :binary:`mongosh`, learn how to
 :ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
+
+You can download a programmatically accessible list of ``mongosh``
+software from `https://downloads.mongodb.com/compass/mongosh.json`__
+that can be accessed through your application.
