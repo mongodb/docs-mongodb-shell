@@ -1,4 +1,5 @@
-For boolean values in connection strings, you:
+For boolean values in :manual:`connection string
+</reference/connection-string>`, you:
 
 - must use ``true`` or ``false``.
 - cannot use ``1``, ``y``, ``yes``, or ``t`` instead of ``true``. 
