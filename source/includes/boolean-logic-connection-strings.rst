@@ -1,4 +1,4 @@
-For boolean values in :manual:`connection string
+For boolean values in :manual:`connection strings
 </reference/connection-string>`, you:
 
 - must use ``true`` or ``false``.
