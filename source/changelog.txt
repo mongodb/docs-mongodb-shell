@@ -21,6 +21,8 @@ v2.0.0
 
   - :method:`Binary.createFromBase64()`
   - :method:`ObjectId.createFromHexString()`
+  - ``Binary.createFromHexString()``
+  - ``ObjectId.createFromBase64()``
 
 - ``mongosh`` returns binary values as ``Binary.createFromBase64(
   <base64String> )`` values instead of ``Binary( Buffer.from(
