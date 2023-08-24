@@ -26,12 +26,8 @@ v2.0.0
 
 - ``mongosh`` returns binary values as ``Binary.createFromBase64(
   <base64String> )`` values instead of ``Binary( Buffer.from(
-  <base64String> ) )`` values. For example:
-
-  - Starting in 2.0.0: ``binaryValue:
+  <base64String> ) )`` values. For example: ``binaryValue:
     Binary.createFromBase64("SGVsbG8gV29ybGQhCg==")``
-  - Earlier versions: ``binaryValue:
-    Binary(Buffer.from("SGVsbG8gV29ybGQhCg==", "hex"), 0)``
 
   For additional details, see :method:`Binary.createFromBase64()`.
   
