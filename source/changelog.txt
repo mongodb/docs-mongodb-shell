@@ -33,7 +33,7 @@ v1.10.6
   when a new ``mongosh`` release is available.
 - :issue:`MONGOSH-923` - Disable and hide ``getLastError`` when
   connecting to a cluster older than 5.1.0.
-- :issue:`MONGOSH-1593` - Add support for Debian 12.
+- :issue:`MONGOSH-1539` - Add support for Debian 12.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36540>`__.
