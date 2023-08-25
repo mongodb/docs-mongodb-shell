@@ -1,3 +1,19 @@
+Installation With a .deb Package
+--------------------------------
+
+Supported Platforms
+~~~~~~~~~~~~~~~~~~~
+
+``mongosh`` is available as a :abbr:`PPA (Personal Package Archive)` for
+the following platforms:
+
+- Ubuntu 22.04 (Jammy)
+- Ubuntu 20.04 (Focal)
+- Ubuntu 18.04 (Bionic)
+
+Steps
+~~~~~
+
 title: Import the public key used by the package management system.
 stepnum: 1
 level: 4

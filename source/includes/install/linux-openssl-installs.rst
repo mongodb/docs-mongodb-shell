@@ -1,2 +1,3 @@
 ``mongosh`` supports OpenSSL. You can also configure ``mongosh`` to use
-your system's OpenSSL installation.
+your system's OpenSSL installation. There are packages for:
+

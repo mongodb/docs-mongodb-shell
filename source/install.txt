@@ -17,8 +17,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
-Procedure
----------
+Installation Types
+------------------
 
 Select the appropriate tab for your operating system:
 
@@ -27,132 +27,64 @@ Select the appropriate tab for your operating system:
    .. tab::
       :tabid: windows
 
-      .. note::
+      .. include:: /includes/install/windows-section-intro.rst
 
-         On Windows, ``mongosh`` preferences and configuration options
-         are stored in the ``%APPDATA%/mongodb/mongosh`` directory.
+      .. tabs::
 
-      Install from MSI
-      ~~~~~~~~~~~~~~~~
+         .. tab:: MSI Installer
+            :tabid: homebrew
 
-      .. include:: /includes/steps/install-shell-windows-msi.rst
-      
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+            .. include:: /includes/install/windows-msi.rst
 
-      .. include:: /includes/steps/install-shell-windows.rst
+         .. tab:: .zip
+            :tabid: windows-zip
+
+            .. include:: /includes/install/windows-zip.rst
 
    .. tab::
       :tabid: macos
 
+      .. include:: /includes/install/macos-section-intro.rst
+
       .. _macos-install-homebrew:
 
-      Install with Homebrew
-      ~~~~~~~~~~~~~~~~~~~~~
+      .. tabs::    
 
-      .. important::
- 
-         To view the complete list of system requirements for Homebrew,
-         see the
-         `Homebrew Website <https://docs.brew.sh/Installation>`__.
+         .. tab:: Homebrew
+            :tabid: homebrew
 
-      The Homebrew package manager is the recommended installation
-      method for :binary:`mongosh` on macOS. To learn how to manually
-      install :binary:`mongosh` from an archive instead, see
-      :ref:`macos-install-archive`.
+            .. include:: /includes/install/macos-homebrew.rst
 
-      Considerations
-      ``````````````
+         .. tab:: .zip
+            :tabid: macos-zip
 
-      :binary:`mongosh` installed with Homebrew does not support
-      :manual:`automatic client-side field level encryption
-      </core/security-automatic-client-side-encryption/>`.
-
-      Procedure
-      `````````
-
-      To install :binary:`mongosh` with Homebrew:
-
-      .. include:: /includes/steps/install-shell-macos-homebrew.rst
-
-      .. _macos-install-archive:
-
-      Install from ``.zip`` File
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      To manually install :binary:`mongosh` using a downloaded ``.zip``
-      file:
-
-      .. include:: /includes/steps/install-shell-macos.rst
+            .. include:: /includes/install/macos-zip.rst
 
    .. tab::
       :tabid: linux
 
-      Select the appropriate tab based on your Linux distribution and
-      desired package from the tabs below:
-
-      - To install the ``.deb`` package on Ubuntu 22.04 (Jammy), Ubuntu
-        20.04 (Focal), Ubuntu 18.04 (Bionic), or Debian, click the
-        ``.deb`` tab.
-
-      - To install the ``.rpm`` package on
-        :abbr:`RHEL (Red Hat Enterprise Linux)` or Amazon Linux 2,
-        click the ``.rpm`` tab.
-
-      - To install the ``.tgz`` tarball, click the ``.tgz`` tab.
+      .. include:: /includes/install/linux-section-intro.rst
 
       .. tabs::
       
          .. tab:: .deb
             :tabid: deb
 
-            Supported Platforms
-            ~~~~~~~~~~~~~~~~~~~
-
-            :binary:`mongosh` is available as a :abbr:`PPA (Personal
-            Package Archive)` for the following platforms:
-            
-            - Ubuntu 22.04 (Jammy)
-            - Ubuntu 20.04 (Focal)
-            - Ubuntu 18.04 (Bionic)
-
-            Procedure
-            ~~~~~~~~~
-
-            .. include:: /includes/steps/install-shell-linux-deb.rst
+            .. include:: /includes/install/linux-deb.rst
 
          .. tab:: .rpm
             :tabid: rpm
 
-            Supported Platforms
-            ~~~~~~~~~~~~~~~~~~~
-            
-            :binary:`mongosh` is available as ``yum`` package for the
-            following platforms:
-
-            - :abbr:`RHEL (Red Hat Enterprise Linux)`
-            - Amazon Linux 2
-
-            .. important:: Amazon Linux 2023 Availability
-
-               ``mongosh`` is **not** currently available on Amazon
-               Linux 2023.
-
-            Procedure
-            ~~~~~~~~~
-
-            .. include:: /includes/steps/install-shell-linux-rpm.rst
+            .. include:: /includes/install/linux-rpm.rst
 
          .. tab:: .tgz
             :tabid: tgz
 
-            Procedure
-            ~~~~~~~~~
-      
-            .. include:: /includes/steps/install-shell-linux-generic.rst
+            .. include:: /includes/install/linux-tgz.rst
 
 Next Steps
 ----------
 
-Once you successfully install :binary:`mongosh`, learn how to
-:ref:`connect to your MongoDB deployment <mdb-shell-connect>`.
+After you install ``mongosh``, learn how to :ref:`connect to your
+MongoDB deployment <mdb-shell-connect>`.
+

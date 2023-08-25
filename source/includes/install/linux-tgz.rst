@@ -1,4 +1,10 @@
----
+Installation With a .tgz Archive
+--------------------------------
+
+Steps
+~~~~~
+      
+ ---
 source:
   file: steps-install-shell-base.yaml
   ref: navigate-dlc
