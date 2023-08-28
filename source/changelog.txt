@@ -33,14 +33,17 @@ v2.0.0
 
 - .. include:: /includes/boolean-logic-connection-strings.rst
 
-- :method:`sh.status()` no longer returns these :data:`config.version`
-  fields that were removed from the server:
+- The following :data:`config.version` fields were removed and
+  :method:`sh.status()` no longer returns the fields:
 
   - ``minCompatibleVersion``
   - ``currentVersion``
   - ``excluding``
   - ``upgradeId``
   - ``upgradeState``
+
+  To obtain version information, see the :ref:`feature compatibility
+  version (fcv) <view-fcv>`.
 
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:
