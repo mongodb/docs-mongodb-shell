@@ -33,6 +33,15 @@ v2.0.0
 
 - .. include:: /includes/boolean-logic-connection-strings.rst
 
+- The following fields are deprecated and :method:`sh.status()` no
+  longer returns the fields:
+
+  - ``minCompatibleVersion``
+  - ``currentVersion``
+  - ``excluding``
+  - ``upgradeId``
+  - ``upgradeState``
+
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:
   
