@@ -113,10 +113,10 @@ Use ``EJSON.parse()`` to format the string for use with methods like
    db.salesRestored.insertMany( EJSON.parse( salesCollection ) )
 
 - ``EJSON.parse()`` formats the values in ``salesCollection`` as JSON
-pairs.
+  pairs.
 
 - :method:`db.salesRestored.insertMany() <db.collection.insertMany()>`
-uses the JSON pairs to create the ``salesRestored`` collection.
+  uses the JSON pairs to create the ``salesRestored`` collection.
 
 Use EJSON.parse() from the command line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,12 +145,12 @@ import the file and create a new collection, exit ``mongosh`` and run an
               EJSON.parse( fs.readFileSync( 'sales.json', 'utf8' ) ) )"
 
 - ``EJSON.parse()`` takes a string as input. This example uses
-``fs.readFileSync()`` to read the ``sale.json`` file as a string. 
+  ``fs.readFileSync()`` to read the ``sale.json`` file as a string. 
 
 - ``EJSON.parse()`` formats the input string as JSON pairs.
 
 - ``db.salesFromFile.insertMany()`` creates the ``salesFromFile``
-collection from the JSON pairs.
+  collection from the JSON pairs.
 
 Learn More
 ----------
