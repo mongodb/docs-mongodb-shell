@@ -34,7 +34,7 @@ v2.0.0
 - .. include:: /includes/boolean-logic-connection-strings.rst
 
 - The following :data:`config.version` fields were removed and
-  :method:`sh.status()` no longer returns the fields:
+  :method:`sh.status()` doesn't return the fields:
 
   - ``minCompatibleVersion``
   - ``currentVersion``
