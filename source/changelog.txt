@@ -33,8 +33,8 @@ v2.0.0
 
 - .. include:: /includes/boolean-logic-connection-strings.rst
 
-- The following fields are deprecated and :method:`sh.status()` no
-  longer returns the fields:
+- :method:`sh.status()` no longer returns these fields that were removed
+  from the server:
 
   - ``minCompatibleVersion``
   - ``currentVersion``
