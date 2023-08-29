@@ -10,14 +10,7 @@ EJSON
    :depth: 2
    :class: singlecol
 
-..
-   COMMENT: These URLs aren't reused, they're just for editing clarity
-
-.. |bsonUrl| replace:: `BSON <https://www.mongodb.com/basics/bson>`__
-
-.. |ejsonUrl| replace:: `EJSON <https://www.npmjs.com/package/bson#EJSON>`__
-
-.. |bsonParseUrl| replace:: `Node.js BSON parser <https://www.npmjs.com/package/bson>`__
+.. include:: /includes/links-urls/ejson.rst
 
 MongoDB uses |bsonUrl|, a binary serialization format, to store
 documents and to exchange data. BSON is a rich format and has data types

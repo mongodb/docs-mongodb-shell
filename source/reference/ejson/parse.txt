@@ -10,6 +10,7 @@ EJSON.parse()
    :depth: 2
    :class: singlecol
 
+.. include:: /includes/links-urls/ejson.rst
 
 The ``EJSON.parse()`` method converts string values to JSON. 
 
@@ -40,7 +41,7 @@ The ``EJSON.parse()`` method takes these fields:
    * - ``value``
      -  string
      -  Required
-     -  The string EJSON.parse() transforms into JSON key-value pairs 
+     -  String ``EJSON.parse()`` transforms into JSON key-value pairs 
 
    * - ``options``
      -  string
@@ -64,17 +65,17 @@ The ``EJSON.parse()`` method takes these fields:
 Behavior
 --------
 
-You can call ``EJSON.parser()`` from inside an interactive ``mongosh``
+You can call ``EJSON.parse()`` from inside an interactive ``mongosh``
 session or from the system command line using ``--eval``.
 
-Call ``EJSON.parser()`` from an interactive session: 
+Call ``EJSON.parse()`` from an interactive session: 
 
 .. code-block:: javascript
    :copyable: false
 
    EJSON.parse(string)
 
-Call ``EJSON.parser()`` from the system command line: 
+Call ``EJSON.parse()`` from the system command line: 
 
 .. code-block:: shell
    :copyable: false
@@ -103,9 +104,9 @@ Format Input with EJSON.parse()
 
 .. code-block:: javascript
 
-   let salesCollection =  EJSON.stringify( db.sales.find().toArray() )   
+   let salesCollection = EJSON.stringify( db.sales.find().toArray() )   
 
-Use ``EJSON.parse()`` to format the string for use with methods like
+Use ``EJSON.parse()`` to format the string for methods like
 :method:`db.collection.insertMany()` that expect JSON pairs:
 
 .. code-block:: javascript
@@ -128,7 +129,7 @@ For this example, save the ``sales`` collection as a file.
 
 .. code-block:: javascript
 
-   let salesCollection =  EJSON.stringify( db.sales.find().toArray() )   
+   let salesCollection = EJSON.stringify( db.sales.find().toArray() )   
 
    fs.writeFileSync( 'sales.json', salesCollection ) 
 
@@ -155,7 +156,6 @@ import the file and create a new collection, exit ``mongosh`` and run an
 Learn More
 ----------
 
-`EJSON documentation <https://www.npmjs.com/package/bson#EJSON>`__
-`Mozilla Developer Network JSON.parse documentation
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse>`__
-
+- |ejsonUrl| documentation
+- Mozilla Developer Network |mdn-json-parse| documentation
+  

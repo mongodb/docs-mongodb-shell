@@ -10,6 +10,8 @@ EJSON.stringify()
    :depth: 2
    :class: singlecol
 
+.. include:: /includes/links-urls/ejson.rst
+
 The ``EJSON.stringify()`` method converts BSON values to strings. 
 
 Syntax
@@ -39,13 +41,13 @@ The ``EJSON.stringify()`` method has these fields:
    * - ``value``
      -  BSON object
      -  Required
-     -  The object ``EJSON.stringify`` transforms
+     -  Object ``EJSON.stringify()`` transforms
 
    * - ``replacer``
      -  array or function
      -  Optional
      -  Modifies output. If the value exists but it is not an array or a
-        function, ``EJSON.stringify`` returns all document fields. 
+        function, ``EJSON.stringify()`` returns all document fields. 
  
         .. list-table::
            :header-rows: 1
@@ -84,8 +86,8 @@ The ``EJSON.stringify()`` method has these fields:
            * - string
              - A character to use to indent each level. This option
                produces invalid JSON if you use a character other than a
-               space or tab. For more information see `JSON.stringify()
-               <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>`__
+               space or tab. For more information see
+              |mdn-json-stringify| 
 
    * - ``options``
      -  boolean
@@ -140,7 +142,7 @@ To control how documents are passed to EJSON, use one of the ``mongosh``
      - Non-blocking, prints documents one-by-one
 
    * - :method:`.next() <cursor.next>`
-     -  Non-blocking, manually iterate over results
+     - Non-blocking, manually iterate over results
 
 Examples
 --------
@@ -274,7 +276,7 @@ string. ``EJSON.stringify()`` does not update the collection.
 Write to a File from Inside mongosh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To write to a file from within ``mongosh``, call the ``fs`` API. Use
+To write to a file from within ``mongosh``, use the ``fs`` API. Use
 ``EJSON.stringify()`` to format the string that you pass to ``fs``. 
 
 .. code-block:: javascript
@@ -452,7 +454,7 @@ The output is:
 Legacy ``tojsononeline()``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``mongosh`` formats query output differently than the deprecated
+``mongosh`` formats query output differently than the deprecated
 ``mongo`` shell. You may have scripts which rely on the old format. To
 reformat ``mongosh`` output on a single line, use ``EJSON.stringify()``.
 
@@ -486,7 +488,7 @@ Legacy output:
      }
    ]
 
-Reformat the output with the EJSON ``stringify()`` method.
+Reformat the output with ``EJSON.stringify()``.
 
 .. code-block:: javascript
 
@@ -500,7 +502,5 @@ Reformat the output with the EJSON ``stringify()`` method.
 Learn More
 ----------
 
-- `EJSON documentation <https://www.npmjs.com/package/bson#EJSON>`__
-- `Mozilla Developer Network JSON.stringify documentation 
-  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>`__
-
+- |ejsonUrl| documentation
+- Mozilla Developer Network |mdn-json-stringify| documentation
