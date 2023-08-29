@@ -87,7 +87,7 @@ The ``EJSON.stringify()`` method has these fields:
              - A character to use to indent each level. This option
                produces invalid JSON if you use a character other than a
                space or tab. For more information see
-              |mdn-json-stringify| 
+               |mdn-json-stringify| 
 
    * - ``options``
      -  boolean
