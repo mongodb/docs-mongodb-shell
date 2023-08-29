@@ -18,13 +18,9 @@ To run commands in ``mongosh``, you must first
 Format Input and Output
 -----------------------
 
-.. |ejsonUrl| replace:: `EJSON <https://www.npmjs.com/package/bson#EJSON>`__
+.. include:: /includes/links-urls/ejson.rst
 
-.. |bsonParseUrl| replace:: `BSON <https://www.npmjs.com/package/bson>`__
-
-.. |bsonUrl| replace:: `BSON <https://www.mongodb.com/basics/bson>`__
-
-``mongosh`` uses the Node.js |bsonParseUrl| parser to parse |bsonUrl|
+``mongosh`` uses the |bsonParseUrl| parser to parse |bsonUrl|
 data. You can use the parser's |ejsonUrl| interface to transform your
 data when you work with ``mongosh``.
 
