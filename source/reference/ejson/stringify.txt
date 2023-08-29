@@ -82,7 +82,10 @@ The ``EJSON.stringify()`` method has these fields:
                maximum.
 
            * - string
-             - The character to use to indent each level.
+             - A character to use to indent each level. This option
+               produces invalid JSON if you use a character other than a
+               space or tab. For more information see `JSON.stringify()
+               <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>`__
 
    * - ``options``
      -  boolean
@@ -97,18 +100,11 @@ The ``EJSON.stringify()`` method has these fields:
              - Default
              - Meaning
 
-           * - ``legacy``
-             - ``false``
-             - Use the Extended JSON v1 specification for output.
-
            * - ``relaxed``
-             - ``false``
+             - ``true``
              - Enable relaxed mode for Extended JSON. Returns native 
-               JavaScript types instead of BSON types when possible.
-
-           * - ``useBigint64`` 
-             - ``false``
-             - Enable native bigint support.
+               JSON types instead of attaching BSON type information
+               where applicable.
 
 Behavior
 --------
@@ -185,36 +181,6 @@ To increase indentation between levels, set the ``spacing`` option.
              "$numberDecimal": "100.60"
         }
    }
-
-To highlight the indentation between levels, use the ``spacing`` option
-to set a string of dots.
-
-.. code-block:: javascript
-
-   EJSON.stringify( db.sales.findOne( { custId: 345 } ), null , "..." )
-
-``EJSON.stringify()`` formats the result for the document with
-``custId: 345``.
-
-.. code-block:: javascript
-
-   {
-    ..."_id": {
-    ......"$oid": "64da90c1175f5091debcab26"
-    ...},
-    ..."custId": 345,
-    ..."purchaseDate": {
-    ......"$date": "2023-07-04T00:00:00Z"
-    ...},
-    ..."quantity": 4,
-    ..."cost": {
-    ......"$numberDecimal": "100.60"
-    ...}
-   }
-
-The ``spacing`` string repeats once for each new level. The example
-string is three dots (``...``) so level two is indented by a total of
-six dots (``......``).
 
 Select Output Fields
 ~~~~~~~~~~~~~~~~~~~~

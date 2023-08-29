@@ -59,7 +59,7 @@ The ``EJSON.parse()`` method takes these fields:
              - Returns native JavaScript types when possible
 
            * - ``false``
-             - Returns Extended JSON types
+             - Prefer to return BSON types
 
 Behavior
 --------
