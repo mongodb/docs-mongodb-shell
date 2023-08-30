@@ -74,7 +74,7 @@ Starting in ``mongosh`` 2.0.0:
        Ubuntu 20.04+ (x64 and ARM64)
        Amazon Linux 2023 (x64 and ARM64)
        Debian 11+
-       SLES 15
+       SLES 15 
 
 Procedure
 ---------
