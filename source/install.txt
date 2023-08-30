@@ -79,7 +79,7 @@ Starting in ``mongosh`` 2.0.0:
 
        | Debian 11+
 
-       | SLES 15 
+       | SLES 15
 
 Procedure
 ---------
