@@ -66,8 +66,8 @@ Starting in ``mongosh`` 2.0.0:
      - 11+ (x64 and ARM64)
 
    * - Microsoft Windows
-     - Microsoft Windows Server 2016+ 
-       Microsoft Windows 10+
+     - * Microsoft Windows Server 2016+ 
+       * Microsoft Windows 10+
 
    * - Linux
      - * Red Hat Enterprise Linux (RHEL) 8+ (x64, ARM64, ppc64le, and s390x)
