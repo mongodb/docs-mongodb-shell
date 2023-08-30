@@ -21,6 +21,7 @@ Supported Operating Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can install MongoDB Shell 2.0.0 on these operating systems:
+<<<<<<< HEAD
 
 .. list-table::
    :widths: 30,70
