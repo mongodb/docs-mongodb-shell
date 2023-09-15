@@ -6,6 +6,17 @@ Write Scripts
 
 .. default-domain:: mongodb
 
+.. facet::
+   :type: genre
+   :values: tutorial
+
+.. facet::
+   :type: programming_language
+   :values: javascript/typescript
+
+.. meta:: 
+   :keywords: server
+
 .. contents:: On this page
    :local:
    :backlinks: none

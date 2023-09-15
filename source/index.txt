@@ -10,6 +10,10 @@ MongoDB Shell (``mongosh``)
 
 .. default-domain:: mongodb
 
+.. facet::
+   :type: genre
+   :values: reference
+
 .. contents:: On this page
    :local:
    :backlinks: none
