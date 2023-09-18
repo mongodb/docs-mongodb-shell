@@ -35,12 +35,20 @@ Access MongoDB From Your Shell
    .. tab:: Connect to MongoDB
       :tabid: connect
 
-      You can connect to MongoDB in Atlas, connect to a local deployment,
-      or connect to another remote host.
+      .. procedure:: Connect to MongoDB
 
-      .. procedure:: Connect to Atlas
+         You can connect to MongoDB in Atlas, connect to a local deployment,
+         or connect to another remote host.
         
-         .. step:: Do this thing
+         .. step:: Connect to Atlas
+
+            Here's a step in a procedure.
+
+         .. step:: Connect to a Local Deployment
+
+            Here's a step in a procedure.
+
+         .. step:: Connect to a Remote Host
 
             Here's a step in a procedure.
 
@@ -50,8 +58,23 @@ Access MongoDB From Your Shell
    .. tab:: Perform CRUD Operations
       :tabid: crud
 
-      Create, read, update, and delete documents in your database - from 
-      your shell.
+      .. procedure:: Crete, Read, Update, and Delete Documents
+
+         .. step:: Create
+
+            Create a document.
+
+         .. step:: Read
+
+            Read a document.
+
+         .. step:: Update
+
+            Update a document.
+
+         .. step:: Delete
+
+            Delete a document.
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
          :alt: Abstract illustration showing a terminal performing CRUD operations
@@ -59,7 +82,11 @@ Access MongoDB From Your Shell
    .. tab:: Run Aggregation Pipelines
       :tabid: aggregation
 
-      Run aggregation pipelines. Do it!
+      .. procedure:: Run Aggregation Pipelines
+
+         .. step:: Do the thing.
+
+            Do it.
 
       .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
          :alt: Abstract illustration showing aggregation pipeline stages
@@ -67,7 +94,11 @@ Access MongoDB From Your Shell
    .. tab:: Write Scripts
       :tabid: scripts
 
-      Do programmatic things. It's fun!
+     .. procedure:: Write Scripts
+
+        .. step:: Do the thing programmatically.
+
+           Do programmatic things. It's fun!
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(4)_Spot.png
          :alt: Abstract illustration implying a terminal executing scripts
