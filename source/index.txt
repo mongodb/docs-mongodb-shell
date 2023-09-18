@@ -82,12 +82,6 @@ Access MongoDB From Your Shell
    .. tab:: Run Aggregation Pipelines
       :tabid: aggregation
 
-      .. procedure:: Run Aggregation Pipelines
-
-         .. step:: Do the thing.
-
-            Do it.
-
       .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
          :alt: Abstract illustration showing aggregation pipeline stages
 
