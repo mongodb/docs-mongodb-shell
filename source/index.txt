@@ -25,9 +25,6 @@ Welcome to MongoDB Shell (``mongosh``)
 .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
    :alt: Abstract illustration showing a terminal interacting with different systems 
 
-To learn more about how to download and install the ``mongosh`` binary, 
-and how to add it to your system ``PATH``, refer to :ref:`mdb-shell-install`.
-
 .. kicker:: What You Can Do
 
 Access MongoDB From Your Shell
