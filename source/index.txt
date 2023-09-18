@@ -46,9 +46,6 @@ Access MongoDB From Your Shell
 
                mongosh "mongodb+srv://mycluster.abcd1.mongodb.net/myFirstDatabase" --apiVersion 1 --username <username>
 
-            For additional details, including how to get the Atlas connection
-            string, refer to :ref:`atlas-connect-to-deployment`.
-
          .. step:: Connect to a Local Deployment
 
             Connecting to a local deployment on the default port is simple:
@@ -56,10 +53,6 @@ Access MongoDB From Your Shell
             .. code-block:: sh
 
                mongosh
-
-            For details about connecting to a non-default port, connecting
-            with authentication, or other options, refer to 
-            :ref:`mdb-shell-connect`.
 
          .. step:: Connect to a Remote Host
 
@@ -75,6 +68,17 @@ Access MongoDB From Your Shell
             .. code-block:: sh
 
                mongosh --host mongodb0.example.com --port 28015
+
+         .. step:: Learn More
+
+            For additional details about connecting to a deployment on Atlas, 
+            including how to get the Atlas connection string, refer to 
+            :ref:`Connect to a Database Deployment <atlas-connect-to-deployment>`
+            in the Atlas documentation.
+
+            For details about connecting to a non-default local port, 
+            connecting with authentication, or other options, refer to 
+            :ref:`mdb-shell-connect`.
 
       .. image:: /images/mongosh-plp/atlas_plp.gif
          :alt: MongoDB Atlas Connect to your Database image
