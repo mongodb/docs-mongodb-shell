@@ -175,6 +175,33 @@ Access MongoDB From Your Shell
    .. tab:: Write Scripts
       :tabid: scripts
 
+      .. procedure::
+
+         .. step:: Perform Common Functions with Scripts
+
+            Write scripts for the |mdb-shell| that modify data in MongoDB or
+            perform administrative operations.
+
+            Explore a tutorial that uses the |mdb-shell| with JavaScript to
+            access MongoDB: :ref:`mdb-shell-write-scripts`.
+
+         .. step:: Package and Distribute Snippets
+
+            You may want to package and distribute your scripts as snippets
+            for you and others to use in their projects. 
+
+            Learn more about :ref:`requiring external files and modules 
+            <mongosh-require-external-files-and-modules>` in your scripts. 
+
+         .. step:: Code Scoping and Other Considerations
+
+            Learn more about code scope when your scripts load JavaScript 
+            into :binary:`~bin.mongosh`: :ref:`mongosh-scoping`.
+
+            Or learn how to work with database query results in class 
+            constructor functions, non-async generator functions, or callbacks
+            to ``.sort()`` on an array: :ref:`mongosh-script-considerations`.
+
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(4)_Spot.png
          :alt: Abstract illustration implying a terminal executing scripts
 
