@@ -1,80 +1,25 @@
+:template: product-landing
+:hidefeedback: header
+:noprevnext:
+
 .. program:: mongosh
 
 .. binary:: mongosh
 
 .. _mdb-shell-overview:
 
-===========================
-MongoDB Shell (``mongosh``)
-===========================
+======================================
+Welcome to MongoDB Shell (``mongosh``)
+======================================
 
-.. default-domain:: mongodb
+.. introduction::
 
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: singlecol
+   The |mdb-shell|, ``mongosh``, is a JavaScript and Node.js 16.x |repl| 
+   environment for interacting with MongoDB deployments. Use the |mdb-shell| 
+   to test queries and operations directly with your database.
 
-The |mdb-shell|, ``mongosh``, is a fully functional JavaScript and 
-Node.js 16.x |repl| environment for interacting with MongoDB 
-deployments. You can use the |mdb-shell| to test queries and operations 
-directly with your database.
-
-:binary:`~bin.mongosh` is available as a standalone package in the
-`MongoDB Download Center
-<https://www.mongodb.com/try/download/shell?jmp=docs>`__.
-
-Download and Install ``mongosh``
---------------------------------
-
-To learn how to download and install the ``mongosh`` binary, see
-:ref:`mdb-shell-install`.
-
-Connect to a MongoDB Deployment
--------------------------------
-
-Once you have installed the |mdb-shell| and added it to your system
-``PATH``, you can connect to a MongoDB deployment. To learn more, see
-:ref:`mdb-shell-connect`.
-
-The |mdb-shell| versus the Legacy ``mongo`` Shell
--------------------------------------------------
-
-The legacy ``mongo`` shell was deprecated in MongoDB 5.0 and removed in
-MongoDB 6.0. The new MongoDB Shell, ``mongosh``, offers numerous
-advantages over the legacy shell. The new shell has improved:
-
-- compatibility with the MongoDB `Node.js
-  <https://www.mongodb.com/docs/drivers/node/current/>`__ driver
-- syntax highlighting
-- command history
-- logging
-
-Some legacy methods are unavailable or have been replaced with updated
-methods in ``mongosh``. To maintain backwards compatibility, the legacy
-methods that ``mongosh`` supports use the same syntax as the
-corresponding methods in the ``mongo`` shell. 
-
-To see the complete list of methods supported by ``mongosh``, refer to:
-:doc:`MongoDB Shell Methods </reference/methods>`.
-
-Learn More 
-----------
-
-- :ref:`Connect to a MongoDB Deployment <mdb-shell-connect>`
-
-- :ref:`Perform CRUD Operations <mdb-shell-crud>`
-
-- :ref:`Run Aggregation Pipelines <mdb-shell-aggregation>`
-
-- :ref:`Use Editor Mode <mongosh-editor-mode>`.
-
-- :ref:`Write Scripts <mdb-shell-write-scripts>`
-
-- :ref:`Retrieve Logs <mdb-shell-logs>`
-
-- :ref:`View Available Methods in the MongoDB Shell <mdb-shell-methods>`
+   .. button:: Download :binary:`~bin.mongosh`
+      :uri: https://www.mongodb.com/try/download/shell?jmp=docs
 
 .. toctree::
    :titlesonly:
@@ -91,4 +36,3 @@ Learn More
    /reference
    /changelog
    /reference/access-mdb-shell-help.txt
-   
