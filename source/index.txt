@@ -48,7 +48,8 @@ Access MongoDB From Your Shell
 
          .. step:: Connect to a Local Deployment
 
-            Connecting to a local deployment on the default port is simple:
+            You can connect to a local deployment on the default port with
+            one simple command:
 
             .. code-block:: sh
 
@@ -83,13 +84,31 @@ Access MongoDB From Your Shell
       .. image:: /images/mongosh-plp/atlas_plp.gif
          :alt: MongoDB Atlas Connect to your Database image
 
-   .. tab:: Perform CRUD Operations
+   .. tab:: Perform CRUD and Aggregation
       :tabid: crud
+
+      .. procedure::
+
+         .. step:: Insert Documents
+
+            :binary:`~bin.mongosh` supports common insert opererations, 
+            including:
+
+            - :method:`db.collection.insertOne()`
+            - :method:`db.collection.insertMany()`
+
+            For more information and examples, refer to :ref:`mongosh-insert`.
+
+         .. step:: Read Documents
+
+            Use the :method:`db.collection.find()` method to query documents
+            in a collection. For more information and examples, refer to 
+            :ref:`mongosh-read`.
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
          :alt: Abstract illustration showing a terminal performing CRUD operations
 
-   .. tab:: Run Aggregation Pipelines
+   .. tab:: Administer and Manage
       :tabid: aggregation
 
       .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
