@@ -132,14 +132,45 @@ Access MongoDB From Your Shell
             using the :method:`db.collection.aggregate()` method. For more 
             information and examples, refer to :ref:`mdb-shell-aggregation`.
 
-      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
-         :alt: Abstract illustration showing a terminal performing CRUD operations
+      .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
+         :alt: Abstract illustration showing CRUD and aggregation operations
 
    .. tab:: Administer and Manage
       :tabid: administer
 
-      .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
-         :alt: Abstract illustration showing aggregation pipeline stages
+      .. procedure::
+
+         .. step:: Manage Databases and Collections
+
+            View information about databases, create collections or views,
+            or drop databases - all from your shell. See all 
+            :ref:`Database Methods <mongosh-database-methods>`.
+
+            Perform collection operations, create or delete indexes, or 
+            explain queries with :ref:`Collection Methods 
+            <mongosh-collection-methods>`.
+
+         .. step:: Administer Servers
+
+            Manage :ref:`replication <mongosh-replication-methods>` or 
+            :ref:`sharding <mongosh-sharding-methods>` from the comfort 
+            of your shell.
+
+            Check server status with a variety of :ref:`Server Status Methods 
+            <mongosh-server-status-methods>`.
+
+         .. step:: Manage Users and Roles
+
+            Create or update roles, define and update privileges, or drop 
+            roles using :ref:`Role Management Methods 
+            <mongosh-role-management-methods>`.
+
+            Create and update users, authenticate users, and manage user
+            roles with :ref:`User Management Methods 
+            <mongosh-user-management-methods>`. 
+
+      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
+         :alt: Abstract illustration showing a terminal performing operations
 
    .. tab:: Write Scripts
       :tabid: scripts
