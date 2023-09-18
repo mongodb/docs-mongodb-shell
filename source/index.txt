@@ -74,7 +74,7 @@ Access MongoDB From Your Shell
 
             For additional details about connecting to a deployment on Atlas, 
             including how to get the Atlas connection string, refer to 
-            :ref:`Connect to a Database Deployment <atlas-connect-to-deployment>`
+            `Connect to a Database Deployment <https://www.mongodb.com/docs/atlas/connect-to-database-deployment/>`__
             in the Atlas documentation.
 
             For details about connecting to a non-default local port, 
