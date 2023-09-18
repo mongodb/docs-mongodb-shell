@@ -13,13 +13,69 @@ Connect to a Deployment
    :class: singlecol
 
 This page shows how to use the |mdb-shell| to connect to a MongoDB
-deployment.
+deployment. You can connect to a MongoDB Atlas cloud-hosted deployment,
+connect to a local deployment, or connect to another remote host with
+|mdb-shell|.
 
 Prerequisites
 -------------
 
 .. include:: /includes/fact-connect-prereqs.rst
    
+
+Connect to a MongoDB Atlas Deployment
+-------------------------------------
+
+You can connect to your MongoDB Atlas deployment directly from your shell.
+
+.. procedure::
+
+   .. step:: Get your Atlas Connection String
+
+      You need an Atlas connection string to connect from |mdb-shell|.
+      You can get the Atlas connection string in the Atlas UI.
+
+      For a guide that shows how to get the connection string, refer to 
+      `Get Connection String <https://www.mongodb.com/docs/guides/atlas/connection-string/>`__ 
+      in the Atlas guides documentation.
+
+      During this process, you must configure IP access settings and 
+      a database user, if you haven't already done so.
+
+   .. step:: Set Your Database Credentials
+
+      If you haven't already established a database user, you must
+      set a username and password to use to connect to your Atlas
+      cluster. You pass the username with the connection string,
+      and must enter the password when the shell prompts you after 
+      you issue the connect command.
+
+   .. step:: Connect to MongoDB Atlas with ``mongosh``
+
+      Issue the connect command, which is ``mongosh``, followed by 
+      your connection string and options.
+
+      The connection string includes your cluster name, a hash, and 
+      flags for the API version and username you want to use to connect.
+
+      It may resemble something similar to:
+
+      .. code-block:: sh
+
+         mongosh "mongodb+srv://YOUR_CLUSTER_NAME.SOME_HASH.mongodb.net/" --apiVersion 1 --username <username>
+
+   .. step:: Learn More
+
+      This procedure provides details for connecting with the standard connection
+      security options, and assume you have already installed :binary:`~bin.mongosh`.
+      For more information about installing :binary:`~bin.mongosh`, refer to
+      :ref:`mdb-shell-install`.
+
+      For information on connecting with other connection security options, 
+      such as private IP for peering or Private Endpoint connection, refer to 
+      the additional details provided in the 
+      `Atlas Connect via mongosh <https://www.mongodb.com/docs/atlas/mongo-shell-connection/#choose-your-connection-security>`__ 
+      documentation.
 
 Connect to a Local Deployment on the Default Port
 -------------------------------------------------
