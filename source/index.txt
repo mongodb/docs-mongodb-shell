@@ -15,11 +15,100 @@ Welcome to MongoDB Shell (``mongosh``)
 .. introduction::
 
    The |mdb-shell|, ``mongosh``, is a JavaScript and Node.js 16.x |repl| 
-   environment for interacting with MongoDB deployments. Use the |mdb-shell| 
-   to test queries and operations directly with your database.
+   environment for interacting with MongoDB deployments in Atlas, locally,
+   or on another remote host. Use the |mdb-shell| to test queries and 
+   operations directly with your database.
 
-   .. button:: Download :binary:`~bin.mongosh`
+   .. button:: Download ``mongosh``
       :uri: https://www.mongodb.com/try/download/shell?jmp=docs
+
+.. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
+   :alt: Abstract illustration showing a terminal interacting with different systems 
+
+.. kicker:: What You Can Do
+
+Access MongoDB From Your Shell
+------------------------------
+
+.. tabs::
+
+   .. tab:: Connect to MongoDB
+      :tabid: connect
+
+      You can connect to MongoDB in Atlas, connect to a local deployment,
+      or connect to another remote host.
+
+      .. procedure:: Connect to Atlas
+        
+         .. step:: Do this thing
+
+            Here's a step in a procedure.
+
+      .. image:: /images/mongosh-plp/atlas_plp.gif
+         :alt: MongoDB Atlas Connect to your Database image
+
+   .. tab:: Perform CRUD Operations
+      :tabid: crud
+
+      Create, read, update, and delete documents in your database - from 
+      your shell.
+
+      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
+         :alt: Abstract illustration showing a terminal performing CRUD operations
+
+   .. tab:: Run Aggregation Pipelines
+      :tabid: aggregation
+
+      Run aggregation pipelines. Do it!
+
+      .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
+         :alt: Abstract illustration showing aggregation pipeline stages
+
+   .. tab:: Write Scripts
+      :tabid: scripts
+
+      Do programmatic things. It's fun!
+
+      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(4)_Spot.png
+         :alt: Abstract illustration implying a terminal executing scripts
+
+.. kicker:: Learn More
+
+Other Powerful Features
+-----------------------
+
+.. card-group::
+   :columns: 3
+   :style: compact
+
+   .. card::
+      :cta: Unlock the power of Editor Mode
+      :url: https://www.mongodb.com/docs/mongodb-shell/reference/editor-mode/
+      :icon: /images/mongosh-plp/icons/Technical_REALM_CLI10x.png
+      :icon-alt: CLI Icon
+
+      Use an external editor or built-in editor to work with multiline
+      functions. Go beyond the line-oriented :binary:`~bin.mongosh` 
+      default console.
+
+   .. card::
+      :cta: Access Session Logs
+      :url: https://www.mongodb.com/docs/mongodb-shell/logs/
+      :icon: /images/mongosh-plp/icons/Technical_MDB_Shell10x.png
+      :icon-alt: MongoDB Shell Icon
+
+      Access session logs for any session within the last 30 days. Find 
+      the command syntax you can't quite remember, or look for common
+      commands you can script.
+
+   .. card::
+      :cta: View Available Methods
+      :url: https://www.mongodb.com/docs/mongodb-shell/reference/methods/
+      :icon: /images/mongosh-plp/icons/General_ACTION_Develop10x.png
+      :icon-alt: Atlas Functions Icon
+
+      Find out which methods :binary:`~bin.mongosh` supports. Get example
+      syntax and parameter details for supported methods.
 
 .. toctree::
    :titlesonly:
