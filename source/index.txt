@@ -19,7 +19,7 @@ Welcome to MongoDB Shell (``mongosh``)
    or on another remote host. Use the |mdb-shell| to test queries and 
    operations directly with your database.
 
-   .. button:: Download ``mongosh``
+   .. button:: Download mongosh
       :uri: https://www.mongodb.com/try/download/shell?jmp=docs
 
 .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
@@ -88,7 +88,7 @@ Other Powerful Features
       :icon-alt: CLI Icon
 
       Use an external editor or built-in editor to work with multiline
-      functions. Go beyond the line-oriented :binary:`~bin.mongosh` 
+      functions. Go beyond the line-oriented ``mongosh`` 
       default console.
 
    .. card::
@@ -105,9 +105,9 @@ Other Powerful Features
       :cta: View Available Methods
       :url: https://www.mongodb.com/docs/mongodb-shell/reference/methods/
       :icon: /images/mongosh-plp/icons/General_ACTION_Develop10x.png
-      :icon-alt: Atlas Functions Icon
+      :icon-alt: Terminal Icon in a circle
 
-      Find out which methods :binary:`~bin.mongosh` supports. Get example
+      Find out which methods ``mongosh`` supports. Get example
       syntax and parameter details for supported methods.
 
 .. toctree::
