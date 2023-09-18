@@ -25,6 +25,9 @@ Welcome to MongoDB Shell (``mongosh``)
 .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
    :alt: Abstract illustration showing a terminal interacting with different systems 
 
+To learn more about how to download and install the ``mongosh`` binary, 
+and how to add it to your system ``PATH``, refer to :ref:`mdb-shell-install`.
+
 .. kicker:: What You Can Do
 
 Access MongoDB From Your Shell
@@ -190,8 +193,8 @@ Access MongoDB From Your Shell
             You may want to package and distribute your scripts as snippets
             for you and others to use in their projects. 
 
-            Learn more about :ref:`requiring external files and modules 
-            <mongosh-require-external-files-and-modules>` in your scripts. 
+            Learn more about requiring external files and modules in your 
+            scripts: :ref:`requiring external files and modules`. 
 
          .. step:: Code Scoping and Other Considerations
 
