@@ -35,46 +35,11 @@ Access MongoDB From Your Shell
    .. tab:: Connect to MongoDB
       :tabid: connect
 
-      .. procedure:: Connect to MongoDB
-
-         You can connect to MongoDB in Atlas, connect to a local deployment,
-         or connect to another remote host.
-        
-         .. step:: Connect to Atlas
-
-            Here's a step in a procedure.
-
-         .. step:: Connect to a Local Deployment
-
-            Here's a step in a procedure.
-
-         .. step:: Connect to a Remote Host
-
-            Here's a step in a procedure.
-
       .. image:: /images/mongosh-plp/atlas_plp.gif
          :alt: MongoDB Atlas Connect to your Database image
 
    .. tab:: Perform CRUD Operations
       :tabid: crud
-
-      .. procedure:: Crete, Read, Update, and Delete Documents
-
-         .. step:: Create
-
-            Create a document.
-
-         .. step:: Read
-
-            Read a document.
-
-         .. step:: Update
-
-            Update a document.
-
-         .. step:: Delete
-
-            Delete a document.
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
          :alt: Abstract illustration showing a terminal performing CRUD operations
@@ -87,12 +52,6 @@ Access MongoDB From Your Shell
 
    .. tab:: Write Scripts
       :tabid: scripts
-
-     .. procedure:: Write Scripts
-
-        .. step:: Do the thing programmatically.
-
-           Do programmatic things. It's fun!
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(4)_Spot.png
          :alt: Abstract illustration implying a terminal executing scripts
