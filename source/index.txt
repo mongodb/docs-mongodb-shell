@@ -194,7 +194,7 @@ Access MongoDB From Your Shell
             for you and others to use in their projects. 
 
             Learn more about requiring external files and modules in your 
-            scripts: :ref:`requiring external files and modules`. 
+            scripts: :ref:`mongosh-require-external-files-and-modules`. 
 
          .. step:: Code Scoping and Other Considerations
 
