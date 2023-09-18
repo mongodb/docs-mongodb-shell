@@ -105,11 +105,38 @@ Access MongoDB From Your Shell
             in a collection. For more information and examples, refer to 
             :ref:`mongosh-read`.
 
+         .. step:: Update Documents
+
+            :binary:`~bin.mongosh` supports common update opererations, 
+            including:
+
+            - :method:`db.collection.updateOne()`
+            - :method:`db.collection.updateMany()`
+            - :method:`db.collection.replaceOne()`
+
+            For more information and examples, refer to :ref:`mongosh-update`.
+
+         .. step:: Delete Documents
+
+            :binary:`~bin.mongosh` supports common delete opererations, 
+            including:
+
+            - :method:`db.collection.deleteMany()`
+            - :method:`db.collection.deleteOne()`
+
+            For more information and examples, refer to :ref:`mongosh-delete`.
+
+         .. step:: Run Aggregation Pipelines
+
+            You can run aggregation pipelines in :binary:`~bin.mongosh` 
+            using the :method:`db.collection.aggregate()` method. For more 
+            information and examples, refer to :ref:`mdb-shell-aggregation`.
+
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
          :alt: Abstract illustration showing a terminal performing CRUD operations
 
    .. tab:: Administer and Manage
-      :tabid: aggregation
+      :tabid: administer
 
       .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
          :alt: Abstract illustration showing aggregation pipeline stages
