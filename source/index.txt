@@ -195,7 +195,7 @@ Access MongoDB From Your Shell
 
             .. code-block:: sh
 
-               mongosh toISO("06/07/2017")
+               db.clientConnections.find( { connectTime: toISO("06/07/2017") } )
 
             For more information, refer to :ref:`mongosh-write-scripts-config-file`.
 
