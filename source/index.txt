@@ -140,8 +140,8 @@ Access MongoDB From Your Shell
          .. step:: Administer Servers
 
             Manage :ref:`replication <mongosh-replication-methods>` or 
-            :ref:`sharding <mongosh-sharding-methods>` from the comfort 
-            of your shell.
+            :ref:`sharding <mongosh-sharding-methods>` conveniently in 
+            your shell.
 
             Check server status with a variety of :ref:`Server Status Methods 
             <mongosh-server-status-methods>`.
