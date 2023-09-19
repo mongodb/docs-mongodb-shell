@@ -14,15 +14,16 @@ Welcome to MongoDB Shell (``mongosh``)
 
 .. introduction::
 
-   The |mdb-shell|, ``mongosh``, is a JavaScript and Node.js 16.x |repl| 
-   environment for interacting with MongoDB deployments in Atlas, locally,
+   The |mdb-shell|, ``mongosh``, is a JavaScript and Node.js |repl| 
+   environment for interacting with MongoDB deployments in 
+   `Atlas <https://www.mongodb.com/docs/atlas/>`__, locally,
    or on another remote host. Use the |mdb-shell| to test queries and 
-   operations directly with your database.
+   interact with the data in your MongoDB database.
 
    .. button:: Download mongosh
       :uri: https://www.mongodb.com/try/download/shell?jmp=docs
 
-.. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
+.. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
    :alt: Abstract illustration showing a terminal interacting with different systems 
 
 .. kicker:: What You Can Do
@@ -37,49 +38,33 @@ Access MongoDB From Your Shell
 
       .. procedure::
 
-         .. step:: Connect to Atlas
+         .. step:: Find Your Connection String
 
-            You can connect to a MongoDB deployment in Atlas using the 
-            Atlas connection string:
+            Find your connection string. The connection string varies 
+            depending on the type of deployment you're connecting to.
+
+            Learn how to find your connection string on
+            `Atlas <https://www.mongodb.com/docs/manual/reference/connection-string/#find-your-connection-string>`__.
+
+            Or connect to an 
+            `on-premise <https://www.mongodb.com/docs/manual/reference/connection-string/#find-your-self-hosted-deployment-s-connection-string>`__
+            deployment.
+
+         .. step:: Connect to MongoDB
+
+            Connect to a MongoDB deployment in Atlas using the Atlas 
+            connection string:
 
             .. code-block:: sh
 
                mongosh "mongodb+srv://mycluster.abcd1.mongodb.net/myFirstDatabase" --apiVersion 1 --username <username>
 
-         .. step:: Connect to a Local Deployment
+         .. step:: Interact with Your Data
 
-            You can connect to a local deployment on the default port with
-            one simple command:
+            Use your chosen connection type to view your data, import 
+            documents, and run queries.
 
-            .. code-block:: sh
-
-               mongosh
-
-         .. step:: Connect to a Remote Host
-
-            You can connect to a remote host using a connection string that
-            includes the chosen host and port:
-
-            .. code-block:: sh
-
-               mongosh "mongodb://mongodb0.example.com:28015"
-
-            Or you can use the ``--host`` and ``--port`` command-line options:
-
-            .. code-block:: sh
-
-               mongosh --host mongodb0.example.com --port 28015
-
-         .. step:: Learn More
-
-            For additional details about connecting to a deployment on Atlas, 
-            including how to get the Atlas connection string, refer to 
-            `Connect to a Database Deployment <https://www.mongodb.com/docs/atlas/connect-to-database-deployment/>`__
-            in the Atlas documentation.
-
-            For details about connecting to a non-default local port, 
-            connecting with authentication, or other options, refer to 
-            :ref:`mdb-shell-connect`.
+            For more information, refer to :ref:`mdb-shell-crud`.
 
       .. image:: /images/mongosh-plp/atlas_plp.gif
          :alt: MongoDB Atlas Connect to your Database image
@@ -107,7 +92,7 @@ Access MongoDB From Your Shell
 
          .. step:: Update Documents
 
-            :binary:`~bin.mongosh` supports common update opererations, 
+            :binary:`~bin.mongosh` supports common update operations, 
             including:
 
             - :method:`db.collection.updateOne()`
@@ -118,7 +103,7 @@ Access MongoDB From Your Shell
 
          .. step:: Delete Documents
 
-            :binary:`~bin.mongosh` supports common delete opererations, 
+            :binary:`~bin.mongosh` supports common delete operations, 
             including:
 
             - :method:`db.collection.deleteMany()`
@@ -129,7 +114,9 @@ Access MongoDB From Your Shell
          .. step:: Run Aggregation Pipelines
 
             You can run aggregation pipelines in :binary:`~bin.mongosh` 
-            using the :method:`db.collection.aggregate()` method. For more 
+            using the :method:`db.collection.aggregate()` method. 
+            Aggregation pipelines transform your documents into 
+            aggregated results based on the stages you specify. For more 
             information and examples, refer to :ref:`mdb-shell-aggregation`.
 
       .. image:: /images/mongosh-plp/Technical_ACTION_SearchDocument_Thumbnail_BS_Mist.png
@@ -169,38 +156,61 @@ Access MongoDB From Your Shell
             roles with :ref:`User Management Methods 
             <mongosh-user-management-methods>`. 
 
-      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(3)_Spot.png
+      .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(1)_Spot.png
          :alt: Abstract illustration showing a terminal performing operations
 
-   .. tab:: Write Scripts
+   .. tab:: Automate with Scripts
       :tabid: scripts
 
       .. procedure::
 
-         .. step:: Perform Common Functions with Scripts
+         .. step:: Run Scripts for CRUD or Administrative Tasks
 
-            Write scripts for the |mdb-shell| that modify data in MongoDB or
-            perform administrative operations.
+            Write scripts for the |mdb-shell| that perform CRUD or 
+            administrative operations in MongoDB.
+
+            For example, if you have a JS file that seeds synthetic or
+            mock data into MongoDB in your development or staging 
+            environment, run the file with:
+
+            .. code-block:: sh
+
+               mongosh YOUR_JS_FILENAME.js
 
             Explore a tutorial that uses the |mdb-shell| with JavaScript to
             access MongoDB: :ref:`mdb-shell-write-scripts`.
 
-         .. step:: Package and Distribute Snippets
+         .. step:: Create Custom Helper Functions with .mongoshrc
 
-            You may want to package and distribute your scripts as snippets
-            for you and others to use in their projects. 
+            If you often find yourself converting date strings to ISO format
+            for queries, create a function in ``.mongoshrc`` to handle it:
 
-            Learn more about requiring external files and modules in your 
-            scripts: :ref:`mongosh-require-external-files-and-modules`. 
+            .. code-block:: JavaScript
 
-         .. step:: Code Scoping and Other Considerations
+               function toISO(dateString) { 
+                  return new Date(dateString).toISOString(); 
+               }
 
-            Learn more about code scope when your scripts load JavaScript 
-            into :binary:`~bin.mongosh`: :ref:`mongosh-scoping`.
+            Then, call the function in ``mongosh``:
 
-            Or learn how to work with database query results in class 
-            constructor functions, non-async generator functions, or callbacks
-            to ``.sort()`` on an array: :ref:`mongosh-script-considerations`.
+            .. code-block:: sh
+
+               mongosh toISO("06/07/2017")
+
+            For more information, refer to :ref:`mongosh-write-scripts-config-file`.
+
+         .. step:: Use or Publish Snippets
+
+            :ref:`Pull existing snippets <snip-install-packages>` into 
+            your codebase for convenient reuse. Or :ref:`create and share 
+            snippets <snip-create>` for your custom use case.
+
+            For example, you might have a snippet that validates the data
+            you import daily as a cron job. You can publish this snippet 
+            so your development team can access it. Publish to a community
+            registry, or configure a private registry. 
+            
+            For more information, refer to :ref:`snip-reg-config`.
 
       .. image:: /images/mongosh-plp/Technical_SOFTWARE_Terminal(4)_Spot.png
          :alt: Abstract illustration implying a terminal executing scripts
