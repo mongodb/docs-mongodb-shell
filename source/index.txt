@@ -169,7 +169,7 @@ Access MongoDB From Your Shell
 
          .. step:: Run Scripts for CRUD or Administrative Tasks
 
-            Write scripts for the |mdb-shell| that perform CRUD or 
+            Write scripts to run with the |mdb-shell| that perform CRUD or 
             administrative operations in MongoDB.
 
             For example, if you have a JS file that seeds synthetic or
@@ -185,8 +185,11 @@ Access MongoDB From Your Shell
 
          .. step:: Create Custom Helper Functions with .mongoshrc
 
-            If you often find yourself converting date strings to ISO format
-            for queries, create a function in ``.mongoshrc`` to handle it:
+            Repeatedly writing large helper functions in the Shell? Store 
+            them in a :ref:`.mongoshrc config file <mongoshrc-js>`. For 
+            example, if you often find yourself converting date strings to 
+            ISO format for queries, create a function in ``.mongoshrc`` to 
+            handle it:
 
             .. code-block:: JavaScript
 
