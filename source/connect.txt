@@ -77,10 +77,6 @@ You can connect to your MongoDB Atlas deployment directly from your shell.
 
    .. step:: Learn More
 
-      This procedure assumes you have already installed ``mongosh``.
-      For more information about installing ``mongosh``, refer to
-      :ref:`mdb-shell-install`.
-
       You can use other connection security options to connect to Atlas via
       ``mongosh``. For information on connecting with a private 
       IP for peering or a Private Endpoint connection, refer to the 
