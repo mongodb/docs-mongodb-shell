@@ -43,17 +43,20 @@ Access MongoDB From Your Shell
             Find your connection string. The connection string varies 
             depending on the type of deployment you're connecting to.
 
-            Learn how to find your connection string on
+            Learn how to find your connection string for
             `Atlas <https://www.mongodb.com/docs/manual/reference/connection-string/#find-your-connection-string>`__.
 
             Or connect to an 
-            `on-premise <https://www.mongodb.com/docs/manual/reference/connection-string/#find-your-self-hosted-deployment-s-connection-string>`__
+            `self-hosted <https://www.mongodb.com/docs/manual/reference/connection-string/#find-your-self-hosted-deployment-s-connection-string>`__
             deployment.
 
          .. step:: Connect to MongoDB
 
-            Connect to a MongoDB deployment in Atlas using the Atlas 
-            connection string:
+            Connect to a MongoDB deployment using the
+            connection string. 
+            
+            The following connection string connects to 
+            an Atlas deployment:
 
             .. code-block:: sh
 
