@@ -23,8 +23,8 @@ Prerequisites
 
 .. include:: /includes/fact-connect-prereqs.rst
 
-Install
-~~~~~~~
+Install ``mongosh``
+~~~~~~~~~~~~~~~~~~~
 
 These procedures assume you have already installed ``mongosh``. For more 
 information about installing ``mongosh``, refer to 
