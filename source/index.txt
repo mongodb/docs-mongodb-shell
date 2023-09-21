@@ -212,9 +212,9 @@ Access MongoDB From Your Shell
             snippets <snip-create>` for your custom use case.
 
             For example, you might have a snippet that validates the data
-            you import daily as a cron job. You can publish this snippet 
+            you import daily as a cron job. You can publish this snippet, 
             so your development team can access it. Publish to a community
-            registry, or configure a private registry. 
+            registry or configure a private registry. 
             
             For more information, refer to :ref:`snip-reg-config`.
 
@@ -236,7 +236,7 @@ Other Powerful Features
       :icon: /images/mongosh-plp/icons/Technical_REALM_CLI10x.png
       :icon-alt: CLI Icon
 
-      Use an external editor or built-in editor to work with multiline
+      Use an external or built-in editor to work with multiline
       functions. Go beyond the line-oriented ``mongosh`` 
       default console.
 
