@@ -231,7 +231,7 @@ Other Powerful Features
    :style: compact
 
    .. card::
-      :cta: Unlock the power of Editor Mode
+      :cta: Unlock the Power of Editor Mode
       :url: https://www.mongodb.com/docs/mongodb-shell/reference/editor-mode/
       :icon: /images/mongosh-plp/icons/Technical_REALM_CLI10x.png
       :icon-alt: CLI Icon
