@@ -7,11 +7,11 @@ Write Scripts
 .. default-domain:: mongodb
 
 .. facet::
-   :type: genre
+   :name: genre
    :values: tutorial
 
 .. facet::
-   :type: programming_language
+   :name: programming_language
    :values: javascript/typescript
 
 .. meta:: 
