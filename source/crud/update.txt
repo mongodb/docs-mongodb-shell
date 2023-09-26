@@ -6,8 +6,8 @@ Update Documents
 
 .. default-domain:: mongodb
 
-  .. facet::
-   :type: genre
+.. facet::
+   :name: genre
    :values: reference
 
 .. meta:: 
