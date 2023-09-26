@@ -11,7 +11,7 @@ MongoDB Shell (``mongosh``)
 .. default-domain:: mongodb
 
 .. facet::
-   :type: genre
+   :name: genre
    :values: reference
 
 .. contents:: On this page
