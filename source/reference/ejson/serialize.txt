@@ -1,0 +1,185 @@
+.. _mongosh-ejson-serialize:
+
+=================
+EJSON.serialize()
+=================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. include:: /includes/links-urls/ejson.rst
+
+The ``EJSON.serialize()`` method converts a BSON object to an Extended
+JSON string and then reparses the string as a JSON object.
+
+Syntax
+------
+
+The method has this syntax:
+
+.. code-block:: javascript
+   :copyable: false
+
+   EJSON.serialize( object, [ options ] )
+
+Method Fields
+-------------
+
+The method takes these fields:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Necessity
+     - Description
+
+   * - ``object``
+     -  BSON object
+     -  Required
+     -  BSON object to convert. For example, a document array.
+
+   * - ``options``
+     -  string
+     -  Optional
+     -  Modifies the output :ref:`types <mongo-shell-data-type>`. The
+        only option is ``{ relaxed: <boolean> }``.
+ 
+        .. list-table::
+           :header-rows: 1
+           :widths: 30 70
+
+           * - Value
+             - Effect
+
+           * - ``true``
+             - Return JavaScript type.
+
+           * - ``false``
+             - Return BSON type.
+
+Behavior
+--------
+
+You can run ``EJSON.serialize()`` from inside an interactive ``mongosh``
+session or from the system command line using ``--eval``.
+
+To run ``EJSON.serialize()`` from an interactive session: 
+
+.. code-block:: javascript
+   :copyable: false
+
+   EJSON.serialize( object, [ options ] )
+
+To run ``EJSON.serialize()`` from the system command line: 
+
+.. code-block:: shell
+   :copyable: false
+
+   mongosh --eval "EJSON.serialize( object, [ options ] )"
+
+Examples
+--------
+
+Create the ``sales`` collection:
+
+.. code-block:: javascript
+
+   db.sales.insertMany( [ 
+      { custId: 345, purchaseDate: ISODate("2023-07-04"),
+        quantity: 4, cost: Decimal128("100.60") },
+      { custId: 346, purchaseDate: ISODate("2023-07-12"),
+        quantity: 3, cost: Decimal128("175.45") },
+      { custId: 486, purchaseDate: ISODate("2023-08-01"),
+        quantity: 9, cost: Decimal128("200.53") }
+   ] )
+
+Interactive Mongo Shell EJSON.serialize() Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following example retrieves the ``sales`` documents as an array and
+stores the results in ``salesCollection``:
+
+.. code-block:: javascript
+
+   let salesCollection = EJSON.serialize( db.sales.find().toArray() )
+
+The following example outputs the contents of ``salesCollection``:
+
+.. code-block:: javascript
+
+   salesCollection
+
+Example output, which shows the results are a JSON object:
+
+.. code-block:: javascript
+   :copyable: false
+
+   [
+      {
+         _id: { '$oid': '6520519a0dbd2d208a5c7941' },
+         custId: 345,
+         purchaseDate: { '$date': '2023-07-04T00:00:00Z' },
+         quantity: 4,
+         cost: { '$numberDecimal': '100.60' }
+      },
+      {
+         _id: { '$oid': '6520519a0dbd2d208a5c7942' },
+         custId: 346,
+         purchaseDate: { '$date': '2023-07-12T00:00:00Z' },
+         quantity: 3,
+         cost: { '$numberDecimal': '175.45' }
+      },
+      {
+         _id: { '$oid': '6520519a0dbd2d208a5c7943' },
+         custId: 486,
+         purchaseDate: { '$date': '2023-08-01T00:00:00Z' },
+         quantity: 9,
+         cost: { '$numberDecimal': '200.53' }
+      }
+   ]
+
+Command Line Mongo Shell EJSON.serialize() Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To import string data from an external source such as a file or an API
+call, use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
+
+The following example retrieves the ``sales`` collection in a file named
+``sales.json``:
+
+.. code-block:: javascript
+
+   let salesCollection = EJSON.serialize( db.sales.find().toArray() )   
+
+   fs.writeFileSync( 'sales.json', salesCollection ) 
+
+The code creates a file on your local system called ``sales.json``. To
+import the file and create a new collection, exit ``mongosh`` and run an
+``--eval`` operation from the command line. 
+
+.. code-block:: javascript
+
+   # Note: This example is formatted to fit on the page.
+
+   mongosh --quiet \
+           --eval "db.salesFromFile.insertMany( \
+              EJSON.serialize( fs.readFileSync( 'sales.json', 'utf8' ) ) )"
+
+- ``EJSON.serialize()`` takes a string as input. This example uses
+  ``fs.readFileSync()`` to read the ``sale.json`` file as a string. 
+
+- ``EJSON.serialize()`` formats the input string as JSON pairs.
+
+- ``db.salesFromFile.insertMany()`` creates the ``salesFromFile``
+  collection from the JSON pairs.
+
+Learn More
+----------
+
+- |ejsonUrl| documentation
+- Mozilla Developer Network |mdn-json-serialize| documentation
