@@ -149,8 +149,8 @@ Command Line Mongo Shell EJSON.serialize() Example
 To import string data from an external source such as a file or an API
 call, use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
 
-The following example retrieves the ``sales`` collection in a file named
-``sales.json``:
+The following example retrieves the ``sales`` collection and saves the
+results in a file named ``sales.json`` on your computer's file system:
 
 .. code-block:: javascript
 
@@ -158,9 +158,8 @@ The following example retrieves the ``sales`` collection in a file named
 
    fs.writeFileSync( 'sales.json', salesCollection ) 
 
-The code creates a file on your local system called ``sales.json``. To
-import the file and create a new collection, exit ``mongosh`` and run an
-``--eval`` operation from the command line. 
+To import the file and create a new collection, exit ``mongosh`` and run
+an ``--eval`` operation from the command line. 
 
 .. code-block:: javascript
 
