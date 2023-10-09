@@ -15,9 +15,8 @@ EJSON.serialize()
 The ``EJSON.serialize()`` method converts a BSON object to an Extended
 JSON string and then reparses the string as a JSON object.
 
-MongoDB stores data using BSON, but external data transformation tools
-typically use JSON. You can use ``EJSON.serialize()`` to convert BSON to
-JSON.
+MongoDB stores data using BSON. Many external data transformation tools
+use JSON. You can use ``EJSON.serialize()`` to convert BSON to JSON.
 
 Syntax
 ------
@@ -32,7 +31,7 @@ The method has this syntax:
 Method Fields
 -------------
 
-The method takes these fields:
+The method takes the following fields:
 
 .. list-table::
    :header-rows: 1
@@ -69,17 +68,18 @@ The method takes these fields:
 Behavior
 --------
 
-You can run ``EJSON.serialize()`` from inside an interactive ``mongosh``
+You can run ``EJSON.serialize()`` from an interactive ``mongosh``
 session or from the system command line using ``--eval``.
 
-To run ``EJSON.serialize()`` from an interactive ``mongosh`` session: 
+To run ``EJSON.serialize()`` from an interactive ``mongosh`` session,
+use:
 
 .. code-block:: javascript
    :copyable: false
 
    EJSON.serialize( object, [ options ] )
 
-To run ``EJSON.serialize()`` from the system command line: 
+To run ``EJSON.serialize()`` from the system command line, use:
 
 .. code-block:: shell
    :copyable: false
@@ -118,7 +118,7 @@ The following example outputs the contents of ``salesCollection``:
 
    salesCollection
 
-Example output:
+Example output, which uses JSON:
 
 .. code-block:: javascript
    :copyable: false
@@ -150,8 +150,8 @@ Example output:
 Command Line Mongo Shell EJSON.serialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To export data to an external source such as a file or an API call, you
-can use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
+To export data to a file or to return data to an external API method,
+you can use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
 
 The following example retrieves the ``sales`` documents as an array and
 saves the results in a file named ``sales2.json`` on the computer's file
