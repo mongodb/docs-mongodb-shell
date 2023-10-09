@@ -15,6 +15,10 @@ EJSON.serialize()
 The ``EJSON.serialize()`` method converts a BSON object to an Extended
 JSON string and then reparses the string as a JSON object.
 
+MongoDB stores data using BSON, but external data transformation tools
+typically use JSON. You can use ``EJSON.serialize()`` to convert BSON to
+JSON.
+
 Syntax
 ------
 
@@ -41,13 +45,13 @@ The method takes these fields:
    * - ``object``
      -  BSON object
      -  Required
-     -  BSON object to convert. For example, a document array.
+     -  BSON object to convert. For example, an array of documents.
 
    * - ``options``
      -  string
      -  Optional
-     -  Modifies the output :ref:`types <mongo-shell-data-type>`. The
-        only option is ``{ relaxed: <boolean> }``.
+     -  Modifies the output object :ref:`types <mongo-shell-data-type>`.
+        The only option is ``{ relaxed: <boolean> }``.
  
         .. list-table::
            :header-rows: 1
@@ -57,10 +61,10 @@ The method takes these fields:
              - Effect
 
            * - ``true``
-             - Return JavaScript type.
+             - Return JSON object types. This is the default.
 
            * - ``false``
-             - Return BSON type.
+             - Return BSON object types.
 
 Behavior
 --------
@@ -68,7 +72,7 @@ Behavior
 You can run ``EJSON.serialize()`` from inside an interactive ``mongosh``
 session or from the system command line using ``--eval``.
 
-To run ``EJSON.serialize()`` from an interactive session: 
+To run ``EJSON.serialize()`` from an interactive ``mongosh`` session: 
 
 .. code-block:: javascript
    :copyable: false
@@ -102,7 +106,7 @@ Interactive Mongo Shell EJSON.serialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example retrieves the ``sales`` documents as an array and
-stores the results in ``salesCollection``:
+stores the results in the ``salesCollection`` object:
 
 .. code-block:: javascript
 
@@ -114,7 +118,7 @@ The following example outputs the contents of ``salesCollection``:
 
    salesCollection
 
-Example output, which shows the results are a JSON object:
+Example output:
 
 .. code-block:: javascript
    :copyable: false
@@ -146,36 +150,20 @@ Example output, which shows the results are a JSON object:
 Command Line Mongo Shell EJSON.serialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To import string data from an external source such as a file or an API
-call, use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
+To export data to an external source such as a file or an API call, you
+can use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
 
-The following example retrieves the ``sales`` collection and saves the
-results in a file named ``sales.json`` on your computer's file system:
-
-.. code-block:: javascript
-
-   let salesCollection = EJSON.serialize( db.sales.find().toArray() )   
-
-   fs.writeFileSync( 'sales.json', salesCollection ) 
-
-To import the file and create a new collection, exit ``mongosh`` and run
-an ``--eval`` operation from the command line. 
+The following example retrieves the ``sales`` documents as an array and
+saves the results in a file named ``sales2.json`` on the computer's file
+system:
 
 .. code-block:: javascript
 
-   # Note: This example is formatted to fit on the page.
+   # Note: Example is formatted to fit the page.
 
    mongosh --quiet \
-           --eval "db.salesFromFile.insertMany( \
-              EJSON.serialize( fs.readFileSync( 'sales.json', 'utf8' ) ) )"
-
-- ``EJSON.serialize()`` takes a string as input. This example uses
-  ``fs.readFileSync()`` to read the ``sale.json`` file as a string. 
-
-- ``EJSON.serialize()`` formats the input string as JSON pairs.
-
-- ``db.salesFromFile.insertMany()`` creates the ``salesFromFile``
-  collection from the JSON pairs.
+           --eval "EJSON.serialize( db.sales.find().toArray() )" \
+           > sales2.json
 
 Learn More
 ----------
