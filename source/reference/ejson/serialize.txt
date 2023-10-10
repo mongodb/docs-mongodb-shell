@@ -17,7 +17,7 @@ JSON (EJSON) string and then reparses the string as a JSON object.
 
 MongoDB stores data using BSON. Many external data transformation
 applications use JSON. You can use ``EJSON.serialize()`` to convert BSON
-to JSON and save the output for those applications.
+to JSON and save the output for those external applications.
 
 Syntax
 ------
@@ -90,7 +90,7 @@ To run ``EJSON.serialize()`` from the system command line, use:
 Examples
 --------
 
-Create the ``sales`` collection:
+Create the ``sales`` collection for the examples:
 
 .. code-block:: javascript
 
