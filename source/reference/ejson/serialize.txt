@@ -160,6 +160,9 @@ system:
            --eval "EJSON.serialize( db.sales.find().toArray() )" \
            > sales.json
 
+You could use the ``sales.json`` file with an external data
+transformation application.
+
 Learn More
 ----------
 
