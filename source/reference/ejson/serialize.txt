@@ -166,5 +166,6 @@ transformation application.
 Learn More
 ----------
 
+- `EJSON serialize method
+  <https://github.com/mongodb/js-bson#EJSON.serialize>`__
 - |ejsonUrl| documentation
-- Mozilla Developer Network |mdn-json-serialize| documentation
