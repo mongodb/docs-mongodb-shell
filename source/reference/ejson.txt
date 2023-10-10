@@ -33,9 +33,8 @@ to transform BSON data.
        transform ``mongosh`` output.
 
    * - :ref:`EJSON.serialize() <mongosh-ejson-serialize>`
-     - Convert strings to JSON. This method converts an object to an
-       Extended JSON string and then reparses the string as a JavaScript
-       object.
+     - Convert BSON objects to JSON objects. This method is useful to
+       export JSON for external data transformation tools.
 
    * - :ref:`EJSON.parse() <mongosh-ejson-parse>`
      - Convert strings to JSON. This method is useful to transform
