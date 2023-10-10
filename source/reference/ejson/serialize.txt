@@ -111,13 +111,7 @@ stores the results in the ``salesCollection`` object:
 
 .. code-block:: javascript
 
-   let salesCollection = EJSON.serialize( db.sales.find().toArray() )
-
-The following example outputs the ``salesCollection`` contents:
-
-.. code-block:: javascript
-
-   salesCollection
+   salesCollection = EJSON.serialize( db.sales.find().toArray() )
 
 Example output, which uses JSON:
 
