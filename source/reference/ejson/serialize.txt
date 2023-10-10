@@ -13,7 +13,7 @@ EJSON.serialize()
 .. include:: /includes/links-urls/ejson.rst
 
 The ``EJSON.serialize()`` method converts a BSON object to an Extended
-JSON string and then reparses the string as a JSON object.
+JSON (EJSON) string and then reparses the string as a JSON object.
 
 MongoDB stores data using BSON. Many external data transformation tools
 use JSON. You can use ``EJSON.serialize()`` to convert BSON to JSON.
@@ -112,7 +112,7 @@ stores the results in the ``salesCollection`` object:
 
    let salesCollection = EJSON.serialize( db.sales.find().toArray() )
 
-The following example outputs the contents of ``salesCollection``:
+The following example outputs the ``salesCollection`` contents:
 
 .. code-block:: javascript
 
@@ -150,11 +150,11 @@ Example output, which uses JSON:
 Command Line Mongo Shell EJSON.serialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To export data to a file or to return data to an external API method,
-you can use ``EJSON.serialize()`` with the ``mongosh --eval`` method.
+To save collection data to a file, you can use ``EJSON.serialize()``
+with the ``mongosh --eval`` method.
 
 The following example retrieves the ``sales`` documents as an array and
-saves the results in a file named ``sales2.json`` on the computer's file
+saves the results to a file named ``sales.json`` on the computer's file
 system:
 
 .. code-block:: javascript
@@ -163,7 +163,7 @@ system:
 
    mongosh --quiet \
            --eval "EJSON.serialize( db.sales.find().toArray() )" \
-           > sales2.json
+           > sales.json
 
 Learn More
 ----------
