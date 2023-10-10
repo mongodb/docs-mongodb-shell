@@ -13,7 +13,7 @@ EJSON.serialize()
 .. include:: /includes/links-urls/ejson.rst
 
 The ``EJSON.serialize()`` method converts a BSON object to an Extended
-JSON (EJSON) string and then reparses the string as a JSON object.
+JSON string and then reparses the string as a JSON object.
 
 MongoDB stores data using BSON. Many external data transformation
 applications use JSON. You can use ``EJSON.serialize()`` to convert BSON
@@ -154,7 +154,7 @@ system:
 
 .. code-block:: javascript
 
-   # Note: Example is formatted to fit the page.
+   # Note: The example is formatted to fit the page.
 
    mongosh --quiet \
            --eval "EJSON.serialize( db.sales.find().toArray() )" \
