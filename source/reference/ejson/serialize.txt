@@ -15,8 +15,9 @@ EJSON.serialize()
 The ``EJSON.serialize()`` method converts a BSON object to an Extended
 JSON (EJSON) string and then reparses the string as a JSON object.
 
-MongoDB stores data using BSON. Many external data transformation tools
-use JSON. You can use ``EJSON.serialize()`` to convert BSON to JSON.
+MongoDB stores data using BSON. Many external data transformation
+applications use JSON. You can use ``EJSON.serialize()`` to convert BSON
+to JSON and save the output for those applications.
 
 Syntax
 ------

@@ -34,7 +34,7 @@ to transform BSON data.
 
    * - :ref:`EJSON.serialize() <mongosh-ejson-serialize>`
      - Convert BSON objects to JSON objects. This method is useful to
-       save JSON data for external data transformation tools.
+       save JSON data for external data transformation applications.
 
    * - :ref:`EJSON.parse() <mongosh-ejson-parse>`
      - Convert strings to JSON. This method is useful to transform
