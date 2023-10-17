@@ -17,7 +17,7 @@ v2.0.2
 
 *Released October 16, 2023*
 
-- Upgrades to Node.js version 20.8.1. Node 20.8.1 addresses security
+- Upgrades to Node.js version 20.8.1. Node 20.8.1 resolves security
   issues. For more information, see
   `Node.js security releases
   <https://nodejs.org/en/blog/vulnerability/october-2023-security-releases>`__ and 
@@ -26,8 +26,8 @@ v2.0.2
   affects the ``fetch()`` API that is available in ``mongosh`` 2.x.
 
 .. important::
-    ``mongosh`` 1.x does not address the above security issues. Please upgrade to 
-    ``mongosh`` 2.0.2 for improved security. 
+    ``mongosh`` 1.x does not address the security issues in the previous list. 
+    For improved security, upgrade to ``mongosh`` 2.0.2. 
 
 `Full release notes available on JIRA <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=36795>`__.
 
