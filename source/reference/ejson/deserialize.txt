@@ -12,8 +12,8 @@ EJSON.deserialize()
 
 .. include:: /includes/links-urls/ejson.rst
 
-The ``EJSON.deserialize()`` method converts Extended JSON
-objects to JavaScript objects.
+The ``EJSON.deserialize()`` method converts Extended JSON objects to
+JavaScript objects.
 
 Syntax
 ------
@@ -116,25 +116,25 @@ Example output, which uses JSON:
 
    [
       {
-         _id: { '$oid': '6520519a0dbd2d208a5c7941' },
+         _id: '6520519a0dbd2d208a5c7941',
          custId: 345,
-         purchaseDate: { '$date': '2023-07-04T00:00:00Z' },
+         purchaseDate: '2023-07-04T00:00:00.000Z',
          quantity: 4,
-         cost: { '$numberDecimal': '100.60' }
+         cost: Decimal128("100.60")
       },
       {
-         _id: { '$oid': '6520519a0dbd2d208a5c7942' },
+         _id: '6520519a0dbd2d208a5c7942',
          custId: 346,
-         purchaseDate: { '$date': '2023-07-12T00:00:00Z' },
+         purchaseDate: '2023-07-12T00:00:00.000Z',
          quantity: 3,
-         cost: { '$numberDecimal': '175.45' }
+         cost: Decimal128("175.45")
       },
       {
-         _id: { '$oid': '6520519a0dbd2d208a5c7943' },
+         _id: '6520519a0dbd2d208a5c7943',
          custId: 486,
-         purchaseDate: { '$date': '2023-08-01T00:00:00Z' },
+         purchaseDate: '2023-08-01T00:00:00.000Z',
          quantity: 9,
-         cost: { '$numberDecimal': '200.53' }
+         cost: Decimal128("200.53")
       }
    ]
 
@@ -155,9 +155,6 @@ system:
    mongosh --quiet \
            --eval "EJSON.deserialize( db.sales.find().toArray() )" \
            > sales.json
-
-You could then use the ``sales.json`` file with an external data
-transformation application.
 
 Learn More
 ----------
