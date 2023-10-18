@@ -156,6 +156,30 @@ system:
            --eval "EJSON.deserialize( db.sales.find().toArray() )" \
            > sales.json
 
+
+   let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
+
+   fs.writeFileSync( 'sales3.json', salesCollection ) 
+
+
+   ./mongosh --quiet \
+           --eval "db.salesFromFile.insertMany( \
+              EJSON.deserialize( fs.readFileSync( 'sales3.json', 'utf8' ) ) )" \
+     --port 27001
+
+
+   MongoInvalidArgumentError: Argument "docs" must be an array of documents
+
+
+   let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
+
+   fs.writeFileSync( 'sales4.json', salesCollection ) 
+
+   ./mongosh --quiet \
+           --eval "db.salesFromFile.insertMany( \
+              EJSON.deserialize( fs.readFileSync( 'sales4.json', 'utf8' ) ) )" \
+     --port 27001
+
 Learn More
 ----------
 
