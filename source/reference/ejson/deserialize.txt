@@ -91,12 +91,12 @@ Create the ``sales`` collection for the examples:
 .. code-block:: javascript
 
    db.sales.insertMany( [ 
-      { custId: 345, purchaseDate: ISODate("2023-07-04"),
-        quantity: 4, cost: Decimal128("100.60") },
-      { custId: 346, purchaseDate: ISODate("2023-07-12"),
-        quantity: 3, cost: Decimal128("175.45") },
-      { custId: 486, purchaseDate: ISODate("2023-08-01"),
-        quantity: 9, cost: Decimal128("200.53") }
+      { custId: 345, purchaseDate: ISODate( "2023-07-04" ),
+        quantity: 4, cost: Decimal128( "100.60" ) },
+      { custId: 346, purchaseDate: ISODate( "2023-07-12" ),
+        quantity: 3, cost: Decimal128( "175.45" ) },
+      { custId: 486, purchaseDate: ISODate( "2023-08-01" ),
+        quantity: 9, cost: Decimal128( "200.53" ) }
    ] )
 
 Interactive Mongo Shell EJSON.deserialize() Example
