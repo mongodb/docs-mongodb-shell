@@ -28,6 +28,11 @@ to transform BSON data.
    * - EJSON Method
      - Use
 
+   * - :ref:`EJSON.deserialize() <mongosh-ejson-deserialize>`
+     - Convert BSON objects to Extended JSON representation as
+       JavaScript objects. This method is useful to export JSON data for
+       external data transformation applications.
+
    * - :ref:`EJSON.stringify() <mongosh-ejson-stringify>`
      - Convert BSON objects to strings. This method is useful to
        transform ``mongosh`` output.
@@ -52,6 +57,7 @@ Learn More
 .. toctree::
    :titlesonly:
 
+   /reference/ejson/deserialize
    /reference/ejson/parse
    /reference/ejson/serialize
    /reference/ejson/stringify
