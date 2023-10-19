@@ -4,6 +4,10 @@
 EJSON.deserialize()
 ===================
 
+.. facet::
+   :name: genre
+   :values: reference
+
 .. contents:: On this page
    :local:
    :backlinks: none
@@ -145,36 +149,26 @@ To save collection data to a file, you can use ``EJSON.deserialize()``
 with the ``mongosh --eval`` method.
 
 The following example retrieves the ``sales`` documents as an array and
-saves the results to a file named ``sales.json`` on the computer's file
-system:
+saves the results to a file named ``salesDeserialize.json`` on the
+computer's file system:
 
 .. code-block:: javascript
 
+   let salesCollection = EJSON.stringify( db.sales.find().toArray() )   
+
+   fs.writeFileSync( 'salesDeserialize.json', salesCollection ) 
+
+To import the ``salesDeserialize.json`` file and create a new collection
+named ``salesFromDeserializeFile``, exit ``mongosh`` and then run this
+example from the command line:
+
+.. code-block:: sh
+
    # Note: The example is formatted to fit the page.
 
-   mongosh --quiet \
-           --eval "EJSON.deserialize( db.sales.find().toArray() )" \
-           > salesDeserialize.json
 
-
-   let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
-
-   fs.writeFileSync( 'sales3.json', salesCollection ) 
-
-
-   ./mongosh --quiet \
-           --eval "db.salesFromFile.insertOne( \
-              EJSON.deserialize( fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) )" \
-     --port 27001
-
-   let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
-
-   fs.writeFileSync( 'sales4.json', salesCollection ) 
-
-   ./mongosh --quiet \
-           --eval "db.salesFromFile.insertMany( \
-              EJSON.deserialize( fs.readFileSync( 'sales4.json', 'utf8' ) ) )" \
-     --port 27001
+You can use a similar example to import files from external
+applications.
 
 Learn More
 ----------
