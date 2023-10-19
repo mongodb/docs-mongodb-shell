@@ -166,6 +166,8 @@ example from the command line:
 
    # Note: The example is formatted to fit the page.
 
+   mongosh --quiet --eval "db.salesFromDeserializeFile.insertOne( \
+      EJSON.deserialize( fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) )"
 
 You can use a similar example to import files from external
 applications.
