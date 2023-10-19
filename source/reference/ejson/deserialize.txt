@@ -154,7 +154,7 @@ system:
 
    mongosh --quiet \
            --eval "EJSON.deserialize( db.sales.find().toArray() )" \
-           > sales.json
+           > salesDeserialize.json
 
 
    let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
@@ -163,8 +163,8 @@ system:
 
 
    ./mongosh --quiet \
-           --eval "db.salesFromFile.insertMany( \
-              EJSON.deserialize( fs.readFileSync( 'sales3.json', 'utf8' ) ) )" \
+           --eval "db.salesFromFile.insertOne( \
+              EJSON.deserialize( fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) )" \
      --port 27001
 
    let salesCollection = EJSON.stringify( db.sales.find().toArray(), null )   
