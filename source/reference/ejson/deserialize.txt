@@ -150,7 +150,7 @@ Command Line Mongo Shell EJSON.deserialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following sections show how to create an example file and then
-import the file with an example that uses ``EJSON.deserialize()``.
+import the file with an ``EJSON.deserialize()`` example.
 
 Create the Example File
 ```````````````````````
@@ -183,7 +183,7 @@ example from the command line:
 In the example:
 
 - ``fs.readFileSync()`` reads the ``salesDeserialize.json`` file and
-  interprets the content as ``utf8`` Unicode characters.
+  interprets the content as ``utf8`` Unicode character strings.
 
 - ``JSON.parse()`` converts the strings read from the file to JSON.
 
