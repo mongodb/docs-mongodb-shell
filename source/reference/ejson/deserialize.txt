@@ -19,10 +19,6 @@ EJSON.deserialize()
 The ``EJSON.deserialize()`` method converts Extended JSON objects to
 JavaScript objects.
 
-Many external data transformation applications use Extended JSON. You
-can use ``EJSON.deserialize()`` to import Extended JSON data from
-external applications into MongoDB.
-
 Syntax
 ------
 
