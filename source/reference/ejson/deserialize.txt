@@ -19,6 +19,10 @@ EJSON.deserialize()
 The ``EJSON.deserialize()`` method converts Extended JSON objects to
 JavaScript objects.
 
+Many external data transformation applications use Extended JSON. You
+can use ``EJSON.deserialize()`` to import Extended JSON data from
+external applications into MongoDB.
+
 Syntax
 ------
 
@@ -145,6 +149,12 @@ Example output:
 Command Line Mongo Shell EJSON.deserialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The following sections show how to create an example file and then
+import the file with an example that uses ``EJSON.deserialize()``.
+
+Create the Example File
+```````````````````````
+
 The following example retrieves the ``sales`` documents as an array and
 saves the results to a file named ``salesDeserialize.json`` on the
 computer's file system:
@@ -154,6 +164,9 @@ computer's file system:
    let salesCollection = EJSON.stringify( db.sales.find().toArray() )   
 
    fs.writeFileSync( 'salesDeserialize.json', salesCollection ) 
+
+Import the Example File from the Command Line
+`````````````````````````````````````````````
 
 To import the ``salesDeserialize.json`` file and create a new collection
 named ``salesFromDeserializeFile``, exit ``mongosh`` and then run this
@@ -165,11 +178,18 @@ example from the command line:
 
    mongosh --quiet  --eval "db.salesFromDeserializeFile.insertMany( \
       EJSON.deserialize( JSON.parse ( \
-      fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) ) ) "
+      fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) ) )"
 
-The :ref:`JSON.parse() <mongosh-ejson-parse>` method converts the file
-contents to JSON.
+In the example:
 
+- ``fs.readFileSync()`` reads the file contents as ``utf8`` strings.
+
+- ``JSON.parse()`` converts the file contents to JSON.
+
+- ``EJSON.deserialize()`` outputs JSON pairs.
+
+- ``db.salesFromDeserializeFile.insertMany()`` creates and populates the
+  collection using the JSON pairs.
 
 Learn More
 ----------
