@@ -182,14 +182,15 @@ example from the command line:
 
 In the example:
 
-- ``fs.readFileSync()`` reads the file contents as ``utf8`` strings.
+- ``fs.readFileSync()`` reads the ``salesDeserialize.json`` file and
+  interprets the content as ``utf8`` Unicode characters.
 
-- ``JSON.parse()`` converts the file contents to JSON.
+- ``JSON.parse()`` converts the strings read from the file to JSON.
 
 - ``EJSON.deserialize()`` outputs JSON pairs.
 
 - ``db.salesFromDeserializeFile.insertMany()`` creates and populates the
-  collection using the JSON pairs.
+  ``salesFromDeserializeFile`` collection using the JSON pairs.
 
 Learn More
 ----------
