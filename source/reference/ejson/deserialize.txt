@@ -95,12 +95,12 @@ Create the ``sales`` collection for the examples:
 .. code-block:: javascript
 
    db.sales.insertMany( [ 
-      { custId: 345, purchaseDate: ISODate( "2023-07-04" ),
-        quantity: 4, cost: Decimal128( "100.60" ) },
-      { custId: 346, purchaseDate: ISODate( "2023-07-12" ),
-        quantity: 3, cost: Decimal128( "175.45" ) },
-      { custId: 486, purchaseDate: ISODate( "2023-08-01" ),
-        quantity: 9, cost: Decimal128( "200.53" ) }
+      { custId: 345, purchaseDate: ISODate("2023-07-04"),
+        quantity: 4, cost: Decimal128("100.60") },
+      { custId: 346, purchaseDate: ISODate("2023-07-12"),
+        quantity: 3, cost: Decimal128("175.45") },
+      { custId: 486, purchaseDate: ISODate("2023-08-01"),
+        quantity: 9, cost: Decimal128("200.53") }
    ] )
 
 Interactive Mongo Shell EJSON.deserialize() Example
@@ -113,7 +113,7 @@ stores the results in the ``salesCollection`` object:
 
    salesCollection = EJSON.deserialize( db.sales.find().toArray() )
 
-Example output, which uses JSON:
+Example output:
 
 .. code-block:: javascript
    :copyable: false
@@ -145,9 +145,6 @@ Example output, which uses JSON:
 Command Line Mongo Shell EJSON.deserialize() Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To save collection data to a file, you can use ``EJSON.deserialize()``
-with the ``mongosh --eval`` method.
-
 The following example retrieves the ``sales`` documents as an array and
 saves the results to a file named ``salesDeserialize.json`` on the
 computer's file system:
@@ -166,8 +163,8 @@ example from the command line:
 
    # Note: The example is formatted to fit the page.
 
-   mongosh --quiet --eval "db.salesFromDeserializeFile.insertOne( \
-      EJSON.deserialize( fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) )"
+   mongosh --quiet  --eval "db.salesFromDeserializeFile.insertMany( \
+      EJSON.deserialize( JSON.parse ( fs.readFileSync( 'salesDeserialize.json', 'utf8' ) ) ) ) "
 
 You can use a similar example to import files from external
 applications.
