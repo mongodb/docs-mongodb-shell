@@ -24,6 +24,7 @@ to transform BSON data.
 
 .. list-table::
    :header-rows: 1
+   :widths: 30, 70
 
    * - EJSON Method
      - Use
