@@ -92,10 +92,10 @@ To run ``EJSON.deserialize()`` from the system command line, use:
 
    mongosh --eval "EJSON.deserialize( object, [ options ] )"
 
-Examples
---------
+Example
+-------
 
-Create the ``sales`` collection for the examples:
+Create the ``sales`` collection:
 
 .. code-block:: javascript
 
