@@ -154,9 +154,9 @@ In the example:
 
 .. note::
 
-   For the previous example, you could use ``EJSON.parse()``, which is a
-   simpler approach. The previous example that uses ``JSON.parse()`` and
-   ``EJSON.deserialize()`` provides more flexibility.
+   You could use ``EJSON.parse()`` in the previous example, which is a
+   simpler approach. ``JSON.parse()`` and ``EJSON.deserialize()``
+   provide more flexibility.
 
 Learn More
 ----------
