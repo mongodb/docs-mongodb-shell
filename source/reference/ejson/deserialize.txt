@@ -150,7 +150,7 @@ In the example:
 
 - ``db.salesFromDeserializeFile.insertMany()`` creates and populates the
   ``salesFromDeserializeFile`` collection using the JSON returned by
-  from ``EJSON.deserialize()``.
+  ``EJSON.deserialize()``.
 
 .. note::
 
