@@ -30,7 +30,7 @@ to transform BSON data.
      - Use
 
    * - :ref:`EJSON.deserialize() <mongosh-ejson-deserialize>`
-     - Convert Extended JSON objects to JavaScript objects. This method
+     - Convert Extended JSON objects to BSON objects. This method
        is useful to import JSON data from external applications.
 
    * - :ref:`EJSON.stringify() <mongosh-ejson-stringify>`

@@ -21,7 +21,7 @@ EJSON.deserialize()
 .. include:: /includes/links-urls/ejson.rst
 
 The ``EJSON.deserialize()`` method converts Extended JSON objects to
-JavaScript objects.
+BSON objects.
 
 Syntax
 ------
@@ -65,7 +65,8 @@ The method takes the following fields:
              - Description
 
            * - ``true``
-             - Return JSON object types. Default is ``true``.
+             - Return plain JavaScript object types. Default is
+               ``true``.
 
            * - ``false``
              - Return BSON object types.
@@ -107,53 +108,11 @@ Create the ``sales`` collection for the examples:
         quantity: 9, cost: Decimal128("200.53") }
    ] )
 
-Interactive Mongo Shell EJSON.deserialize() Example
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The following example retrieves the ``sales`` documents as an array and
-stores the results in the ``salesCollection`` object:
-
-.. code-block:: javascript
-
-   salesCollection = EJSON.deserialize( db.sales.find().toArray() )
-
-Example output:
-
-.. code-block:: javascript
-   :copyable: false
-
-   [
-      {
-         _id: '6520519a0dbd2d208a5c7941',
-         custId: 345,
-         purchaseDate: '2023-07-04T00:00:00.000Z',
-         quantity: 4,
-         cost: Decimal128("100.60")
-      },
-      {
-         _id: '6520519a0dbd2d208a5c7942',
-         custId: 346,
-         purchaseDate: '2023-07-12T00:00:00.000Z',
-         quantity: 3,
-         cost: Decimal128("175.45")
-      },
-      {
-         _id: '6520519a0dbd2d208a5c7943',
-         custId: 486,
-         purchaseDate: '2023-08-01T00:00:00.000Z',
-         quantity: 9,
-         cost: Decimal128("200.53")
-      }
-   ]
-
-Command Line Mongo Shell EJSON.deserialize() Example
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 The following sections show how to create an example file and then
 import the file with an ``EJSON.deserialize()`` example.
 
 Create the Example File
-```````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example retrieves the ``sales`` documents as an array and
 saves the results to a file named ``salesDeserialize.json`` on the
@@ -166,7 +125,7 @@ computer's file system:
    fs.writeFileSync( 'salesDeserialize.json', salesCollection ) 
 
 Import the Example File from the Command Line
-`````````````````````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To import the ``salesDeserialize.json`` file and create a new collection
 named ``salesFromDeserializeFile``, exit ``mongosh`` and then run this
@@ -191,6 +150,12 @@ In the example:
 
 - ``db.salesFromDeserializeFile.insertMany()`` creates and populates the
   ``salesFromDeserializeFile`` collection using the JSON pairs.
+
+.. note::
+
+   For the previous example, you could use ``EJSON.parse()``, which is a
+   simpler approach. The previous example that uses ``JSON.parse()`` and
+   ``EJSON.deserialize()`` provides more flexibility.
 
 Learn More
 ----------
