@@ -146,10 +146,11 @@ In the example:
 
 - ``JSON.parse()`` converts the strings read from the file to JSON.
 
-- ``EJSON.deserialize()`` outputs JSON pairs.
+- ``EJSON.deserialize()`` outputs JSON.
 
 - ``db.salesFromDeserializeFile.insertMany()`` creates and populates the
-  ``salesFromDeserializeFile`` collection using the JSON pairs.
+  ``salesFromDeserializeFile`` collection using the JSON returned by
+  from ``EJSON.deserialize()``.
 
 .. note::
 
