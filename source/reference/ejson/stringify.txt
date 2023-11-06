@@ -49,6 +49,8 @@ The ``EJSON.stringify()`` method has these fields:
      -  Modifies output. If the value exists but it is not an array or a
         function, ``EJSON.stringify()`` returns all document fields. 
  
+        ``replacer`` can be a function or an array.
+
         .. list-table::
            :header-rows: 1
            :widths: 30 70
@@ -57,13 +59,20 @@ The ``EJSON.stringify()`` method has these fields:
              - Effect
 
            * - array
-             - An array of document fields to include in the output
+             - An array of document fields to include in the output. The
+               array elements must specify the field names to include in
+               the returned JSON string.
 
            * - function
              - A function that takes two parameters, ``key`` and
                ``value``. ``key`` provides the function's ``this``
-               context. EJSON returns the transformed ``value``. See
-               below for an :ref:`example <ex-ejson-function>`   
+               context. EJSON returns the transformed ``value``.
+               
+               The function is called for each object to transform by
+               ``EJSON.stringify()``. The object values are replaced
+               with the function return value.
+               
+               For an example, see :ref:`ex-ejson-function`.
 
    * - ``spacer``
      -  integer or string
@@ -209,7 +218,7 @@ Use a Function to Transform Output Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To transform field values, use a JavaScript function to set the
-``replace`` option.
+``replacer`` option. For example:
 
 .. code-block:: javascript
 
@@ -229,7 +238,10 @@ To transform field values, use a JavaScript function to set the
 
 The function runs recursively against the input object.
 
+Example output:
+
 .. code-block:: javascript
+   :copyable: false
 
    [
       {
@@ -272,6 +284,49 @@ The ``replacer`` function updates two fields, ``_id`` and ``quantity``.
 The function also modifies the ``quantity`` field in the output string.
 All of the ``quantity`` values are multiplied by two in the output
 string. ``EJSON.stringify()`` does not update the collection.
+
+Use a Function to Transform Output Fields in Nested Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create the ``salesWithAddress`` collection with nested addresses:
+
+.. code-block:: javascript
+
+   db.salesWithAddress.insertMany( [ 
+      { custId: 345, purchaseDate: ISODate("2023-07-04"),
+        quantity: 4, cost: Decimal128("100.60"),
+        address: { number: 100, street: "Main Street", ZIP: 12345 } },
+      { custId: 346, purchaseDate: ISODate("2023-07-12"),
+        quantity: 3, cost: Decimal128("175.45"),
+        address: { number: 200, street: "East Street", ZIP: 12345 } },
+      { custId: 486, purchaseDate: ISODate("2023-08-01"),
+        quantity: 9, cost: Decimal128("200.53"),
+        address: { number: 300, street: "West Street", ZIP: 12345 } }
+   ] )
+
+To transform field values, use a JavaScript function to set the
+``replacer`` option. The following example changes the ZIP codes for
+the addresses to ``55555``:
+
+.. code-block:: javascript
+
+   let queryResults = db.salesWithAddress.find().toArray()
+   let replacer = function( key, value ) {
+      if (key === 'address') {
+         value.ZIP = 55555;
+      }
+      return value; 
+   }
+
+   EJSON.stringify( queryResults, replacer, 3 )
+
+The function runs recursively for the input objects.
+
+Example output:
+
+.. code-block:: javascript
+   :copyable: false
+
 
 Write to a File from Inside mongosh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
