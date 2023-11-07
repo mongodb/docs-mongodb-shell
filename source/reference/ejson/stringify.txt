@@ -49,7 +49,7 @@ The ``EJSON.stringify()`` method has these fields:
      -  Modifies output. If the value exists but it is not an array or a
         function, ``EJSON.stringify()`` returns all document fields. 
  
-        ``replacer`` can be a function or an array.
+        ``replacer`` can be an array or a function.
 
         .. list-table::
            :header-rows: 1
