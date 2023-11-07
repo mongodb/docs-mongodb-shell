@@ -372,7 +372,7 @@ For a list of BSON data types and their corresponding numeric codes, see
 :manual:`BSON Types </reference/bson-types>`.
 
 The following example uses a ``replacer`` function to replace BSON
-strings with the string ``"This was a string"``:
+strings with the string ``"This is a string"``:
 
 .. code-block:: javascript
 
@@ -383,7 +383,7 @@ strings with the string ``"This was a string"``:
    // Define a replacer function that removes strings
    let replacer = function( key, value ) {
       if (typeof value === "string") {
-         return "This was a string";
+         return "This is a string";
       }
       return value; 
    }
@@ -399,37 +399,37 @@ Example output:
    [
       {
          "_id": {
-            "$oid": "This was a string"
+            "$oid": "This is a string"
          },
          "custId": 345,
          "purchaseDate": {
-            "$date": "This was a string"
+            "$date": "This is a string"
          },
          "quantity": 4,
          "cost": {
-            "$numberDecimal": "This was a string"
+            "$numberDecimal": "This is a string"
          },
          "address": {
             "number": 100,
-            "street": "This was a string",
+            "street": "This is a string",
             "ZIP": 12345
          }
       },
       {
          "_id": {
-            "$oid": "This was a string"
+            "$oid": "This is a string"
          },
          "custId": 346,
          "purchaseDate": {
-            "$date": "This was a string"
+            "$date": "This is a string"
          },
          "quantity": 3,
          "cost": {
-            "$numberDecimal": "This was a string"
+            "$numberDecimal": "This is a string"
          },
          "address": {
             "number": 200,
-            "street": "This was a string",
+            "street": "This is a string",
             "ZIP": 12345
          }
       }
