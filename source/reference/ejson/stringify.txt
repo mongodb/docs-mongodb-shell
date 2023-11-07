@@ -68,9 +68,8 @@ The ``EJSON.stringify()`` method has these fields:
                ``value``. ``key`` provides the function's ``this``
                context. EJSON returns the transformed ``value``.
                
-               The function is called for each object to transform by
-               ``EJSON.stringify()``. The object values are replaced
-               with the function return value.
+               The function is run for each object. The object
+               values are replaced with the function's return value.
                
                For an example, see :ref:`ex-ejson-function`.
 
