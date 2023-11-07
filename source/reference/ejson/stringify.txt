@@ -387,7 +387,7 @@ strings with the string ``"This is a string"``:
       return value; 
    }
  
-   // Run EJSON.stringify() to remove the strings from queryResults
+   // Run EJSON.stringify() to replace the strings in queryResults
    EJSON.stringify( queryResults, replacer, 3 )
 
 Example output:
