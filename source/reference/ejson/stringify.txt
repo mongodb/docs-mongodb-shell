@@ -310,7 +310,8 @@ the addresses to ``55555``:
 
 .. code-block:: javascript
 
-   // Retrieve the salesWithAddress contents as an array
+   // Retrieve the salesWithAddress contents as an array and save
+   // in queryResults
    let queryResults = db.salesWithAddress.find().toArray()
 
    // Define a replacer function that changes the ZIP codes
@@ -321,7 +322,7 @@ the addresses to ``55555``:
       return value; 
    }
 
-   // Run EJSON.stringify() to change the ZIP codes in the query results
+   // Run EJSON.stringify() to change the ZIP codes in queryResults
    EJSON.stringify( queryResults, replacer, 3 )
 
 The replacer function runs recursively for the input objects.
@@ -337,7 +338,11 @@ Use a Function to Remove Fields that Match a String Type
 
 .. code-block:: javascript
 
+   // Retrieve the salesWithAddress contents as an array and save
+   // in queryResults
    let queryResults = db.salesWithAddress.find().toArray()
+
+   // Define a replacer function that removes strings
    let replacer = function( key, value ) {
       if (typeof value === "string") {
          return undefined;
@@ -345,6 +350,7 @@ Use a Function to Remove Fields that Match a String Type
       return value; 
    }
  
+   // Run EJSON.stringify() to remove the strings from queryResults
    EJSON.stringify( queryResults, replacer, 3 )
 
 Write to a File from Inside mongosh
