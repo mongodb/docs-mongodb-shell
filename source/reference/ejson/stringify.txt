@@ -367,7 +367,7 @@ Example output:
 Use a Function to Replace BSON Strings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For a list of BSON data types and their corresponding numeric codes, see
+For a list of BSON data types and the corresponding numeric codes, see
 :manual:`BSON Types </reference/bson-types>`.
 
 The following example uses a ``replacer`` function to replace BSON
