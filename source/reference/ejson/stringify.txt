@@ -301,9 +301,8 @@ Create the ``salesWithAddress`` collection with nested addresses:
         address: { number: 200, street: "East Street", ZIP: 12345 } }
    ] )
 
-To transform field values, use a JavaScript function to set the
-``replacer`` option. The following example changes the ZIP codes for
-the addresses to ``55555``:
+The following example uses a ``replacer`` function to change the ZIP
+codes for the addresses to ``55555``:
 
 .. code-block:: javascript
 
@@ -321,8 +320,6 @@ the addresses to ``55555``:
 
    // Run EJSON.stringify() to change the ZIP codes in queryResults
    EJSON.stringify( queryResults, replacer, 3 )
-
-The replacer function runs recursively for the input objects.
 
 Example output:
 
@@ -371,13 +368,11 @@ Example output:
 Use a Function to Remove Fields that Match a BSON String Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To transform field values, use a JavaScript function to set the
-``replacer`` option.
-
 For a list of BSON data types and their corresponding numeric codes, see
 :manual:`BSON Types </reference/bson-types>`.
 
-The following example removes BSON strings:
+The following example uses a ``replacer`` function to replace BSON
+strings with the string ``"This was a string"``:
 
 .. code-block:: javascript
 
@@ -389,9 +384,6 @@ The following example removes BSON strings:
    let replacer = function( key, value ) {
       if (typeof value === "string") {
          return "This was a string";
-      }
-      if (typeof value === "date") {
-         return "This was a date";
       }
       return value; 
    }
@@ -406,24 +398,38 @@ Example output:
 
    [
       {
-         "_id": {},
+         "_id": {
+            "$oid": "This was a string"
+         },
          "custId": 345,
-         "purchaseDate": {},
+         "purchaseDate": {
+            "$date": "This was a string"
+         },
          "quantity": 4,
-         "cost": {},
+         "cost": {
+            "$numberDecimal": "This was a string"
+         },
          "address": {
             "number": 100,
+            "street": "This was a string",
             "ZIP": 12345
          }
       },
       {
-         "_id": {},
+         "_id": {
+            "$oid": "This was a string"
+         },
          "custId": 346,
-         "purchaseDate": {},
+         "purchaseDate": {
+            "$date": "This was a string"
+         },
          "quantity": 3,
-         "cost": {},
+         "cost": {
+            "$numberDecimal": "This was a string"
+         },
          "address": {
             "number": 200,
+            "street": "This was a string",
             "ZIP": 12345
          }
       }
