@@ -309,7 +309,7 @@ codes for the addresses to ``55555``:
    // in queryResults
    let queryResults = db.salesWithAddress.find().toArray()
 
-   // Define a replacer function that changes the ZIP codes
+   // Define a replacer function to change the ZIP codes
    let replacer = function( key, value ) {
       if (key === 'address') {
          value.ZIP = 55555;
@@ -370,7 +370,7 @@ Use a Function to Replace BSON Strings
 For a list of BSON data types and the corresponding numeric codes, see
 :manual:`BSON Types </reference/bson-types>`.
 
-The following example uses a ``replacer`` function to replace BSON
+The following example uses a ``replacer`` function to replace the BSON
 strings with the string ``"This is a string"``:
 
 .. code-block:: javascript
@@ -379,7 +379,7 @@ strings with the string ``"This is a string"``:
    // in queryResults
    let queryResults = db.salesWithAddress.find().toArray()
 
-   // Define a replacer function that removes strings
+   // Define a replacer function to replace the strings
    let replacer = function( key, value ) {
       if (typeof value === "string") {
          return "This is a string";
