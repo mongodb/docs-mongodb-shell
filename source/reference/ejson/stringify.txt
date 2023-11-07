@@ -310,7 +310,10 @@ the addresses to ``55555``:
 
 .. code-block:: javascript
 
+   // Retrieve the salesWithAddress contents as an array
    let queryResults = db.salesWithAddress.find().toArray()
+
+   // Define a replacer function that changes the ZIP codes
    let replacer = function( key, value ) {
       if (key === 'address') {
          value.ZIP = 55555;
@@ -318,15 +321,31 @@ the addresses to ``55555``:
       return value; 
    }
 
+   // Run EJSON.stringify() to change the ZIP codes in the query results
    EJSON.stringify( queryResults, replacer, 3 )
 
-The function runs recursively for the input objects.
+The replacer function runs recursively for the input objects.
 
 Example output:
 
 .. code-block:: javascript
    :copyable: false
 
+
+Use a Function to Remove Fields that Match a String Type
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+   let queryResults = db.salesWithAddress.find().toArray()
+   let replacer = function( key, value ) {
+      if (typeof value === "string") {
+         return undefined;
+      }
+      return value; 
+   }
+ 
+   EJSON.stringify( queryResults, replacer, 3 )
 
 Write to a File from Inside mongosh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
