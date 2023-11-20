@@ -11,6 +11,7 @@ Install ``mongosh``
    :values: tutorial
 
 .. meta:: 
+   :description: Prerequisites, compatibility issues, and how to install mongosh, the MongoDB shell.
    :keywords: server, atlas
 
 .. contents:: On this page

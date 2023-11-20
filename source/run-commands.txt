@@ -11,6 +11,7 @@ Run Commands
    :values: reference
 
 .. meta:: 
+   :description: Use run commands in mongosh to  format input or output, create or switch databases, terminate a query, and clear the console.
    :keywords: server, atlas
 
 .. contents:: On this page

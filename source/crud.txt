@@ -11,6 +11,7 @@ Perform CRUD Operations
    :values: reference
 
 .. meta:: 
+   :description: CRUD operations create, read, update, and delete documents within a MongoDB collection.
    :keywords: server
 
 .. contents:: On this page

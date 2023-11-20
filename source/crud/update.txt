@@ -11,6 +11,7 @@ Update Documents
    :values: reference
 
 .. meta:: 
+   :description: MongoDB provides methods to update a single document, update multiple documents, and replace a document. 
    :keywords: server, atlas, sample dataset
 
 .. contents:: On this page
