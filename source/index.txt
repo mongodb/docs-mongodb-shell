@@ -7,7 +7,7 @@
    :values: reference
 
 .. meta:: 
-   :description: Use the MongoDB Shell REPL environment to test queries and interact with the data in your MongoDB database.
+   :description: Use the MongoDB Shell to test queries and interact with the data in your MongoDB database.
 
 .. program:: mongosh
 
