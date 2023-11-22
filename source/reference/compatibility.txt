@@ -217,7 +217,7 @@ with double quotes and indentation:
 
    mongosh --eval "EJSON.stringify(db.sales.findOne().toArray(), null, 2)"
 
-The output looks like this:
+The output looks like the following:
 
 .. code-block:: javascript
 
