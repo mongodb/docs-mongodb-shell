@@ -17,14 +17,14 @@ v2.1.0
 
 *Released November 21, 2023*
 
-- :issue:`MONGOSH-1621` & :issue:`NODE-5709` – homebrew users who got autoupgraded 
+- :issue:`MONGOSH-1621` & :issue:`NODE-5709` – Homebrew users who got autoupgraded 
   to Node.js 21 stop seeing deprecation warnings. 
 
 - :issue:`MONGOSH-1452` & :issue:`NODE-5040` – ``mongosh`` now displays BSON objects in a format 
   that is more consistent with other ``mongosh`` output. Also, many BSON objects now support syntax 
   highlighting.
 
-- :issue:`MONGOSH-1527` – you can now iterate ``mongosh`` cursors with an idiomatic. 
+- :issue:`MONGOSH-1527` – You can now iterate ``mongosh`` cursors with an idiomatic. 
 
 v2.0.2
 ------
