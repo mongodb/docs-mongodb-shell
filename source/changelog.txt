@@ -21,8 +21,8 @@ v2.1.0
   to Node.js 21 stop seeing deprecation warnings. 
 
 - :issue:`MONGOSH-1452` & :issue:`NODE-5040` – ``mongosh`` now displays BSON objects in a format 
-  that is more consistent with other ``mongosh output``, for example ``ISODate('2023-11-21T11:18:13.509Z')`` 
-  with single quotes rather than double-quotes. Also, many BSON objects now support syntax highlighting.
+  that is more consistent with other ``mongosh`` output. Also, many BSON objects now support syntax 
+  highlighting.
 
 - :issue:`MONGOSH-1527` – you can now iterate ``mongosh`` cursors with an idiomatic. 
 
