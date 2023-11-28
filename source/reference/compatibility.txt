@@ -210,8 +210,8 @@ quotes on values. To reproduce the output of the legacy
 ``mongo`` shell, which wraps both the keys and string values in double quotes, 
 use ``mongosh --eval`` with :ref:`EJSON.stringify() <mongosh-ejson-stringify>`.
 
-For example, the following command returns the items in the ``sales`` collection
-with double quotes and indentation:
+For example, the following command returns the items in the ``sales``
+collection on the ``test`` database with double quotes and indentation:
 
 .. code-block:: shell
 
