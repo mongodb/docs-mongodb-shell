@@ -1336,9 +1336,10 @@ Sharding Methods
 
    * - :method:`sh.getShardedDataDistribution()`
 
-     - Provides a wrapper for the :pipeline:`$shardedDataDistribution`
-       aggregation pipeline stage, which returns information about the
-       distribution of data in sharded collections.
+     - Returns data distribution information for sharded collections.
+       ``sh.getShardedDataDistribution()`` is a shell helper method for
+       the :pipeline:`$shardedDataDistribution` aggregation pipeline
+       stage.
 
    * - :method:`sh.isBalancerRunning()`
 
