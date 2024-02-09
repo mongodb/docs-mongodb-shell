@@ -27,7 +27,7 @@ v2.1.4
   the sharding catalog.
 
 `Full release notes available on JIRA 
-<https://jira.mongodb.org/secure/ConfigureReleaseNote.jspa?projectId=17381&version=37881>`__.
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?version=37881&styleName=&projectId=17381>`__.
 
 v2.1.3
 ------
