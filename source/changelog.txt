@@ -19,7 +19,7 @@ v2.1.4
 
 - :issue:`MONGOSH-1198` - Shows the code for an error with the error response.
 
-- :issue:`MONGOSH-1669` - Allows OIDC device auth flow without an id_ token. 
+- :issue:`MONGOSH-1669` - Allows OIDC device auth flow without an ``id_`` token. 
 
 - :issue:`MONGOSH-1679` - Improves error message reading from a secondary. 
 
@@ -27,7 +27,7 @@ v2.1.4
   the sharding catalog.
 
 `Full release notes available on JIRA 
-<https://jira.mongodb.org/issues/?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.1.4>`__.
+<https://jira.mongodb.org/secure/ConfigureReleaseNote.jspa?projectId=17381&version=37881>`__.
 
 v2.1.3
 ------
