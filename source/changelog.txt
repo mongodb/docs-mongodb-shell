@@ -24,7 +24,8 @@ v2.1.4
 - :issue:`MONGOSH-1679` - Improves error message reading from a secondary. 
 
 - :issue:`MONGOSH-1706` - Accounts for unsharded collections becoming part of 
-  the sharding catalog.
+  the sharding catalog. This ensures forward compatibility with upcoming server 
+  versions.
 
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?version=37881&styleName=&projectId=17381>`__.
