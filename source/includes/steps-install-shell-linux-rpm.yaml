@@ -60,7 +60,7 @@ content: |
             <https://repo.mongodb.org/yum/amazon/>`__. Downloads are
             organized in the following order:
             
-            1. Amazon Linux version (for example, ``2``)
+            1. Amazon Linux version (for example, ``2023``)
 
             #. MongoDB :manual:`release version </reference/versioning>`
                (for example, ``{+mdb-version+}``)
