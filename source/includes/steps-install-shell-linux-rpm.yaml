@@ -55,6 +55,11 @@ content: |
                enabled=1
                gpgkey=https://www.mongodb.org/static/pgp/server-{+pgp-version+}.asc 
 
+            .. note::
+
+              If your system uses Amazon Linux 2, replace ``2023`` with
+              ``2`` in the baseurl. 
+
             You can also download the ``.rpm`` files directly from the
             `MongoDB repository
             <https://repo.mongodb.org/yum/amazon/>`__. Downloads are
