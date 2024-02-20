@@ -12,6 +12,21 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.1.5
+------
+
+*Released February 19, 2024*
+
+- Fixed the continuous integration task release_publish(_dry_run) 
+  parameters
+- Removed e2e test from unit test suite (:issue:`MONGOSH-1716`)
+- Modify ``shell.exec`` to avoid leaking any secrets 
+  (:issue:`MONGOSH-1704`)
+- Remove ``userId`` from identify and track (:issue:`COMPASS-7607`)
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?version=37926&styleName=&projectId=17381>`__.
+
 v2.1.4
 ------
 
