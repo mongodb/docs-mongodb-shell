@@ -18,11 +18,11 @@ v2.1.5
 *Released February 19, 2024*
 
 - Fixed the continuous integration task release_publish(_dry_run) 
-  parameters
-- Removed the e2e test from the unit test suite (:issue:`MONGOSH-1716`)
+  parameters.
+- Removed the e2e test from the unit test suite (:issue:`MONGOSH-1716`).
 - Modified ``shell.exec`` to avoid leaking any secrets 
-  (:issue:`MONGOSH-1704`)
-- Remove ``userId`` from identify and track (:issue:`COMPASS-7607`)
+  (:issue:`MONGOSH-1704`).
+- Remove ``userId`` from identify and track (:issue:`COMPASS-7607`).
 
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?version=37926&styleName=&projectId=17381>`__.
