@@ -86,7 +86,7 @@ Access MongoDB From Your Shell
 
          .. step:: Insert Documents
 
-            :binary:`~bin.mongosh` supports common insert opererations, 
+            :binary:`~bin.mongosh` supports common insert operations, 
             including:
 
             - :method:`db.collection.insertOne()`
