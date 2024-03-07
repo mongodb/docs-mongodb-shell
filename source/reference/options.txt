@@ -37,13 +37,24 @@ General Options
    statements, ``mongosh`` only prints the results of the last
    ``--eval``.
 
+   You can use the ``--json`` flag with ``--eval`` to return
+   ``mongosh`` results in :manual:`Extended JSON 
+   </reference/mongodb-extended-json/>` format. ``mongosh``
+   supports both ``--json=canonical`` and ``--json=relaxed`` modes. If
+   you omit the mode, ``mongosh`` defaults to the ``canonical``
+   mode. The ``--json`` flag is mutually exclusive with ``--shell``.
+
    **Example: Format Output**
 
    .. include:: /includes/examples/ex-eval-output.rst
 
-   **Example: Multiple ``--eval`` Arguments**
+   **Example: Multiple --eval Arguments**
 
    .. include:: /includes/examples/ex-eval-multi.rst
+
+   **Example: --json Option**
+
+   .. include:: /includes/examples/ex-eval-json.rst
 
 .. option:: --file, -f <javascript>
 
