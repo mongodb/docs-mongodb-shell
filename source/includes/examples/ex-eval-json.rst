@@ -1,7 +1,7 @@
 To return statistics about a collection in Extended JSON format using
 multiple ``--eval`` statements: 
 
-.. code-block:: javascript
+.. code-block:: sh
 
    mongosh --quiet --json=relaxed \
            --eval 'use <database-name>' \
