@@ -123,7 +123,7 @@ equivalent unsupported code.
 JavaScript Setters 
 ~~~~~~~~~~~~~~~~~~
 
-The following JavaScript setter doesn't work: 
+The following JavaScript setter does not work: 
 
 .. code-block:: javascript
    :copyable: false
