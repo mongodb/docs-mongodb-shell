@@ -104,6 +104,53 @@ Use the following methods to manage Atlas Search indexes.
 
      - Updates an existing Atlas Search index.
 
+Atlas Stream Processing Methods
+------------------------------------------------------
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Name
+
+     - Description
+
+  * - :method:`sp.createStreamProcessor()
+      </reference/method/sp.createStreamProcessor>`
+
+     - Creates a stream processor.
+
+   * - :method:`sp.<processor>.drop()
+       </reference/method/sp.dropStreamProcessor>`
+
+     - Delete an existing stream processor.
+
+   * - :method:`sp.listStreamProcessor()
+       </reference/method/sp.listStreamProcessor>`
+
+     - List all existing stream processors on the current stream
+       processing instance.
+
+   * - :method:`sp.<processor>.sample()
+       </reference/method/sp.startSampleStreamProcessor>`
+
+     - Return an array of sampled results from a currently running stream processor.
+
+   * - :method:`sp.<processor>.start()
+       </reference/method/sp.startStreamProcessor>`
+
+     - Start an existing stream processor.
+
+   * - :method:`sp.<processor>.stats()
+       </reference/method/sp.getStreamProcessorStats>`
+
+     - Return statistics summarizing an existing stream processor.
+
+   * - :method:`sp.stopStreamProcessor()
+       </reference/method/sp.dropStreamProcessor>`
+
+     - Stop a currently running stream processor.
+       
 Bulk Operation Methods
 ----------------------
 
