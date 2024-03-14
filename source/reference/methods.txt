@@ -115,8 +115,8 @@ Atlas Stream Processing Methods
 
      - Description
 
-  * - :method:`sp.createStreamProcessor()
-      </reference/method/sp.createStreamProcessor>`
+   * - :method:`sp.createStreamProcessor()
+       </reference/method/sp.createStreamProcessor>`
 
      - Creates a stream processor.
 
