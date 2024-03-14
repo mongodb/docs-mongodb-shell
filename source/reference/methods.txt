@@ -120,28 +120,28 @@ Atlas Stream Processing Methods
 
      - Creates a stream processor.
 
-   * - :method:`sp.<processor>.drop()
+   * - :method:`sp.dropStreamProcessor()
        </reference/method/sp.dropStreamProcessor>`
 
      - Delete an existing stream processor.
 
-   * - :method:`sp.listStreamProcessor()
-       </reference/method/sp.listStreamProcessor>`
+   * - :method:`sp.listStreamProcessors()
+       </reference/method/sp.listStreamProcessors>`
 
      - List all existing stream processors on the current stream
        processing instance.
 
-   * - :method:`sp.<processor>.sample()
+   * - :method:`sp.sampleStreamProcessor()
        </reference/method/sp.startSampleStreamProcessor>`
 
      - Return an array of sampled results from a currently running stream processor.
 
-   * - :method:`sp.<processor>.start()
+   * - :method:`sp.startStreamProcessor()
        </reference/method/sp.startStreamProcessor>`
 
      - Start an existing stream processor.
 
-   * - :method:`sp.<processor>.stats()
+   * - :method:`sp.getStreamProcessorStats()
        </reference/method/sp.getStreamProcessorStats>`
 
      - Return statistics summarizing an existing stream processor.
