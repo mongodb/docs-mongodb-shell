@@ -12,6 +12,57 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.2.0
+------
+
+*Released March 11, 2024*
+
+Performance Improvements
+
+- :issue:`MONGOSH-1605` – ``mongosh`` now makes use of Node.js startup 
+  snapshots again to improve initialization performance.
+
+- :issue:`MONGOSH-1721` – ``mongosh`` now defaults to ``--quiet`` in 
+  non-interactive mode. For example, using ``--json`` or loading files 
+  from the command line without also specifying ``--shell``. Users who 
+  do not want this behavior need to specify ``--no-quiet``.
+
+- :issue:`MONGOSH-1720` – Script execution in non-interactive mode becomes 
+  significantly faster by replacing the underlying evaluation mechanism.
+
+Node.js:
+
+- ``mongosh`` now uses version 6.5.0 of the :driver:`Node.js driver </node/>`.
+
+- :issue:`NODE-5981` – Improved compliance for the Node.js driver. ``mongosh`` 
+  enters ``directConnection=true`` by default when only a single host/port 
+  is given on the command line. This ignores ``readPreference`` options 
+  and consistently applies a ``primaryPreferred`` read preference, even 
+  if a read preference is specified on the connection string or on the 
+  individual command.
+
+OIDC functionality:
+
+- :issue:`COMPASS-7437` – ``mongosh`` will not request default OIDC scopes 
+  that are not supported by the Identity Provider.
+
+- :issue:`MONGOSH-1712` – the ``--tlsUseSystemCA`` flag now also applies 
+  to HTTP requests made to the Identity Provider, to better accommodate 
+  customers behind TLS-terminating firewalls.
+
+Bug fixes in this release:
+
+- :issue:`MONGOSH-1667` – ``passwordPrompt()`` works as originally intended.
+
+- :issue:`MONGOSH-1702` – No more flaky deprecation warnings showing up for 
+  macOS homebrew users.
+
+- :issue:`MONGOSH-1617` – Piping scripts into ``mongosh`` together with 
+  custom prompts from your ``.mongoshrc.js`` works consistently now.
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=38080>`__.
+
 v2.1.5
 ------
 
