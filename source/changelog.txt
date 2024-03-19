@@ -17,9 +17,9 @@ v2.2.0
 
 *Released March 11, 2024*
 
-Performance Improvements
+Performance improvements:
 
-- :issue:`MONGOSH-1605` – ``mongosh`` now makes use of Node.js startup 
+- :issue:`MONGOSH-1605` – ``mongosh`` uses Node.js startup 
   snapshots again to improve initialization performance.
 
 - :issue:`MONGOSH-1721` – ``mongosh`` now defaults to ``--quiet`` in 
@@ -46,11 +46,11 @@ OIDC functionality:
 - :issue:`COMPASS-7437` – ``mongosh`` will not request default OIDC scopes 
   that are not supported by the Identity Provider.
 
-- :issue:`MONGOSH-1712` – the ``--tlsUseSystemCA`` flag now also applies 
+- :issue:`MONGOSH-1712` – The ``--tlsUseSystemCA`` flag now also applies 
   to HTTP requests made to the Identity Provider, to better accommodate 
   customers behind TLS-terminating firewalls.
 
-Bug fixes in this release:
+Issues fixed:
 
 - :issue:`MONGOSH-1667` – ``passwordPrompt()`` works as originally intended.
 
