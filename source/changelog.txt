@@ -12,6 +12,13 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.2.1
+------
+
+*Released March 19, 2024*
+
+- :issue:`MONGOSH-1738` - 'require' not working in script mode.
+
 v2.2.0
 ------
 
