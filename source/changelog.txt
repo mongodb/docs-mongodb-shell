@@ -27,9 +27,9 @@ v2.2.0
 
 *Released March 11, 2024*
 
-.. important::
-     This release is affected by a bug, fixed in 2.2.1, where ``require('<module>')`` 
-     caused an error in script mode.
+.. warning::
+   This release is affected by a bug, fixed in 2.2.1, where ``require('<module>')`` 
+   caused an error in script mode.
 
 Performance improvements:
 
