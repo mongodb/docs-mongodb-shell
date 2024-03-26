@@ -17,8 +17,8 @@ v2.2.2
 
 *Released March 26, 2024*
 
-Fixes a bug in 2.2.0 where connections that use OIDC workforce
-authentication caused an error:
+Fixes a bug where connections that use OIDC workforce authentication
+caused an error:
 
 - :issue:`MONGOSH-1743` - use JS Proxy for forwarding "lazy-loaded"
   webpack function exports.
