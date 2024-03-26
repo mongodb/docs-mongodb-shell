@@ -134,7 +134,7 @@ Use the following methods to manage Stream Processors
 
    * - :method:`sp.listStreamProcessors()`
 
-     - List all existing stream processors on the current stream
+     - Lists all existing stream processors on the current stream
        processing instance.
 
    * - :method:`sp.process()`
