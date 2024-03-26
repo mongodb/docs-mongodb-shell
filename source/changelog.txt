@@ -21,7 +21,7 @@ Fixes a bug in 2.2.0 where connections that use OIDC workforce
 authentication caused an error:
 
 - :issue:`MONGOSH-1743` - use JS Proxy for forwarding "lazy-loaded"
-  webpack function exports
+  webpack function exports.
 
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=38341>`__.
