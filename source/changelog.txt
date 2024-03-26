@@ -36,6 +36,9 @@ script mode:
 
 - :issue:`MONGOSH-1738` - ``require`` not working in script mode.
 
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=38287>`__.
+
 v2.2.0
 ------
 
