@@ -133,34 +133,39 @@ Use the following methods to manage Stream Processors
 
      - Creates a stream processor.
 
-   * - :method:`sp.dropStreamProcessor()
-       </reference/method/sp.dropStreamProcessor>`
-
-     - Delete an existing stream processor.
-
    * - :method:`sp.listStreamProcessors()
        </reference/method/sp.listStreamProcessors>`
 
      - List all existing stream processors on the current stream
        processing instance.
 
-   * - :method:`sp.sampleStreamProcessor()
-       </reference/method/sp.startSampleStreamProcessor>`
+   * - :method:`sp.process()
+       </reference/method/sp.process>`
+
+       Create an ephemeral stream processor.
+
+   * - :method:`sp.processor.drop()
+       </reference/method/sp.process.drop>`
+
+     - Delete an existing stream processor.
+
+   * - :method:`sp.processor.sample()
+       </reference/method/sp.processor.sample>`
 
      - Return an array of sampled results from a currently running stream processor.
 
-   * - :method:`sp.startStreamProcessor()
-       </reference/method/sp.startStreamProcessor>`
+   * - :method:`sp.processor.start()
+       </reference/method/sp.processor.start>`
 
      - Start an existing stream processor.
 
-   * - :method:`sp.getStreamProcessorStats()
-       </reference/method/sp.getStreamProcessorStats>`
+   * - :method:`sp.processor.stats()
+       </reference/method/sp.processor.stats>`
 
      - Return statistics summarizing an existing stream processor.
 
-   * - :method:`sp.stopStreamProcessor()
-       </reference/method/sp.dropStreamProcessor>`
+   * - :method:`sp.processor.stop()
+       </reference/method/sp.processor.stop>`
 
      - Stop a currently running stream processor.
        
