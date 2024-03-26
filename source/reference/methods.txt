@@ -139,7 +139,7 @@ Use the following methods to manage Stream Processors
 
    * - :method:`sp.process()`
 
-       Create an ephemeral stream processor.
+     - Create an ephemeral stream processor.
 
    * - :method:`sp.processor.drop()`
 
