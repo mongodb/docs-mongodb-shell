@@ -139,27 +139,27 @@ Use the following methods to manage Stream Processors
 
    * - :method:`sp.process()`
 
-     - Create an ephemeral stream processor.
+     - Creates an ephemeral stream processor.
 
    * - :method:`sp.processor.drop()`
 
-     - Delete an existing stream processor.
+     - Deletes an existing stream processor.
 
    * - :method:`sp.processor.sample()`
 
-     - Return an array of sampled results from a currently running stream processor.
+     - Returns an array of sampled results from a currently running stream processor.
 
    * - :method:`sp.processor.start()`
 
-     - Start an existing stream processor.
+     - Starts an existing stream processor.
 
    * - :method:`sp.processor.stats()`
 
-     - Return statistics summarizing an existing stream processor.
+     - Returns statistics summarizing an existing stream processor.
 
    * - :method:`sp.processor.stop()`
    
-     - Stop a currently running stream processor.
+     - Stops a currently running stream processor.
        
 Bulk Operation Methods
 ----------------------
