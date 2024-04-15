@@ -18,7 +18,7 @@ v2.2.4
 *Released April 15, 2024*
 
 Upgrades to Node.js version 20.12.2. Node 20.12.2 resolves security issues. Vulnerabilities 
-are unlikely to affect typical mongosh users. For more information, see the 
+are unlikely to affect typical ``mongosh`` users. For more information, see the 
 `April 2024 Node.js security release 2
 <https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2/>`__.
 
@@ -34,7 +34,7 @@ v2.2.3
 Issues fixed:
 
 - :issue:`MONGOSH-1752` - Updates Node.js version to 20.12.1. Node 20.12.1 resolves 
-  security issues. Vulnerabilities are unlikely to affect typical mongosh users. For
+  security issues. Vulnerabilities are unlikely to affect typical ``mongosh`` users. For
   more information, see the `April 2024 Node.js security release 
   <https://nodejs.org/en/blog/vulnerability/april-2024-security-releases/>`__.
 
