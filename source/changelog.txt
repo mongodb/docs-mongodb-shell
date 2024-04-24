@@ -12,6 +12,20 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.2.5
+------
+
+*Released April 22, 2024*
+
+Performance improvements:
+
+- :issue:`MONGOSH-1759` – Updated our stance on a trade-off between 
+  startup performance and binary size. ``mongosh`` is now a couple dozen 
+  megabytes larger when stored on disk, but start up is now ~25% faster. 
+
+- :issue:`MONGOSH-1765` – ``mongosh`` now skips waiting for server command results 
+  during startup in non-interactive mode.
+
 v2.2.4
 ------
 
