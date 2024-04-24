@@ -19,7 +19,7 @@ v2.2.5
 
 Performance improvements:
 
-- :issue:`MONGOSH-1759` – Updates the stance on a trade-off between 
+- :issue:`MONGOSH-1759` – Updates the stance on the trade-off between 
   startup performance and binary size. ``mongosh`` is now a couple dozen 
   megabytes larger when stored on disk, but start up is now ~25% faster. 
 
