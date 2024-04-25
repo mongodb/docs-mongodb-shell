@@ -19,9 +19,8 @@ v2.2.5
 
 Performance improvements:
 
-- :issue:`MONGOSH-1759` – Updates the policy regarding the balance between 
-  startup performance and binary size. Improves ``mongosh`` startup time 
-  approximately 40% by disabling startup snapshot compression in boxed node.
+- :issue:`MONGOSH-1759` – Improves ``mongosh`` startup time approximately 
+  40% by disabling startup snapshot compression in boxed node.
 
 - :issue:`MONGOSH-1765` – ``mongosh`` now skips waiting for server command results 
   during startup in non-interactive mode.
