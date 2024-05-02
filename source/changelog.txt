@@ -200,12 +200,6 @@ v2.1.1
 - :issue:`MONGOSH-1628` - Statically linking kerberos leads to OpenSSL 
   version conflict on RHEL8 distros 
 - :issue:`MONGOSH-1651` - Sample sessions sent to telemetry
-- :issue:`MONGOSH-1652` - Disable initial showCommands from telemetry
-- :issue:`MONGOSH-1653` - Add a new "Startup Time" event for sessions
-- :issue:`MONGOSH-1654` - Re-enable arm64 executable connectivity tests
-- :issue:`MONGOSH-1656` - Allow startup timings to be grouped
-- :issue:`MONGOSH-1658` - node-worker-runtime: remove function 
-  properties from errors before serialization
 
 `Full release notes available on JIRA <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=37380>`__.
 
