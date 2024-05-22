@@ -21,7 +21,8 @@ Snippets Reference
    package manager that tracks individual snippet packages.
 
 :ref:`snip-errors`
-   Expressions to catch runtime errors and display custom error messages.
+   Error handlers to specify regular expressions to catch runtime errors
+   and display custom error messages.
 
 :ref:`snip-manual-reg-index`
    Steps to manually create a registry index file.
