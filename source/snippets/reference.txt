@@ -17,8 +17,8 @@ Snippets Reference
    :ref:`snippets <snip-overview>`.
 
 :ref:`snip-configure`
-   Options control the interaction between  ``mongosh`` and the package
-   manager that tracks individual snippet packages.
+   Options to control the interaction between ``mongosh`` and the
+   package manager that tracks individual snippet packages.
 
 :ref:`snip-errors`
    Expressions to catch runtime errors and display custom error messages.
