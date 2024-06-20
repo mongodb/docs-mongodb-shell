@@ -19,8 +19,8 @@ Verify MongoDB Shell Packages on macOS
 Before You Begin
 ----------------
 
-To verify MongoDB Shell packages, download the ``mongosh`` binary from
-the `MongoDB Download Center
+If you don't have MongoDB Shell installed, download the MongoDB Shell
+binary from the `Download Center
 <https://www.mongodb.com/try/download/shell?jmp=docs>`__.
 
 Steps
