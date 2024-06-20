@@ -1,0 +1,22 @@
+.. _verify-signatures-mongosh:
+
+==========================================
+Verify Integrity of MongoDB Shell Packages
+==========================================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. include:: /includes/verify-signatures-intro.rst
+
+To learn how to verify MongoDB Shell packages, see the corresponding
+page for your operating system:
+
+- :ref:`verify-signatures-macos`
