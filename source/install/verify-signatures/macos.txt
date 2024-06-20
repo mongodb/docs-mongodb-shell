@@ -16,42 +16,45 @@ Verify MongoDB Shell Packages on macOS
 
 .. include:: /includes/verify-signatures-intro.rst
 
+Before You Begin
+----------------
+
+To verify MongoDB Shell packages, download the ``mongosh`` binary from
+the `MongoDB Download Center
+<https://www.mongodb.com/try/download/shell?jmp=docs>`__.
+
+Steps
+-----
+
 To verify MongoDB Shell packages on macOS, you can use one of these
 methods:
 
 - :ref:`Disk Image Verification <verify-signatures-macos-disk-image>`
 
-- :ref:`GPG <verify-signatures-macos-disk-gpg>`
+- :ref:`GPG <verify-signatures-macos-gpg>`
+
+.. _verify-signatures-macos-disk-image:
 
 Verify Packages with Disk Image Verification
---------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. procedure::
-   :style: normal
+Run the following command:
 
-   .. step:: Download mongosh
-      
-      Download ``mongosh`` from the `MongoDB Download Center
-      <https://www.mongodb.com/try/download/shell?jmp=docs>`__.
+.. code-block:: sh
 
-   .. step:: Verify the signature
+   codesign -dv --verbose=4 <path_to_mongosh>
 
-      Run the following command:
+If the file is successfully signed by MongoDB, the output includes
+the following information:
 
-      .. code-block:: sh
+.. code-block:: sh
+   :copyable: false
 
-         codesign -dv --verbose=4 <path_to_mongosh>
+   Authority=Developer ID Application: MongoDB, Inc. (4XWMY46275)
+   Authority=Developer ID Certification Authority
+   Authority=Apple Root CA
 
-      If the file is successfully signed by MongoDB, the output includes
-      the following information:
-
-      .. code-block:: sh
-         :copyable: false
-
-         Authority=Developer ID Application: MongoDB, Inc. (4XWMY46275)
-         Authority=Developer ID Certification Authority
-         Authority=Apple Root CA
-
+.. _verify-signatures-macos-gpg:
 
 Verify Packages with GPG
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
