@@ -16,7 +16,7 @@ Verify MongoDB Shell Packages on macOS
 
 .. include:: /includes/verify-signatures-intro.rst
 
-Before You Begin
+Before you Begin
 ----------------
 
 If you don't have MongoDB Shell installed, download the MongoDB Shell
