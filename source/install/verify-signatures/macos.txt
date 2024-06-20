@@ -123,8 +123,7 @@ Verify Packages with GPG
          gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
          
       If the package is signed properly but the key is not in trusted
-      list, then the command returns the following additional
-      information:
+      list, the command returns the following additional information:
 
       .. code-block:: sh
          :copyable: false
