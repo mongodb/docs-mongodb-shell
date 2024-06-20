@@ -20,3 +20,8 @@ To learn how to verify MongoDB Shell packages, see the corresponding
 page for your operating system:
 
 - :ref:`verify-signatures-macos`
+
+.. toctree::
+   :titlesonly:
+
+   /install/verify-signatures/macos
