@@ -15,3 +15,43 @@ Verify MongoDB Shell Packages on macOS
    :values: tutorial
 
 .. include:: /includes/verify-signatures-intro.rst
+
+To verify MongoDB Shell packages on macOS, you can use one of these
+methods:
+
+- :ref:`Disk Image Verification <verify-signatures-macos-disk-image>`
+
+- :ref:`GPG <verify-signatures-macos-disk-gpg>`
+
+Verify Packages with Disk Image Verification
+--------------------------------------------
+
+.. procedure::
+   :style: normal
+
+   .. step:: Download mongosh
+      
+      Download ``mongosh`` from the `MongoDB Download Center
+      <https://www.mongodb.com/try/download/shell?jmp=docs>`__.
+
+   .. step:: Verify the signature
+
+      Run the following command:
+
+      .. code-block:: sh
+
+         codesign -dv --verbose=4 <path_to_mongosh>
+
+      If the file is successfully signed by MongoDB, the output includes
+      the following information:
+
+      .. code-block:: sh
+         :copyable: false
+
+         Authority=Developer ID Application: MongoDB, Inc. (4XWMY46275)
+         Authority=Developer ID Certification Authority
+         Authority=Apple Root CA
+
+
+Verify Packages with GPG
+------------------------
