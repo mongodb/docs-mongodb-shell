@@ -44,8 +44,8 @@ Run the following command:
 
    codesign -dv --verbose=4 <path_to_mongosh>
 
-If the file is successfully signed by MongoDB, the output includes
-the following information:
+If the package is properly signed by MongoDB, the output includes the
+following information:
 
 .. code-block:: sh
    :copyable: false
@@ -58,3 +58,86 @@ the following information:
 
 Verify Packages with GPG
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. procedure::
+   :style: normal
+
+   .. step:: Import the MongoDB Shell public key
+
+      .. code-block:: sh
+
+         curl https://pgp.mongodb.com/mongosh.asc | gpg --import
+
+      If the key imports successfully, the command returns the
+      following output:
+
+      .. code-block:: sh
+         :copyable: false
+
+         gpg: key CEED0419D361CB16: public key "Mongosh Release Signing Key <packaging@mongodb.com>" imported
+         gpg: Total number processed: 1
+         gpg:               imported: 1
+
+      If you have previously imported the key, the command returns the
+      following output:
+
+      .. code-block:: sh
+         :copyable: false
+
+         gpg: key A8130EC3F9F5F923: "Mongosh Release Signing Key <packaging@mongodb.com>" not changed
+         gpg: Total number processed: 1
+         gpg:             	      unchanged: 1
+
+   .. step:: Download the MongoDB Shell public signature
+
+      To download the MongoDB Shell public signature, go to the `mongosh
+      Releases <https://github.com/mongodb-js/mongosh/releases>`__ page
+      on GitHub and download the corresponding ``.sig`` file for your
+      version and variant.
+
+      For example, if you are running
+      ``mongosh-{+version+}-linux-arm64``, download
+      ``mongosh-{+version+}-linux-arm64.sig``
+
+      .. note:: 
+         
+         Make sure that you select the correct version in the GitHub
+         releases page when you download the signature.
+
+   .. step:: Verify the package
+
+      Run the following command:
+
+      .. code-block:: sh
+
+         gpg --verify <path_to_signature_file> <path_to_mongosh>
+
+      If the package is properly signed by MongoDB, the command returns
+      this response:
+      
+      .. code-block:: sh
+         :copyable: false
+
+         gpg: Signature made Mon Jan 22 10:22:53 2024 CET
+         gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
+         gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
+         
+      If the package is signed properly but the key is not in trusted
+      list, then the command returns the following additional
+      information:
+
+      .. code-block:: sh
+         :copyable: false
+
+         gpg: WARNING: This key is not certified with a trusted signature!
+         gpg:          There is no indication that the signature belongs to the owner.
+         
+      If the package is not signed properly, the command returns an
+      error message:
+
+      .. code-block:: sh
+         :copyable: false
+
+         gpg: Signature made Mon Jan 22 10:22:53 2024 CET
+         gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
+         gpg: BAD signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
