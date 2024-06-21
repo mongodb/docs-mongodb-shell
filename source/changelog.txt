@@ -19,9 +19,6 @@ v2.2.9
 
 ``mongosh`` now uses version 6.7.0 of the :driver:`Node.js driver </node/>`.
 
-`Full release notes available on JIRA 
-<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=39810>`__.
-
 v2.2.5
 ------
 
