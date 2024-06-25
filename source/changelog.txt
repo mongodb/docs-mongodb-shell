@@ -17,10 +17,6 @@ v2.2.10
 
 *Released June 24, 2024*
 
-Issue fixed:
-
-- :issue:`MONGOSH-1773` – Adopt augmented SBOM integration with Silk.
-
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=39987>`__.
 
