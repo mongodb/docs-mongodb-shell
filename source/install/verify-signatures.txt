@@ -121,8 +121,9 @@ Verify Packages with GPG
          gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
          gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
          
-      If the package is signed properly but the key is not in trusted
-      list, the command returns the following additional information:
+      If the package is signed properly but the key is not in the
+      trusted list, the command returns the following additional
+      information:
 
       .. code-block:: sh
          :copyable: false
