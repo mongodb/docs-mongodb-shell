@@ -32,7 +32,7 @@ To verify MongoDB Shell packages, you can use one of these methods:
 
 - :ref:`GPG Verification <verify-signatures-gpg>`
 
-- - :ref:`RPM Package Verification <verify-signatures-rpm>`
+- :ref:`RPM Package Verification <verify-signatures-rpm>`
 
 .. _verify-signatures-disk-image:
 
