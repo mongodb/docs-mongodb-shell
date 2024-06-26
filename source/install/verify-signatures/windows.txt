@@ -79,5 +79,3 @@ Verify Package by Checking Properties
          * - MONGODB, INC.
            - sha256
            - <Timestamp>
-      
-      
