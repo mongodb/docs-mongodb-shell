@@ -52,6 +52,8 @@ output:
    -----------------     ------     ----
    F2D7C28591847B...     Valid      <path_to_mongosh_exe_or_msi>
 
+.. _verify-signatures-windows-check-properties:
+
 Verify Package by Checking Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
