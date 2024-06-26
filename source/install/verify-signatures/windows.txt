@@ -54,8 +54,8 @@ output:
 
 .. _verify-signatures-windows-check-properties:
 
-Verify Package by Checking Properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Verify Packages by Checking Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. procedure::
    :style: normal
