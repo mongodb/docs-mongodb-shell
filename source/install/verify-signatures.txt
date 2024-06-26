@@ -39,7 +39,7 @@ To verify MongoDB Shell packages, you can use one of these methods:
 Verify Packages with Disk Image Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run the following command:
+Run this command:
 
 .. code-block:: sh
 
@@ -64,6 +64,8 @@ Verify Packages with GPG
    :style: normal
 
    .. step:: Import the MongoDB Shell public key
+
+      Run this command:
 
       .. code-block:: sh
 
@@ -107,7 +109,7 @@ Verify Packages with GPG
 
    .. step:: Verify the package
 
-      Run the following command:
+      Run this command:
 
       .. code-block:: sh
 
@@ -152,13 +154,15 @@ Verify RPM Packages for RedHat
 
    .. step:: Import the MongoDB Shell public key in gpg and rpm
 
-      Run the following command:
+      Run this command:
 
       .. code-block:: sh
 
          curl https://pgp.mongodb.com/mongosh.asc | gpg --import rpm --import https://pgp.mongodb.com/mongosh.asc
 
    .. step:: Verify the rpm file
+
+      Run this command:
 
       .. code-block:: sh
 
