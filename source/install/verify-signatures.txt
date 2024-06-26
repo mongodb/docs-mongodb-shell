@@ -89,7 +89,7 @@ Verify Packages with GPG
 
          gpg: key A8130EC3F9F5F923: "Mongosh Release Signing Key <packaging@mongodb.com>" not changed
          gpg: Total number processed: 1
-         gpg:             	unchanged: 1
+         gpg:         unchanged: 1
 
    .. step:: Download the MongoDB Shell public signature
 
