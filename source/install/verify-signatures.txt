@@ -28,11 +28,13 @@ Steps
 
 To verify MongoDB Shell packages, you can use one of these methods:
 
-- :ref:`Disk Image Verification <verify-signatures-macos-disk-image>`
+- :ref:`Disk Image Verification <verify-signatures-disk-image>`
 
-- :ref:`GPG <verify-signatures-macos-gpg>`
+- :ref:`GPG Verification <verify-signatures-gpg>`
 
-.. _verify-signatures-macos-disk-image:
+- - :ref:`RPM Package Verification <verify-signatures-rpm>`
+
+.. _verify-signatures-disk-image:
 
 Verify Packages with Disk Image Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,7 +55,7 @@ following information:
    Authority=Developer ID Certification Authority
    Authority=Apple Root CA
 
-.. _verify-signatures-macos-gpg:
+.. _verify-signatures-gpg:
 
 Verify Packages with GPG
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,9 +123,9 @@ Verify Packages with GPG
          gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
          gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
          
-      If the package is signed properly but the key is not in the
-      trusted list, the command returns the following additional
-      information:
+      If the package is properly signed, but you do not trust the
+      signing key in your local ``trustdb``, ``gpg`` returns this
+      message:
 
       .. code-block:: sh
          :copyable: false
@@ -140,3 +142,32 @@ Verify Packages with GPG
          gpg: Signature made Mon Jan 22 10:22:53 2024 CET
          gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
          gpg: BAD signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
+
+.. _verify-signatures-rpm:
+
+Verify RPM Packages for RedHat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. procedure::
+   :style: normal
+
+   .. step:: Import the MongoDB Shell public key in gpg and rpm
+
+      Run the following command:
+
+      .. code-block:: sh
+
+         curl https://pgp.mongodb.com/mongosh.asc | gpg --import rpm --import https://pgp.mongodb.com/mongosh.asc
+
+   .. step:: Verify the rpm file
+
+      .. code-block:: sh
+
+         rpm --checksig <path_to_mongosh_rpm_file>
+
+      If the file is properly signed, the command returns this output:
+
+      .. code-block:: sh
+         :copyable: false
+
+         <path_to_mongosh_rpm_file> digests signatures OK
