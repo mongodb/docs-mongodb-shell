@@ -7,7 +7,7 @@ Verify Integrity of MongoDB Shell Packages
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 .. facet::
@@ -16,163 +16,21 @@ Verify Integrity of MongoDB Shell Packages
 
 .. include:: /includes/verify-signatures-intro.rst
 
-Before you Begin
-----------------
+To learn how to verify MongoDB Shell packages, see the corresponding
+page for your verification method:
 
-If you don't have MongoDB Shell installed, download the MongoDB Shell
-binary from the `Download Center
-<https://www.mongodb.com/try/download/shell?jmp=docs>`__.
+- :ref:`verify-signatures-disk-image`
 
-Steps
------
+- :ref:`verify-signatures-gpg`
 
-To verify MongoDB Shell packages, you can use one of these methods:
+- :ref:`verify-signatures-rpm`
 
-- :ref:`Disk Image Verification <verify-signatures-disk-image>`
+- :ref:`verify-signatures-windows`
 
-- :ref:`GPG Verification <verify-signatures-gpg>`
+.. toctree::
+   :titlesonly:
 
-- :ref:`RPM Package Verification <verify-signatures-rpm>`
-
-.. _verify-signatures-disk-image:
-
-Verify Packages with Disk Image Verification
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Run this command:
-
-.. code-block:: sh
-
-   codesign -dv --verbose=4 <path_to_mongosh_executable>
-
-If the package is properly signed by MongoDB, the output includes the
-following information:
-
-.. code-block:: sh
-   :copyable: false
-
-   Authority=Developer ID Application: MongoDB, Inc. (4XWMY46275)
-   Authority=Developer ID Certification Authority
-   Authority=Apple Root CA
-
-.. _verify-signatures-gpg:
-
-Verify Packages with GPG
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. procedure::
-   :style: normal
-
-   .. step:: Import the MongoDB Shell public key
-
-      Run this command:
-
-      .. code-block:: sh
-
-         curl https://pgp.mongodb.com/mongosh.asc | gpg --import
-
-      If the key imports successfully, the command returns the
-      following output:
-
-      .. code-block:: sh
-         :copyable: false
-
-         gpg: key CEED0419D361CB16: public key "Mongosh Release Signing Key <packaging@mongodb.com>" imported
-         gpg: Total number processed: 1
-         gpg:               imported: 1
-
-      If you have previously imported the key, the command returns the
-      following output:
-
-      .. code-block:: sh
-         :copyable: false
-
-         gpg: key A8130EC3F9F5F923: "Mongosh Release Signing Key <packaging@mongodb.com>" not changed
-         gpg: Total number processed: 1
-         gpg:              unchanged: 1
-
-   .. step:: Download the MongoDB Shell public signature
-
-      To download the MongoDB Shell public signature, go to the `mongosh
-      Releases <https://github.com/mongodb-js/mongosh/releases>`__ page
-      on GitHub and download the corresponding ``.sig`` file for your
-      version and variant.
-
-      For example, if you are running
-      ``mongosh-{+version+}-linux-arm64``, download
-      ``mongosh-{+version+}-linux-arm64.sig``
-
-      .. note:: 
-         
-         Make sure that you select the correct version in the GitHub
-         releases page when you download the signature.
-
-   .. step:: Verify the package
-
-      Run this command:
-
-      .. code-block:: sh
-
-         gpg --verify <path_to_signature_file> <path_to_mongosh_executable>
-
-      If the package is properly signed by MongoDB, the command returns
-      this response:
-      
-      .. code-block:: sh
-         :copyable: false
-
-         gpg: Signature made Mon Jan 22 10:22:53 2024 CET
-         gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
-         gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
-         
-      If the package is properly signed but you do not trust the signing
-      key in your local ``trustdb``, ``gpg`` returns this message:
-
-      .. code-block:: sh
-         :copyable: false
-
-         gpg: WARNING: This key is not certified with a trusted signature!
-         gpg:          There is no indication that the signature belongs to the owner.
-         
-      If the package is not signed properly, the command returns an
-      error message:
-
-      .. code-block:: sh
-         :copyable: false
-
-         gpg: Signature made Mon Jan 22 10:22:53 2024 CET
-         gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
-         gpg: BAD signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
-
-.. _verify-signatures-rpm:
-
-Verify RPM Packages for RedHat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. procedure::
-   :style: normal
-
-   .. step:: Import the MongoDB Shell public key in gpg and rpm
-
-      Run these commands:
-
-      .. code-block:: sh
-
-         curl https://pgp.mongodb.com/mongosh.asc | gpg --import
-         
-         rpm --import https://pgp.mongodb.com/mongosh.asc
-
-   .. step:: Verify the rpm file
-
-      Run this command:
-
-      .. code-block:: sh
-
-         rpm --checksig <path_to_mongosh_rpm_file>
-
-      If the file is properly signed, the command returns this output:
-
-      .. code-block:: sh
-         :copyable: false
-
-         <path_to_mongosh_rpm_file> digests signatures OK
+   /install/verify-signatures/disk-images
+   /install/verify-signatures/gpg
+   /install/verify-signatures/rpm
+   /install/verify-signatures/windows
