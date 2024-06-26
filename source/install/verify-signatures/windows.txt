@@ -64,7 +64,7 @@ Verify Packages by Checking Properties
 
    .. step:: Check the package's digital signatures
 
-      In the package properties, open the :guilabel:`Digital Signatures`
+      In the properties window, open the :guilabel:`Digital Signatures`
       tab.
 
       If the package is properly signed, the Digital Signatures show
