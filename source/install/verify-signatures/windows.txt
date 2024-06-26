@@ -40,7 +40,7 @@ To verify Windows packages with PowerShell, run this command:
 
 .. code-block:: sh
 
-   powershell Get-AuthenticodeSignature -FilePath 
+   powershell Get-AuthenticodeSignature -FilePath <path_to_mongosh_exe_or_msi>
    
 If the file is properly signed, the command returns the following
 output:
@@ -50,7 +50,7 @@ output:
 
    SignerCertificate     Status     Path                               
    -----------------     ------     ----
-   F2D7C28591847B...     Valid      <path_to_Compass_exe_or_msi>
+   F2D7C28591847B...     Valid      <path_to_mongosh_exe_or_msi>
 
 Verify Package by Checking Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +58,7 @@ Verify Package by Checking Properties
 .. procedure::
    :style: normal
 
-   .. step:: Open the properties for your Compass package
+   .. step:: Open the properties for your MongoDB Shell package
 
    .. step:: Check the package's digital signatures
 
