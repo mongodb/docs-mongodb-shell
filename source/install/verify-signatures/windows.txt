@@ -1,4 +1,4 @@
-.. _verify-signatures-windows:
+.. _mongosh-verify-signatures-windows:
 
 =======================
 Verify Windows Packages
@@ -30,11 +30,11 @@ Steps
 To verify the MongoDB Shell package on Windows, you can use one of these
 methods:
 
-- :ref:`verify-signatures-windows-command-line`
+- :ref:`mongosh-verify-signatures-windows-command-line`
 
-- :ref:`verify-signatures-windows-check-properties`
+- :ref:`mongosh-verify-signatures-windows-check-properties`
 
-.. _verify-signatures-windows-command-line:
+.. _mongosh-verify-signatures-windows-command-line:
 
 Verify Packages with PowerShell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ output:
    -----------------     ------     ----
    F2D7C28591847B...     Valid      <path_to_mongosh_exe_or_msi>
 
-.. _verify-signatures-windows-check-properties:
+.. _mongosh-verify-signatures-windows-check-properties:
 
 Verify Packages by Checking Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

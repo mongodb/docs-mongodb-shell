@@ -1,4 +1,4 @@
-.. _verify-signatures-rpm:
+.. _mongosh-verify-signatures-rpm:
 
 ==========================
 Verify RPM Packages (RHEL)

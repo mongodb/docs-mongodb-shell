@@ -1,4 +1,4 @@
-.. _verify-signatures-gpg:
+.. _mongosh-verify-signatures-gpg:
 
 ==========================================
 Verify Packages with GPG (Linux and macOS)

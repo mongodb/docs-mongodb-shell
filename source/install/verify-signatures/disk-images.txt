@@ -1,4 +1,4 @@
-.. _verify-signatures-disk-image:
+.. _mongosh-verify-signatures-disk-image:
 
 ====================================================
 Verify Packages with Disk Image Verification (macOS)

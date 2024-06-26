@@ -19,13 +19,13 @@ Verify Integrity of MongoDB Shell Packages
 To learn how to verify MongoDB Shell packages, see the corresponding
 page for your verification method:
 
-- :ref:`verify-signatures-disk-image`
+- :ref:`mongosh-verify-signatures-disk-image`
 
-- :ref:`verify-signatures-gpg`
+- :ref:`mongosh-verify-signatures-gpg`
 
-- :ref:`verify-signatures-rpm`
+- :ref:`mongosh-verify-signatures-rpm`
 
-- :ref:`verify-signatures-windows`
+- :ref:`mongosh-verify-signatures-windows`
 
 .. toctree::
    :titlesonly:
