@@ -16,6 +16,8 @@ Verify RPM Packages (RedHat)
 
 .. include:: /includes/verify-signatures-intro.rst
 
+This page describes how to verify ``.rpm`` packages on RedHat.
+
 Before you Begin
 ----------------
 

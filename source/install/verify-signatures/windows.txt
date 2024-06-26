@@ -16,6 +16,9 @@ Verify Windows Packages
 
 .. include:: /includes/verify-signatures-intro.rst
 
+This page describes how to verify Windows ``.exe`` and ``.msi``
+packages.
+
 Before you Begin
 ----------------
 
