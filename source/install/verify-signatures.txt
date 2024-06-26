@@ -89,7 +89,7 @@ Verify Packages with GPG
 
          gpg: key A8130EC3F9F5F923: "Mongosh Release Signing Key <packaging@mongodb.com>" not changed
          gpg: Total number processed: 1
-         gpg:             	      unchanged: 1
+         gpg:             	unchanged: 1
 
    .. step:: Download the MongoDB Shell public signature
 
@@ -154,11 +154,13 @@ Verify RPM Packages for RedHat
 
    .. step:: Import the MongoDB Shell public key in gpg and rpm
 
-      Run this command:
+      Run these commands:
 
       .. code-block:: sh
 
-         curl https://pgp.mongodb.com/mongosh.asc | gpg --import rpm --import https://pgp.mongodb.com/mongosh.asc
+         curl https://pgp.mongodb.com/mongosh.asc | gpg --import
+         
+         rpm --import https://pgp.mongodb.com/mongosh.asc
 
    .. step:: Verify the rpm file
 
