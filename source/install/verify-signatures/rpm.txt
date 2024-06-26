@@ -1,8 +1,8 @@
 .. _verify-signatures-rpm:
 
-============================
-Verify RPM Packages (RedHat)
-============================
+==========================
+Verify RPM Packages (RHEL)
+==========================
 
 .. contents:: On this page
    :local:
@@ -16,7 +16,8 @@ Verify RPM Packages (RedHat)
 
 .. include:: /includes/verify-signatures-intro.rst
 
-This page describes how to verify ``.rpm`` packages on RedHat.
+This page describes how to verify ``.rpm`` packages on RHEL operating
+systems.
 
 Before you Begin
 ----------------
