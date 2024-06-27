@@ -47,8 +47,8 @@ Steps
       version and variant.
 
       For example, if you are running
-      ``mongosh-{+version+}-linux-arm64``, download
-      ``mongosh-{+version+}-linux-arm64.sig``
+      ``mongodb-mongosh_{+version+}_amd64.deb``, download
+      ``mongodb-mongosh_{+version+}_amd64.deb.sig``
 
       .. note:: 
          
