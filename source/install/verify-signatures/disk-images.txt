@@ -26,14 +26,14 @@ Before you Begin
 Steps
 -----
 
-To verify the MongoDB Shell package, run this command:
+To verify the MongoDB Shell package, run:
 
 .. code-block:: sh
 
    codesign -dv --verbose=4 <path_to_mongosh_executable>
 
-If the package is properly signed by MongoDB, the output includes the
-following information:
+If the package is signed by MongoDB, the output includes the following
+information:
 
 .. code-block:: sh
    :copyable: false

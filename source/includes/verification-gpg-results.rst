@@ -1,4 +1,4 @@
-If the key imports successfully, the command returns this output:
+If the key imports successfully, the command returns:
 
 .. code-block:: sh
     :copyable: false
@@ -7,8 +7,7 @@ If the key imports successfully, the command returns this output:
     gpg: Total number processed: 1
     gpg:               imported: 1
 
-If you have previously imported the key, the command returns this
-output:
+If you have previously imported the key, the command returns:
 
 .. code-block:: sh
     :copyable: false

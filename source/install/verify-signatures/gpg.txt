@@ -31,8 +31,6 @@ Steps
 
    .. step:: Import the MongoDB Shell public key
 
-      Run this command:
-
       .. code-block:: sh
 
          curl https://pgp.mongodb.com/mongosh.asc | gpg --import
@@ -57,14 +55,11 @@ Steps
 
    .. step:: Verify the package
 
-      Run this command:
-
       .. code-block:: sh
 
          gpg --verify <path_to_signature_file> <path_to_mongosh_executable>
 
-      If the package is properly signed by MongoDB, the command returns
-      this response:
+      If the package is signed by MongoDB, the command returns:
       
       .. code-block:: sh
          :copyable: false
@@ -73,8 +68,8 @@ Steps
          gpg:                using RSA key AB1B92FFBE0D3740425DAD16A8130EC3F9F5F923
          gpg: Good signature from "Mongosh Release Signing Key <packaging@mongodb.com>" [unknown]
          
-      If the package is properly signed but you do not trust the signing
-      key in your local ``trustdb``, ``gpg`` returns this message:
+      If the package is signed but the signing key is not added to your
+      local ``trustdb``, the command returns:
 
       .. code-block:: sh
          :copyable: false
@@ -82,7 +77,7 @@ Steps
          gpg: WARNING: This key is not certified with a trusted signature!
          gpg:          There is no indication that the signature belongs to the owner.
          
-      If the package is not signed properly, the command returns an
+      If the package is not properly signed, the command returns an
       error message:
 
       .. code-block:: sh
