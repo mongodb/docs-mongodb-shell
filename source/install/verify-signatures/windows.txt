@@ -45,8 +45,7 @@ To verify Windows packages with PowerShell, run this command:
 
    powershell Get-AuthenticodeSignature -FilePath <path_to_mongosh_exe_or_msi>
    
-If the file is properly signed, the command returns the following
-output:
+If the file is properly signed, the command returns this output:
 
 .. code-block:: sh
    :copyable: false
