@@ -6,7 +6,7 @@ output:
 
     gpg: key CEED0419D361CB16: public key "Mongosh Release Signing Key <packaging@mongodb.com>" imported
     gpg: Total number processed: 1
-    gpg:              imported: 1
+    gpg:               imported: 1
 
 If you have previously imported the key, the command returns the
 following output:
