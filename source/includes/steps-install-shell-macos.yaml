@@ -12,6 +12,7 @@ content: |
    Download the appropriate version of ``mongosh`` for your operating
    system. MongoDB provides versions of ``mongosh`` for Intel and ARM 
    architectures. 
+
 ---
 title: "Extract the files from the downloaded archive."
 ref: extract-zip-macos
