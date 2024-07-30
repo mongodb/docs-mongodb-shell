@@ -25,9 +25,9 @@ New features in this release:
 Bug fixes in this release:
 
 - ``Sh.status()`` now shows a full list of tag ranges in verbose mode only :issue:`MONGOSH-1327`.
-- ReadPreference options specified apply to admin commands :issue:`MONGOSH-1837`.
+- ReadPreference options specified now apply to admin commands :issue:`MONGOSH-1837`.
 - The ``mongodb-redact`` dependency library has been updated to version ``1.1.2``. This change should
-  help ``mongosh`` processing time for regex operators and large base64 input data :issue:`MONGOSH-1392`.
+  help ``mongosh`` processing time for large base64 input data :issue:`MONGOSH-1392`.
 
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=40244>`__.
