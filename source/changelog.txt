@@ -20,7 +20,7 @@ v2.2.15
 
 New features in this release:
 
-- :issue:`MONGOSH-1848` Added helper for ``shardMoveCollection`` and ``unshardCollection`` commands. 
+- Added helper for ``shardMoveCollection`` and ``unshardCollection`` commands :issue:`MONGOSH-1848`. 
   
 Bug fixes in this release:
 
