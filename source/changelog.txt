@@ -19,14 +19,13 @@ v2.3.0
 
 New features released in this version:
 
-- :issue:`MONGOSH-1550` - Support for Range GA
+- :issue:`MONGOSH-1550` - Adds support for Queryable Encryption Range queries  
 
 Bug fixes in this release:
 
 - :issue:`MONGOSH-1136` - mongosh should use stderr for password prompt
-- :issue:`MONGOSH-1425` - Expand fallback condition for $collStats to command form to account for ADF
-- :issue:`MONGOSH-1820` - 'fields' option is not working as expected in findAndModify
-- :issue:`MONGOSH-1858` - Investigate proxy e2e test failure on s390x
+- :issue:`MONGOSH-1425` - Expand fallback condition for ``$collStats`` to command form to account for ADF
+- :issue:`MONGOSH-1820` - ``fields`` option is not working as expected in findAndModify
 
 `Full release notes available on JIRA 
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=40317>`__.
