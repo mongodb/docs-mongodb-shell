@@ -22,8 +22,8 @@
 
    * - ``HTTP_PROXY``
 
-     - Proxy connections to ``http://`` URLs. HTTP connections primarily relate 
-       to OIDC authentication. 
+     - Proxy connections to ``http://`` URLs. HTTP connections are mostly 
+       used for OIDC authentication. 
      
        If you also set ``HTTPS_PROXY``, the value of ``HTTPS_PROXY`` takes 
        precedence for all requests.
@@ -39,8 +39,8 @@
 
    * - ``HTTPS_PROXY``
 
-     - Proxy connections to ``https://`` URLs. HTTPS connections primarily 
-       relate to OIDC authentication. 
+     - Proxy connections to ``https://`` URLs. HTTPS connections are mostly 
+       used for OIDC authentication. 
      
        If you also set ``HTTP_PROXY``, the value of ``HTTPS_PROXY`` takes 
        precedence for all requests.
@@ -79,4 +79,4 @@
        .. code-block:: sh 
           :copyable: false 
 
-          export NO_PROXY=localhost, internal-db.example.com 
+          export NO_PROXY=localhost,internal-db.example.com 
