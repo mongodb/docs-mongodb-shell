@@ -372,7 +372,7 @@ following environment variables:
    - Socks5 proxies
    - HTTP proxies 
    - CONNECT proxies
-   - :abbr:`PAC (proxy auto-configx)` URLs that resolve to one of the previously 
+   - :abbr:`PAC (proxy auto-config)` URLs that resolve to one of the previously 
      listed proxies
 
 Connect to a Different Deployment
