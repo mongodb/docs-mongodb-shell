@@ -240,3 +240,21 @@ Limitations on Database Calls
 
 .. include:: /includes/fact-call-limitations.rst
 
+Output
+------
+
+For example, the createIndex command in the legacy mongo returns a
+document. This document is then checked in their script to validate the
+result of the command.
+
+MongoDB Enterprise > db.test.createIndex({name: 1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+} 
+While in the mongo shell, it simply returns the name of the index:
+
+Enterprise playground> db.test.createIndex({name: 1})
+name_1
