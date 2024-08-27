@@ -111,7 +111,7 @@ You can also terminate a script from within the script code by calling the
 Command Exceptions
 ------------------
 
-.. include:: /includes/legacy/command-exceptions.rst
+.. include:: /includes/legacy/legacy-command-exceptions.rst
 
 Clear the ``mongosh`` Console
 -----------------------------

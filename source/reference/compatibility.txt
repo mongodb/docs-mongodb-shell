@@ -264,4 +264,16 @@ name_1
 Command Exceptions
 ------------------
 
-.. include:: /includes/legacy/command-exceptions.rst
+.. include:: /includes/legacy/legacy-command-exceptions.rst
+
+Shell Configuration
+------------------
+
+.. include:: /includes/legacy/legacy-shell-configuration.rst
+
+Data Types
+----------
+
+.. include:: /includes/legacy/legacy-data-types.rst
+
+For details, see :ref:`mongo-shell-data-type`.
