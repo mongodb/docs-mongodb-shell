@@ -1,3 +1,5 @@
+.. _mongo-shell-data-types:
+
 ==========
 Data Types
 ==========
