@@ -1,6 +1,5 @@
-MongoDB Server stores data using the :manual:`BSON
-</reference/bson-types>` format which supports some additional data
-types that are not available using the :term:`JSON` format. Compared to
-the legacy ``mongo`` shell, MongoDB Shell (``mongosh``) has type
-handling which is better aligned with the default types used by the
+The MongoDB server stores data using :manual:`BSON
+</reference/bson-types>`, which supports additional data types that
+aren't available in :term:`JSON`. Compared to the legacy ``mongo``
+shell, MongoDB Shell (``mongosh``) has improved type handling for the
 MongoDB :ecosystem:`drivers </drivers>`. 
