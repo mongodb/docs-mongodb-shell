@@ -254,7 +254,14 @@ MongoDB Enterprise > db.test.createIndex({name: 1})
         "numIndexesAfter" : 2,
         "ok" : 1
 } 
+
 While in the mongo shell, it simply returns the name of the index:
 
 Enterprise playground> db.test.createIndex({name: 1})
 name_1
+
+
+Command Exceptions
+------------------
+
+.. include:: /includes/legacy/command-exceptions.rst
