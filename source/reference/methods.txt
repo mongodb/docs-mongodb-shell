@@ -1039,15 +1039,16 @@ Replication Methods
             replLag: '0 secs (0 hrs) behind the primary '
           }
 
-   * - ``rs.printSecondaryReplicationInfo``
+   * - :method:`rs.printSecondaryReplicationInfo`
 
      - Returns the status of the secondary members of the replica set. 
      
        This is identical to the ``db.printSecondaryReplicationInfo()`` 
        method. This method's output is similar to the 
        :method:`rs.printSlaveReplicationInfo()` method in the legacy 
-       |mongo| shell. The :method:`rs.printSlaveReplicationInfo()` method is deprecated in ``mongosh``. Use 
-       ``rs.printSecondaryReplicationInfo()`` instead.
+       |mongo| shell.
+        
+       .. include:: /includes/legacy/legacy-slave-replication-method.rst
 
        The following is an example output from the 
        ``rs.printSecondaryReplicationInfo()`` method issued on a replica set with two secondary members:

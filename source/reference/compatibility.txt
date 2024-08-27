@@ -257,9 +257,14 @@ Data Types
 
 For details, see :ref:`mongo-shell-data-types`.
 
-Load Method
-----------
+Methods
+-------
 
 .. include:: /includes/legacy/legacy-load-method.rst
 
 For details, see :ref:`mongosh-native-method-load`.
+
+.. include:: /includes/legacy/legacy-slave-replication-method.rst
+
+For details, see :method:`rs.printSecondaryReplicationInfo`.
+
