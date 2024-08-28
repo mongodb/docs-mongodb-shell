@@ -4,5 +4,5 @@ returns an exception and doesn't return the raw output from the server.
 .. note::
 
    In the legacy ``mongo`` shell, when a command's output included ``{
-   ok: 0 }``, the behavior differs between commands. ``mongosh``
+   ok: 0 }``, the returned output varied for each command. ``mongosh``
    always returns a consistent exception.
