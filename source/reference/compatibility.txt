@@ -268,3 +268,9 @@ For details, see :ref:`load() <mongosh-native-method-load>`.
 
 For details, see :method:`rs.printSecondaryReplicationInfo`.
 
+Retryable Writes
+----------------
+
+.. include:: /includes/legacy/legacy-retryable-writes.rst
+
+For details, see :option:`--retryWrites`.
