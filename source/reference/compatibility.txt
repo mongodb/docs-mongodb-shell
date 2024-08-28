@@ -245,10 +245,14 @@ Command Exceptions
 
 .. include:: /includes/legacy/legacy-command-exceptions.rst
 
+For details, see :ref:`run-commands`.
+
 Shell Configuration
 -------------------
 
 .. include:: /includes/legacy/legacy-shell-configuration.rst
+
+For details, see :ref:`mongoshrc-js`.
 
 Data Types
 ----------
@@ -285,7 +289,6 @@ For details, see :ref:`mongosh-ejson-stringify-legacy-output`.
 Code Snippets
 -------------
 
-Each snippet is unique and has its own interface. Working with code
-snippets is different for the legacy shell.
+Working with code snippets is different for the legacy ``mongo`` shell.
 
 For details, see :ref:`snip-get-help`.
