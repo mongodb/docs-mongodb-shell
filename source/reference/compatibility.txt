@@ -274,3 +274,18 @@ Retryable Writes
 .. include:: /includes/legacy/legacy-retryable-writes.rst
 
 For details, see :option:`--retryWrites`.
+
+Legacy Output
+-------------
+
+.. include:: /includes/legacy/legacy-output.rst
+
+For details, see :ref:`mongosh-ejson-stringify-legacy-output`.
+
+Code Snippets
+-------------
+
+Each snippet is unique and has its own interface. Working with code
+snippets is different for the legacy shell.
+
+For details, see :ref:`snip-get-help`.
