@@ -262,7 +262,7 @@ Methods
 
 .. include:: /includes/legacy/legacy-load-method.rst
 
-For details, see :method:`mongosh-native-method-load`.
+For details, see :ref:`load() <mongosh-native-method-load>`.
 
 .. include:: /includes/legacy/legacy-slave-replication-method.rst
 
