@@ -1,5 +1,5 @@
 For commands where the output includes ``{ ok: 0 }``, ``mongosh``
-returns an exception and doesn't return the raw output from the server.
+returns an exception and doesn't return the server raw output.
 
 .. note::
 
