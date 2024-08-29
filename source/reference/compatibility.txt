@@ -268,10 +268,6 @@ Methods
 
 For details, see :ref:`load() <mongosh-native-method-load>`.
 
-.. include:: /includes/legacy/legacy-slave-replication-method.rst
-
-For details, see :method:`rs.printSecondaryReplicationInfo`.
-
 Retryable Writes
 ----------------
 

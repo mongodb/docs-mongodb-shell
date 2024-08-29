@@ -1046,10 +1046,9 @@ Replication Methods
        This is identical to the ``db.printSecondaryReplicationInfo()`` 
        method. This method's output is similar to the 
        :method:`rs.printSlaveReplicationInfo()` method in the legacy 
-       |mongo| shell.
-        
-       .. include:: /includes/legacy/legacy-slave-replication-method.rst
-
+       |mongo| shell. The :method:`rs.printSlaveReplicationInfo()` method is deprecated in ``mongosh``. Use 
+       ``rs.printSecondaryReplicationInfo()`` instead.
+       
        The following is an example output from the 
        ``rs.printSecondaryReplicationInfo()`` method issued on a replica set with two secondary members:
 
