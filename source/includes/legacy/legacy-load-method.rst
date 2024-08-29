@@ -1,2 +1,2 @@
-In the legacy ``mongo`` shell, you cannot access a script's file name or
-directory using the ``load()`` method.
+The legacy ``mongo`` shell cannot access a script's file name or
+directory in the ``load()`` method.

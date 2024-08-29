@@ -562,6 +562,8 @@ Session Options
 
 .. option:: --retryWrites
 
+   Enables :ref:`retryable-writes`.
+   
    .. include:: /includes/legacy/legacy-retryable-writes.rst
 
    For more information on sessions, see :ref:`sessions`.

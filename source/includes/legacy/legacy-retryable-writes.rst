@@ -1,4 +1,4 @@
-Enables :ref:`retryable-writes`. By default, retryable writes are:
+By default, retryable writes are:
 
 - enabled in :binary:`mongosh`
 - disabled in the legacy ``mongo`` shell
