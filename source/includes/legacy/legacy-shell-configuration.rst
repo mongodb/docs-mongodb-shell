@@ -1,4 +1,4 @@
-The legacy ``mongo`` shell used a configuration file named
+The legacy ``mongo`` shell uses a configuration file named
 ``.mongorc.js``.
 
 If :binary:`mongosh` finds ``.mongorc.js`` on startup but doesn't find
