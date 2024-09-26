@@ -540,7 +540,7 @@ you do not have to edit the script to run ``portableGetUserCount.js``.
 .. toctree::
    :titlesonly:
 
-   Include External Files & Modules </write-scripts/require-external-modules>
+   Include Files & Modules </write-scripts/require-external-modules>
    require() versus load() </write-scripts/require-load-differences>
    Code Scoping </write-scripts/scoping>
    Considerations </write-scripts/considerations>
