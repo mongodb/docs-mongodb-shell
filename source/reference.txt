@@ -12,5 +12,5 @@ Reference
    Methods </reference/methods>
    EJSON </reference/ejson>
    .mongoshrc Configuration File </mongoshrc>
-   Operations </reference/options>
+   Options </reference/options>
    Retrieve Shell Logs </logs>
