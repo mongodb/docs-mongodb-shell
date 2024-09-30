@@ -37,6 +37,14 @@ To delete all documents from a collection, pass an empty
 :ref:`filter<document-query-filter>` document ``{}`` to the
 :method:`db.collection.deleteMany()` method.
 
+.. note::
+
+   If you want to delete all documents from a large collection, dropping
+   and recreating the collection may have faster performance than using
+   the :method:`db.collection.deleteMany()` method with an empty filter.
+   When you recreate the collection, you must also recreate any
+   specified collection characteristics. 
+
 .. example::
 
    To delete all documents from the ``sample_mflix.movies`` collection:
