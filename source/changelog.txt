@@ -19,7 +19,9 @@ v2.3.2
 
 Contains internal enhancements and improvements.
 
-Fixes startup performance regression introduced in ``v2.3.1``.
+Fixes startup performance regression introduced in ``v2.3.1``:
+
+- :issue:`MONGOSH-1878` - Use TLS ``allowPartialTrustChain`` flag
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=40645>`__.
