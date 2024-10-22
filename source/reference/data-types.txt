@@ -60,16 +60,33 @@ Starting in  1.8.0, the ``ObjectId`` wrapper no longer accepts:
 
    :method:`ObjectId` 
 
+Double 
+------
+
+The :node-api:`Double() <Double.html>` constructor can be used to
+explicitly specify a Double:
+
+.. code-block:: javascript
+
+      db.types.insertOne(
+         {
+            "_id": 2,
+            "value": Double("1"),
+            "expectedType": "Double" 
+         }
+      )
+
+.. note:: 
+
+   If a number can be converted to a 32-bit integer, ``mongosh`` will store it 
+   as ``Int32``. If not, ``mongosh`` defaults to storing the number as a 
+   ``Double``. Numerical values that are stored as ``Int32`` in ``mongosh`` 
+   would have been stored by default as ``Double`` in the ``mongo`` shell.
+
 .. _shell-type-int:
 
 Int32
 -----
-
-If a number can be converted to a 32-bit integer, ``mongosh`` will
-store it as ``Int32``. If not, ``mongosh`` defaults to storing the
-number as a ``Double``. Numerical values that are stored as ``Int32``
-in ``mongosh`` would have been stored by default as ``Double`` in the
-``mongo`` shell.
 
 The :node-api:`Int32() <Int32.html>` constructor can be used to
 explicitly specify 32-bit integers.
