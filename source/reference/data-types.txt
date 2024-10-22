@@ -64,7 +64,7 @@ Double
 ------
 
 The :node-api:`Double() <Double.html>` constructor can be used to
-explicitly specify a Double:
+explicitly specify a double:
 
 .. code-block:: javascript
 
