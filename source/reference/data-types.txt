@@ -71,17 +71,17 @@ explicitly specify a double:
       db.types.insertOne(
          {
             "_id": 2,
-            "value": Double("1"),
+            "value": Double(1),
             "expectedType": "Double" 
          }
       )
 
 .. note:: 
 
-   If a number can be converted to a 32-bit integer, ``mongosh`` will store it 
-   as ``Int32``. If not, ``mongosh`` defaults to storing the number as a 
-   ``Double``. Numerical values that are stored as ``Int32`` in ``mongosh`` 
-   would have been stored by default as ``Double`` in the ``mongo`` shell.
+   If field's value is a number that can be converted to a 32-bit integer, 
+   ``mongosh`` will store it as ``Int32``. If not, ``mongosh`` defaults to 
+   storing the number as a ``Double``. To specify the value type, use the 
+   ``Double()`` or ``Int32()`` constructors. 
 
 .. _shell-type-int:
 
@@ -96,7 +96,7 @@ explicitly specify 32-bit integers.
       db.types.insertOne(
          {
              "_id": 1,
-             "value": Int32("1"),
+             "value": Int32(1),
              "expectedType": "Int32" 
          }
       )
@@ -120,7 +120,7 @@ explicitly specify a 64-bit integer.
       db.types.insertOne(
          {
             "_id": 3,
-            "value": Long("1"),
+            "value": Long(1),
             "expectedType": "Long" 
          }
       )
