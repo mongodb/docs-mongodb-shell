@@ -12,6 +12,45 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.3.3
+------
+
+*Released October 30, 2024*
+
+New features released in this version:
+
+- :issue:`MONGOSH-1326` - Adds ``shardedDataDistribution`` to
+  :method:`sh.status`.
+- Adds individual evergreen test results with XUnit.
+- :issue:`MONGOSH-1730` - Asks for
+  ``tlsCertificateKeyFilePassword`` when it is needed.
+- :issue:`MONGOSH-1838` - Accounts for orphan documents in
+  :method:`~db.collection.getShardDistribution()` helper.
+
+Bug Fixes:
+
+- :issue:`MONGOSH-1868` - Align database and collection
+  aggregate functions 
+
+- :issue:`MONGOSH-1608` - ``mongosh`` should throw an error when
+  trying to drop a non-primary index 
+
+- :issue:`MONGOSH-1868` - Add support for running aggregate
+  database with a single stage
+
+- Revert workaround for ``depcheck`` for ``searchParams`` type
+
+- Fix ``depcheck`` with a more permissive workaround for the ``searchParams`` type
+
+- :issue:`MONGOSH-1867` - Fix incorrect ``db.createView.help``.
+
+- :issue:`MONGOSH-1697` - Add missing options parameter for
+  :method:`~db.collection.find` and
+  :method:`~db.collection.findOne`.
+
+- :issue:`MONGOSH-1703` Fix invalid regular expression error in
+  :method:`db.currentOp`.
+
 v2.3.2
 ------
 
