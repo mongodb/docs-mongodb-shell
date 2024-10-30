@@ -51,6 +51,10 @@ Bug Fixes:
 - :issue:`MONGOSH-1703` Fix invalid regular expression error in
   :method:`db.currentOp`.
 
+`Full release notes available on JIRA
+<https://jira.mongodb.org/issues/?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.3>`__.
+
+
 v2.3.2
 ------
 
