@@ -21,9 +21,6 @@ New features released in this version:
 
 - :issue:`MONGOSH-1326` - Add ``shardedDataDistribution`` to
   :method:`sh.status`.
-- Add individual evergreen test results with XUnit.
-- :issue:`MONGOSH-1730` - Ask for
-  ``tlsCertificateKeyFilePassword`` when it is needed.
 - :issue:`MONGOSH-1838` - Account for orphan documents in
   :method:`~db.collection.getShardDistribution()` helper.
 
@@ -35,12 +32,10 @@ Bug Fixes:
   trying to drop a non-primary index 
 - :issue:`MONGOSH-1868` - Add support for running aggregate
   database with a single stage
-- Revert workaround for ``depcheck`` for ``searchParams`` type
-- Fix ``depcheck`` with a more permissive workaround for the ``searchParams`` type
 - :issue:`MONGOSH-1867` - Fix incorrect ``db.createView.help``.
-- :issue:`MONGOSH-1697` - Add missing options parameter for
+- :issue:`MONGOSH-1697` - Updates the ``help()`` text for the
   :method:`~db.collection.find` and
-  :method:`~db.collection.findOne`.
+  :method:`~db.collection.findOne` methods.
 - :issue:`MONGOSH-1703` Fix invalid regular expression error in
   :method:`db.currentOp`.
 
