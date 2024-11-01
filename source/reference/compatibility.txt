@@ -202,6 +202,37 @@ in ``mongosh`` better align with the types used by the MongoDB Drivers.
    For more information on managing types, refer to the
    :manual:`schema validation overview </core/schema-validation>`.
 
+Undefined Values
+----------------
+
+The undefined BSON type is deprecated <https://bsonspec.org/spec.html>__ in
+:binary:`bin.mongosh`. If you insert a document with the undefined BSON type in
+:binary:`bin.mongosh`, your deployment stores a null value. To create `undefined` 
+fields in your document, use the legacy :binary:`~bin.mongo` shell.
+
+For example, consider running the same code to insert a document in both
+:binary:`bin.mongosh` and in the legacy :binary:`~bin.mongo` shell:
+
+.. code-block:: javascript
+
+   db.people.insertOne( { name : "Sally", age : undefined } )
+
+When you run this code to insert a document with the undefined BSON type in
+:binary:`bin.mongosh`, the shell inserts the following document: 
+
+.. code-block:: javascript
+   "copyable: false
+
+   { name : "Sally", age : null }
+
+However, when you run the same code to insert a document with the undefined BSON type in
+the legacy :binary:`~bin.mongo` shell, the shell inserts the following document: 
+
+.. code-block:: javascript
+   "copyable: false
+
+   { name : "Sally", age : undefined }
+
 Object Quoting Behavior
 -----------------------
 
