@@ -208,7 +208,8 @@ Undefined Values
 The undefined BSON type is `deprecated <https://bsonspec.org/spec.html>`__ in
 :binary:`bin.mongosh`. If you insert a document with the undefined BSON type in
 :binary:`bin.mongosh`, your deployment replaces the undefined value in your 
-document with the BSON null value.
+document with the BSON null value. There is no supported way of inserting undefined
+values into your database using :binary:`bin.mongosh`.
 
 For example, consider running the same code to insert a document in both
 :binary:`bin.mongosh` and in the legacy :binary:`~bin.mongo` shell:
