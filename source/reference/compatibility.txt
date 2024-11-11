@@ -206,7 +206,7 @@ Undefined Values
 ----------------
 
 The undefined BSON type is `deprecated <https://bsonspec.org/spec.html>`__. 
-If you insert a document with the undefined JS type in
+If you try to insert a document with the undefined JS type in
 ``mongosh``, your deployment replaces the undefined value in your 
 document with the BSON null value. There is no supported way of inserting undefined
 values into your database using ``mongosh``.
