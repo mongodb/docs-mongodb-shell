@@ -205,8 +205,8 @@ in ``mongosh`` better align with the types used by the MongoDB Drivers.
 Undefined Values
 ----------------
 
-The undefined BSON type is `deprecated <https://bsonspec.org/spec.html>`__ in
-:binary:`bin.mongosh`. If you insert a document with the undefined JS type in
+The undefined BSON type is `deprecated <https://bsonspec.org/spec.html>`__. 
+If you insert a document with the undefined JS type in
 :binary:`bin.mongosh`, your deployment replaces the undefined value in your 
 document with the BSON null value. There is no supported way of inserting undefined
 values into your database using :binary:`bin.mongosh`.
@@ -225,6 +225,10 @@ the following document:
    "copyable: false
 
    { name : "Sally", age : null }
+
+``mongosh`` represents any BSON undefined values stored using other tools, such as 
+the `Go Driver <https://www.mongodb.com/docs/drivers/go/current/>`__ or the 
+legacy :binary:`mongo` shell, as null.
 
 Object Quoting Behavior
 -----------------------
