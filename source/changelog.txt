@@ -12,6 +12,26 @@ Release Notes
    :depth: 1
    :class: singlecol
 
+v2.3.4
+------
+
+*Released November 27, 2024*
+
+New features released in this version:
+
+- :issue:`MONGOSH-1920` - shell-api: Add options in stream processor start, stop, and drop
+- :issue:`MONGOSH-1864` - shell-api: Add stream processor modify
+
+Bug Fixes:
+
+- :issue:`MONGOSH-1892` - Allocate more memory to fix test_vscode
+- :issue:`MONGOSH-1917`, :issue:`MONGOSH-1905` - Include nonce in oidc request by default
+- :issue:`MONGOSH-1895` - Suppress experimental warning for node 23
+
+`Full release notes available on JIRA
+<https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.4>`__.
+
+
 v2.3.3
 ------
 
