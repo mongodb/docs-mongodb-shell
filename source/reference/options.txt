@@ -462,7 +462,7 @@ Authentication Options
           available only in `MongoDB Enterprise
           <http://www.mongodb.com/products/mongodb-enterprise-advanced?jmp=docs>`_.
 
-      * - :manual:`MONGODB-AWS </core/security-oidc/>` (AWS IAM) 
+      * - ``MONGODB-AWS`` (AWS IAM) 
 
         - External authentication using AWS IAM credentials. This
           mechanism is available in `MongoDB Enterprise
