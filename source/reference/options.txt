@@ -469,7 +469,7 @@ Authentication Options
           <http://www.mongodb.com/products/mongodb-enterprise-advanced?jmp=docs>`_
           and  `MongoDB Atlas
           <https://www.mongodb.com/atlas/database?tck=docs_server>`_
-          cluster. See :ref:`example-connect-mongo-using-aws-iam`.
+          cluster.
 
 .. option:: --gssapiServiceName
 
