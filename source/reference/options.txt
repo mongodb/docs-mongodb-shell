@@ -464,8 +464,9 @@ Authentication Options
 
       * - ``MONGODB-AWS`` (AWS IAM) 
 
-        - External authentication using AWS IAM credentials. This
-          mechanism is available in `MongoDB Enterprise
+        - External authentication using Amazon Web Services Identity and
+          Access Management (AWS IAM) credentials. This mechanism is
+          available in `MongoDB Enterprise
           <http://www.mongodb.com/products/mongodb-enterprise-advanced?jmp=docs>`_
           and `MongoDB Atlas
           <https://www.mongodb.com/atlas/database?tck=docs_server>`_
