@@ -25,7 +25,6 @@ New features released in this version:
 
 Bug Fixes:
 
-- :issue:`MONGOSH-1892` - Allocate more memory to fix test_vscode
 - :issue:`MONGOSH-1917`, :issue:`MONGOSH-1905` - Include ``nonce`` in OIDC
   requests by default. Use the ``--oidcNoNonce`` option to suppress this 
   behavior if your |idp| doesn't support it.
