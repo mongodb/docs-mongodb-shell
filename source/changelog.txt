@@ -16,6 +16,11 @@ v2.3.9
 ------
 *Released February 5, 2025*
 
+Upgrades to Node.js version 20.18.2. Node 20.18.2 resolves security issues.
+Vulnerabilities are unlikely to affect typical ``mongosh`` users. For more
+information, see the 
+`January 21, 2025 Node.js security release <https://nodejs.org/en/blog/release/v20.18.2>`__.
+
 New features released in this version:
 
 - :issue:`MONGOSH-1989` - Added ability to log custom messages in scripts by 
