@@ -18,8 +18,6 @@ v2.3.9
 
 New features released in this version:
 
-- :issue:`MONGOSH-1998` - ``ConnectDnsResolutionDetail`` now includes a 
-  ``durationMs`` field with the DNS resolution time.
 - :issue:`MONGOSH-1989` - Added ability to log custom messages in scripts by 
   calling ``log.[debug|info|warn|error|fatal]()``
 
