@@ -31,7 +31,7 @@ New features released in this version:
 
 - :issue:`MONGOSH-1995` - Added help output for logging commands.
 
-- Added the following logging configuration options, which can be set directly
+- Added the following logging configuration options, which you can set directly
   in the :ref:`configuration file <configure-settings-global>`, or by calling 
   the :ref:`config api <configure-settings-api>`.
   - :issue:`MONGOSH-1988` - Disable logging by setting ``disableLogging: true``.
