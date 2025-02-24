@@ -23,10 +23,10 @@ v2.4.0
 
 New features released in this version:
 
-- :issue:`MONGOSH-2013` - Added a history() command, which returns an array of 
+- :issue:`MONGOSH-2013` - Added a ``history()`` command, which returns an array of 
   all previously run commands.
   
-- :issue:`MONGOSH-1090` - Added a log.getPath() command, which returns the path
+- :issue:`MONGOSH-1090` - Added a ``log.getPath()`` command, which returns the path
   to the currently active log file.
 
 - :issue:`MONGOSH-1995` - Added help output for logging commands.
@@ -36,15 +36,15 @@ New features released in this version:
   the :ref:`config api <configure-settings-api>`.
 
   - :issue:`MONGOSH-1988` - Disable logging by setting ``disableLogging: true``.
-  
+
   - :issue:`MONGOSH-1983`, :issue:`MONGOSH-2012` - Specify a custom path for
     :ref:`log files <mdb-shell-logs>` by setting ``logLocation``.
 
   - :issue:`MONGOSH-1986` - Compress log files by setting 
     ``logCompressionEnabled: true``.
 
-  - :issue:`MONGOSH-1984` - Limit the duration to keep log files by setting
-    ``logRetentionDays`` (default 30).
+  - :issue:`MONGOSH-1984` - Limit the number of days to keep log files by
+    setting ``logRetentionDays`` (default 30).
 
   - :issue:`MONGOSH-1985` - Limit the maximum size of the logs directory by
     setting ``logRetentionGB`` (default uncapped).
@@ -52,7 +52,7 @@ New features released in this version:
   - :issue:`MONGOSH-1987` - Limit the maximum number of log files by setting
     ``logMaxFileCount`` (default 100).
 
-- :issue:`SERVER-77400` - Added renameCollection() to the MongoDB 8.1 Stable
+- :issue:`SERVER-77400` - Added ``renameCollection()`` to the MongoDB 8.1 Stable
   API V1.
 
 Bug Fixes:
@@ -60,6 +60,7 @@ Bug Fixes:
 - :issue:`MONGOSH-1914` - Fixed an issue where multiple ``mongosh`` processes
   could attempt to remove outdated log files at the same time, leading to one
   process terminating with ``Error: ENOENT: no such file or directory``.
+
 - :issue:`MONGOSH-2002` - Improved error messaging when attempting to serialize
   a cursor.
 
@@ -78,6 +79,7 @@ v2.3.9
 - Upgrades Node.js version to 20.18.2. Node 20.18.2 resolves security issues. 
   For more information, see the  `January 21, 2025 Node.js security release \
   <https://nodejs.org/en/blog/release/v20.18.2>`__.
+
 - Stricter validation of user input to address vulnerabilities.
 
 New features released in this version:
