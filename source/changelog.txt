@@ -23,10 +23,7 @@ v2.3.9
 - Upgrades Node.js version to 20.18.2. Node 20.18.2 resolves security issues. 
   For more information, see the  `January 21, 2025 Node.js security release \
   <https://nodejs.org/en/blog/release/v20.18.2>`__.
-- Stricter validation of user input to address `(CVE
-  150, number TBD) <https://nvd.nist.gov/vuln/detail/CVE-2025-TBD>`__, `(CVE
-  149, number TBD) <https://nvd.nist.gov/vuln/detail/CVE-2025-TBD>`__, and 
-  `(CVE 148, number TBD) <https://nvd.nist.gov/vuln/detail/CVE-2025-TBD>`__.
+- Stricter validation of user input to address vulnerabilities.
 
 New features released in this version:
 
