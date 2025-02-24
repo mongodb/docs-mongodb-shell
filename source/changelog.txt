@@ -34,17 +34,23 @@ New features released in this version:
 - Added the following logging configuration options, which you can set directly
   in the :ref:`configuration file <configure-settings-global>`, or by calling 
   the :ref:`config api <configure-settings-api>`.
+
   - :issue:`MONGOSH-1988` - Disable logging by setting ``disableLogging: true``.
+  
   - :issue:`MONGOSH-1983`, :issue:`MONGOSH-2012` - Specify a custom path for
-  :ref:`log files <mdb-shell-logs>` by setting ``logLocation``.
+    :ref:`log files <mdb-shell-logs>` by setting ``logLocation``.
+
   - :issue:`MONGOSH-1986` - Compress log files by setting 
-  ``logCompressionEnabled: true``.
+    ``logCompressionEnabled: true``.
+
   - :issue:`MONGOSH-1984` - Limit the duration to keep log files by setting
-  ``logRetentionDays`` (default 30).
+    ``logRetentionDays`` (default 30).
+
   - :issue:`MONGOSH-1985` - Limit the maximum size of the logs directory by
-  setting ``logRetentionGB`` (default uncapped).
+    setting ``logRetentionGB`` (default uncapped).
+
   - :issue:`MONGOSH-1987` - Limit the maximum number of log files by setting
-  ``logMaxFileCount`` (default 100).
+    ``logMaxFileCount`` (default 100).
 
 - :issue:`SERVER-77400` - Added renameCollection() to the MongoDB 8.1 Stable
   API V1.
