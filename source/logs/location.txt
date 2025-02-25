@@ -10,7 +10,7 @@ Specify Log File Location
    :depth: 1
    :class: singlecol
 
-TEST You can specify where MongoDB Shell writes log files. By default,
+You can specify where MongoDB Shell writes log files. By default,
 MongoDB Shell saves the log for each session to your user's
 ``.mongodb/mongosh`` directory, which depends on your operating system:
 
