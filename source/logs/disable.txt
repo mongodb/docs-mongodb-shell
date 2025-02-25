@@ -10,8 +10,15 @@ Toggle Logging
    :depth: 1
    :class: singlecol
 
-To specify whether |mdb-shell| performs logging, use the
+To specify whether |mdb-shell| writes log messages, use the
 ``disableLogging`` configuration option.
+
+About this Task
+---------------
+
+When you toggle logging, the change affects the current |mdb-shell|
+session. You don't need to start a new session for the change to take
+effect.
 
 Before you Begin
 ----------------
@@ -28,8 +35,9 @@ To check if logging is currently disabled, run the following command:
 Steps
 -----
 
-You can set configuration options with the configuration API or a
-configuration file.
+You can set configuration options with the :ref:`configuration API
+<configure-settings-api>` or a :ref:`configuration file
+<configure-settings-global>`.
 
 Disable Logging with the Configuration API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,9 +51,20 @@ The following command uses the config API to disable logging for
    .. input::
       :language: javascript
 
-      config.set("logLocation", "/path/to/log/directory")
+      config.set("disableLogging", true)
 
    .. output::
       :language: javascript
 
-      Setting "logLocation" has been changed
+      Setting "disableLogging" has been changed
+
+Disable Logging with a Configuration File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following configuration file sets the ``disableLogging`` setting to
+``true``:
+
+.. code-block:: yaml
+
+   mongosh:
+     disableLogging: true
