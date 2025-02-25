@@ -90,3 +90,36 @@ The custom log entry appears in the logs for your session:
    
 For more information about log sessions and how to retrieve log
 messages, see :ref:`mdb-shell-view-logs`.
+
+To verify that the script inserted the documents, query the ``movies``
+collection:
+
+.. code-block:: javascript
+
+   use myDatabase
+   db.movies.find()
+
+Output:
+
+.. code-block:: javascript
+   :copyable: false
+
+   [
+      {
+         _id: ObjectId('67bde8c2a527c6b1341979f2'),
+         title: 'Titanic',
+         year: 1997,
+         genres: [ 'Drama', 'Romance' ]
+      },
+      {
+         _id: ObjectId('67bde8c2a527c6b1341979f3'),
+         title: 'Spirited Away',
+         year: 2001,
+         genres: [ 'Animation', 'Adventure', 'Family' ]
+      },
+      {
+         _id: ObjectId('67bde8c2a527c6b1341979f4'),
+         title: 'Casablanca',
+         genres: [ 'Drama', 'Romance', 'War' ]
+      }
+   ]
