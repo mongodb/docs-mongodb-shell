@@ -1,0 +1,7 @@
+.. _mongosh-log-location:
+
+=========================
+Specify Log File Location
+=========================
+
+You can specify where MongoDB Shell writes log files. By default, 
