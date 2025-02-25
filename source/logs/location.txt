@@ -68,8 +68,6 @@ setting to ``/path/to/log/directory``:
 
       Setting "logLocation" has been changed
 
-Test
-
 Modify Log Location with a Configuration File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
