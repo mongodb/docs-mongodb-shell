@@ -55,16 +55,18 @@ Modify Log Location with the API
 The following command uses the config API to set the ``logLocation``
 setting to ``/path/to/log/directory``:
 
-.. code-block:: javascript
+.. io-code-block::
+   :copyable: true
 
-   config.set("logLocation", "/path/to/log/directory")
+   .. input::
+      :language: javascript
 
-Output:
+      config.set("logLocation", "/path/to/log/directory")
 
-.. code-block:: javascript
-   :copyable: false
+   .. output::
+      :language: javascript
 
-   Setting "logLocation" has been changed
+      Setting "logLocation" has been changed
 
 Modify Log Location with a Configuration File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
