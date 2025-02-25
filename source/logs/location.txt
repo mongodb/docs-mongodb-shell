@@ -41,7 +41,7 @@ start after you change the log file location use the updated location.
 Steps
 -----
 
-To change the default log location, modify the ``logLocation``
+To change the log file location, modify the ``logLocation``
 configuration option. You can modify configuration options with the
 configuration API or a configuration file.
 
