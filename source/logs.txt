@@ -30,6 +30,9 @@ View |mdb-shell| Logs
 
 .. include:: /includes/steps/view-logs.rst
 
+To change where MongoDB Shell writes logs, see
+:ref:`mongosh-log-location`.
+
 .. _mdb-shell-command-history:
 
 View |mdb-shell| Command History
