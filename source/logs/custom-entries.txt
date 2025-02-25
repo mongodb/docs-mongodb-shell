@@ -10,11 +10,10 @@ Write Custom Log Entries
    :depth: 1
    :class: singlecol
 
-You can update your :ref:`MongoDB Shell scripts
-<mdb-shell-write-scripts>` to write custom entries that appear in
-:ref:`MongoDB Shell logs <mdb-shell-logs>`. Custom log entries can help
-with debugging, error handling, and alert you when the script performs a
-specific function.
+You can write custom :ref:`MongoDB Shell log entries <mdb-shell-logs>`
+from your :ref:`MongoDB Shell scripts <mdb-shell-write-scripts>`. Custom
+log entries help with debugging, error handling, and alert you when the
+script performs specific functions.
 
 About this Task
 ---------------
