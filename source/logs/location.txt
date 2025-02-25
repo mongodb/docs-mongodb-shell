@@ -19,6 +19,21 @@ operating system:
    * - Windows
      - ``%UserProfile%/AppData/Local/mongodb/mongosh/<LogID>_log``
 
+About this Task
+---------------
+
+To view the current log file location, use the :ref:`config API
+<configure-settings-api>` to return the ``logLocation`` value:
+
+.. code-block:: javascript
+
+   config.get("logLocation")
+
+After you modify your log file location, your current MongoDB Shell
+session continues to use the previous log file location. MongoDB Shell
+sessions that start after you change the log file location use the
+updated location.
+
 Steps
 -----
 
@@ -33,8 +48,8 @@ the configuration API or a configuration file.
 Modify Log Location with the API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following command sets the ``logLocation`` setting to
-``/path/to/log/directory``:
+The following command uses the config API to set the ``logLocation``
+setting to ``/path/to/log/directory``:
 
 .. code-block:: javascript
 
@@ -49,3 +64,11 @@ Output:
 
 Modify Log Location with a Configuration File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following :ref:`configuration file <configure-settings-global>` sets
+the ``logLocation`` setting to ``/path/to/log/directory``:
+
+.. code-block:: yaml
+
+   mongosh:
+     logLocation: "/path/to/log/directory"
