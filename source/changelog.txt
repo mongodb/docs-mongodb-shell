@@ -52,8 +52,6 @@ New features released in this version:
   - :issue:`MONGOSH-1987` - Limit the maximum number of log files by setting
     ``logMaxFileCount`` (default 100).
 
-- :issue:`SERVER-77400` - Added ``renameCollection()`` to the MongoDB 8.1 Stable
-  API V1.
 
 Bug Fixes:
 
