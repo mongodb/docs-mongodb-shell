@@ -4,4 +4,48 @@
 Specify Log File Location
 =========================
 
-You can specify where MongoDB Shell writes log files. By default, 
+You can specify where MongoDB Shell writes log files. By default,
+MongoDB Shell saves the log for each session to your user's
+``.mongodb/mongosh`` directory. The default directory depends on your
+operating system:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Operating System
+     - Default Log Location
+   * - macOS and Linux
+     - ``~/.mongodb/mongosh/<LogID>_log``
+   * - Windows
+     - ``%UserProfile%/AppData/Local/mongodb/mongosh/<LogID>_log``
+
+Steps
+-----
+
+To change the default log location, modify the ``logLocation``
+configuration option. You can modify configuration options with either
+the configuration API or a configuration file.
+
+.. important::
+
+   Specify ``logLocation`` as an absolute filepath.
+
+Modify Log Location with the API
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following command sets the ``logLocation`` setting to
+``/path/to/log/directory``:
+
+.. code-block:: javascript
+
+   config.set("logLocation", "/path/to/log/directory")
+
+Output:
+
+.. code-block:: javascript
+   :copyable: false
+
+   Setting "logLocation" has been changed
+
+Modify Log Location with a Configuration File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
