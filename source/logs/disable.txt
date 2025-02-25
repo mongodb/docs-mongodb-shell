@@ -1,0 +1,51 @@
+.. _mongosh-logs-toggle:
+
+==============
+Toggle Logging
+==============
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+To specify whether |mdb-shell| performs logging, use the
+``disableLogging`` configuration option.
+
+Before you Begin
+----------------
+
+To check if logging is currently disabled, run the following command:
+
+.. code-block:: javascript
+
+   config.get("disableLogging")
+
+- If the command returns ``true``, logging is disabled.
+- If the command returns ``false``, logging is enabled.
+
+Steps
+-----
+
+You can set configuration options with the configuration API or a
+configuration file.
+
+Disable Logging with the Configuration API
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following command uses the config API to disable logging for
+|mdb-shell|:
+
+.. io-code-block::
+   :copyable: true
+
+   .. input::
+      :language: javascript
+
+      config.set("logLocation", "/path/to/log/directory")
+
+   .. output::
+      :language: javascript
+
+      Setting "logLocation" has been changed
