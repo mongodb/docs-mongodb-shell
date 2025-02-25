@@ -10,15 +10,15 @@ Write Custom Log Entries
    :depth: 1
    :class: singlecol
 
-You can write custom :ref:`MongoDB Shell log entries <mdb-shell-logs>`
-from your :ref:`MongoDB Shell scripts <mdb-shell-write-scripts>`. Custom
-log entries help with debugging, error handling, and alert you when the
+You can write custom :ref:`log entries <mdb-shell-logs>` from your
+:ref:`MongoDB Shell scripts <mdb-shell-write-scripts>`. Custom log
+entries help with debugging, error handling, and alert you when the
 script performs specific functions.
 
 About this Task
 ---------------
 
-MongoDB Shell supports the following log levels for custom log entries:
+MongoDB Shell supports the following methods for custom log entries:
 
 - ``log.debug()``
 - ``log.error()``
@@ -39,9 +39,9 @@ Steps
 
       .. code-block:: javascript
          :emphasize-lines: 22,24
-
-         // connect-and-insert-with-log-entry.js
          
+         // connect-and-insert-with-log-entry.js
+                  
          try {
             db = connect( 'mongodb://localhost/myDatabase' );
 
@@ -52,18 +52,18 @@ Steps
                   genres: [ 'Drama', 'Romance' ]
                },
                {
-                  title: 'Spirited Away',
+                  title: 'Spirited Away', 
                   year: 2001,
-                  genres: ['Animation', 'Adventure', 'Family' ]
+                  genres: [ 'Animation', 'Adventure', 'Family' ]
                },
                {
                   title: 'Casablanca',
                   genres: [ 'Drama', 'Romance', 'War' ]
                }
             ] )
-            log.info('InsertData: [$(new Date().toISOString()}] Inserted 3 movies')
+            log.info('InsertData: Inserted 3 movies');
          } catch (error) {
-            log.error('ERROR: [$(new Date().toISOString()}] Insert failed. Reason: ${error.message}');
+            log.error('Insert failed', { error: error.message });
          }
 
       Save the script as ``connect-and-insert-with-log-entry.js``.
@@ -86,7 +86,7 @@ The custom log entry appears in the logs for your session:
 .. code-block:: javascript
    :copyable: false
 
-   {"t":{"$date":"2025-02-25T15:41:49.135Z"},"s":"I","c":"MONGOSH-SCRIPTS","id":1000000054,"ctx":"custom-log","msg":"InsertData: 2025-02-25T15:41:49.135Z Inserted 3 movies"}
+   {"t":{"$date":"2025-02-25T18:04:01.690Z"},"s":"I","c":"MONGOSH-SCRIPTS","id":1000000054,"ctx":"custom-log","msg":"InsertData: Inserted 3 movies"}
    
 For more information about log sessions and how to retrieve log
 messages, see :ref:`mdb-shell-view-logs`.
