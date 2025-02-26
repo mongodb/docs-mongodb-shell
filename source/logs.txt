@@ -69,6 +69,6 @@ automatically deletes log files older than 30 days.
 .. toctree::
    :titlesonly:
 
-   Toggle Logging </logs/disable>
+   Disable Logging </logs/disable>
    Specify Log Location <logs/location> 
    Write Custom Log Entries <logs/custom-entries> 

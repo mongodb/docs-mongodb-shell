@@ -35,9 +35,9 @@ To check if logging is currently disabled, run the following command:
 Steps
 -----
 
-You can set configuration options with the :ref:`configuration API
-<configure-settings-api>` or a :ref:`configuration file
-<configure-settings-global>`.
+You can set the ``disableLogging`` configuration option with the
+:ref:`configuration API <configure-settings-api>` or a
+:ref:`configuration file <configure-settings-global>`.
 
 Disable Logging with the Configuration API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,8 +61,7 @@ The following command uses the config API to disable logging for
 Disable Logging with a Configuration File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following configuration file sets the ``disableLogging`` setting to
-``true``:
+The following configuration file disables logging for |mdb-shell|:
 
 .. code-block:: yaml
 
