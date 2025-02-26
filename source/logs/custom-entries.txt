@@ -78,6 +78,14 @@ Steps
 
          load("connect-and-insert-with-log-entry.js")
 
+      Alternatively, you can run the script programmatically by using
+      the :option:`--file <mongosh --file>` option when you start
+      ``mongosh``:
+      
+      .. code-block:: javascript
+
+         mongosh --file connect-and-insert-with-log-entry.js
+
 Results
 -------
 
