@@ -82,7 +82,7 @@ Steps
       the :option:`--file <mongosh --file>` option when you start
       ``mongosh``:
       
-      .. code-block:: javascript
+      .. code-block:: bash
 
          mongosh --file connect-and-insert-with-log-entry.js
 
