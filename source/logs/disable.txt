@@ -1,8 +1,8 @@
-.. _mongosh-logs-toggle:
+.. _mongosh-logs-disable:
 
-==============
-Toggle Logging
-==============
+===============
+Disable Logging
+===============
 
 .. contents:: On this page
    :local:
@@ -69,7 +69,8 @@ The following configuration file sets the ``disableLogging`` setting to
    mongosh:
      disableLogging: true
 
-Enable Logging
-~~~~~~~~~~~~~~
+Re-Enable Logging
+~~~~~~~~~~~~~~~~~
 
-To enable logging, set ``disableLogging`` to ``false``.
+To enable logging, set ``disableLogging`` to ``false``. You can perform
+this action through the config API or configuration file.
