@@ -1,0 +1,7 @@
+.. _mongosh-log-file-duration:
+
+================================
+Customize Log Retention Duration
+================================
+
+Test

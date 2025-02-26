@@ -63,11 +63,13 @@ history:
 Log Retention
 -------------
 
-``mongosh`` retains up to 100 log files for 30 days. ``mongosh``
-automatically deletes log files older than 30 days.
+By default, ``mongosh`` retains up to 100 log files for 30 days.
+``mongosh`` automatically deletes log files older than 30 days. To
+customize log file retention, see :ref:`mongosh-logs-retention`.
 
 .. toctree::
    :titlesonly:
 
-   Specify Log Location <logs/location> 
-   Write Custom Log Entries <logs/custom-entries> 
+   Specify Log Location </logs/location> 
+   Write Custom Log Entries </logs/custom-entries>
+   Retention </logs/retention>
