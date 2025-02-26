@@ -11,7 +11,7 @@ Toggle Logging
    :class: singlecol
 
 To specify whether |mdb-shell| writes log messages, use the
-``disableLogging`` configuration option.
+``disableLogging`` configuration option. Logging is enabled by default.
 
 About this Task
 ---------------
@@ -68,3 +68,8 @@ The following configuration file sets the ``disableLogging`` setting to
 
    mongosh:
      disableLogging: true
+
+Enable Logging
+~~~~~~~~~~~~~~
+
+To enable logging, set ``disableLogging`` to ``false``.
