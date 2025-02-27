@@ -51,13 +51,19 @@
      - 6
      - The depth to which objects are printed. Setting ``inspectDepth``
        to ``Infinity`` (the javascript object) prints all nested
-       objects to their full depth. 
+       objects to their full depth.
 
    * - ``logLocation``
      - string
      - Depends on your operating system. See :ref:`mdb-shell-view-logs`.
      - Directory where MongoDB Shell writes log files. Specify an
        absolute filepath. See :ref:`mongosh-log-location`.
+
+   * - ``logRetentionDays``
+     - integer
+     - 30
+     - Number of days that |mdb-shell| log files are retained. Only
+       applicable when ``disableLogging`` is ``false``.
 
    * - ``redactHistory``
      - string

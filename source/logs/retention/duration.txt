@@ -1,7 +1,15 @@
 .. _mongosh-log-file-duration:
 
-================================
-Customize Log Retention Duration
-================================
+=============================
+Modify Log Retention Duration
+=============================
 
-Test
+You can modify how long |mdb-shell| log files are retained. By default,
+log files are retained for 30 days.
+
+Steps
+-----
+
+To modify how long log files are retained, set the ``logRetentionDays``
+configuration options. You can set configuration options in the
+configuration API or a configuration file.
