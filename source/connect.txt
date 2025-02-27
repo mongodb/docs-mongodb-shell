@@ -357,7 +357,7 @@ following command:
 
     mongosh "mongodb://localhost:27017/qa"
 
-The database attribute in the connection string can also take `<defaultAuthDB>`, 
+The database attribute in the connection string can also take ``<defaultauthdb>``, 
 which specifies the authentication database to use if the connection string 
 includes `username:password@` authentication credentials but the :urioption:`authSource`
 option is unspecified. For more information, see :ref:`connections-standard-connection-string-format`.
