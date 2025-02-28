@@ -4,6 +4,12 @@
 Modify Log Retention Duration
 =============================
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 You can modify how long |mdb-shell| log files are retained. A log
 cleanup process automatically deletes log files older than the specified
 retention period. By default, log files are retained for 30 days.
@@ -66,7 +72,4 @@ To instruct |mdb-shell| to not delete logs based on file age, set
 ``logRetentionDays`` to ``Infinity``. You can perform this action
 through the config API or configuration file.
 
-.. important::
-
-   To prevent log storage from growing too large, always specify at
-   least one log retention criterion.
+.. include:: /includes/specify-one-retention-criterion.rst
