@@ -62,9 +62,9 @@ days:
 Disable Duration-Based Log Cleanup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To not delete log files based on log file age, set ``logRetentionDays``
-to ``Infinity``. You can perform this action through the config API or
-configuration file.
+To instruct |mdb-shell| to not delete logs based on file age, set
+``logRetentionDays`` to ``Infinity``. You can perform this action
+through the config API or configuration file.
 
 .. important::
 
