@@ -19,6 +19,9 @@ About this Task
 When log compression is enabled, |mdb-shell| compresses log files with
 gzip.
 
+After you toggle log compression, you must start a new |mdb-shell|
+session for the change to take effect.
+
 Before you Begin
 ----------------
 
