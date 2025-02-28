@@ -65,9 +65,13 @@
        absolute filepath. See :ref:`mongosh-log-location`.
 
    * - ``logRetentionDays``
-     - integer
+     - integer or Infinity
      - 30
-     - Number of days that |mdb-shell| log files are retained.
+     - Number of days that |mdb-shell| log files are retained. If this
+       value is set to ``Infinity``, log files are not deleted based on
+       age. To prevent log storage from growing too large, you should
+       always specify at least one log retention criteria. See
+       :ref:`mongosh-logs-retention`.
 
    * - ``redactHistory``
      - string
