@@ -62,7 +62,8 @@
      - boolean
      - false
      - Specifies whether |mdb-shell| compresses log files. When this
-       value is ``true``, |mdb-shell| uses gzip to compress logs.
+       value is ``true``, |mdb-shell| uses gzip to compress logs. See
+       :ref:`mongosh-log-compression`.
 
    * - ``logLocation``
      - string
