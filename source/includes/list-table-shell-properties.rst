@@ -69,8 +69,8 @@
      - 30
      - Number of days that |mdb-shell| log files are retained. If this
        value is set to ``Infinity``, log files are not deleted based on
-       age. To prevent log storage from growing too large, you should
-       always specify at least one log retention criterion. See
+       age. To prevent log storage from growing too large, always
+       specify at least one log retention criterion. See
        :ref:`mongosh-logs-retention`.
 
    * - ``redactHistory``
