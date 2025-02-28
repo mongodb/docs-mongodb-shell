@@ -7,6 +7,11 @@
      - Default
      - Description
 
+   * - ``disableLogging``
+     - boolean
+     - ``false``
+     - Specifies whether |mdb-shell| writes log entries.
+
    * - ``displayBatchSize``
      - integer
      - 20
@@ -62,8 +67,7 @@
    * - ``logRetentionDays``
      - integer
      - 30
-     - Number of days that |mdb-shell| log files are retained. Only
-       applicable when ``disableLogging`` is ``false``.
+     - Number of days that |mdb-shell| log files are retained.
 
    * - ``redactHistory``
      - string
