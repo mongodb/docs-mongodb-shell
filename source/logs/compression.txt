@@ -34,7 +34,8 @@ Steps
 
 To enable log compression, set the ``logCompressionEnabled``
 configuration option to ``true``. You can set configuration options in
-the configuration API or a configuration file.
+the :ref:`configuration API <configure-settings-api>` or a
+:ref:`configuration file <configure-settings-global>`.
 
 Enable Log Compression with the Configuration API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,3 +64,10 @@ The following configuration file enables log compression:
 
    mongosh:
      logCompressionEnabled: true
+
+Disable Log Compression
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To disable log compression, set ``logCompressionEnabled`` to ``false``.
+You can perform this action through the config API or configuration
+file.
