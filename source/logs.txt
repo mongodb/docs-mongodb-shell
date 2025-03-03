@@ -73,4 +73,5 @@ customize log file retention, see :ref:`mongosh-logs-retention`.
    Specify Log Location </logs/location> 
    Write Custom Log Entries </logs/custom-entries>
    Retention </logs/retention>
+   Enable Log Compression </logs/compression>
    Disable Logging </logs/disable>

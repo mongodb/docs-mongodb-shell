@@ -12,7 +12,7 @@ Log Retention
 
 You can customize how |mdb-shell| logs are retained. By default, the
 system retains 100 log files for 30 days. You can choose to retain logs
-based on a combination of time, file size, and number of log files.
+based on a combination of time, storage size, and number of log files.
 
 Get Started
 -----------
