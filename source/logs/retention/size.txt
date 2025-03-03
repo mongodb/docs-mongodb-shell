@@ -88,4 +88,8 @@ To instruct |mdb-shell| to not delete logs based on storage size, set
 ``logRetentionGB`` to ``Infinity``. You can perform this action
 through the config API or configuration file.
 
+.. code-block:: javascript
+
+    config.set("logRetentionGB", Infinity)
+
 .. include:: /includes/specify-one-retention-criterion.rst
