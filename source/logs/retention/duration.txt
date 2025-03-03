@@ -4,12 +4,15 @@
 Modify Log Retention Duration
 =============================
 
+<<<<<<< HEAD
 .. contents:: On this page
    :local:
    :backlinks: none
    :depth: 1
    :class: singlecol
 
+=======
+>>>>>>> refs/remotes/upstream/master
 You can modify how long |mdb-shell| log files are retained. A log
 cleanup process automatically deletes log files older than the specified
 retention period. By default, log files are retained for 30 days.
