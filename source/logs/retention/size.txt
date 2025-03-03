@@ -85,8 +85,8 @@ Disable Maximum Log Storage Size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To instruct |mdb-shell| to not delete logs based on storage size, set
-``logRetentionGB`` to ``Infinity``. You can perform this action
-through the config API or configuration file.
+``logRetentionGB`` to ``Infinity``. You can perform this action through
+the config API or configuration file. For example:
 
 .. code-block:: javascript
 
