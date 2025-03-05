@@ -21,6 +21,7 @@ To customize log retention, see these pages:
 
 - :ref:`mongosh-log-file-duration`
 - :ref:`mongosh-log-retention-gb`
+- :ref:`mongosh-log-file-count`
 
 Details
 -------
@@ -32,3 +33,4 @@ Details
 
    Duration </logs/retention/duration>
    Storage Size </logs/retention/size>
+   File Count </logs/retention/file-count>
