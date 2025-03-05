@@ -27,7 +27,7 @@ value (including less than ``1``).
 
 To check the current storage size of log files, check the size of the
 log folder. To see the current log folder, run the following command
-from |mdb-shell|:
+from the |mdb-shell|:
 
 .. code-block:: javascript
 
@@ -84,9 +84,9 @@ The following configuration file sets the maximum log storage size to
 Disable Maximum Log Storage Size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To instruct |mdb-shell| to not delete logs based on storage size, set
-``logRetentionGB`` to ``Infinity``. You can perform this action through
-the config API or configuration file. For example:
+To instruct the |mdb-shell| to not delete logs based on storage size,
+set ``logRetentionGB`` to ``Infinity``. You can perform this action
+through the config API or configuration file. For example:
 
 .. code-block:: javascript
 
