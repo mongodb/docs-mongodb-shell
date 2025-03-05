@@ -10,12 +10,12 @@ Modify Maximum Log File Count
    :depth: 1
    :class: singlecol
 
-You can specify the maximum number of log files that |mdb-shell|
-retains. After the maximum log file count is reached, |mdb-shell|
-deletes log files until the count is below the threshold, starting with
-the oldest log files.
+You can specify the maximum number of log files that the |mdb-shell|
+retains. After the |mdb-shell| reaches the maximum log file count, it
+starts deleting the oldest log files until the count is below the
+threshold.
 
-|mdb-shell| stores one log file for each session. By default,
+The |mdb-shell| stores one log file for each session. By default, the
 |mdb-shell| stores up to 100 log files.
 
 About this Task

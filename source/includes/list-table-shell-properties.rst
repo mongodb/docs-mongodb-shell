@@ -74,10 +74,10 @@
    * - ``logMaxFileCount``
      - integer or Infinity
      - 100
-     - Maximum number of log files that |mdb-shell| retains. After the
-       maximum log file count is reached, |mdb-shell| deletes log files
-       until the count is below the threshold, starting with the oldest
-       log files. See :ref:`mongosh-log-file-count`.
+     - Maximum number of log files that the |mdb-shell| retains. After
+       the |mdb-shell| reaches the maximum log file count, it starts
+       deleting the oldest log files until the count is below the
+       threshold. See :ref:`mongosh-log-file-count`.
 
    * - ``logRetentionDays``
      - integer or Infinity
