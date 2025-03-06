@@ -348,7 +348,7 @@ Connect to a Specific Database
 To connect to a specific default database, specify a database in your
 :manual:`connection string URI path </reference/connection-string/>`. If
 you do not specify a database in your URI path, you connect to the
-``admin`` database.
+``test`` database.
 
 For example, to connect to a database called ``qa`` on localhost, run the
 following command:
