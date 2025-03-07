@@ -17,6 +17,9 @@ actions performed in the |mdb-shell|.
 Get Started
 -----------
 
+You can view or tail the logs for a |mdb-shell| session based on its log
+ID.
+
 To learn how to view and customize |mdb-shell| logs, see these pages:
 
 - :ref:`mdb-shell-view-logs`
@@ -31,21 +34,21 @@ Details
 
 See the following details about |mdb-shell| logging behavior:
 
-Log Format
-~~~~~~~~~~
+Format
+~~~~~~
 
 The |mdb-shell| uses `Newline delimited JSON
-<https://github.com/ndjson/ndjson-spec>`__ to store session logs. The
-format used for |mdb-shell| logs matches the MongoDB server log format.
-For details, see :ref:`log-messages-ref`. 
+<https://github.com/ndjson/ndjson-spec>`__ to store session logs, which
+is the same log format used for :ref:`MongoDB server logs
+<log-messages-ref>`.
 
-You can view or tail the logs for a |mdb-shell| session based on its
-log ID.
+Redaction
+~~~~~~~~~
 
 .. include:: /includes/admonitions/note-redact-credentials-command-history.rst
 
-Log Retention
-~~~~~~~~~~~~~
+Retention
+~~~~~~~~~
 
 By default, the |mdb-shell| retains up to 100 log files, and individual
 log files are retained for 30 days. To customize log file retention, see
