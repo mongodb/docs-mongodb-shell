@@ -10,6 +10,9 @@ View Shell Logs
    :depth: 1
    :class: singlecol
 
+The |mdb-shell| stores logs for each session. The default log location
+depends on your operating system.
+
 .. include:: /includes/steps/view-logs.rst
 
 .. tip::

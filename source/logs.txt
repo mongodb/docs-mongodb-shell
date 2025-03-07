@@ -47,9 +47,9 @@ log ID.
 Log Retention
 ~~~~~~~~~~~~~
 
-By default, ``mongosh`` retains up to 100 log files for 30 days.
-``mongosh`` automatically deletes log files older than 30 days. To
-customize log file retention, see :ref:`mongosh-logs-retention`.
+By default, the |mdb-shell| retains up to 100 log files, and individual
+log files are retained for 30 days. To customize log file retention, see
+:ref:`mongosh-logs-retention`.
 
 .. toctree::
    :titlesonly:

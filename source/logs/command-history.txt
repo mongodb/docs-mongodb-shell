@@ -4,9 +4,18 @@
 View Shell Command History
 ==========================
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 |mdb-shell| saves a history of all commands you've run across sessions.
 When a new command is issued, it is added to the beginning of the
 history file.
+
+Steps
+-----
 
 To view the |mdb-shell| command history, open the following file in a
 text editor:
