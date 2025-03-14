@@ -498,7 +498,7 @@ Cursor Methods
 
    * - :method:`cursor.batchSize()`
      - Specifies the maximum number of documents MongoDB will return to the client 
-       within each batch returned in a query result. By default, the initial batchx 
+       within each batch returned in a query result. By default, the initial batch
        size is ``101`` documents and subsequent batches have a maximum 
        size of 16 mebibytes (MiB). This option can enforce a smaller
        limit than 16 MiB, but not a larger one. If you set ``batchSize`` 
