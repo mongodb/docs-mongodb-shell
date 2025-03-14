@@ -497,8 +497,15 @@ Cursor Methods
        .. arrayAccess
 
    * - :method:`cursor.batchSize()`
-     - Controls the number of documents MongoDB will return to the
-       client in a single network message.
+     - Specifies the maximum number of documents MongoDB will return to the client 
+       within each batch returned in a query result. By default, the initial batch 
+       size is ``101`` documents and subsequent batches have a maximum 
+       size of 16 mebibytes (MiB). This option can enforce a smaller
+       limit than 16 MiB, but not a larger one. If you set ``batchSize`` 
+       to a limit that results in batches larger than 16 MiB, this option has no effect.
+
+       A batchSize of 0 means that the cursor will be established, but no documents 
+       will be returned in the first batch. 
 
        The following example query returns results in batches of
        100: 
