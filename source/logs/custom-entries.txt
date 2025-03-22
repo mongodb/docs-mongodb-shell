@@ -18,13 +18,16 @@ script performs specific functions.
 About this Task
 ---------------
 
-MongoDB Shell supports the following methods for custom log entries:
+MongoDB Shell supports the following methods for setting the level for
+custom log entries:
 
 - ``log.debug()``
 - ``log.error()``
 - ``log.fatal()``
 - ``log.info()``
 - ``log.warn()``
+
+To view the log file location in the file system, use ``log.getPath()``.
 
 Steps
 -----
@@ -131,3 +134,17 @@ Output:
          genres: [ 'Drama', 'Romance', 'War' ]
       }
    ]
+
+The following example uses ``log.getPath()`` to view the log file
+location in the file system:
+
+.. code-block:: javascript
+
+   log.getPath()
+
+Output:
+
+.. code-block:: javascript
+   :copyable: false
+
+   /.mongodb/mongosh/67ddc00703bcd2a490a7299f_log
