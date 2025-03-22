@@ -142,7 +142,7 @@ location in the file system:
 
    log.getPath()
 
-Output:
+Output, which varies depending on your implementation:
 
 .. code-block:: javascript
    :copyable: false
