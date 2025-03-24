@@ -151,4 +151,6 @@ Output, which varies depending on your implementation:
 
 ./mongosh --port 27019
 
-The hexadecimal value in the path is the ``mongosh`` log ID.
+The hexadecimal value in the path is the ``mongosh`` log identifier for
+the current session. In the previous example, the identifier is
+``67ddc00703bcd2a490a7299f``.
