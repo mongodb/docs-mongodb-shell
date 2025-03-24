@@ -37,6 +37,10 @@ To view the current log file location, use the :ref:`config API
 After you modify your log file location, you must start a new
 |mdb-shell| session for the change to take effect.
 
+Starting in |mdb-shell| 2.4.0, you can also use the ``log.getPath()``
+command to view the current log file location. For details, see
+:ref:`mongosh-custom-log-entries`.
+
 Log File Names
 ~~~~~~~~~~~~~~
 
