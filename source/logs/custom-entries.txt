@@ -148,3 +148,7 @@ Output, which varies depending on your implementation:
    :copyable: false
 
    /.mongodb/mongosh/67ddc00703bcd2a490a7299f_log
+
+./mongosh --port 27019
+
+The hexadecimal value in the path is the ``mongosh`` log ID.
