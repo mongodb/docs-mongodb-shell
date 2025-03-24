@@ -18,8 +18,7 @@ script performs specific functions.
 About this Task
 ---------------
 
-MongoDB Shell supports the following methods for setting the level for
-custom log entries:
+MongoDB Shell supports the following methods for custom log entries:
 
 - ``log.debug()``
 - ``log.error()``
