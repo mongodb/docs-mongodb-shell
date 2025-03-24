@@ -27,9 +27,6 @@ custom log entries:
 - ``log.info()``
 - ``log.warn()``
 
-Starting in |mdb-shell| 2.4.0, you can view the log file location in the
-file system with the ``log.getPath()`` command.
-
 Steps
 -----
 
@@ -135,23 +132,3 @@ Output:
          genres: [ 'Drama', 'Romance', 'War' ]
       }
    ]
-
-The following example uses ``log.getPath()`` to view the log file
-location in the file system:
-
-.. code-block:: javascript
-
-   log.getPath()
-
-Example output:
-
-.. code-block:: javascript
-   :copyable: false
-
-   /Users/jane.doe/.mongodb/mongosh/67ddc00703bcd2a490a7299f_log
-
-./mongosh --port 27019
-
-The hexadecimal value in the path is the ``mongosh`` log identifier for
-the current session. In the previous example, the identifier is
-``67ddc00703bcd2a490a7299f``.
