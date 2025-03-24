@@ -5,7 +5,7 @@ command to view the current log file location. For example:
 
    log.getPath()
 
-The output format depends on the operating system. Example output:
+Example output:
 
 .. code-block:: javascript
    :copyable: false
