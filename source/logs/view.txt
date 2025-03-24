@@ -13,11 +13,11 @@ View Shell Logs
 The |mdb-shell| stores logs for each session. The default log location
 depends on your operating system.
 
-.. include:: /includes/log-file-location.rst
-
 .. include:: /includes/steps/view-logs.rst
 
 .. tip::
   
    To change where MongoDB Shell writes logs, see
    :ref:`mongosh-log-location`.
+
+.. include:: /includes/log-file-location.rst
