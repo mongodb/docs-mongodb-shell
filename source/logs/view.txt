@@ -19,3 +19,7 @@ depends on your operating system.
   
    To change where MongoDB Shell writes logs, see
    :ref:`mongosh-log-location`.
+
+Starting in |mdb-shell| 2.4.0, you can use the ``log.getPath()``
+command to view the current log file location. For details, see
+:ref:`mongosh-custom-log-entries`.
