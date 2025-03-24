@@ -103,10 +103,11 @@
    * - ``redactHistory``
      - string
      - ``remove``
-     - Controls what information is recorded in the ``mongosh`` command history, 
-       meaning what can be accessed via up and down keys and Ctrl+R while inside the shell. 
+     - Controls what information is recorded in the ``mongosh`` command history.
+       You can access the ``mongosh`` command history via the up and down keys 
+       and Ctrl+R while inside the shell.
 
-       Must be one of:
+       Must be one of the following values:
 
        - ``keep``: Retain all history.
        - ``remove``: Remove lines that contain sensitive commands from the history. 
