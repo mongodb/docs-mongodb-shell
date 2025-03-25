@@ -34,7 +34,7 @@ text editor:
      - ``%UserProfile%/.mongodb/mongosh/mongosh_repl_history``
 
 Starting in |mdb-shell| 2.4.0, you can use the ``history()`` command to
-output a list of previously executed commands. For example:
+view a list of previously executed commands. For example:
 
 .. code-block:: javascript
 
@@ -57,3 +57,8 @@ Example output, which shows a list of commands in an array of strings:
      'exit',
      ...
   ]
+
+``history`` supports JavaScript array operations like ``slice()``. For
+example, to view the last 10 commands, run:
+
+history().slice(-10)
