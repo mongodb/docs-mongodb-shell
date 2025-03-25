@@ -58,7 +58,9 @@ Example output, which shows a list of commands in an array of strings:
      ...
   ]
 
-``history`` supports JavaScript array operations like ``slice()``. For
+``history`` supports JavaScript array operators like ``slice()``. For
 example, to view the last 10 commands, run:
 
-history().slice(-10)
+.. code-block:: javascript
+
+   history().slice(-10)
