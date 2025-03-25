@@ -105,7 +105,7 @@
      - ``remove``
      - Controls what information is recorded in the ``mongosh`` command history.
        You can access the ``mongosh`` command history via the up and down keys 
-       and Ctrl+R while inside the shell.
+       or Ctrl+R while inside the shell.
 
        Must be one of the following values:
 
