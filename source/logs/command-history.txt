@@ -40,7 +40,8 @@ view a list of previously executed commands. For example:
 
    history()
 
-Example output, which shows a list of commands in an array of strings:
+The following example output shows a list of commands in an array of
+strings:
 
 .. code-block:: javascript
    :copyable: false
