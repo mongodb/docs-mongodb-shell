@@ -47,15 +47,17 @@ strings:
    :copyable: false
 
    [
-     'db.salesFromFile.find()',
-     '   let salesCollection = JSON.parse( db.sales.find().toArray() )   ',
-     '   let salesCollection = JSON.parse( db.sales.find() )   ',
-     '   let salesCollection = EJSON.stringify( db.sales.find().toArray() )   ',
-     "   fs.writeFileSync( 'salesDeserialize.json', salesCollection ) ",
-     'db.salesFromFile.find()',
-     'db.salesFromDeserializeFile.find()',
-     'db.salesFromDeserializeFile.drop()',
-     'exit',
+     'db.pizzaOrders.explain()',
+     'db.pizzaOrders.find()',
+     'db.pizzaOrdersas.explain()',
+     'db.pizzaOrders.explain.find()',
+     'db.pizzaOrders.explain.find( {} )',
+     'db.pizzaOrders.explain().find( {} )',
+     'db.pizzaOrders.explain().find( orderDate, totalNumber )',
+     'db.pizzaOrders.explain().find( orderDate: Date( "2024-03-20T10:01:12Z" ), totalNumber: 20 )',
+     'db.pizzaOrders.explain().find( totalNumber: 20 )',
+     'db.pizzaOrders.explain().find( { orderDate: Date( "2024-03-20T10:01:12Z" ) }, { totalNumber: 20 } )',
+     'db.pizzaOrders.find( { orderDate: Date( "2024-03-20T10:01:12Z" ) }, { totalNumber: 20 } )',
      ...
   ]
 
