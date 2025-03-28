@@ -49,7 +49,6 @@ strings:
    [
      'db.pizzaOrders.explain()',
      'db.pizzaOrders.find()',
-     'db.pizzaOrdersas.explain()',
      'db.pizzaOrders.explain.find()',
      'db.pizzaOrders.explain.find( {} )',
      'db.pizzaOrders.explain().find( {} )',
