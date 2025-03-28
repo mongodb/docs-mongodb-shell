@@ -61,6 +61,8 @@ strings:
      ...
   ]
 
+The history is returned in chronological order.
+
 ``history()`` supports JavaScript array methods. You can use ``slice()``
 to return a section of an array. For example, to view the last 10
 commands, run:
