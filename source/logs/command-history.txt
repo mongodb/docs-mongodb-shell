@@ -58,7 +58,7 @@ strings:
      'db.pizzaOrders.explain().find( { orderDate: Date( "2024-03-20T10:01:12Z" ) }, { totalNumber: 20 } )',
      'db.pizzaOrders.find( { orderDate: Date( "2024-03-20T10:01:12Z" ) }, { totalNumber: 20 } )',
      ...
-  ]
+   ]
 
 The history is returned in chronological order.
 
