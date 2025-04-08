@@ -503,7 +503,7 @@ Cursor Methods
        Subsequent batches have a maximum size of 16 MiB. This option can enforce a smaller
        limit than 16 MiB, but not a larger one. When set, the
        ``batchSize`` is the lesser of ``batchSize`` documents or 16 MiB worth of
-        documents.
+       documents.
 
        A ``batchSize`` of ``0`` means that the cursor is established, but no documents 
        are returned in the first batch. 
