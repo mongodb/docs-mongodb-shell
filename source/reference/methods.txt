@@ -501,10 +501,9 @@ Cursor Methods
        client within each batch returned in a query result. By default, the initial batch
        size is the lesser of ``101`` documents or 16 mebibytes (MiB) worth of documents.
        Subsequent batches have a maximum size of 16 MiB. This option can enforce a smaller
-       limit than 16 MiB, but not a larger one. If you set ``batchSize`` to a limit that
-       results in batches larger than 16 MiB, this option has no effect and
-       :method:`~cursor.batchSize()` uses the default batch size of the lesser of ``101``
-       documents or 16 mebibytes (MiB) worth of documents.
+       limit than 16 MiB, but not a larger one. When set, the
+       ``batchSize`` is the lesser of ``batchSize`` documents or 16 MiB worth of
+        documents.
 
        A ``batchSize`` of ``0`` means that the cursor is established, but no documents 
        are returned in the first batch. 
