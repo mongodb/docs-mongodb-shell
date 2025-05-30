@@ -7,6 +7,11 @@
      - Default
      - Description
 
+   * - ``disableLogging``
+     - boolean
+     - ``false``
+     - Specifies whether |mdb-shell| writes log entries.
+
    * - ``displayBatchSize``
      - integer
      - 20
@@ -52,16 +57,63 @@
      - The depth to which objects are printed. Setting ``inspectDepth``
        to ``Infinity`` (the javascript object) prints all nested
        objects to their full depth. 
+   
+   * - ``logCompressionEnabled``
+     - boolean
+     - false
+     - Specifies whether |mdb-shell| compresses log files. When this
+       value is ``true``, |mdb-shell| uses gzip to compress logs. See
+       :ref:`mongosh-log-compression`.
+
+   * - ``logLocation``
+     - string
+     - Depends on your operating system. See :ref:`mdb-shell-view-logs`.
+     - Directory where MongoDB Shell writes log files. Specify an
+       absolute filepath. See :ref:`mongosh-log-location`.
+
+   * - ``logMaxFileCount``
+     - integer or Infinity
+     - 100
+     - Maximum number of log files that the |mdb-shell| retains. After
+       the |mdb-shell| reaches the maximum log file count, it starts
+       deleting the oldest log files until the count is below the
+       threshold. See :ref:`mongosh-log-file-count`.
+
+   * - ``logRetentionDays``
+     - integer or Infinity
+     - 30
+     - Number of days that |mdb-shell| log files are retained. If this
+       value is set to ``Infinity``, log files are not deleted based on
+       age. To prevent log storage from growing too large, always
+       specify at least one log retention criterion. See
+       :ref:`mongosh-logs-retention`.
+
+   * - ``logRetentionGB``
+     - float or Infinity
+     - Unset
+     - Maximum amount of space in gigabytes used for |mdb-shell| logs.
+       If the combined size of |mdb-shell| logs exceeds this value, log
+       files are deleted starting with the oldest logs.
+
+       If this value is set to ``Infinity``, log files are not deleted
+       based on storage size. To prevent log storage from growing too
+       large, always specify at least one log retention criterion. See
+       :ref:`mongosh-logs-retention`.
 
    * - ``redactHistory``
      - string
      - ``remove``
-     - Controls what information is recorded in the shell history.
-       Must be one of:
+     - Controls what information is recorded in the ``mongosh`` command history.
+       You can access the ``mongosh`` command history via the up and down keys 
+       or Ctrl+R while inside the shell.
+
+       Must be one of the following values:
 
        - ``keep``: Retain all history.
-       - ``remove``: Remove lines which contain sensitive information.
-       - ``remove-redact``: Redact sensitive information.
+       - ``remove``: Remove lines that contain sensitive commands from the history. 
+         For example, ``remove`` removes calls to db.auth() or connect().
+       - ``remove-redact``: Remove lines that contain sensitive commands and redact 
+         specific strings in other history lines, such as file paths, email addresses, and URLs. 
 
    * - ``showStackTraces``
      - boolean

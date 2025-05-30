@@ -2,6 +2,9 @@
 Reference
 =========
 
+.. meta::
+   :description: Explore the reference materials for MongoDB Shell.
+
 .. default-domain:: mongodb
 
 .. toctree::
@@ -13,4 +16,4 @@ Reference
    EJSON </reference/ejson>
    .mongoshrc Configuration File </mongoshrc>
    Options </reference/options>
-   Retrieve Shell Logs </logs>
+   Logs </logs>

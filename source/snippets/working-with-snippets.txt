@@ -4,6 +4,9 @@
 Use Snippets in the Console
 ===========================
 
+.. meta::
+   :description: Learn how to install, run, and manage snippets in the `mongosh` console, including searching for available snippets and getting help for specific ones.
+
 .. default-domain:: mongodb
 
 .. contents:: On this page
@@ -207,9 +210,6 @@ The output lists each repository.
 
 .. code-block:: javascript
    :copyable: false
-
-   Snippet repository URL:      https://github.com/YOUR_COMPANY/YOUR_REPO_PATH/index.bson.br
-     -->  Homepage:             https://davemungo.github.io/mongosh-snippets/
 
    Snippet repository URL:      https://compass.mongodb.com/mongosh/snippets-index.bson.br
      -->  Homepage:             https://github.com/mongodb-labs/mongosh-snippets

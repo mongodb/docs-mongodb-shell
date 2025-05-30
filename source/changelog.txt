@@ -4,6 +4,9 @@
 Release Notes
 =============
 
+.. meta::
+   :description: Explore the changelog for `mongosh`, detailing new features, bug fixes, and updates across various versions.
+
 .. default-domain:: mongodb
 
 .. contents:: On this page
@@ -11,6 +14,126 @@ Release Notes
    :backlinks: none
    :depth: 1
    :class: singlecol
+
+
+=======
+v2.5.0
+------
+
+*Released April 9, 2025*
+
+New features released in this version:
+
+- :issue:`MONGOSH-1873` - Support new BSON vector types in mongosh
+- :issue:`MONGOSH-1649` - Add automerge information to sh.status()
+- :issue:`MONGOSH-1100` - Add Mongo bulkWrite API
+- :issue:`MONGOSH-1919` - Add sh.isConfigShardEnabled and listShards helpers
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/issues/?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.5.0>`__.
+
+v2.4.2
+------
+
+*Released March 6, 2025*
+
+New feature released in this version:
+
+- :issue:`MONGOSH-1926` - Added the ``sh.moveRange`` helper method.
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/issues/?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.4.2>`__.
+
+v2.4.0
+------
+*Released February 24, 2025*
+
+``mongosh`` now uses the following driver versions:
+
+- `Node.js driver 6.13.0 <https://github.com/mongodb/node-mongodb-native/releases/tag/v6.13.0>`__.
+- `Node.js BSON package 6.10.3 <https://github.com/mongodb/js-bson/releases/tag/v6.10.3>`__.
+
+New features released in this version:
+
+- :issue:`MONGOSH-2013` - Added a ``history()`` command, which returns an array of 
+  all previously run commands.
+  
+- :issue:`MONGOSH-1090` - Added a ``log.getPath()`` command, which returns the path
+  to the currently active log file.
+
+- :issue:`MONGOSH-1995` - Added help output for logging commands.
+
+- Added the following logging configuration options, which you can set directly
+  in the :ref:`configuration file <configure-settings-global>`, or by calling 
+  the :ref:`config api <configure-settings-api>`.
+
+  - :issue:`MONGOSH-1988` - Disable logging by setting ``disableLogging: true``.
+
+  - :issue:`MONGOSH-1983`, :issue:`MONGOSH-2012` - Specify a custom path for
+    :ref:`log files <mdb-shell-logs>` by setting ``logLocation``.
+
+  - :issue:`MONGOSH-1986` - Compress log files by setting 
+    ``logCompressionEnabled: true``.
+
+  - :issue:`MONGOSH-1984` - Limit the number of days to keep log files by
+    setting ``logRetentionDays`` (default 30).
+
+  - :issue:`MONGOSH-1985` - Limit the maximum size of the logs directory by
+    setting ``logRetentionGB`` (default uncapped).
+
+  - :issue:`MONGOSH-1987` - Limit the maximum number of log files by setting
+    ``logMaxFileCount`` (default 100).
+
+
+Bug Fixes:
+
+- :issue:`MONGOSH-1914` - Fixed an issue where multiple ``mongosh`` processes
+  could attempt to remove outdated log files at the same time, leading to one
+  process terminating with ``Error: ENOENT: no such file or directory``.
+
+- :issue:`MONGOSH-2002` - Improved error messaging when attempting to serialize
+  a cursor.
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=42122>`__.
+
+
+v2.3.9
+------
+*Released February 5, 2025*
+
+.. important::
+   This release includes fixes for security issues. Upgrade to ``mongosh`` 
+   2.3.9 at your earliest convenience.
+
+- Upgrades Node.js version to 20.18.2. Node 20.18.2 resolves security issues. 
+  For more information, see the  `January 21, 2025 Node.js security release \
+  <https://nodejs.org/en/blog/release/v20.18.2>`__.
+
+- Stricter validation of user input to address 
+  `CVE-2025-1691 <https://nvd.nist.gov/vuln/detail/CVE-2025-1691>`__, 
+  `CVE-2025-1692 <https://nvd.nist.gov/vuln/detail/CVE-2025-1692>`__, 
+  and `CVE-2025-1693 <https://nvd.nist.gov/vuln/detail/CVE-2025-1693>`__.
+
+New features released in this version:
+
+- :issue:`MONGOSH-1989` - Added ability to log custom messages in scripts by 
+  calling ``log.[debug|info|warn|error|fatal]()``
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=41759>`__.
+
+
+v2.3.8
+------
+
+*Released January 6, 2025*
+
+Contains internal enhancements and improvements.
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=17381&version=41730>`__.
+
 
 v2.3.7
 ------
@@ -34,6 +157,7 @@ Contains internal enhancements and improvements.
 `Full release notes available on JIRA
 <https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.6>`__.
 
+
 v2.3.5
 ------
 
@@ -47,6 +171,7 @@ Bug Fixes:
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.5>`__.
+
 
 v2.3.4
 ------
@@ -491,7 +616,7 @@ v2.0.0
   - ``upgradeState``
 
   To obtain version information, see the :ref:`feature compatibility
-  version (fcv) <view-fcv>`.
+  version (FCV) <view-fcv>`.
 
 - Removes support for :ref:`Free Monitoring <free-monitoring-mongodb>`
   helper functions:

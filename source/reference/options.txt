@@ -2,6 +2,9 @@
 Options
 =======
 
+.. meta::
+   :description: Explore various options to control MongoDB Shell, including general, stable API, connection, authentication, session, and client-side field level encryption options.
+
 .. default-domain:: mongodb
 
 .. contents:: On this page
@@ -532,6 +535,13 @@ Authentication Options
 
       mongosh 'mongodb://localhost/' --authenticationMechanism MONGODB-OIDC --oidcFlows=auth-code,device-auth
 
+.. option:: --oidcIdTokenAsAccessToken 
+   
+   Specifies whether ``mongosh`` uses the ID token received from the identity
+   provider instead of the access token. Use this option with identity providers 
+   that you can't configure to provide :abbr:`JWT (JSON Web Token)` access 
+   tokens.
+
 .. option:: --oidcRedirectUri
 
    Specifies a URI where the identity provider redirects you after authentication.
@@ -540,8 +550,9 @@ Authentication Options
 
 .. option:: --oidcTrustedEndpoint
 
-   Specifies a connection to a trusted endpoint that is not Atlas or localhost. 
-   Only use this option when connecting to servers that you trust.
+   Specifies a connection to a trusted endpoint that is not Atlas or localhost to
+   ensure that access tokens are sent to trusted servers. Only use this option when
+   connecting to servers that you trust.
 
 .. option:: --browser
 

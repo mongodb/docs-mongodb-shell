@@ -1,5 +1,5 @@
 name = "mongodb-shell"
-title = "MongoDB Shell"
+title = "mongosh"
 
 intersphinx = [ "https://www.mongodb.com/docs/manual/objects.inv" ]
 
@@ -12,12 +12,14 @@ toc_landing_pages = ["/install",
                      "/snippets",
                      "/configure-mongosh",
                      "/reference/configure-shell-settings",
-                     "/reference/ejson"
+                     "/reference/ejson",
+                     "/logs",
+                     "/logs/retention"
                     ]
 
 [constants]
 
-version = "2.3.2"
+version = "2.4.0"
 mdb-version = "8.0"
 pgp-version = "{+mdb-version+}"
 atlas = "MongoDB Atlas"
