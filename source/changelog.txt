@@ -29,11 +29,7 @@ v2.3.6
 
 *Released December 13, 2024*
 
-Bug Fixes:
-
-- :issue:`MONGOSH-1943` - Account for possibility of process.exit() throwing 
-  under coverage; Improve debuggability of ``mongosh not initialized yet`` errors
-- :issue:`COMPASS-8576` - Keep operation in progress while switching tabs 
+Contains internal enhancements and improvements.
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.6>`__.
@@ -48,7 +44,6 @@ Bug Fixes:
 - :issue:`MONGOSH-1935` - Retry connection without system certificates in case 
   of TLS errors
 - :issue:`MONGOSH-1632` - Add Node.js patch for OpenSSL Windows build fix 
-- :issue:`MONGOSH-1924` - Increase timeouts for AWS tests
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.5>`__.
