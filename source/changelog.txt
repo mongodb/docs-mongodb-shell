@@ -19,7 +19,7 @@ v2.3.7
 
 Bug Fixes:
 
-- :issue:`MONGOSH-1943` - Only ever run ``MongoshRepl.onExit`` once
+- :issue:`MONGOSH-1943` - Fix cause of rare flaky "Mongosh not initialized yet" errors 
 - :issue:`MONGOSH-1969` - Don't override output that came from onPrint
 
 `Full release notes available on JIRA
