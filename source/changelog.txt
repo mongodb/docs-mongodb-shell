@@ -20,7 +20,6 @@ v2.3.7
 Bug Fixes:
 
 - :issue:`MONGOSH-1943` - Fix cause of rare flaky "Mongosh not initialized yet" errors 
-- :issue:`MONGOSH-1969` - Don't override output that came from onPrint
 
 `Full release notes available on JIRA
 <https://jira.mongodb.org/browse/MONGOSH-1922?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.3.7>`__.
