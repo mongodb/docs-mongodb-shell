@@ -24,8 +24,8 @@ New feature released in this version:
 
 - :issue:`COMPASS-8443` - Added device ID logging:
  
-  - Linux uses ``/var/lib/dbus/machine-id``
-    BSD uses ``/etc/hostid and smbios.system.uuid`` as a fallback
+  - Linux uses ``/var/lib/dbus/machine-id``. BSD uses ``/etc/hostid and smbios.
+    system.uuid`` as a fallback
   - macOS uses ``IOPlatformUUID``
   - Windows uses the ``MachineGuid`` from ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography``
 
