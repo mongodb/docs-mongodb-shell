@@ -31,7 +31,6 @@ New feature released in this version:
 
 Bug Fixes:
 
-- :issue:`MONGOSH-2124` - Added assume roles to Evergreen template
 - :issue:`MONGOSH-2153` - Added padding information to ``Binary.fromPackedBits``.
 - :issue:`MONGOSH-2050` - Fixed logging retention tests.
 
