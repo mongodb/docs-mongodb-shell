@@ -20,7 +20,20 @@ v2.5.1
 
 *Released May 7, 2025*
 
+New features released in this version:
 
+- :issue:`MONGOSH-2124` - Set acls to private for  new uploads
+- :issue:`COMPASS-8443` - Add device ID logging
+
+Bug Fixes:
+
+- :issue:`MONGOSH-2124` - Add assume roles to Evergreen template
+- :issue:`MONGOSH-2153` - Include padding when inspecting packed bits
+- :issue:`MONGOSH-2177`, :issue:`MONGOSH-2178`, :issue:`MONGOSH-2179` - Continue to use 8.0.x crypt_shared library
+- :issue:`MONGOSH-2050` - Fixes to logging retention tests
+
+`Full release notes available on JIRA 
+<https://jira.mongodb.org/issues/?jql=project%20%3D%20MONGOSH%20AND%20fixVersion%20%3D%202.5.1>`__.
 
 v2.5.0
 ------
